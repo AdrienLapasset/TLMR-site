@@ -1,14 +1,21 @@
 import { createGlobalStyle } from "styled-components/macro";
+import SohneBuch from "assets/fonts/Sohne/Sohne-Buch.otf";
+import SöhneBreitBuch from "assets/fonts/Sohne/SöhneBreit-Buch.otf";
+import SöhneKräftig from "assets/fonts/Sohne/Söhne-Kräftig.otf";
 
 export default createGlobalStyle`
 
 @font-face {
-  font-family: "Sohne-Buch";
-  src: url("assets/fonts/Sohne/Sohne-Buch.otf") format("opentype");
+  font-family: "Sohne Buch";
+  src: url(${SohneBuch}) format("opentype");
 }
 @font-face {
-  font-family: "Söhne-Kräftig";
-  src: url("assets/fonts/Sohne/Söhne-Kräftig.otf") format("opentype");
+  font-family: "Söhne Kräftig";
+  src: url(${SöhneKräftig}) format("opentype");
+}
+@font-face {
+  font-family: "SöhneBreit Buch";
+  src: url(${SöhneBreitBuch}) format("opentype");
 }
 
 * {
@@ -29,7 +36,7 @@ select,
 textarea { 
   margin: 0;
   padding: 0;
-  font-family: "Sohne-Buch", sans-serif;
+  font-family: "Sohne Buch", sans-serif;
   list-style: none;
   font-size: 16px;
   font-weight: 400;
