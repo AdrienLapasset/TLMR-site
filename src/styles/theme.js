@@ -1,6 +1,7 @@
 const theme = {
   colors: {
     black: "#000000",
+    grey: "#939393",
   },
   minWidth: {
     xs: `(min-width: 375px)`,

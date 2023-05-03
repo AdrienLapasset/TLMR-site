@@ -6,7 +6,7 @@ import SöhneKräftig from "assets/fonts/Sohne/Söhne-Kräftig.otf";
 export default createGlobalStyle`
 
 @font-face {
-  font-family: "Sohne Buch";
+  font-family: "Söhne Buch";
   src: url(${SohneBuch}) format("opentype");
 }
 @font-face {
@@ -25,7 +25,7 @@ export default createGlobalStyle`
 
 h1,
 h2,
-h3
+h3,
 p,
 a,
 button,
@@ -36,7 +36,7 @@ select,
 textarea { 
   margin: 0;
   padding: 0;
-  font-family: "Sohne Buch", sans-serif;
+  font-family: "Söhne Buch", sans-serif;
   list-style: none;
   font-size: 16px;
   font-weight: 400;
@@ -44,12 +44,18 @@ textarea {
   box-sizing: border-box;
 }
 
-html {
+html, body {
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: ${(props) => props.theme.colors.black};
   display: block;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
 }
 `;
