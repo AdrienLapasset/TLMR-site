@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
-import Container from "components/Layout/Container";
 import { Link } from "gatsby";
 
 const StyledNav = styled.nav`
@@ -10,13 +9,13 @@ const StyledNav = styled.nav`
   align-items: center;
   height: 70px;
   img {
-    height: 30px;
+    height: 40px;
   }
   div {
     display: flex;
 
     a {
-      margin: 0 40px 0 0;
+      margin: 0 70px 0 0;
       font-size: 16px;
     }
   }
@@ -30,31 +29,29 @@ const Navigation = ({ toggleModal }) => {
   };
 
   return (
-    <Container>
-      <StyledNav>
-        <img src={TLMRlogo} alt="Logo TLMR" />
-        <div isNavOpen={isNavOpen}>
-          <Link to="/a-propos-de-nous" activeClassName="active">
-            Expertises{" "}
-          </Link>
-          <Link to="/expertises" activeClassName="active">
-            e-Services{" "}
-          </Link>
-          <Link to="/projets" activeClassName="active">
-            Formations{" "}
-          </Link>
-          <Link to="/actus" activeClassName="active">
-            Actualités{" "}
-          </Link>
-          <Link to="/actus" activeClassName="active">
-            L’équipe{" "}
-          </Link>
-          <Link to="/actus" activeClassName="active">
-            Contact{" "}
-          </Link>
-        </div>
-      </StyledNav>
-    </Container>
+    <StyledNav>
+      <img src={TLMRlogo} alt="Logo TLMR" />
+      <div isNavOpen={isNavOpen}>
+        <Link to="/a-propos-de-nous" activeClassName="active">
+          Expertises{" "}
+        </Link>
+        <Link to="/expertises" activeClassName="active">
+          e-Services{" "}
+        </Link>
+        <Link to="/projets" activeClassName="active">
+          Formations{" "}
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          Actualités{" "}
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          L’équipe{" "}
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          Contact{" "}
+        </Link>
+      </div>
+    </StyledNav>
   );
 };
 

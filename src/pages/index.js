@@ -1,11 +1,12 @@
 import * as React from "react";
 import Layout from "components/Layout";
+import HeroSection from "./home/heroSection";
 
 const IndexPage = () => {
   return (
-    <>
-      <Layout>TOTO</Layout>
-    </>
+    <Layout>
+      <HeroSection />
+    </Layout>
   );
 };
 
