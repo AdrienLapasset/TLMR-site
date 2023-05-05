@@ -21,9 +21,13 @@ const StyledCircle = styled.div`
 const StyledList = styled.ul`
   column-count: 2;
   column-gap: 20px;
-  a {
-    border-bottom: 0.5px solid ${(props) => props.theme.colors.grey};
+  a,
+  aside {
+    border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLight};
     padding: 10px 0;
+  }
+  aside {
+    height: 21px;
   }
 `;
 
@@ -35,10 +39,13 @@ const HomeList = ({ type, list }) => {
   return (
     <StyledContainer>
       <div>
-        {type === "Compétences" ? <StyledCircle type={type} /> : null}
+        <StyledCircle type={type} />
         <h3>{type}</h3>
       </div>
-      <StyledList>{listRender}</StyledList>
+      <StyledList>
+        {listRender}
+        {type === "e-Services" ? <aside></aside> : null}
+      </StyledList>
     </StyledContainer>
   );
 };

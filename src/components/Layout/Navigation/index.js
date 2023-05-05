@@ -50,6 +50,9 @@ const Navigation = ({ toggleModal }) => {
         <Link to="/actus" activeClassName="active">
           Contact{" "}
         </Link>
+        <Link to="/actus" activeClassName="active">
+          Paiement{" "}
+        </Link>
       </div>
     </StyledNav>
   );

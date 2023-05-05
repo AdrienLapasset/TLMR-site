@@ -53,6 +53,9 @@ a {
   color: ${(props) => props.theme.colors.black};
   display: block;
   cursor: pointer;
+  &:hover {
+    color: ${(props) => props.theme.colors.grey};
+  }
 }
 
 li {
