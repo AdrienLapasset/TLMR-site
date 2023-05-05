@@ -20,7 +20,7 @@ const StyledCircle = styled.div`
 `;
 const StyledList = styled.ul`
   column-count: 2;
-  column-gap: 20px;
+  column-gap: 30px;
   a,
   aside {
     border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLight};
