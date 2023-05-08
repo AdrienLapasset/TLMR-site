@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../SectionTitle";
 import Button from "components/Button";
-import HomeList from "../HomeList";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
@@ -12,25 +11,27 @@ const StyledContainer = styled.div`
     font-size: 25px;
     font-family: "Söhne Buch", sans-serif;
     max-width: 800px;
-    margin: 20px 0 30px;
+    margin-bottom: 30px;
   }
 `;
 const StyledColumns = styled.div`
   column-count: 2;
   column-gap: 30px;
 `;
-const StyledButtonsContainer = styled.div`
-  display: flex;
-  a {
-    margin-right: 40px;
-  }
-`;
 
-const VousFormer = () => {
+const VosExperts = () => {
   return (
     <StyledContainer>
-      <SectionTitle aside={"Formations"} title={"VOUS FORMER"} />
+      <SectionTitle aside={"L’équipe"} title={"VOS EXPERTS"} />
       <StyledColumns>
+        <p>
+          Le cabinet a été fondé par Me Henri de la Motte Rouge et Me
+          Jean-Philippe Touati, deux avocats expérimentés et passionnés aux
+          compétences complémentaires, partageant une éthique et une vision
+          commune de la profession d’avocat, particulièrement attachés à la
+          qualité du service rendu au client.
+        </p>
+        <Button title={"Découvrez l’équipe"} />
         <StaticImage
           src="../../../assets/imgs/placeholder.jpg"
           alt="TLMR - L’excellence accessible"
@@ -38,19 +39,9 @@ const VousFormer = () => {
           quality="90"
           aspectRatio={1.44}
         />
-        <p>
-          La formation juridique et la transmission de notre savoir-faire sont
-          au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et
-          Jean-Philippe Touati sont les premiers avocats infopreneurs. Ils ont
-          fondé le Programme de formation en ligne infolawyers.
-        </p>
-        <StyledButtonsContainer>
-          <Button title={"En savoir plus"} />
-          <Button title={"Visiter infolawyers"} />
-        </StyledButtonsContainer>
       </StyledColumns>
     </StyledContainer>
   );
 };
 
-export default VousFormer;
+export default VosExperts;

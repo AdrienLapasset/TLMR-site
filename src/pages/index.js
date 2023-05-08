@@ -5,6 +5,8 @@ import VousProteger from "./home/VousProteger";
 import NosSolution from "./home/NosSolution";
 import VousFormer from "./home/VousFormer";
 import ALaUne from "./home/ALaUne";
+import VosExperts from "./home/VosExperts";
+import VosTemoignages from "./home/VosTemoignages";
 
 const IndexPage = () => {
   return (
@@ -14,6 +16,8 @@ const IndexPage = () => {
       <NosSolution />
       <VousFormer />
       <ALaUne />
+      <VosExperts />
+      <VosTemoignages />
     </Layout>
   );
 };
