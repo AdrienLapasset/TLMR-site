@@ -3,11 +3,9 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../SectionTitle";
 import Button from "components/Button";
-import HomeList from "../HomeList";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
-
   p {
     font-size: 25px;
     font-family: "Söhne Buch", sans-serif;

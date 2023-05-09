@@ -20,8 +20,11 @@ const theme = {
     xl: "1440px",
     xxl: "1728px",
   },
-  baseCubicBezier: "cubic-bezier(.25, .8, .25, 1)",
-  baseBorderRadius: "20px",
+  cubicBezier: {
+    base: "cubic-bezier(.25, .8, .25, 1)",
+    bounce: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
+  },
+  transitionTime: "0.3s",
 };
 
 export default theme;
