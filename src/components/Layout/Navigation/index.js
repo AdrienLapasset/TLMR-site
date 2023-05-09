@@ -32,8 +32,17 @@ const StyledLinksContainer = styled.div`
     visibility: visible;
   }
   a {
-    margin: 0 70px 0 0;
-    font-size: 16px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0;
+    border-bottom: 1px solid ${(props) => props.theme.colors.greyLightest};
+    width: 100%;
+    @media ${(props) => props.theme.minWidth.lg} {
+      margin: 0 70px 0 0;
+      font-size: 16px;
+      border-bottom: none;
+      padding: 0;
+      width: unset;
+    }
   }
 `;
 const StyledMobileLayout = styled.div`

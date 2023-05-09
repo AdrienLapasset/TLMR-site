@@ -3,6 +3,7 @@ const theme = {
     black: "#000000",
     grey: "#939393",
     greyLight: "#AAAAAA",
+    greyLightest: "#E4E4E4",
   },
   minWidth: {
     xs: `(min-width: 375px)`,
