@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "../../SectionTitle";
 
 const StyledContainer = styled.div`
   margin-top: 160px;

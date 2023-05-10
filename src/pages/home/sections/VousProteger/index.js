@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "../../SectionTitle";
 import Button from "components/Button";
-import HomeList from "../HomeList";
+import HomeList from "../../HomeList";
 
 const StyledContainer = styled.div`
   margin-top: 160px;

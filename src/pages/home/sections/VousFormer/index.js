@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "../../SectionTitle";
 import Button from "components/Button";
 
 const StyledContainer = styled.div`
