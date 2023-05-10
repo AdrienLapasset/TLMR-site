@@ -27,7 +27,7 @@ const ALaUne = () => {
       <StyledColumns>
         <StyledNews>
           <StaticImage
-            src="../../../assets/imgs/placeholder.jpg"
+            src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
             loading="eager"
             quality="90"
@@ -38,7 +38,7 @@ const ALaUne = () => {
         </StyledNews>
         <StyledNews>
           <StaticImage
-            src="../../../assets/imgs/placeholder.jpg"
+            src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
             loading="eager"
             quality="90"
@@ -49,7 +49,7 @@ const ALaUne = () => {
         </StyledNews>
         <StyledNews>
           <StaticImage
-            src="../../../assets/imgs/placeholder.jpg"
+            src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
             loading="eager"
             quality="90"
@@ -60,7 +60,7 @@ const ALaUne = () => {
         </StyledNews>
         <StyledNews>
           <StaticImage
-            src="../../../assets/imgs/placeholder.jpg"
+            src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
             loading="eager"
             quality="90"

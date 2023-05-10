@@ -19,13 +19,5 @@ module.exports = {
         dataset: "production",
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/assets/imgs",
-      },
-      __key: "images",
-    },
   ],
 };

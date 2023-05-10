@@ -47,7 +47,7 @@ const NosSolution = () => {
         ]}
       />
       <StaticImage
-        src="../../../assets/imgs/placeholder.jpg"
+        src="../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
         loading="eager"
         quality="90"
