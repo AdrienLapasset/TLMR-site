@@ -34,6 +34,12 @@ const StyledList = styled.ul`
   }
   aside {
     height: 21px;
+    display: none;
+    &.blank {
+      @media ${(props) => props.theme.minWidth.md} {
+        display: block;
+      }
+    }
   }
 `;
 
@@ -50,7 +56,7 @@ const HomeList = ({ type, list }) => {
       </div>
       <StyledList>
         {listRender}
-        {type === "e-Services" ? <aside></aside> : null}
+        {type === "e-Services" ? <aside className="blank"></aside> : null}
       </StyledList>
     </StyledContainer>
   );
