@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 const StyledContainer = styled.div`
-  margin: 70px 0 45px;
+  margin: 50px 0 0 0;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin: 70px 0 45px;
+  }
   div {
     display: flex;
     align-items: center;
@@ -19,8 +22,11 @@ const StyledCircle = styled.div`
   margin-right: 10px;
 `;
 const StyledList = styled.ul`
-  column-count: 2;
+  column-count: 1;
   column-gap: 30px;
+  @media ${(props) => props.theme.minWidth.md} {
+    column-count: 2;
+  }
   a,
   aside {
     border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLight};
