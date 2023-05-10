@@ -6,8 +6,11 @@ import ToggleBtn from "./ToggleBtn";
 
 const StyledNav = styled.nav`
   display: flex;
-  padding: 30px 0;
   flex-direction: column;
+  padding: 3px 0;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding: 13px 0;
+  }
   @media ${(props) => props.theme.minWidth.lg} {
     justify-content: space-between;
     align-items: center;
@@ -50,8 +53,8 @@ const StyledMobileLayout = styled.div`
   justify-content: space-between;
 `;
 
-const Navigation = ({ toggleModal }) => {
-  const [isNavOpen, setNavOpen] = useState(true);
+const Navigation = () => {
+  const [isNavOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
     setNavOpen(!isNavOpen);
