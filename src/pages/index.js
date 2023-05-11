@@ -7,6 +7,7 @@ import VousFormer from "./home/sections/VousFormer";
 import ALaUne from "./home/sections/ALaUne";
 import VosExperts from "./home/sections/VosExperts";
 import VosTemoignages from "./home/sections/VosTemoignages";
+import DansLaPresse from "./home/sections/DansLaPresse";
 
 const IndexPage = () => {
   return (
@@ -18,6 +19,7 @@ const IndexPage = () => {
       <ALaUne />
       <VosExperts />
       <VosTemoignages />
+      <DansLaPresse />
     </Layout>
   );
 };

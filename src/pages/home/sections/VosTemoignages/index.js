@@ -9,8 +9,6 @@ const StyledContainer = styled.div`
     font-family: "Söhne Kräftig";
     font-size: 14px;
   }
-  h2 {
-  }
 `;
 const StyledGrid = styled.div`
   display: grid;
