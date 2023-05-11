@@ -2,25 +2,29 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
-import Button from "components/Button";
+import SectionDescription from "../../SectionDescription";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
-  p {
-    font-size: 25px;
-    font-family: "Söhne Buch", sans-serif;
-    max-width: 800px;
-    margin: 20px 0 30px;
-  }
 `;
 const StyledColumns = styled.div`
-  column-count: 2;
-  column-gap: 30px;
-`;
-const StyledButtonsContainer = styled.div`
   display: flex;
-  a {
-    margin-right: 40px;
+  flex-direction: column;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: block;
+    column-count: 2;
+    column-gap: 30px;
+  }
+  .gatsby-image-wrapper {
+    margin-bottom: 12px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      order: 1;
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      margin-top: 0px;
+    }
   }
 `;
 
@@ -36,16 +40,15 @@ const VousFormer = () => {
           quality="90"
           aspectRatio={1.44}
         />
-        <p>
-          La formation juridique et la transmission de notre savoir-faire sont
-          au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et
-          Jean-Philippe Touati sont les premiers avocats infopreneurs. Ils ont
-          fondé le Programme de formation en ligne infolawyers.
-        </p>
-        <StyledButtonsContainer>
-          <Button title={"En savoir plus"} />
-          <Button title={"Visiter infolawyers"} />
-        </StyledButtonsContainer>
+        <SectionDescription
+          description={
+            "La formation juridique et la transmission de notre savoir-faire sont au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et Jean-Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne infolawyers."
+          }
+          links={[
+            { text: "En savoir plus", link: "" },
+            { text: "Visiter infolawyers", link: "" },
+          ]}
+        />
       </StyledColumns>
     </StyledContainer>
   );

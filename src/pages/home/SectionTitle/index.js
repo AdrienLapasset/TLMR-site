@@ -15,26 +15,29 @@ const StyledContainer = styled.div`
       font-size: 16px;
     }
   }
-  h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-family: "SöhneBreit Buch", sans-serif;
-    text-transform: uppercase;
-    @media ${(props) => props.theme.minWidth.sm} {
-      margin-bottom: 40px;
-      font-size: 55px;
-    }
-    @media ${(props) => props.theme.minWidth.xl} {
-      font-size: 60px;
-    }
+`;
+const StyledH2 = styled.h2`
+  font-size: ${(props) => (props.small ? "28px" : "32px")};
+  margin-bottom: 30px;
+  font-family: "SöhneBreit Buch", sans-serif;
+  text-transform: uppercase;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-bottom: ${(props) => (props.small ? "60px" : "40px")};
+    font-size: ${(props) => (props.small ? "35px" : "45px")};
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    font-size: ${(props) => (props.small ? "35px" : "50px")};
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    font-size: ${(props) => (props.small ? "45px" : "60px")};
   }
 `;
 
-const SectionTitle = ({ aside, title }) => {
+const SectionTitle = ({ aside, title, small }) => {
   return (
     <StyledContainer>
       <aside>{aside}</aside>
-      <h2>{title}</h2>
+      <StyledH2 small={small}>{title}</StyledH2>
     </StyledContainer>
   );
 };

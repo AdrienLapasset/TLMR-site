@@ -6,8 +6,8 @@ const StyledContainer = styled(Link)`
   text-decoration: underline;
 `;
 
-const Button = ({ title }) => {
-  return <StyledContainer>{title}</StyledContainer>;
+const Button = ({ text, className }) => {
+  return <StyledContainer className={className}>{text}</StyledContainer>;
 };
 
 export default Button;

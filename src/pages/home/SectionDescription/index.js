@@ -9,6 +9,9 @@ const StyledContainer = styled.div`
     max-width: 800px;
     margin-bottom: 30px;
     @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 20px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
       font-size: 22px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
@@ -26,7 +29,7 @@ const StyledButtonsContainer = styled.div`
 
 const SectionDescription = ({ description, links }) => {
   const linksRender = links.map((link) => {
-    return <Button title={link.text} />;
+    return <Button text={link.text} />;
   });
 
   return (
