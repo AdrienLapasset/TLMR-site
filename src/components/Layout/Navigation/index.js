@@ -5,6 +5,10 @@ import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
 
 const StyledNav = styled.nav`
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   padding: 3px 0;
@@ -22,7 +26,7 @@ const StyledNav = styled.nav`
 `;
 const StyledLinksContainer = styled.div`
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
-  max-height: ${(props) => (props.isNavOpen ? "290px" : "0px")};
+  height: ${(props) => (props.isNavOpen ? "100vh" : "0px")};
   transition: all 0.4s;
   overflow: hidden;
   padding: ${(props) => (props.isNavOpen ? "10px 0 22px" : "0")};
@@ -37,7 +41,7 @@ const StyledLinksContainer = styled.div`
   a {
     padding: 0 0 12px 0;
     margin: 12px 0 0;
-    border-bottom: 1px solid ${(props) => props.theme.colors.greyLightest};
+    border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     @media ${(props) => props.theme.minWidth.lg} {
       margin: 0 70px 0 0;

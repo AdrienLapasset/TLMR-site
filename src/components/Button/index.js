@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 
 const StyledContainer = styled(Link)`
   text-decoration: underline;
+  text-underline-offset: 4px;
 `;
 
 const Button = ({ text, className }) => {

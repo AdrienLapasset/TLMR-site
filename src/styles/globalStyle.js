@@ -44,10 +44,6 @@ textarea {
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 a {
   text-decoration: none;
   color: ${(props) => props.theme.colors.black};
