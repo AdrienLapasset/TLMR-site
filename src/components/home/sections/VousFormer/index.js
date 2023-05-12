@@ -11,8 +11,8 @@ const StyledColumns = styled.div`
   display: flex;
   flex-direction: column;
   @media ${(props) => props.theme.minWidth.md} {
-    display: block;
-    column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
   }
   .gatsby-image-wrapper {
@@ -23,6 +23,7 @@ const StyledColumns = styled.div`
       margin-bottom: 0;
     }
     @media ${(props) => props.theme.minWidth.md} {
+      order: 0;
       margin-top: 0px;
     }
   }
