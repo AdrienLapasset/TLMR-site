@@ -44,7 +44,7 @@ const StyledList = styled.ul`
 `;
 
 const HomeList = ({ type, list }) => {
-  const listRender = list.map((element, index) => {
+  const listRender = list?.map((element, index) => {
     return <Link key={index}>{element}</Link>;
   });
 

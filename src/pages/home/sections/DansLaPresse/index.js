@@ -29,58 +29,58 @@ const StyledGrid = styled.div`
   }
 `;
 
-const VosTemoignages = () => {
-  const logosList = [
-    {
-      name: affiches,
-      alt: "Affiches Parisiennes",
-    },
-    {
-      name: bfm,
-      alt: "BFM TV",
-    },
-    {
-      name: doctrine,
-      alt: "Doctrine.fr",
-    },
-    {
-      name: dsih,
-      alt: "DSIH",
-    },
-    {
-      name: leaders,
-      alt: "Leaders League",
-    },
-    {
-      name: lefebvre,
-      alt: "Editions Francis Lefebvre",
-    },
-    {
-      name: legalis,
-      alt: "Legalis",
-    },
-    {
-      name: lepoint,
-      alt: "Le Point",
-    },
-    {
-      name: lexbase,
-      alt: "Lexbase",
-    },
-    {
-      name: lja,
-      alt: "LJA",
-    },
-    {
-      name: obs,
-      alt: "L'Obs",
-    },
-    {
-      name: village,
-      alt: "Village de la Justice",
-    },
-  ];
+const logosList = [
+  {
+    name: affiches,
+    alt: "Affiches Parisiennes",
+  },
+  {
+    name: bfm,
+    alt: "BFM TV",
+  },
+  {
+    name: doctrine,
+    alt: "Doctrine.fr",
+  },
+  {
+    name: dsih,
+    alt: "DSIH",
+  },
+  {
+    name: leaders,
+    alt: "Leaders League",
+  },
+  {
+    name: lefebvre,
+    alt: "Editions Francis Lefebvre",
+  },
+  {
+    name: legalis,
+    alt: "Legalis",
+  },
+  {
+    name: lepoint,
+    alt: "Le Point",
+  },
+  {
+    name: lexbase,
+    alt: "Lexbase",
+  },
+  {
+    name: lja,
+    alt: "LJA",
+  },
+  {
+    name: obs,
+    alt: "L'Obs",
+  },
+  {
+    name: village,
+    alt: "Village de la Justice",
+  },
+];
 
+const DansLaPresse = () => {
   const logosRender = logosList.map((logo) => {
     return <img src={logo.name} alt={logo.alt} />;
   });
@@ -93,4 +93,4 @@ const VosTemoignages = () => {
   );
 };
 
-export default VosTemoignages;
+export default DansLaPresse;
