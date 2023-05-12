@@ -38,7 +38,7 @@ textarea {
   padding: 0;
   font-family: "Söhne Buch", sans-serif;
   list-style: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   display: block;
   box-sizing: border-box;
@@ -60,5 +60,15 @@ a {
 
 li {
   list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    color: ${(props) => props.theme.colors.grey};
+  }
 }
 `;
