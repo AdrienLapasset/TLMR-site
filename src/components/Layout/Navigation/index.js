@@ -35,7 +35,7 @@ const StyledLinksContainer = styled.div`
     display: flex;
     opacity: 1;
     flex-direction: row;
-    max-height: unset;
+    height: unset;
     visibility: visible;
   }
   a {
