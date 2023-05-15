@@ -1,21 +1,34 @@
 import React from "react";
+import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import theme from "styles/theme";
 import GlobalStyle from "styles/globalStyle";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
-import Container from "components/Layout/Container";
+
+const StyledContainer = styled.div`
+  padding: 0 15px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding: 0 24px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    padding: 0 32px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    padding: 0 45px;
+  }
+`;
 
 const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Container>
+        <StyledContainer>
           <Navigation />
           {children}
           <Footer />
-        </Container>
+        </StyledContainer>
       </ThemeProvider>
     </>
   );

@@ -23,9 +23,12 @@ const StyledCircle = styled.div`
 `;
 const StyledList = styled.ul`
   column-count: 1;
-  column-gap: 30px;
   @media ${(props) => props.theme.minWidth.md} {
+    column-gap: ${(props) => props.theme.columnGap.lg};
     column-count: 2;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.xl};
   }
   a,
   aside {

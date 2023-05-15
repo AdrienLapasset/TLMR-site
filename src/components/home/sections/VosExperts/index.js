@@ -13,7 +13,10 @@ const StyledColumns = styled.div`
   @media ${(props) => props.theme.minWidth.md} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
+    column-gap: ${(props) => props.theme.columnGap.lg};
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.xl};
   }
   .gatsby-image-wrapper {
     margin-bottom: 12px;

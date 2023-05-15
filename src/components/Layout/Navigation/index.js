@@ -11,14 +11,20 @@ const StyledNav = styled.nav`
   z-index: 1;
   display: flex;
   flex-direction: column;
-  padding: 3px 0;
+  padding: 13px 0;
   @media ${(props) => props.theme.minWidth.sm} {
     padding: 21px 0;
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: ${(props) => props.theme.columnGap.lg};
+    grid-template-areas: "logo logo . . . links links links links links links links";
     align-items: center;
     flex-direction: row;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.xl};
   }
   img {
     height: 28px;
@@ -32,19 +38,24 @@ const StyledLinksContainer = styled.div`
   padding: ${(props) => (props.isNavOpen ? "10px 0 22px" : "0")};
   visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
   @media ${(props) => props.theme.minWidth.lg} {
-    display: flex;
+    grid-area: links;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: ${(props) => props.theme.columnGap.lg};
     opacity: 1;
-    flex-direction: row;
     height: unset;
     visibility: visible;
   }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+  }
   a {
     padding: 0 0 12px 0;
-    margin: 12px 0 0;
+    margin-top: 12px;
     border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     @media ${(props) => props.theme.minWidth.lg} {
-      margin: 0 70px 0 0;
+      margin-top: 0;
       font-size: 16px;
       border-bottom: none;
       padding: 0;
@@ -55,6 +66,12 @@ const StyledLinksContainer = styled.div`
 const StyledMobileLayout = styled.div`
   display: flex;
   justify-content: space-between;
+  grid-area: logo;
+`;
+const StyledDesktopLayout = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
 `;
 
 const Navigation = () => {
@@ -66,6 +83,31 @@ const Navigation = () => {
 
   return (
     <StyledNav>
+      {/* <StyledDesktopLayout>
+        <img src={TLMRlogo} alt="Logo TLMR" />
+        <Link to="/a-propos-de-nous" activeClassName="active">
+          Expertises
+        </Link>
+        <Link to="/expertises" activeClassName="active">
+          e-Services
+        </Link>
+        <Link to="/projets" activeClassName="active">
+          Formations
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          Actualités
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          L’équipe
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          Contact
+        </Link>
+        <Link to="/actus" activeClassName="active">
+          Paiement
+        </Link>
+      </StyledDesktopLayout> */}
+
       <StyledMobileLayout>
         <img src={TLMRlogo} alt="Logo TLMR" />
         <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />

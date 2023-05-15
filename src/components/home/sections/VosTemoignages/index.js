@@ -15,12 +15,15 @@ const StyledGrid = styled.div`
   grid-template-columns: repeat(1, 1fr);
   row-gap: 20px;
   @media ${(props) => props.theme.minWidth.sm} {
-    column-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: ${(props) => props.theme.columnGap.lg};
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    column-gap: 30px;
+    column-gap: ${(props) => props.theme.columnGap.lg};
     grid-template-columns: repeat(4, 1fr);
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.xl};
   }
 `;
 

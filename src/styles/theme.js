@@ -26,6 +26,10 @@ const theme = {
     bounce: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
   },
   transitionTime: "0.3s",
+  columnGap: {
+    lg: "20px",
+    xl: "30px",
+  },
 };
 
 export default theme;
