@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
   margin-top: 160px;
   border-top: 0.5px solid ${(props) => props.theme.colors.black};
   img {
-    margin-bottom: 170px;
+    margin: 45px 0 170px;
   }
 `;
 const StyledLinksContainer = styled.div`
@@ -31,9 +31,13 @@ const StyledLinksContainer = styled.div`
       }
     }
     & > div {
-      margin-top: 35px;
+      &:not(:first-child) {
+        margin-top: 35px;
+        @media ${(props) => props.theme.minWidth.sm} {
+          margin-top: 0;
+        }
+      }
       @media ${(props) => props.theme.minWidth.sm} {
-        margin-top: 0;
         margin-right: 40px;
         @media ${(props) => props.theme.minWidth.md} {
           margin-right: 60px;

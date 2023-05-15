@@ -13,7 +13,7 @@ const StyledNav = styled.nav`
   flex-direction: column;
   padding: 3px 0;
   @media ${(props) => props.theme.minWidth.sm} {
-    padding: 13px 0;
+    padding: 21px 0;
   }
   @media ${(props) => props.theme.minWidth.lg} {
     justify-content: space-between;
@@ -21,7 +21,7 @@ const StyledNav = styled.nav`
     flex-direction: row;
   }
   img {
-    height: 40px;
+    height: 28px;
   }
 `;
 const StyledLinksContainer = styled.div`
