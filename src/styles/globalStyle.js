@@ -7,15 +7,15 @@ export default createGlobalStyle`
 
 @font-face {
   font-family: "Söhne Buch";
-  src: url(${SohneBuch}) format("opentype");
+  src: url(${SohneBuch}) format("woff2");
 }
 @font-face {
   font-family: "Söhne Kräftig";
-  src: url(${SöhneKräftig}) format("opentype");
+  src: url(${SöhneKräftig}) format("woff2");
 }
 @font-face {
   font-family: "SöhneBreit Buch";
-  src: url(${SöhneBreitBuch}) format("opentype");
+  src: url(${SöhneBreitBuch}) format("woff2");
 }
 
 * {
