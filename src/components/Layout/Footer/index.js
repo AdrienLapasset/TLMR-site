@@ -31,12 +31,11 @@ const StyledLinksContainer = styled.div`
       }
     }
     & > div {
-      &:not(:first-child) {
-        margin-top: 35px;
-        @media ${(props) => props.theme.minWidth.sm} {
-          margin-top: 0;
-        }
+      margin-bottom: 35px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        margin-top: 0;
       }
+
       @media ${(props) => props.theme.minWidth.sm} {
         margin-right: 40px;
         @media ${(props) => props.theme.minWidth.md} {
@@ -87,6 +86,7 @@ const Navigation = () => {
             <h3>À propos</h3>
             <Link>Notre équipe</Link>
             <Link>Contact</Link>
+            <Link>Paiement</Link>
           </div>
           <div>
             <h3>Retrouvez-nous</h3>
