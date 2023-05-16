@@ -27,7 +27,6 @@ const StyledColumns = styled.div`
     }
     @media ${(props) => props.theme.minWidth.md} {
       margin-top: 0px;
-      order: 0;
     }
   }
 `;

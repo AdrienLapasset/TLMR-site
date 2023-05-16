@@ -54,9 +54,10 @@ const StyledLinksContainer = styled.div`
     margin-top: 12px;
     border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
+    font-size: 18px;
     @media ${(props) => props.theme.minWidth.lg} {
       margin-top: 0;
-      font-size: 16px;
+      font-size: 15px;
       border-bottom: none;
       padding: 0;
       width: unset;
@@ -83,31 +84,6 @@ const Navigation = () => {
 
   return (
     <StyledNav>
-      {/* <StyledDesktopLayout>
-        <img src={TLMRlogo} alt="Logo TLMR" />
-        <Link to="/a-propos-de-nous" activeClassName="active">
-          Expertises
-        </Link>
-        <Link to="/expertises" activeClassName="active">
-          e-Services
-        </Link>
-        <Link to="/projets" activeClassName="active">
-          Formations
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          Actualités
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          L’équipe
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          Contact
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          Paiement
-        </Link>
-      </StyledDesktopLayout> */}
-
       <StyledMobileLayout>
         <img src={TLMRlogo} alt="Logo TLMR" />
         <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
