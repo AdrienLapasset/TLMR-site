@@ -58,7 +58,6 @@ const StyledCopyrightsContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       width: 200px;
     }
-
     span {
       display: none;
       @media ${(props) => props.theme.minWidth.sm} {

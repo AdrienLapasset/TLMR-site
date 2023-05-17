@@ -64,6 +64,7 @@ button {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  color: ${(props) => props.theme.colors.black};
   &:hover {
     color: ${(props) => props.theme.colors.grey};
   }
