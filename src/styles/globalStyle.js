@@ -33,7 +33,8 @@ div,
 q,
 input,
 select,
-textarea { 
+textarea,
+nav { 
   margin: 0;
   padding: 0;
   font-family: "Söhne Buch", sans-serif;

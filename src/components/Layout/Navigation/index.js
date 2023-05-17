@@ -5,6 +5,8 @@ import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
 
 const StyledNav = styled.nav`
+  transition: all 0.4s;
+  height: ${(props) => (props.isNavOpen ? "100vh" : "54px")};
   position: sticky;
   top: 0;
   background-color: white;
@@ -13,9 +15,11 @@ const StyledNav = styled.nav`
   flex-direction: column;
   padding: 13px 0;
   @media ${(props) => props.theme.minWidth.sm} {
+    height: ${(props) => (props.isNavOpen ? "100vh" : "70px")};
     padding: 21px 0;
   }
   @media ${(props) => props.theme.minWidth.lg} {
+    height: unset;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: ${(props) => props.theme.columnGap.lg};
@@ -31,10 +35,9 @@ const StyledNav = styled.nav`
 `;
 const StyledLinksContainer = styled.div`
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
-  height: ${(props) => (props.isNavOpen ? "100vh" : "0px")};
   transition: all 0.4s;
   overflow: hidden;
-  padding: ${(props) => (props.isNavOpen ? "10px 0 22px" : "0")};
+  padding-top: ${(props) => (props.isNavOpen ? "50px" : "0")};
   visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
   @media ${(props) => props.theme.minWidth.lg} {
     grid-area: links;
@@ -49,8 +52,7 @@ const StyledLinksContainer = styled.div`
     grid-column-gap: ${(props) => props.theme.columnGap.xl};
   }
   a {
-    padding: 0 0 12px 0;
-    margin-top: 12px;
+    padding: 15px 0;
     border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     font-size: 18px;
@@ -61,11 +63,18 @@ const StyledLinksContainer = styled.div`
       padding: 0;
       width: unset;
     }
+    &:first-child {
+      border-top: 0.5px solid ${(props) => props.theme.colors.greyLightest};
+      @media ${(props) => props.theme.minWidth.lg} {
+        border-top: none;
+      }
+    }
   }
 `;
 const StyledMobileLayout = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   grid-area: logo;
 `;
 const StyledDesktopLayout = styled.div`
@@ -82,7 +91,7 @@ const Navigation = () => {
   };
 
   return (
-    <StyledNav>
+    <StyledNav isNavOpen={isNavOpen}>
       <StyledMobileLayout>
         <img src={TLMRlogo} alt="Logo TLMR" />
         <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
