@@ -70,7 +70,6 @@ const ALaUne = () => {
           <StaticImage
             src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
-            loading="eager"
           />
           <aside>10 Octobre 2023</aside>
           <h3>Refus de vente : licite ou non ?</h3>
@@ -79,7 +78,6 @@ const ALaUne = () => {
           <StaticImage
             src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
-            loading="eager"
           />
           <aside>10 Octobre 2023</aside>
           <h3>
@@ -90,7 +88,6 @@ const ALaUne = () => {
           <StaticImage
             src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
-            loading="eager"
           />
           <aside>10 Octobre 2023</aside>
           <h3>
@@ -101,7 +98,6 @@ const ALaUne = () => {
           <StaticImage
             src="../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
-            loading="eager"
           />
           <aside>10 Octobre 2023</aside>
           <h3>

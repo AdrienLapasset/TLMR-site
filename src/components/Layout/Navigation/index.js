@@ -21,7 +21,6 @@ const StyledNav = styled.nav`
     grid-column-gap: ${(props) => props.theme.columnGap.lg};
     grid-template-areas: "logo logo . . . links links links links links links links";
     align-items: center;
-    /* flex-direction: row; */
   }
   @media ${(props) => props.theme.minWidth.xl} {
     grid-column-gap: ${(props) => props.theme.columnGap.xl};
