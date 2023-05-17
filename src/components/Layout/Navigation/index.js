@@ -77,12 +77,6 @@ const StyledMobileLayout = styled.div`
   align-items: center;
   grid-area: logo;
 `;
-const StyledDesktopLayout = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 10px;
-`;
-
 const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 

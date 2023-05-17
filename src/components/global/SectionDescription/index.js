@@ -27,13 +27,13 @@ const StyledButtonsContainer = styled.div`
   }
 `;
 
-const SectionDescription = ({ description, links }) => {
-  const linksRender = links.map((link) => {
+const SectionDescription = ({ description, links, className }) => {
+  const linksRender = links?.map((link) => {
     return <Button text={link.text} />;
   });
 
   return (
-    <StyledContainer>
+    <StyledContainer className={className}>
       <p>{description}</p>
       <StyledButtonsContainer>{linksRender}</StyledButtonsContainer>
     </StyledContainer>

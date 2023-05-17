@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
-import SectionDescription from "../../SectionDescription";
+import SectionDescription from "components/global/SectionDescription";
 import HomeList from "../../HomeList";
 
 const StyledContainer = styled.div`

@@ -68,4 +68,11 @@ button {
     color: ${(props) => props.theme.colors.grey};
   }
 }
+
+p {
+  font-size: 16px;
+  @media ${(props) => props.theme.minWidth.lg} {
+    font-size: 18px;
+  }
+}
 `;
