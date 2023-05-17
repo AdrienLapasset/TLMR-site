@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
@@ -85,6 +85,14 @@ const StyledDesktopLayout = styled.div`
 
 const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [isNavOpen]);
 
   const toggleNav = () => {
     setNavOpen(!isNavOpen);
