@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import Title from "components/global/Title";
 
 const StyledContainer = styled.div`
   aside {
@@ -16,7 +17,7 @@ const StyledContainer = styled.div`
     }
   }
 `;
-const StyledH2 = styled.h2`
+const StyledTitle = styled(Title)`
   font-size: ${(props) => (props.small ? "28px" : "32px")};
   margin-bottom: 30px;
   font-family: "SöhneBreit Buch", sans-serif;
@@ -37,7 +38,9 @@ const SectionTitle = ({ aside, title, small }) => {
   return (
     <StyledContainer>
       <aside>{aside}</aside>
-      <StyledH2 small={small}>{title}</StyledH2>
+      <StyledTitle type={"h2"} small={small}>
+        {title}
+      </StyledTitle>
     </StyledContainer>
   );
 };

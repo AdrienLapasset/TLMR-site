@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Button from "components/Button";
+import Button from "components/global/Button";
 
 const StyledContainer = styled.div`
   p {
