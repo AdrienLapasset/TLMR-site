@@ -101,31 +101,19 @@ const Navigation = () => {
   return (
     <StyledNav isNavOpen={isNavOpen}>
       <StyledMobileLayout>
-        <img src={TLMRlogo} alt="Logo TLMR" />
+        <Link to="/">
+          <img src={TLMRlogo} alt="Logo TLMR" />
+        </Link>
         <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
       </StyledMobileLayout>
       <StyledLinksContainer isNavOpen={isNavOpen}>
-        <Link to="/a-propos-de-nous" activeClassName="active">
-          Expertises
-        </Link>
-        <Link to="/expertises" activeClassName="active">
-          e-Services
-        </Link>
-        <Link to="/projets" activeClassName="active">
-          Formations
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          Actualités
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          L’équipe
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          Contact
-        </Link>
-        <Link to="/actus" activeClassName="active">
-          Paiement
-        </Link>
+        <Link to="/expertises">Expertises</Link>
+        <Link to="/e-services">e-Services</Link>
+        <Link to="/formations">Formations</Link>
+        <Link to="/actualites">Actualités</Link>
+        <Link to="/l-equipe">L’équipe</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/paiement">Paiement</Link>
       </StyledLinksContainer>
     </StyledNav>
   );

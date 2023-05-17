@@ -71,6 +71,12 @@ const StyledCopyrightsContainer = styled.div`
 const Navigation = () => {
   const currentYear = new Date().getFullYear();
 
+  const goToTop = () => {
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <StyledFooter>
       <img src={TLMRlogo} alt="Logo TLMR" />
@@ -104,7 +110,7 @@ const Navigation = () => {
       <StyledCopyrightsContainer>
         <p>© Touati La Motte Rouge Avocats {currentYear}</p>
         <div>
-          <button>
+          <button onClick={goToTop}>
             Retour <span>en haut</span> ↑
           </button>
         </div>
