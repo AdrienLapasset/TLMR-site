@@ -76,4 +76,15 @@ p {
     font-size: 18px;
   }
 }
+
+.small {
+  font-size: 12px;
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 14px;
+    }
+}
+
+.greyLight {
+  color: ${(props) => props.theme.colors.greyLight};
+}
 `;

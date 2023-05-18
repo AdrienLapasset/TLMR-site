@@ -23,7 +23,7 @@ const NosSolution = () => {
     <StyledContainer>
       <SectionTitle aside={"e-Services"} title={"NOS SOLUTIONS"} />
       <StaticImage
-        src="../../../../assets/imgs/placeholder.jpg"
+        src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
         quality="90"
         aspectRatio={1.44}

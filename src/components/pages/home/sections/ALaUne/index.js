@@ -43,11 +43,9 @@ const StyledColumns = styled.div`
 `;
 const StyledNews = styled.div`
   aside {
-    font-size: 12px;
     margin: 6px 0;
     @media ${(props) => props.theme.minWidth.lg} {
       margin: 12px 0;
-      font-size: 14px;
     }
   }
   h3 {
@@ -68,38 +66,38 @@ const ALaUne = () => {
       <StyledColumns>
         <StyledNews>
           <StaticImage
-            src="../../../../assets/imgs/placeholder.jpg"
+            src="../../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
           />
-          <aside>10 Octobre 2023</aside>
+          <aside className="small">10 Octobre 2023</aside>
           <h3>Refus de vente : licite ou non ?</h3>
         </StyledNews>
         <StyledNews>
           <StaticImage
-            src="../../../../assets/imgs/placeholder.jpg"
+            src="../../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
           />
-          <aside>10 Octobre 2023</aside>
+          <aside className="small">10 Octobre 2023</aside>
           <h3>
             Cadeaux, vente à prime : ce que vous pouvez faire ou ne pas faire ?
           </h3>
         </StyledNews>
         <StyledNews>
           <StaticImage
-            src="../../../../assets/imgs/placeholder.jpg"
+            src="../../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
           />
-          <aside>10 Octobre 2023</aside>
+          <aside className="small">10 Octobre 2023</aside>
           <h3>
             Comment mettre en place un MLM licite ? Nos conseils juridiques
           </h3>
         </StyledNews>
         <StyledNews>
           <StaticImage
-            src="../../../../assets/imgs/placeholder.jpg"
+            src="../../../../../assets/imgs/placeholder.jpg"
             alt="TLMR - L’excellence accessible"
           />
-          <aside>10 Octobre 2023</aside>
+          <aside className="small">10 Octobre 2023</aside>
           <h3>
             Comment mettre en place un MLM licite ? Nos conseils juridiques
           </h3>

@@ -64,7 +64,7 @@ const StyledLinksContainer = styled.div`
       width: unset;
     }
     &:first-child {
-      border-top: 0.5px solid ${(props) => props.theme.colors.greyLightest};
+      border-top: ${(props) => props.theme.border.greyLightest};
       @media ${(props) => props.theme.minWidth.lg} {
         border-top: none;
       }

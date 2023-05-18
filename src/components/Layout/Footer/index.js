@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 const StyledFooter = styled.footer`
   margin-top: 160px;
-  border-top: 0.5px solid ${(props) => props.theme.colors.black};
+  border-top: ${(props) => props.theme.border.black};
   img {
     margin: 45px 0 170px;
   }

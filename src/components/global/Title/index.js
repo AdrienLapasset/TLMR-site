@@ -6,8 +6,8 @@ const StyledH1 = styled.h1`
   font-size: ${(props) => (props.small ? "28px" : "32px")};
   font-family: "SöhneBreit Buch", sans-serif;
   text-transform: uppercase;
+  margin-bottom: 30px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-bottom: 40px;
     font-size: 45px;
   }
   @media ${(props) => props.theme.minWidth.md} {
@@ -19,9 +19,9 @@ const StyledH1 = styled.h1`
 `;
 const StyledH2 = styled.h2`
   font-size: ${(props) => (props.small ? "28px" : "32px")};
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-family: "SöhneBreit Buch", sans-serif;
-  text-transform: uppercase;
+  text-transform: ${(props) => (props.lowercase ? "none" : "uppercase")};
   @media ${(props) => props.theme.minWidth.sm} {
     margin-bottom: ${(props) => (props.small ? "60px" : "40px")};
     font-size: ${(props) => (props.small ? "35px" : "45px")};
@@ -34,9 +34,14 @@ const StyledH2 = styled.h2`
   }
 `;
 
-const Title = ({ type, small, children }) => {
+const Title = ({ type, small, lowercase, children }) => {
   if (type === "h1") return <StyledH1>{children}</StyledH1>;
-  if (type === "h2") return <StyledH2 small={small}>{children}</StyledH2>;
+  if (type === "h2")
+    return (
+      <StyledH2 small={small} lowercase={lowercase}>
+        {children}
+      </StyledH2>
+    );
 };
 
 export default Title;

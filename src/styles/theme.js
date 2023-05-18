@@ -30,6 +30,10 @@ const theme = {
     lg: "20px",
     xl: "30px",
   },
+  border: {
+    black: "0.5px solid #000000",
+    greyLightest: "0.5px solid #E4E4E4",
+  },
 };
 
 export default theme;
