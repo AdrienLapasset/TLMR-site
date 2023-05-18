@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import Title from "components/global/Title";
+import Accordion from "../Accordion";
 
 const StyledContainer = styled.div`
   margin-top: 110px;
@@ -53,7 +54,7 @@ const Expertise = ({ expertise }) => {
           __html: expertise.description,
         }}
       ></p>
-      {/* Accordion */}
+      <Accordion data={expertise.accordion} />
     </StyledContainer>
   );
 };

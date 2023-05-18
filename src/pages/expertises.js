@@ -13,23 +13,23 @@ const expertisesData = [
       "Vous accompagner dans des projets innovants est au cœur de l’ADN du Cabinet. La création et l’innovation exigent une compétence juridique spécifique pour laquelle le Cabinet Touati La Motte Rouge dispose d’un savoir-faire reconnu et d’une excellente maîtrise des enjeux en matière de propriété intellectuelle, sur les supports traditionnels comme sur les nouveaux médias et réseaux sociaux.<br/><br/>Le cabinet intervient en matière de conseil et de contentieux sur tous les volets de la propriété intellectuelle (droits d’auteur, logiciels, marques, dessins et modèles, brevets, noms de domaine, bases de données) et accompagnent les entreprises dans la sécurisation de leurs actifs immatériels mais aussi les créateurs, artistes, développeurs, musiciens et inventeurs dans la défense de leurs droits.",
     accordion: [
       {
-        sectionTitle: "Droit des Marques",
-        sectionContent:
+        title: "Droit des Marques",
+        content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
       },
       {
-        sectionTitle: " Dessins et modèles et Brevets",
-        sectionContent:
+        title: " Dessins et modèles et Brevets",
+        content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
       },
       {
-        sectionTitle: "Droits d’auteur",
-        sectionContent:
+        title: "Droits d’auteur",
+        content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
       },
       {
-        sectionTitle: "Noms de domaine",
-        sectionContent:
+        title: "Noms de domaine",
+        content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
       },
     ],
