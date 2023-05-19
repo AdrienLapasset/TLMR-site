@@ -11,8 +11,12 @@ const StyledContainer = styled(Link)`
   }
 `;
 
-const Button = ({ text, className }) => {
-  return <StyledContainer className={className}>{text}</StyledContainer>;
+const Cta = ({ type, children, className }) => {
+  return (
+    <StyledContainer as={type} className={className}>
+      {children}
+    </StyledContainer>
+  );
 };
 
-export default Button;
+export default Cta;

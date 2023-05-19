@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
-import Button from "components/global/Button";
+import Cta from "components/global/Cta";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
@@ -61,7 +61,7 @@ const ALaUne = () => {
     <StyledContainer>
       <header>
         <SectionTitle aside={"Actualités"} title={"À LA UNE"} />
-        <Button text="Toutes les actualités" />
+        <Cta>Toutes les actualités</Cta>
       </header>
       <StyledColumns>
         <StyledNews>
@@ -103,7 +103,7 @@ const ALaUne = () => {
           </h3>
         </StyledNews>
       </StyledColumns>
-      <Button className="mobile" text="Toutes les actualités" />
+      <Cta className="mobile">Toutes les actualités</Cta>
     </StyledContainer>
   );
 };

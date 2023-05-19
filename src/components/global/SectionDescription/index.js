@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Button from "components/global/Button";
+import Cta from "components/global/Cta";
 
 const StyledContainer = styled.div`
   p {
@@ -29,7 +29,7 @@ const StyledButtonsContainer = styled.div`
 
 const SectionDescription = ({ description, links, className }) => {
   const linksRender = links?.map((link) => {
-    return <Button text={link.text} />;
+    return <Cta>{link.text}</Cta>;
   });
 
   return (

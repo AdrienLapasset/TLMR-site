@@ -4,11 +4,15 @@ import Title from "components/global/Title";
 import Grid from "components/global/Grid";
 import Accordion from "../Accordion";
 import Paragraph from "components/global/Paragraph";
+import Cta from "components/global/Cta";
 
 const StyledContainer = styled.div`
-  margin-top: 110px;
+  margin-top: 150px;
   border-top: ${(props) => props.theme.border.black};
   padding-top: 5px;
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
   & > aside {
     margin-bottom: 40px;
     & > span {
@@ -76,9 +80,15 @@ const StyledUseCases = styled.div`
     }
     & > div {
       display: flex;
+      margin-bottom: 10px;
       & > aside {
         margin-right: 7px;
       }
+    }
+  }
+  button {
+    @media ${(props) => props.theme.minWidth.sm} {
+      display: none;
     }
   }
 `;
@@ -120,6 +130,7 @@ const Expertise = ({ expertise }) => {
               </div>
             ))}
           </ul>
+          <Cta type="button">Voir plus</Cta>
         </StyledUseCases>
       </StyledContentGrid>
     </StyledContainer>
