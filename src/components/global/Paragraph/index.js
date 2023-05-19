@@ -14,12 +14,22 @@ const StyleP = styled.p`
   }
 `;
 
-const Paragraph = ({ size, color, children }) => {
+const Paragraph = ({ size, color, type, children, html, className }) => {
   return (
-    <StyleP size={size} color={color}>
+    <StyleP
+      as={type}
+      size={size}
+      color={color}
+      dangerouslySetInnerHTML={html}
+      className={className}
+    >
       {children}
     </StyleP>
   );
 };
 
 export default Paragraph;
+
+Paragraph.defaultProps = {
+  type: "p",
+};

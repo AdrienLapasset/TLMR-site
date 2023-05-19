@@ -55,6 +55,9 @@ const StyledGrid = styled(Grid)`
     @media ${(props) => props.theme.minWidth.sm} {
       grid-column: 1/10;
     }
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 1/7;
+    }
     @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 1/5;
     }

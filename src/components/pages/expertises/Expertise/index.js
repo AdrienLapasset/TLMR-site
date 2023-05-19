@@ -1,21 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
 import Title from "components/global/Title";
+import Grid from "components/global/Grid";
 import Accordion from "../Accordion";
+import Paragraph from "components/global/Paragraph";
 
 const StyledContainer = styled.div`
   margin-top: 110px;
   border-top: ${(props) => props.theme.border.black};
   padding-top: 5px;
-  aside {
+  & > aside {
     margin-bottom: 40px;
-    span {
+    & > span {
       margin-left: 10px;
     }
-  }
-  & > p {
-    border-top: ${(props) => props.theme.border.black};
-    padding-top: 5px;
   }
 `;
 const StyledDot = styled.div`
@@ -25,43 +23,105 @@ const StyledDot = styled.div`
   background-color: ${(props) => props.theme.colors.black};
   border-radius: 100px;
   margin-right: 7px;
-  @media ${(props) => props.theme.minWidth.md} {
-    width: 14px;
-    height: 14px;
-    margin-right: 10px;
-  }
+`;
+const StyledParagrph = styled(Paragraph)`
+  border-top: ${(props) => props.theme.border.black};
+  padding-top: 5px;
 `;
 const StyledAccordionContainer = styled.div`
   margin-top: 40px;
   border-top: ${(props) => props.theme.border.black};
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 0;
+  }
+`;
+const StyledTitleGrid = styled(Grid)`
+  & > * {
+    grid-column: 1 / 13;
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 1 / 9;
+    }
+  }
+`;
+const StyledContentGrid = styled(Grid)`
+  display: block;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    & > * {
+      &:nth-child(1) {
+        grid-column: 1 / 7;
+      }
+      &:nth-child(2) {
+        grid-column: 7 / 13;
+        grid-row: 1 / span 2;
+      }
+      &:nth-child(3) {
+        align-self: start;
+        grid-column: 1 / 7;
+      }
+    }
+  }
+`;
+const StyledUseCases = styled.div`
+  margin-top: 40px;
+  & > h3 {
+    margin-bottom: 10px;
+  }
+  & > ul {
+    padding-top: 5px;
+    border-top: ${(props) => props.theme.border.black};
+    @media ${(props) => props.theme.minWidth.sm} {
+      column-count: 2;
+    }
+    & > div {
+      display: flex;
+      & > aside {
+        margin-right: 7px;
+      }
+    }
+  }
 `;
 
 const Expertise = ({ expertise }) => {
   return (
     <StyledContainer>
-      <Title type="h2" small lowercase>
-        {expertise.title}
-      </Title>
+      <StyledTitleGrid>
+        <Title type="h2" small lowercase>
+          {expertise.title}
+        </Title>
+      </StyledTitleGrid>
       <aside>
         <p className="small">
           <StyledDot />
           Leaders League & Le Point
           <span className="greyLight">
-            Le cabinet est classé parmis les meilleurs cabinets français pour
-            son expertise
+            Le cabinet est classé parmis les meilleurs
+            <br /> cabinets français pour son expertise
           </span>
         </p>
       </aside>
-      <p
-        dangerouslySetInnerHTML={{
-          __html: expertise.description,
-        }}
-      ></p>
-      <StyledAccordionContainer>
-        {expertise.accordion.map(({ title, content }) => (
-          <Accordion title={title} content={content} />
-        ))}
-      </StyledAccordionContainer>
+      <StyledContentGrid>
+        <StyledParagrph html={{ __html: expertise.description }} />
+        <StyledAccordionContainer>
+          {expertise.accordion.map(({ title, content }) => (
+            <Accordion title={title} content={content} />
+          ))}
+        </StyledAccordionContainer>
+        <StyledUseCases>
+          <h3>Exemples de cas traités</h3>
+          <ul>
+            {expertise.useCases.map((content) => (
+              <div>
+                <aside>→</aside>
+                <Paragraph color="greyLight" type="li">
+                  {content}
+                </Paragraph>
+              </div>
+            ))}
+          </ul>
+        </StyledUseCases>
+      </StyledContentGrid>
     </StyledContainer>
   );
 };

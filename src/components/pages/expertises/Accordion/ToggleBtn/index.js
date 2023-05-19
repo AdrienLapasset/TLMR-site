@@ -3,9 +3,6 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   margin-left: auto;
-  @media ${(props) => props.theme.minWidth.lg} {
-    display: none;
-  }
   div {
     display: flex;
     flex-direction: column;
