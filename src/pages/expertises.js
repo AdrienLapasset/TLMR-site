@@ -5,6 +5,7 @@ import Title from "components/global/Title";
 import SectionDescription from "components/global/SectionDescription";
 import Grid from "components/global/Grid";
 import Expertise from "components/pages/expertises/Expertise";
+import Dot from "components/global/Dot";
 
 const expertisesData = [
   {
@@ -44,7 +45,7 @@ const expertisesData = [
     ],
   },
   {
-    title: "Innovation, Propriété intellectuelle et industrielle",
+    title: "Droit immobilier, baux et construction",
     description:
       "Vous accompagner dans des projets innovants est au cœur de l’ADN du Cabinet. La création et l’innovation exigent une compétence juridique spécifique pour laquelle le Cabinet Touati La Motte Rouge dispose d’un savoir-faire reconnu et d’une excellente maîtrise des enjeux en matière de propriété intellectuelle, sur les supports traditionnels comme sur les nouveaux médias et réseaux sociaux.<br/><br/>Le cabinet intervient en matière de conseil et de contentieux sur tous les volets de la propriété intellectuelle (droits d’auteur, logiciels, marques, dessins et modèles, brevets, noms de domaine, bases de données) et accompagnent les entreprises dans la sécurisation de leurs actifs immatériels mais aussi les créateurs, artistes, développeurs, musiciens et inventeurs dans la défense de leurs droits.",
     accordion: [
@@ -99,6 +100,31 @@ const StyledGrid = styled(Grid)`
     }
   }
 `;
+const StyledExpertiseNav = styled.div`
+  display: none;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: block;
+    margin-top: 100px;
+    border-top: ${(props) => props.theme.border.black};
+    padding-top: 5px;
+  }
+  h3 {
+    display: none;
+    @media ${(props) => props.theme.minWidth.lg} {
+      display: block;
+    }
+  }
+`;
+const StyledExpertiseNavContainer = styled(Grid)``;
+const StyledNavLink = styled.button`
+  grid-column: ${(props) => props.index + 1} / ${(props) => props.index + 4};
+  text-align: left;
+  display: flex;
+  align-items: first baseline;
+  & > div {
+    flex: 0 0 10px;
+  }
+`;
 
 const ExpertisesPage = () => {
   return (
@@ -117,6 +143,17 @@ const ExpertisesPage = () => {
           une défense contentieuse efficace.
         </p>
       </StyledGrid>
+      <StyledExpertiseNav>
+        <h3>Compétences</h3>
+        <StyledExpertiseNavContainer>
+          {expertisesData.map(({ title }, index) => (
+            <StyledNavLink index={index * 3}>
+              <Dot />
+              {title}
+            </StyledNavLink>
+          ))}
+        </StyledExpertiseNavContainer>
+      </StyledExpertiseNav>
       {expertisesData.map((data) => (
         <Expertise expertise={data} />
       ))}

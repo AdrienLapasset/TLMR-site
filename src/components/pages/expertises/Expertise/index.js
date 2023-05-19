@@ -5,6 +5,7 @@ import Grid from "components/global/Grid";
 import Accordion from "../Accordion";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
+import Dot from "components/global/Dot";
 
 const StyledContainer = styled.div`
   margin-top: 150px;
@@ -19,14 +20,6 @@ const StyledContainer = styled.div`
       margin-left: 10px;
     }
   }
-`;
-const StyledDot = styled.div`
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: ${(props) => props.theme.colors.black};
-  border-radius: 100px;
-  margin-right: 7px;
 `;
 const StyledParagrph = styled(Paragraph)`
   border-top: ${(props) => props.theme.border.black};
@@ -103,7 +96,7 @@ const Expertise = ({ expertise }) => {
       </StyledTitleGrid>
       <aside>
         <p className="small">
-          <StyledDot />
+          <Dot />
           Leaders League & Le Point
           <span className="greyLight">
             Le cabinet est classé parmis les meilleurs
