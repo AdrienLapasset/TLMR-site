@@ -1,20 +1,30 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Grid from "components/global/Grid";
-import Title from "components/global/Title";
+import ToggleBtn from "./ToggleBtn";
 
-const StyledContainer = styled.div``;
+const StyledHeader = styled.div`
+  padding: 7px 0;
+  border-bottom: ${(props) => props.theme.border.greyLightest};
+  display: flex;
+  cursor: pointer;
+`;
 
-const Accordion = ({ data }) => {
-  const sectionsRender = data.map((section) => {
-    return (
-      <>
-        {section.title} {section.content}
-      </>
-    );
-  });
+const Accordion = ({ title, content }) => {
+  const [isSectionOpen, setSectionOpen] = useState(false);
 
-  return <StyledContainer>{sectionsRender}</StyledContainer>;
+  const toggleSection = () => {
+    setSectionOpen(!isSectionOpen);
+  };
+
+  return (
+    <>
+      <StyledHeader onClick={toggleSection}>
+        {title}
+        <ToggleBtn isSectionOpen={isSectionOpen} />
+      </StyledHeader>
+      {isSectionOpen && <p>{content}</p>}
+    </>
+  );
 };
 
 export default Accordion;

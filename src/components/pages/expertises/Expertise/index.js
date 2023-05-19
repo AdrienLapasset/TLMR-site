@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Accordion from "../Accordion";
 
@@ -32,6 +31,10 @@ const StyledDot = styled.div`
     margin-right: 10px;
   }
 `;
+const StyledAccordionContainer = styled.div`
+  margin-top: 40px;
+  border-top: ${(props) => props.theme.border.black};
+`;
 
 const Expertise = ({ expertise }) => {
   return (
@@ -54,7 +57,11 @@ const Expertise = ({ expertise }) => {
           __html: expertise.description,
         }}
       ></p>
-      <Accordion data={expertise.accordion} />
+      <StyledAccordionContainer>
+        {expertise.accordion.map(({ title, content }) => (
+          <Accordion title={title} content={content} />
+        ))}
+      </StyledAccordionContainer>
     </StyledContainer>
   );
 };
