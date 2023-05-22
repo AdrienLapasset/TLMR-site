@@ -43,6 +43,8 @@ nav {
   font-weight: 400;
   display: block;
   box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
