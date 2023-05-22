@@ -9,6 +9,8 @@ import ExpertiseData from "components/pages/expertises/data";
 import Dot from "components/global/Dot";
 import { Link, Element } from "react-scroll";
 import Paragraph from "components/global/Paragraph";
+import { StaticImage } from "gatsby-plugin-image";
+import Cta from "components/global/Cta";
 
 const StyledGrid = styled(Grid)`
   p {
@@ -29,6 +31,7 @@ const StyledExpertiseNav = styled(Grid)`
   @media ${(props) => props.theme.minWidth.md} {
     position: sticky;
     top: 73px;
+    z-index: 1;
     background-color: white;
     display: grid;
     margin-top: 100px;
@@ -117,6 +120,30 @@ const StyledNavLink = styled(Link)`
     }
   }
 `;
+const StyledSolutionsSection = styled.section`
+  border-top: ${(props) => props.theme.border.black};
+  margin-top: 300px;
+  .grid {
+    & > div {
+      grid-column: 1 / span 6;
+      &:last-child {
+        grid-column: 7 / span 6;
+      }
+      & > div {
+        column-count: 2;
+        @media ${(props) => props.theme.minWidth.sm} {
+          grid-column-gap: ${(props) => props.theme.columnGap.lg};
+        }
+        @media ${(props) => props.theme.minWidth.xl} {
+          grid-column-gap: ${(props) => props.theme.columnGap.xl};
+        }
+        a {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+`;
 
 const ExpertisesPage = () => {
   return (
@@ -155,6 +182,42 @@ const ExpertisesPage = () => {
           <Expertise expertise={data} id={index} />
         </Element>
       ))}
+      <StyledSolutionsSection>
+        <Grid className="grid">
+          <div>
+            <Title type="h2">NOS SOLUTIONS</Title>
+            <div>
+              <StaticImage
+                src="../assets/imgs/placeholder.jpg"
+                alt="TLMR - L’excellence accessible"
+              />
+              <Paragraph>
+                Nous accompagnons au quotidien des entreprises qui innovent et
+                avec lesquelles nous parlons le même langage. Le cabinet TLMR a
+                développé une suite d’e-services inédite permettant d’optimiser
+                la relation et le service rendu au client.
+              </Paragraph>
+              <Cta>En savoir plus</Cta>
+            </div>
+          </div>
+          <div>
+            <Title type="h2">VOUS FORMER</Title>
+            <div>
+              <StaticImage
+                src="../assets/imgs/placeholder.jpg"
+                alt="TLMR - L’excellence accessible"
+              />
+              <Paragraph>
+                La formation juridique et la transmission de notre savoir-faire
+                sont au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge
+                et Jean Philippe Touati sont les premiers avocats infopreneurs.
+                Ils ont fondé le Programme de formation en ligne Infolawyers™.
+              </Paragraph>
+              <Cta>En savoir plus</Cta>
+            </div>
+          </div>
+        </Grid>
+      </StyledSolutionsSection>
     </Layout>
   );
 };
