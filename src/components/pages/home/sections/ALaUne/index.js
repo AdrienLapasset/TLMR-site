@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
 import Cta from "components/global/Cta";
+import Title from "components/global/Title";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
@@ -56,11 +57,15 @@ const StyledNews = styled.div`
   }
 `;
 
-const ALaUne = () => {
+const ALaUne = ({ className, home }) => {
   return (
-    <StyledContainer>
+    <StyledContainer className={className}>
       <header>
-        <SectionTitle aside={"Actualités"} title={"À LA UNE"} />
+        {home ? (
+          <SectionTitle aside={"Actualités"} title={"À LA UNE"} />
+        ) : (
+          <Title>À LA UNE</Title>
+        )}
         <Cta>Toutes les actualités</Cta>
       </header>
       <StyledColumns>

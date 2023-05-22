@@ -11,6 +11,7 @@ import { Link, Element } from "react-scroll";
 import Paragraph from "components/global/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
 import Cta from "components/global/Cta";
+import ALaUne from "components/pages/home/sections/ALaUne";
 
 const StyledGrid = styled(Grid)`
   p {
@@ -144,6 +145,10 @@ const StyledSolutionsSection = styled.section`
     }
   }
 `;
+const StyledALaUne = styled(ALaUne)`
+  border-top: ${(props) => props.theme.border.black};
+  margin-top: 300px;
+`;
 
 const ExpertisesPage = () => {
   return (
@@ -218,6 +223,7 @@ const ExpertisesPage = () => {
           </div>
         </Grid>
       </StyledSolutionsSection>
+      <StyledALaUne />
     </Layout>
   );
 };

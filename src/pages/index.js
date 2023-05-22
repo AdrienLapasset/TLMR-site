@@ -16,7 +16,7 @@ const IndexPage = () => {
       <VousProteger />
       <NosSolution />
       <VousFormer />
-      <ALaUne />
+      <ALaUne home />
       <VosExperts />
       <VosTemoignages />
       <DansLaPresse />
