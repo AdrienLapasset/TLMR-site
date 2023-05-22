@@ -16,6 +16,8 @@ const StyledContainer = styled.div`
   }
   & > aside {
     margin-bottom: 40px;
+    display: flex;
+    align-items: baseline;
     & > span {
       margin-left: 10px;
     }
@@ -95,14 +97,14 @@ const Expertise = ({ expertise, id }) => {
         </Title>
       </StyledTitleGrid>
       <aside>
-        <p className="small">
-          <Dot />
-          Leaders League & Le Point
-          <span className="greyLight">
+        <Dot />
+        <Paragraph size="sm">
+          Leaders League & Le Point&nbsp;
+          <Paragraph size="sm" type="span" color="greyLight">
             Le cabinet est classé parmis les meilleurs
             <br /> cabinets français pour son expertise
-          </span>
-        </p>
+          </Paragraph>
+        </Paragraph>
       </aside>
       <StyledContentGrid>
         <StyledParagrph html={{ __html: expertise.description }} />
