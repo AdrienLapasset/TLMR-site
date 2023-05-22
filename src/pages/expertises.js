@@ -125,13 +125,25 @@ const StyledSolutionsSection = styled.section`
   border-top: ${(props) => props.theme.border.black};
   margin-top: 300px;
   .grid {
+    display: block;
+    @media ${(props) => props.theme.minWidth.md} {
+      display: grid;
+    }
     & > div {
       grid-column: 1 / span 6;
       &:last-child {
         grid-column: 7 / span 6;
+        border-top: ${(props) => props.theme.border.black};
+        @media ${(props) => props.theme.minWidth.sm} {
+          border-top: none;
+        }
       }
       & > div {
-        column-count: 2;
+        margin-bottom: 90px;
+        @media ${(props) => props.theme.minWidth.sm} {
+          column-count: 2;
+          margin-bottom: 0;
+        }
         @media ${(props) => props.theme.minWidth.sm} {
           grid-column-gap: ${(props) => props.theme.columnGap.lg};
         }
@@ -147,7 +159,18 @@ const StyledSolutionsSection = styled.section`
 `;
 const StyledALaUne = styled(ALaUne)`
   border-top: ${(props) => props.theme.border.black};
-  margin-top: 300px;
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 100px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-top: 150px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    margin-top: 170px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    margin-top: 300px;
+  }
 `;
 
 const ExpertisesPage = () => {
