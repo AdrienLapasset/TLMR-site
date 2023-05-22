@@ -7,11 +7,6 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-root-import",
     {
       resolve: "gatsby-source-sanity",
       options: {
@@ -19,5 +14,18 @@ module.exports = {
         dataset: "production",
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+        stripHash: true,
+      },
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-root-import",
+    "gatsby-plugin-anchor-links",
   ],
 };

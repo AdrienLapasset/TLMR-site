@@ -6,6 +6,7 @@ import SectionDescription from "components/global/SectionDescription";
 import Grid from "components/global/Grid";
 import Expertise from "components/pages/expertises/Expertise";
 import Dot from "components/global/Dot";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const expertisesData = [
   {
@@ -116,7 +117,7 @@ const StyledExpertiseNav = styled.div`
   }
 `;
 const StyledExpertiseNavContainer = styled(Grid)``;
-const StyledNavLink = styled.button`
+const StyledNavLink = styled(AnchorLink)`
   grid-column: ${(props) => props.index + 1} / ${(props) => props.index + 4};
   text-align: left;
   display: flex;
@@ -147,15 +148,20 @@ const ExpertisesPage = () => {
         <h3>Compétences</h3>
         <StyledExpertiseNavContainer>
           {expertisesData.map(({ title }, index) => (
-            <StyledNavLink index={index * 3}>
+            <StyledNavLink
+              index={index * 3}
+              offset={-100}
+              stripHash
+              to={"/expertises#expertise" + index}
+            >
               <Dot />
               {title}
             </StyledNavLink>
           ))}
         </StyledExpertiseNavContainer>
       </StyledExpertiseNav>
-      {expertisesData.map((data) => (
-        <Expertise expertise={data} />
+      {expertisesData.map((data, index) => (
+        <Expertise expertise={data} id={index} />
       ))}
     </Layout>
   );

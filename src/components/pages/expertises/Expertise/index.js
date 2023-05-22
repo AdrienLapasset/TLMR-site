@@ -86,9 +86,9 @@ const StyledUseCases = styled.div`
   }
 `;
 
-const Expertise = ({ expertise }) => {
+const Expertise = ({ expertise, id }) => {
   return (
-    <StyledContainer>
+    <StyledContainer id={"expertise" + id}>
       <StyledTitleGrid>
         <Title type="h2" small lowercase>
           {expertise.title}
