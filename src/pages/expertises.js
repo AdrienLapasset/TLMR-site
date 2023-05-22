@@ -7,6 +7,15 @@ import Grid from "components/global/Grid";
 import Expertise from "components/pages/expertises/Expertise";
 import Dot from "components/global/Dot";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 const expertisesData = [
   {
@@ -320,10 +329,16 @@ const StyledGrid = styled(Grid)`
 const StyledExpertiseNav = styled(Grid)`
   display: none;
   @media ${(props) => props.theme.minWidth.md} {
+    position: sticky;
+    top: 73px;
+    background-color: white;
     display: grid;
     margin-top: 100px;
     border-top: ${(props) => props.theme.border.black};
-    padding-top: 5px;
+    padding: 5px 0 10px;
+  }
+  @media ${(props) => props.theme.minWidth.sm} {
+    top: 69px;
   }
   h3 {
     display: none;
@@ -333,10 +348,23 @@ const StyledExpertiseNav = styled(Grid)`
     }
   }
 `;
-const StyledNavLink = styled(AnchorLink)`
+const StyledNavLink = styled(Link)`
   text-align: left;
   display: flex;
   align-items: first baseline;
+  color: ${(props) => props.theme.colors.greyLight};
+
+  &.active,
+  &:hover {
+    color: ${(props) => props.theme.colors.black};
+    & > div {
+      background-color: ${(props) => props.theme.colors.black};
+    }
+  }
+  & > div {
+    flex: 0 0 10px;
+    background-color: ${(props) => props.theme.colors.greyLight};
+  }
   &:nth-child(2) {
     grid-column: 1 / span 3;
     @media ${(props) => props.theme.minWidth.lg} {
@@ -390,9 +418,6 @@ const StyledNavLink = styled(AnchorLink)`
       grid-column: 11 / span 2;
     }
   }
-  & > div {
-    flex: 0 0 10px;
-  }
 `;
 
 const ExpertisesPage = () => {
@@ -416,10 +441,11 @@ const ExpertisesPage = () => {
         <h3>Compétences</h3>
         {expertisesData.map(({ title }, index) => (
           <StyledNavLink
-            index={index * 2}
-            offset={-100}
-            stripHash
-            to={"/expertises#expertise" + index}
+            offset={-200}
+            to={index}
+            activeClass="active"
+            smooth
+            spy
           >
             <Dot />
             {title}
@@ -427,7 +453,9 @@ const ExpertisesPage = () => {
         ))}
       </StyledExpertiseNav>
       {expertisesData.map((data, index) => (
-        <Expertise expertise={data} id={index} />
+        <Element name={index}>
+          <Expertise expertise={data} id={index} />
+        </Element>
       ))}
     </Layout>
   );
