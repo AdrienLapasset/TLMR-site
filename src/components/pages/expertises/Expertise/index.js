@@ -32,7 +32,6 @@ const StyledParagrph = styled(Paragraph)`
 `;
 const StyledAccordionContainer = styled.div`
   margin-top: 40px;
-  border-bottom: ${(props) => props.theme.border.black};
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 0;
   }

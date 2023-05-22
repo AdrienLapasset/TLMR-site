@@ -3,6 +3,11 @@ import styled from "styled-components";
 import ToggleBtn from "./ToggleBtn";
 import Paragraph from "components/global/Paragraph";
 
+const StyledContainer = styled.section`
+  &:last-child {
+    border-bottom: ${(props) => props.theme.border.black};
+  }
+`;
 const StyledHeader = styled.div`
   padding: 7px 0;
   border-top: ${(props) => props.theme.border.black};
@@ -31,7 +36,7 @@ const Accordion = ({ title, content }) => {
   };
 
   return (
-    <>
+    <StyledContainer>
       <StyledHeader onClick={toggleSection}>
         {title}
         <ToggleBtn isSectionOpen={isSectionOpen} />
@@ -43,7 +48,7 @@ const Accordion = ({ title, content }) => {
       >
         <Paragraph color={"greyLight"}>{content}</Paragraph>
       </StyledContent>
-    </>
+    </StyledContainer>
   );
 };
 
