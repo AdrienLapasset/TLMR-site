@@ -17,14 +17,19 @@ const StyledContainer = styled.div`
     }
   }
 `;
+const StyledTitle = styled(Title)`
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-bottom: 60px;
+  }
+`;
 
 const SectionTitle = ({ aside, title, small, className }) => {
   return (
     <StyledContainer className={className}>
       <aside>{aside}</aside>
-      <Title type={"h2"} small={small}>
+      <StyledTitle type={"h2"} small={small} className={className}>
         {title}
-      </Title>
+      </StyledTitle>
     </StyledContainer>
   );
 };

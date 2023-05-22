@@ -23,7 +23,6 @@ const StyledH2 = styled.h2`
   font-family: "SöhneBreit Buch", sans-serif;
   text-transform: ${(props) => (props.lowercase ? "none" : "uppercase")};
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-bottom: ${(props) => (props.small ? "60px" : "40px")};
     font-size: ${(props) => (props.small ? "35px" : "45px")};
   }
   @media ${(props) => props.theme.minWidth.md} {
@@ -34,11 +33,12 @@ const StyledH2 = styled.h2`
   }
 `;
 
-const Title = ({ type, small, lowercase, children }) => {
-  if (type === "h1") return <StyledH1>{children}</StyledH1>;
+const Title = ({ type, small, lowercase, children, className }) => {
+  if (type === "h1")
+    return <StyledH1 className={className}>{children}</StyledH1>;
   if (type === "h2")
     return (
-      <StyledH2 small={small} lowercase={lowercase}>
+      <StyledH2 className={className} small={small} lowercase={lowercase}>
         {children}
       </StyledH2>
     );

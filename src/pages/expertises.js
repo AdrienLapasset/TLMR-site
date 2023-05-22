@@ -51,7 +51,7 @@ const StyledNavLink = styled(Link)`
   display: flex;
   align-items: first baseline;
   color: ${(props) => props.theme.colors.greyLight};
-
+  margin-bottom: 10px;
   &.active,
   &:hover {
     color: ${(props) => props.theme.colors.black};

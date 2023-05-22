@@ -18,6 +18,9 @@ const StyledContainer = styled.div`
     margin-bottom: 40px;
     display: flex;
     align-items: baseline;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 60px;
+    }
     & > span {
       margin-left: 10px;
     }
@@ -29,7 +32,7 @@ const StyledParagrph = styled(Paragraph)`
 `;
 const StyledAccordionContainer = styled.div`
   margin-top: 40px;
-  border-top: ${(props) => props.theme.border.black};
+  border-bottom: ${(props) => props.theme.border.black};
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 0;
   }

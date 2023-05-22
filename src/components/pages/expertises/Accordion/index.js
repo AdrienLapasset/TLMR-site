@@ -5,12 +5,11 @@ import Paragraph from "components/global/Paragraph";
 
 const StyledHeader = styled.div`
   padding: 7px 0;
-  border-bottom: ${(props) => props.theme.border.greyLightest};
+  border-top: ${(props) => props.theme.border.black};
   display: flex;
   cursor: pointer;
 `;
 const StyledContent = styled.div`
-  padding-top: ${(props) => (props.isSectionOpen ? "10px" : "0")};
   padding-bottom: ${(props) => (props.isSectionOpen ? "10px" : "0")};
   padding-left: 10px;
   padding-right: 10px;
