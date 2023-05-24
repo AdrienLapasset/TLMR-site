@@ -176,7 +176,7 @@ const StyledALaUne = styled(ALaUne)`
 const ExpertisesPage = () => {
   return (
     <Layout>
-      <Title type="h1">Expertises</Title>
+      <Title as="h1">Expertises</Title>
       <SectionDescription
         description={
           "Le cabinet Touati La Motte Rouge répond à des problématiques diverses avec rigueur et pragmatisme. Dans chaque domaine d’expertise, vous disposez de l’accompagnement et de l’expérience de l’associé qui traite de manière réactive, accessible et opérationnelle votre dossier."
@@ -213,7 +213,7 @@ const ExpertisesPage = () => {
       <StyledSolutionsSection>
         <Grid className="grid">
           <div>
-            <Title type="h2">NOS SOLUTIONS</Title>
+            <Title as="h2">NOS SOLUTIONS</Title>
             <div>
               <StaticImage
                 src="../assets/imgs/placeholder.jpg"
@@ -229,7 +229,7 @@ const ExpertisesPage = () => {
             </div>
           </div>
           <div>
-            <Title type="h2">VOUS FORMER</Title>
+            <Title as="h2">VOUS FORMER</Title>
             <div>
               <StaticImage
                 src="../assets/imgs/placeholder.jpg"

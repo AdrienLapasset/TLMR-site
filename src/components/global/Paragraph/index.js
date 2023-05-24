@@ -35,10 +35,10 @@ const StyleP = styled.p`
   }
 `;
 
-const Paragraph = ({ size, color, type, children, html, className }) => {
+const Paragraph = ({ size, color, type, children, html, className, as }) => {
   return (
     <StyleP
-      as={type}
+      as={as}
       size={size}
       color={color}
       dangerouslySetInnerHTML={html}

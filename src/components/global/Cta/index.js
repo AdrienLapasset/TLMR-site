@@ -11,9 +11,9 @@ const StyledContainer = styled(Link)`
   }
 `;
 
-const Cta = ({ type, children, className }) => {
+const Cta = ({ as, children, className }) => {
   return (
-    <StyledContainer as={type} className={className}>
+    <StyledContainer as={as} className={className}>
       {children}
     </StyledContainer>
   );

@@ -97,7 +97,7 @@ const Expertise = ({ expertise, id }) => {
   return (
     <StyledContainer id={"expertise" + id}>
       <StyledTitleGrid>
-        <Title type="h2" small lowercase>
+        <Title as="h2" small lowercase>
           {expertise.title}
         </Title>
       </StyledTitleGrid>
@@ -105,7 +105,7 @@ const Expertise = ({ expertise, id }) => {
         <Dot />
         <Paragraph size="sm">
           Leaders League & Le Point&nbsp;
-          <Paragraph size="sm" type="span" color="greyLight">
+          <Paragraph size="sm" as="span" color="greyLight">
             Le cabinet est classé parmis les meilleurs
             <br /> cabinets français pour son expertise
           </Paragraph>
@@ -131,13 +131,13 @@ const Expertise = ({ expertise, id }) => {
             {expertise.useCases.map((content) => (
               <div>
                 <aside>→</aside>
-                <Paragraph color="greyLight" type="li">
+                <Paragraph color="greyLight" as="li">
                   {content}
                 </Paragraph>
               </div>
             ))}
           </ul>
-          <Cta type="button">Voir plus</Cta>
+          <Cta as="button">Voir plus</Cta>
         </StyledUseCases>
       </StyledContentGrid>
     </StyledContainer>

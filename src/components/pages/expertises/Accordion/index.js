@@ -38,7 +38,9 @@ const Accordion = ({ title, content }) => {
   return (
     <StyledContainer>
       <StyledHeader onClick={toggleSection}>
-        {title}
+        <Paragraph size="lg" as="h3">
+          {title}
+        </Paragraph>
         <ToggleBtn isSectionOpen={isSectionOpen} />
       </StyledHeader>
       <StyledContent
