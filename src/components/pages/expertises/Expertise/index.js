@@ -133,7 +133,7 @@ const Expertise = ({ expertise, id }) => {
     } else {
       setUseCases(expertise.useCases);
     }
-  }, [isSeeMoreUseCases]);
+  }, [isSeeMoreUseCases, expertise.useCases, useCases, screenWidth]);
 
   const handleSeeMoreUseCases = () => {
     setIsSeeMoreUseCases(!isSeeMoreUseCases);
@@ -182,9 +182,11 @@ const Expertise = ({ expertise, id }) => {
               </div>
             ))}
           </ul>
-          <Cta as="button" onClick={handleSeeMoreUseCases}>
-            Voir plus
-          </Cta>
+          {expertise.useCases.length > 5 && (
+            <Cta as="button" onClick={handleSeeMoreUseCases}>
+              Voir plus
+            </Cta>
+          )}
         </StyledUseCases>
         {expertise.additionalSection && (
           <StyledAdditionalSection>
