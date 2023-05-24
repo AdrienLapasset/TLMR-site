@@ -10,7 +10,7 @@ import Dot from "components/global/Dot";
 const StyledContainer = styled.div`
   margin-top: 150px;
   border-top: ${(props) => props.theme.border.black};
-  padding-top: 5px;
+  padding-top: 7px;
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 130px;
   }
@@ -26,9 +26,10 @@ const StyledContainer = styled.div`
     }
   }
 `;
-const StyledParagrph = styled(Paragraph)`
-  border-top: ${(props) => props.theme.border.black};
-  padding-top: 5px;
+const StyledParagraph = styled(Paragraph)`
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 `;
 const StyledAccordionContainer = styled.div`
   margin-top: 40px;
@@ -52,6 +53,8 @@ const StyledContentGrid = styled(Grid)`
     & > * {
       &:nth-child(1) {
         grid-column: 1 / 7;
+        border-top: ${(props) => props.theme.border.black};
+        padding-top: 7px;
       }
       &:nth-child(2) {
         grid-column: 7 / 13;
@@ -70,14 +73,14 @@ const StyledUseCases = styled.div`
     margin-bottom: 10px;
   }
   & > ul {
-    padding-top: 5px;
+    padding-top: 7px;
     border-top: ${(props) => props.theme.border.black};
     @media ${(props) => props.theme.minWidth.sm} {
       column-count: 2;
     }
     & > div {
       display: flex;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       & > aside {
         margin-right: 7px;
       }
@@ -109,7 +112,14 @@ const Expertise = ({ expertise, id }) => {
         </Paragraph>
       </aside>
       <StyledContentGrid>
-        <StyledParagrph html={{ __html: expertise.description }} />
+        <div>
+          {expertise.description.map((paragraph) => (
+            <StyledParagraph
+              html={{ __html: paragraph }}
+              size="xl"
+            ></StyledParagraph>
+          ))}
+        </div>
         <StyledAccordionContainer>
           {expertise.accordion.map(({ title, content }) => (
             <Accordion title={title} content={content} />
