@@ -35,7 +35,7 @@ const StyleP = styled.p`
   }
 `;
 
-const Paragraph = ({ size, color, type, children, html, className, as }) => {
+const Paragraph = ({ size, color, children, html, className, as }) => {
   return (
     <StyleP
       as={as}

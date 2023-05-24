@@ -5,7 +5,7 @@ import Title from "components/global/Title";
 import SectionDescription from "components/global/SectionDescription";
 import Grid from "components/global/Grid";
 import Expertise from "components/pages/expertises/Expertise";
-import ExpertiseData from "components/pages/expertises/data";
+import ExpertisesData from "components/pages/expertises/data";
 import Dot from "components/global/Dot";
 import { Link, Element } from "react-scroll";
 import Paragraph from "components/global/Paragraph";
@@ -192,11 +192,11 @@ const ExpertisesPage = () => {
       </StyledGrid>
       <StyledExpertiseNav>
         <h3>Compétences</h3>
-        {ExpertiseData.map(({ title }, index) => (
+        {ExpertisesData.map(({ title }, index) => (
           <StyledNavLink
             key={index}
             offset={-200}
-            to={index}
+            to={title}
             activeClass="active"
             smooth
             spy
@@ -206,9 +206,9 @@ const ExpertisesPage = () => {
           </StyledNavLink>
         ))}
       </StyledExpertiseNav>
-      {ExpertiseData.map((data, index) => (
-        <Element key={index} name={index}>
-          <Expertise expertise={data} id={index} />
+      {ExpertisesData.map((expertise, index) => (
+        <Element key={index} name={expertise.title}>
+          <Expertise expertise={expertise} />
         </Element>
       ))}
       <StyledSolutionsSection>

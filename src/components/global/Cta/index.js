@@ -11,9 +11,15 @@ const StyledContainer = styled(Link)`
   }
 `;
 
-const Cta = ({ as, children, className, onClick }) => {
+const Cta = ({ as, children, className, onClick, key }) => {
   return (
-    <StyledContainer as={as} className={className} onClick={() => onClick()}>
+    <StyledContainer
+      key={key}
+      to="/"
+      as={as}
+      className={className}
+      onClick={() => onClick()}
+    >
       {children}
     </StyledContainer>
   );

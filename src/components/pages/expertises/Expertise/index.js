@@ -120,27 +120,26 @@ const StyledAdditionalSection = styled(Grid)`
   }
 `;
 
-const Expertise = ({ expertise, id }) => {
+const Expertise = ({ expertise, key }) => {
   const [useCases, setUseCases] = useState(expertise.useCases);
   const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(false);
-  const screenWidth = window.innerWidth;
 
   useEffect(() => {
+    const screenWidth = window.innerWidth;
     if (screenWidth < 768) {
+      setUseCases(useCases.slice(0, 5));
       isSeeMoreUseCases
         ? setUseCases(expertise.useCases)
         : setUseCases(useCases.slice(0, 5));
-    } else {
-      setUseCases(expertise.useCases);
     }
-  }, [isSeeMoreUseCases, expertise.useCases, useCases, screenWidth]);
+  }, [isSeeMoreUseCases]);
 
   const handleSeeMoreUseCases = () => {
     setIsSeeMoreUseCases(!isSeeMoreUseCases);
   };
 
   return (
-    <StyledContainer id={"expertise" + id}>
+    <StyledContainer key={key}>
       <StyledTitleGrid>
         <Title as="h2" small lowercase>
           {expertise.title}
@@ -158,22 +157,22 @@ const Expertise = ({ expertise, id }) => {
       </StyledPoint>
       <StyledContentGrid>
         <div>
-          {expertise.description.map((paragraph, index) => (
+          {expertise.description.map((paragraph) => (
             <StyledParagraph
-              key={index}
+              key={paragraph}
               html={{ __html: paragraph }}
               size="xl"
             ></StyledParagraph>
           ))}
         </div>
         <StyledAccordionContainer>
-          {expertise.accordion.map(({ title, content, index }) => (
-            <Accordion key={index} title={title} content={content} />
+          {expertise.accordion.map(({ title, content }) => (
+            <Accordion key={title} title={title} content={content} />
           ))}
         </StyledAccordionContainer>
         <StyledUseCases>
           <h3>Exemples de cas traités</h3>
-          <ul isSeeMoreUseCases={isSeeMoreUseCases}>
+          <ul>
             {useCases.map((content, index) => (
               <div key={index}>
                 <aside>→</aside>
@@ -197,8 +196,8 @@ const Expertise = ({ expertise, id }) => {
                 {expertise.additionalSection.title}
               </Paragraph>
             </StyledPoint>
-            {expertise.additionalSection.description.map((paragraph, index) => (
-              <Paragraph key={index} size="md">
+            {expertise.additionalSection.description.map((paragraph) => (
+              <Paragraph key={paragraph} size="md">
                 {paragraph}
               </Paragraph>
             ))}
