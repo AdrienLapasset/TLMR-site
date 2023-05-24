@@ -14,16 +14,16 @@ const StyledContainer = styled.div`
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 130px;
   }
-  & > aside {
-    margin-bottom: 40px;
-    display: flex;
-    align-items: baseline;
-    @media ${(props) => props.theme.minWidth.sm} {
-      margin-bottom: 60px;
-    }
-    & > span {
-      margin-left: 10px;
-    }
+`;
+const StyledPoint = styled.aside`
+  margin-bottom: 40px;
+  display: flex;
+  align-items: baseline;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-bottom: 60px;
+  }
+  & > span {
+    margin-left: 10px;
   }
 `;
 const StyledParagraph = styled(Paragraph)`
@@ -92,6 +92,29 @@ const StyledUseCases = styled.div`
     }
   }
 `;
+const StyledAdditionalSection = styled(Grid)`
+  border-top: ${(props) => props.theme.border.black};
+  padding-top: 7px;
+  grid-column: 1 / span 12;
+  display: grid;
+  margin-top: 70px;
+
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 100px;
+  }
+  aside {
+    margin-bottom: 25px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      grid-column: 1 / span 6;
+    }
+  }
+  p {
+    margin-bottom: 20px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      grid-column: 7 / span 6;
+    }
+  }
+`;
 
 const Expertise = ({ expertise, id }) => {
   return (
@@ -101,7 +124,7 @@ const Expertise = ({ expertise, id }) => {
           {expertise.title}
         </Title>
       </StyledTitleGrid>
-      <aside>
+      <StyledPoint>
         <Dot />
         <Paragraph size="sm">
           Leaders League & Le Point&nbsp;
@@ -110,7 +133,7 @@ const Expertise = ({ expertise, id }) => {
             <br /> cabinets français pour son expertise
           </Paragraph>
         </Paragraph>
-      </aside>
+      </StyledPoint>
       <StyledContentGrid>
         <div>
           {expertise.description.map((paragraph) => (
@@ -139,6 +162,19 @@ const Expertise = ({ expertise, id }) => {
           </ul>
           <Cta as="button">Voir plus</Cta>
         </StyledUseCases>
+        {expertise.additionalSection && (
+          <StyledAdditionalSection>
+            <StyledPoint>
+              <Dot />
+              <Paragraph size="md" as="h3">
+                {expertise.additionalSection.title}
+              </Paragraph>
+            </StyledPoint>
+            {expertise.additionalSection.description.map((paragraph) => (
+              <Paragraph size="md">{paragraph}</Paragraph>
+            ))}
+          </StyledAdditionalSection>
+        )}
       </StyledContentGrid>
     </StyledContainer>
   );
