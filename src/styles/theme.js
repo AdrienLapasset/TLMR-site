@@ -13,14 +13,6 @@ const theme = {
     xl: `(min-width: 1440px)`,
     xxl: `(min-width: 1728px)`,
   },
-  layoutWidth: {
-    xs: "100%",
-    sm: "768px",
-    md: "1024px",
-    lg: "1280px",
-    xl: "1440px",
-    xxl: "1728px",
-  },
   cubicBezier: {
     base: "cubic-bezier(.25, .8, .25, 1)",
     bounce: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",

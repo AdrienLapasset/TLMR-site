@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Title from "components/global/Title";
 import Grid from "components/global/Grid";
@@ -80,13 +80,17 @@ const StyledUseCases = styled.div`
     }
     & > div {
       display: flex;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        margin-bottom: 15px;
+      }
       & > aside {
         margin-right: 7px;
       }
     }
   }
   button {
+    margin-left: 17px;
     @media ${(props) => props.theme.minWidth.sm} {
       display: none;
     }
@@ -117,6 +121,24 @@ const StyledAdditionalSection = styled(Grid)`
 `;
 
 const Expertise = ({ expertise, id }) => {
+  const [useCases, setUseCases] = useState(expertise.useCases);
+  const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(false);
+  const screenWidth = window.innerWidth;
+
+  useEffect(() => {
+    if (screenWidth < 768) {
+      isSeeMoreUseCases
+        ? setUseCases(expertise.useCases)
+        : setUseCases(useCases.slice(0, 5));
+    } else {
+      setUseCases(expertise.useCases);
+    }
+  }, [isSeeMoreUseCases]);
+
+  const handleSeeMoreUseCases = () => {
+    setIsSeeMoreUseCases(!isSeeMoreUseCases);
+  };
+
   return (
     <StyledContainer id={"expertise" + id}>
       <StyledTitleGrid>
@@ -150,8 +172,8 @@ const Expertise = ({ expertise, id }) => {
         </StyledAccordionContainer>
         <StyledUseCases>
           <h3>Exemples de cas traités</h3>
-          <ul>
-            {expertise.useCases.map((content) => (
+          <ul isSeeMoreUseCases={isSeeMoreUseCases}>
+            {useCases.map((content) => (
               <div>
                 <aside>→</aside>
                 <Paragraph color="greyLight" as="li">
@@ -160,7 +182,9 @@ const Expertise = ({ expertise, id }) => {
               </div>
             ))}
           </ul>
-          <Cta as="button">Voir plus</Cta>
+          <Cta as="button" onClick={handleSeeMoreUseCases}>
+            Voir plus
+          </Cta>
         </StyledUseCases>
         {expertise.additionalSection && (
           <StyledAdditionalSection>
