@@ -47,9 +47,9 @@ const VosTemoignages = () => {
     },
   ];
 
-  const TestimoniesRender = testimoniesList.map((testimony) => {
+  const TestimoniesRender = testimoniesList.map((testimony, index) => {
     return (
-      <div>
+      <div key={index}>
         <p>« {testimony.text} »</p>
         <aside>{testimony.author}</aside>
       </div>

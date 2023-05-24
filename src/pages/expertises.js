@@ -194,6 +194,7 @@ const ExpertisesPage = () => {
         <h3>Compétences</h3>
         {ExpertiseData.map(({ title }, index) => (
           <StyledNavLink
+            key={index}
             offset={-200}
             to={index}
             activeClass="active"
@@ -206,7 +207,7 @@ const ExpertisesPage = () => {
         ))}
       </StyledExpertiseNav>
       {ExpertiseData.map((data, index) => (
-        <Element name={index}>
+        <Element key={index} name={index}>
           <Expertise expertise={data} id={index} />
         </Element>
       ))}

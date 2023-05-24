@@ -81,8 +81,8 @@ const logosList = [
 ];
 
 const DansLaPresse = () => {
-  const logosRender = logosList.map((logo) => {
-    return <img src={logo.name} alt={logo.alt} />;
+  const logosRender = logosList.map((logo, index) => {
+    return <img key={index} src={logo.name} alt={logo.alt} />;
   });
 
   return (

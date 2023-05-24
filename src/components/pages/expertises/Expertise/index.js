@@ -158,23 +158,24 @@ const Expertise = ({ expertise, id }) => {
       </StyledPoint>
       <StyledContentGrid>
         <div>
-          {expertise.description.map((paragraph) => (
+          {expertise.description.map((paragraph, index) => (
             <StyledParagraph
+              key={index}
               html={{ __html: paragraph }}
               size="xl"
             ></StyledParagraph>
           ))}
         </div>
         <StyledAccordionContainer>
-          {expertise.accordion.map(({ title, content }) => (
-            <Accordion title={title} content={content} />
+          {expertise.accordion.map(({ title, content, index }) => (
+            <Accordion key={index} title={title} content={content} />
           ))}
         </StyledAccordionContainer>
         <StyledUseCases>
           <h3>Exemples de cas traités</h3>
           <ul isSeeMoreUseCases={isSeeMoreUseCases}>
-            {useCases.map((content) => (
-              <div>
+            {useCases.map((content, index) => (
+              <div key={index}>
                 <aside>→</aside>
                 <Paragraph color="greyLight" as="li">
                   {content}
@@ -196,8 +197,10 @@ const Expertise = ({ expertise, id }) => {
                 {expertise.additionalSection.title}
               </Paragraph>
             </StyledPoint>
-            {expertise.additionalSection.description.map((paragraph) => (
-              <Paragraph size="md">{paragraph}</Paragraph>
+            {expertise.additionalSection.description.map((paragraph, index) => (
+              <Paragraph key={index} size="md">
+                {paragraph}
+              </Paragraph>
             ))}
           </StyledAdditionalSection>
         )}

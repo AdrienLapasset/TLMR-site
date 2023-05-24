@@ -29,7 +29,7 @@ const StyledButtonsContainer = styled.div`
 
 const SectionDescription = ({ description, links, className }) => {
   const linksRender = links?.map((link) => {
-    return <Cta>{link.text}</Cta>;
+    return <Cta key={link.text}>{link.text}</Cta>;
   });
 
   return (
