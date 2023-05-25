@@ -18,13 +18,13 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ isNavHidden, children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <StyledContainer>
-          <Navigation />
+          <Navigation isNavHidden={isNavHidden} />
           {children}
           <Footer />
         </StyledContainer>

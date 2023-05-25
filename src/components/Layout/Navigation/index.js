@@ -5,7 +5,8 @@ import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
 
 const StyledNav = styled.nav`
-  transition: all 0.4s;
+  transition: all ${(props) => props.theme.transitionTime};
+  ${(props) => props.theme.cubicBezier.base};
   height: ${(props) => (props.isNavOpen ? "100vh" : "54px")};
   position: sticky;
   top: 0;
@@ -19,6 +20,8 @@ const StyledNav = styled.nav`
     padding: 21px 0;
   }
   @media ${(props) => props.theme.minWidth.lg} {
+    transform: ${(props) =>
+      props.isNavHidden ? "translateY(-69px)" : "translateY(0px)"};
     height: unset;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -77,7 +80,7 @@ const StyledMobileLayout = styled.div`
   align-items: center;
   grid-area: logo;
 `;
-const Navigation = () => {
+const Navigation = ({ isNavHidden }) => {
   const [isNavOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
@@ -93,7 +96,7 @@ const Navigation = () => {
   };
 
   return (
-    <StyledNav isNavOpen={isNavOpen}>
+    <StyledNav isNavOpen={isNavOpen} isNavHidden={isNavHidden}>
       <StyledMobileLayout>
         <Link to="/">
           <img src={TLMRlogo} alt="Logo TLMR" />

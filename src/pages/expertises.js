@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import Title from "components/global/Title";
@@ -27,9 +27,13 @@ const StyledGrid = styled(Grid)`
     }
   }
 `;
-const StyledExpertiseNav = styled(Grid)`
+const StyledExpertiseNav = styled.section`
   display: none;
-  @media ${(props) => props.theme.minWidth.md} {
+  @media ${(props) => props.theme.minWidth.lg} {
+    transform: ${(props) =>
+      props.isNavHidden ? "translateY(-69px)" : "translateY(0px)"};
+    transition: transform ${(props) => props.theme.transitionTime};
+    ${(props) => props.theme.cubicBezier.base};
     position: sticky;
     top: 73px;
     z-index: 1;
@@ -42,6 +46,7 @@ const StyledExpertiseNav = styled(Grid)`
   @media ${(props) => props.theme.minWidth.sm} {
     top: 69px;
   }
+
   h3 {
     display: none;
     @media ${(props) => props.theme.minWidth.lg} {
@@ -174,8 +179,26 @@ const StyledALaUne = styled(ALaUne)`
 `;
 
 const ExpertisesPage = () => {
+  const expertisesNavRef = useRef(null);
+  const [isNavHidden, setIsNavHidden] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleIsHeaderVisible = () => {
+      const currentScrollY = window.scrollY;
+      const expertisesNavDistanceFromPageTop =
+        expertisesNavRef.current.getBoundingClientRect().top;
+      expertisesNavDistanceFromPageTop === 69 && setIsNavHidden(true);
+      currentScrollY < scrollY && setIsNavHidden(false);
+      setScrollY(currentScrollY);
+    };
+    window.addEventListener("scroll", handleIsHeaderVisible);
+    return () => {
+      window.removeEventListener("scroll", handleIsHeaderVisible);
+    };
+  }, [expertisesNavRef, scrollY]);
   return (
-    <Layout>
+    <Layout isNavHidden={isNavHidden}>
       <Title as="h1">Expertises</Title>
       <SectionDescription
         description={
@@ -190,21 +213,23 @@ const ExpertisesPage = () => {
           une défense contentieuse efficace.
         </Paragraph>
       </StyledGrid>
-      <StyledExpertiseNav>
-        <h3>Compétences</h3>
-        {ExpertisesData.map(({ title }, index) => (
-          <StyledNavLink
-            key={index}
-            offset={-200}
-            to={title}
-            activeClass="active"
-            smooth
-            spy
-          >
-            <Dot />
-            {title}
-          </StyledNavLink>
-        ))}
+      <StyledExpertiseNav ref={expertisesNavRef} isNavHidden={isNavHidden}>
+        <Grid>
+          <h3>Compétences</h3>
+          {ExpertisesData.map(({ title }, index) => (
+            <StyledNavLink
+              key={index}
+              offset={-200}
+              to={title}
+              activeClass="active"
+              smooth
+              spy
+            >
+              <Dot />
+              {title}
+            </StyledNavLink>
+          ))}
+        </Grid>
       </StyledExpertiseNav>
       {ExpertisesData.map((expertise, index) => (
         <Element key={index} name={expertise.title}>
