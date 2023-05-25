@@ -39,7 +39,7 @@ const StyledExpertiseNav = styled.section`
     z-index: 1;
     background-color: white;
     display: grid;
-    margin-top: 100px;
+    margin: 100px 0 120px;
     border-top: ${(props) => props.theme.border.black};
     padding: 10px 0;
   }
