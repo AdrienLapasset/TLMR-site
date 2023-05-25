@@ -122,19 +122,17 @@ const StyledAdditionalSection = styled(Grid)`
 
 const Expertise = ({ expertise, key }) => {
   const [useCases, setUseCases] = useState(expertise.useCases);
-  const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(false);
+  const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(true);
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      setUseCases(useCases.slice(0, 5));
-      isSeeMoreUseCases
-        ? setUseCases(expertise.useCases)
-        : setUseCases(useCases.slice(0, 5));
-    }
-  }, [isSeeMoreUseCases]);
+    screenWidth < 768 && setUseCases((useCases) => useCases.slice(0, 5));
+  }, []);
 
   const handleSeeMoreUseCases = () => {
+    isSeeMoreUseCases
+      ? setUseCases(expertise.useCases)
+      : setUseCases(useCases.slice(0, 5));
     setIsSeeMoreUseCases(!isSeeMoreUseCases);
   };
 
