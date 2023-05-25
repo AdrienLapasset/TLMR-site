@@ -4,7 +4,9 @@ import styled from "styled-components";
 // TODO refactorer en fonction de "size" et pas en fonction du minwidth
 const StyleP = styled.p`
   font-size: ${(props) =>
-    props.size === "lg" || "xl"
+    props.size === "xxl"
+      ? "20px"
+      : props.size === "lg" || "xl"
       ? "16px"
       : props.size === "sm"
       ? "12px"
@@ -15,7 +17,9 @@ const StyleP = styled.p`
       : (props) => props.theme.colors.black};
   @media ${(props) => props.theme.minWidth.lg} {
     font-size: ${(props) =>
-      props.size === "xl"
+      props.size === "xxl"
+        ? "22px"
+        : props.size === "xl"
         ? "18px"
         : props.size === "lg"
         ? "18px"
@@ -25,7 +29,9 @@ const StyleP = styled.p`
   }
   @media ${(props) => props.theme.minWidth.xl} {
     font-size: ${(props) =>
-      props.size === "xl"
+      props.size === "xxl"
+        ? "25px"
+        : props.size === "xl"
         ? "20px"
         : props.size === "lg"
         ? "18px"

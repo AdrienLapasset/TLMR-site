@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import Title from "components/global/Title";
-import SectionDescription from "components/global/SectionDescription";
 import Grid from "components/global/Grid";
 import Expertise from "components/pages/expertises/Expertise";
 import ExpertisesData from "components/pages/expertises/data";
@@ -11,22 +10,9 @@ import { Link, Element } from "react-scroll";
 import Paragraph from "components/global/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
 import Cta from "components/global/Cta";
+import PageHero from "components/global/PageHero";
 import ALaUne from "components/pages/home/sections/ALaUne";
 
-const StyledGrid = styled(Grid)`
-  p {
-    grid-column: 1/12;
-    @media ${(props) => props.theme.minWidth.sm} {
-      grid-column: 1/10;
-    }
-    @media ${(props) => props.theme.minWidth.md} {
-      grid-column: 1/7;
-    }
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 1/5;
-    }
-  }
-`;
 const StyledExpertiseNav = styled.section`
   display: none;
   @media ${(props) => props.theme.minWidth.lg} {
@@ -199,20 +185,18 @@ const ExpertisesPage = () => {
   }, [expertisesNavRef, scrollY]);
   return (
     <Layout isNavHidden={isNavHidden}>
-      <Title as="h1">Expertises</Title>
-      <SectionDescription
-        description={
-          "Le cabinet Touati La Motte Rouge répond à des problématiques diverses avec rigueur et pragmatisme. Dans chaque domaine d’expertise, vous disposez de l’accompagnement et de l’expérience de l’associé qui traite de manière réactive, accessible et opérationnelle votre dossier."
-        }
-      />
-      <StyledGrid>
-        <Paragraph size="lg">
-          Dans les dossiers complexes, il est déterminant de travailler en
+      <PageHero
+        title="Expertises"
+        firstParagraph="Le cabinet Touati La Motte Rouge répond à des problématiques diverses
+          avec rigueur et pragmatisme. Dans chaque domaine d’expertise, vous
+          disposez de l’accompagnement et de l’expérience de l’associé qui
+          traite de manière réactive, accessible et opérationnelle votre"
+        secondParagraph=" Dans les dossiers complexes, il est déterminant de travailler en
           équipe et d’associer des compétences et visions complémentaires. Cela
           permet une résolution opérationnelle des problématiques juridiques et
-          une défense contentieuse efficace.
-        </Paragraph>
-      </StyledGrid>
+          une défense contentieuse efficace."
+      />
+
       <StyledExpertiseNav ref={expertisesNavRef} isNavHidden={isNavHidden}>
         <Grid>
           <h3>Compétences</h3>
