@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import { Link } from "react-scroll";
@@ -128,7 +128,7 @@ const AnchorNavBar = ({
             smooth
             spy
           >
-            <Dot />
+            <Dot square={eservices} />
             {title}
           </StyledNavLink>
         ))}

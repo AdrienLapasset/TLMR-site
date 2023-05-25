@@ -6,12 +6,12 @@ const StyledDot = styled.div`
   width: 10px;
   height: 10px;
   background-color: ${(props) => props.theme.colors.black};
-  border-radius: 100px;
+  border-radius: ${(props) => (props.square ? "0" : "100px")};
   margin-right: 7px;
 `;
 
-const Dot = () => {
-  return <StyledDot />;
+const Dot = ({ square }) => {
+  return <StyledDot square={square} />;
 };
 
 export default Dot;

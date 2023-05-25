@@ -106,7 +106,6 @@ const ExpertisesPage = () => {
         expertisesNavRef={expertisesNavRef}
         isNavHidden={isNavHidden}
       />
-
       {ExpertisesData.map((expertise, index) => (
         <Element key={index} name={expertise.title}>
           <Expertise expertise={expertise} />

@@ -3,6 +3,8 @@ import Layout from "components/Layout";
 import PageHero from "components/global/PageHero";
 import AnchorNavBar from "components/global/AnchorNavBar";
 import EservicesData from "components/pages/e-services/data";
+import Eservice from "components/pages/e-services/Eservice";
+import { Element } from "react-scroll";
 
 const Eservices = () => {
   const [isNavHidden, setIsNavHidden] = useState(false);
@@ -38,6 +40,11 @@ const Eservices = () => {
         isNavHidden={isNavHidden}
         eservices
       />
+      {EservicesData.map((eservice, index) => (
+        <Element key={index} name={eservice.title}>
+          <Eservice eservice={eservice} />
+        </Element>
+      ))}
     </Layout>
   );
 };

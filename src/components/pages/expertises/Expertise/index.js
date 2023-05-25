@@ -120,7 +120,7 @@ const StyledAdditionalSection = styled(Grid)`
   }
 `;
 
-const Expertise = ({ expertise, key }) => {
+const Expertise = ({ expertise }) => {
   const [useCases, setUseCases] = useState(expertise.useCases);
   const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(true);
 
@@ -137,7 +137,7 @@ const Expertise = ({ expertise, key }) => {
   };
 
   return (
-    <StyledContainer key={key}>
+    <StyledContainer>
       <StyledTitleGrid>
         <Title as="h2" small lowercase>
           {expertise.title}
