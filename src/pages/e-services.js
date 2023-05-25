@@ -36,6 +36,7 @@ const Eservices = () => {
         data={EservicesData}
         expertisesNavRef={expertisesNavRef}
         isNavHidden={isNavHidden}
+        eservices
       />
     </Layout>
   );

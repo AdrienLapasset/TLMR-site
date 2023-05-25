@@ -30,6 +30,60 @@ const StyledContainer = styled.section`
       grid-column: 1 / span 4;
     }
   }
+  a {
+    &:nth-of-type(1) {
+      grid-column: 1 / span 3;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 5 / span 2;
+      }
+    }
+    &:nth-of-type(2) {
+      grid-column: 4 / span 3;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 7 / span 2;
+      }
+    }
+    &:nth-of-type(3) {
+      grid-column: 7 / span 3;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 9 / span 2;
+      }
+    }
+    &:nth-of-type(4) {
+      grid-column: 10 / span 3;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 11 / span 2;
+      }
+    }
+    &:nth-of-type(5) {
+      grid-column: 1 / span 3;
+      grid-row: 2;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 5 / span 2;
+      }
+    }
+    &:nth-of-type(6) {
+      grid-column: 4 / span 3;
+      grid-row: 2;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 7 / span 2;
+      }
+    }
+    &:nth-of-type(7) {
+      grid-column: 7 / span 3;
+      grid-row: 2;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 9 / span 2;
+      }
+    }
+    &:nth-of-type(8) {
+      grid-column: 10 / span 3;
+      grid-row: 2;
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 11 / span 2;
+      }
+    }
+  }
 `;
 const StyledNavLink = styled(Link)`
   text-align: left;
@@ -48,59 +102,6 @@ const StyledNavLink = styled(Link)`
     flex: 0 0 10px;
     background-color: ${(props) => props.theme.colors.greyLight};
   }
-  &:nth-child(2) {
-    grid-column: 1 / span 3;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 5 / span 2;
-    }
-    grid-row: 1;
-  }
-  &:nth-child(3) {
-    grid-column: 4 / span 3;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 7 / span 2;
-    }
-  }
-  &:nth-child(4) {
-    grid-column: 7 / span 3;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 9 / span 2;
-    }
-  }
-  &:nth-child(5) {
-    grid-column: 10 / span 3;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 11 / span 2;
-    }
-  }
-  &:nth-child(6) {
-    grid-column: 1 / span 3;
-    grid-row: 2;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 5 / span 2;
-    }
-  }
-  &:nth-child(7) {
-    grid-column: 4 / span 3;
-    grid-row: 2;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 7 / span 2;
-    }
-  }
-  &:nth-child(8) {
-    grid-column: 7 / span 3;
-    grid-row: 2;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 9 / span 2;
-    }
-  }
-  &:nth-child(9) {
-    grid-column: 10 / span 3;
-    grid-row: 2;
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 11 / span 2;
-    }
-  }
 `;
 
 const AnchorNavBar = ({
@@ -108,6 +109,7 @@ const AnchorNavBar = ({
   expertisesNavRef,
   isNavHidden,
   headerHeight,
+  eservices,
 }) => {
   return (
     <StyledContainer
@@ -116,7 +118,7 @@ const AnchorNavBar = ({
       headerHeight={headerHeight}
     >
       <Grid>
-        <h3>Compétences</h3>
+        {!eservices && <h3>Compétences</h3>}
         {data.map(({ title }, index) => (
           <StyledNavLink
             key={index}
