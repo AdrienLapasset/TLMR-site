@@ -9,7 +9,7 @@ import { Element } from "react-scroll";
 const Eservices = () => {
   const [isNavHidden, setIsNavHidden] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const headerHeight = 73;
+  const headerHeight = 71;
   const expertisesNavRef = useRef(null);
 
   useEffect(() => {
