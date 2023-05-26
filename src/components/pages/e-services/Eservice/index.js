@@ -4,23 +4,40 @@ import Grid from "components/global/Grid";
 import { StaticImage } from "gatsby-plugin-image";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
-// import Cta from "components/global/Cta";
-// import Dot from "components/global/Dot";
 
 const StyledContainer = styled(Grid)`
   padding-top: 15px;
   border-top: ${(props) => props.theme.border.black};
   padding-bottom: 150px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 20px;
+  }
   @media ${(props) => props.theme.minWidth.md} {
     padding-top: 35px;
   }
   & > .gatsby-image-wrapper {
-    grid-column: 1 / span 6;
+    max-height: 600px;
+    grid-column: 1 / span 12;
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 1 / span 6;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 1 / span 7;
+    }
   }
   & > div {
-    grid-column: 8 / span 6;
+    grid-column: 1 / span 12;
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 8 / span 6;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 9 / span 5;
+    }
     h2 {
       margin-top: 10px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        margin-top: 20px;
+      }
     }
     & > p {
       margin-top: 30px;
@@ -39,6 +56,9 @@ const StyledContainer = styled(Grid)`
           position: relative;
           top: -10px;
           flex: 0 0 40px;
+          @media ${(props) => props.theme.minWidth.sm} {
+            flex: 0 0 200px;
+          }
         }
       }
     }
@@ -88,7 +108,7 @@ const Eservice = ({ title, description, points, btn, imgPath }) => {
           {points?.map((point, index) => (
             <li key={point}>
               <aside>{index + 1}</aside>
-              <p>{point}</p>
+              <Paragraph>{point}</Paragraph>
             </li>
           ))}
         </ol>

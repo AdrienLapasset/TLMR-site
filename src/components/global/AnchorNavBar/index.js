@@ -18,7 +18,7 @@ const StyledContainer = styled.section`
     z-index: 1;
     background-color: white;
     display: block;
-    margin: 100px 0 120px;
+    margin: 100px 0 70px;
     border-top: ${(props) => props.theme.border.black};
     padding: 10px 0;
   }
