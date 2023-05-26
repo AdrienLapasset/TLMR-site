@@ -26,6 +26,7 @@ const Eservices = () => {
       window.removeEventListener("scroll", handleIsHeaderVisible);
     };
   }, [expertisesNavRef, scrollY, isNavHidden]);
+
   return (
     <Layout>
       <PageHero
