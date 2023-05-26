@@ -38,7 +38,6 @@ nav {
   margin: 0;
   padding: 0;
   font-family: "Söhne Buch", sans-serif;
-  list-style: none;
   font-size: 14px;
   font-weight: 400;
   display: block;

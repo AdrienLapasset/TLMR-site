@@ -41,9 +41,15 @@ const Eservices = () => {
         isNavHidden={isNavHidden}
         eservices
       />
-      {EservicesData.map((eservice, index) => (
-        <Element key={index} name={eservice.title}>
-          <Eservice eservice={eservice} />
+      {EservicesData.map(({ title, description, points, btn, imgPath }) => (
+        <Element key={title} name={title}>
+          <Eservice
+            title={title}
+            description={description}
+            points={points}
+            btn={btn}
+            imgPath={imgPath}
+          />
         </Element>
       ))}
     </Layout>

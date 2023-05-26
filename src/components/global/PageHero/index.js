@@ -5,7 +5,10 @@ import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 
 const StyledContainer = styled(Grid)`
-  margin: 110px 0;
+  margin: 110px 0 75px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin: 110px 0;
+  }
   h1 {
     margin-bottom: 30px;
   }
