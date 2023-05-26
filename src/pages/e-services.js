@@ -28,7 +28,7 @@ const Eservices = () => {
   }, [expertisesNavRef, scrollY, isNavHidden]);
 
   return (
-    <Layout>
+    <Layout isNavHidden={isNavHidden}>
       <PageHero
         title="E-SERVICES"
         firstParagraph="Des services en ligne LegalTech pour simplifier et améliorer notre relation et votre rapport au Droit. Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage."
