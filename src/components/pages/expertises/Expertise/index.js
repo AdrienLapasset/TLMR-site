@@ -69,6 +69,10 @@ const StyledContentGrid = styled(Grid)`
 `;
 const StyledUseCases = styled.div`
   margin-top: 40px;
+  padding-bottom: 70px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-bottom: 100px;
+  }
   & > h3 {
     margin-bottom: 10px;
   }
@@ -96,26 +100,31 @@ const StyledUseCases = styled.div`
     }
   }
 `;
-const StyledAdditionalSection = styled(Grid)`
-  border-top: ${(props) => props.theme.border.black};
-  padding-top: 7px;
+const StyledAdditionalSection = styled.section`
+  background-color: ${(props) => props.theme.colors.greyLighter};
   grid-column: 1 / span 12;
-  display: grid;
-  margin-top: 70px;
-
+  padding-top: 35px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-top: 100px;
+    margin-left: -45px;
+    margin-right: -45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 170px;
   }
-  aside {
-    margin-bottom: 25px;
-    @media ${(props) => props.theme.minWidth.sm} {
-      grid-column: 1 / span 6;
+  & > div {
+    border-top: ${(props) => props.theme.border.black};
+    padding-top: 7px;
+    aside {
+      margin-bottom: 25px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        grid-column: 1 / span 6;
+      }
     }
-  }
-  p {
-    margin-bottom: 20px;
-    @media ${(props) => props.theme.minWidth.sm} {
-      grid-column: 7 / span 6;
+    p {
+      margin-bottom: 20px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        grid-column: 7 / span 6;
+      }
     }
   }
 `;
@@ -188,17 +197,19 @@ const Expertise = ({ expertise }) => {
         </StyledUseCases>
         {expertise.additionalSection && (
           <StyledAdditionalSection>
-            <StyledPoint>
-              <Dot />
-              <Paragraph size="md" as="h3">
-                {expertise.additionalSection.title}
-              </Paragraph>
-            </StyledPoint>
-            {expertise.additionalSection.description.map((paragraph) => (
-              <Paragraph key={paragraph} size="md">
-                {paragraph}
-              </Paragraph>
-            ))}
+            <Grid>
+              <StyledPoint>
+                <Dot />
+                <Paragraph size="md" as="h3">
+                  {expertise.additionalSection.title}
+                </Paragraph>
+              </StyledPoint>
+              {expertise.additionalSection.description.map((paragraph) => (
+                <Paragraph key={paragraph} size="md">
+                  {paragraph}
+                </Paragraph>
+              ))}
+            </Grid>
           </StyledAdditionalSection>
         )}
       </StyledContentGrid>

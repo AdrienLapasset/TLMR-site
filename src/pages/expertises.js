@@ -37,10 +37,10 @@ const StyledSolutionsSection = styled.section`
           margin-bottom: 0;
         }
         @media ${(props) => props.theme.minWidth.sm} {
-          grid-column-gap: ${(props) => props.theme.columnGap.lg};
+          grid-column-gap: ${(props) => props.theme.columnGap.mobile};
         }
         @media ${(props) => props.theme.minWidth.xl} {
-          grid-column-gap: ${(props) => props.theme.columnGap.xl};
+          grid-column-gap: ${(props) => props.theme.columnGap.desktop};
         }
         a {
           margin-top: 10px;

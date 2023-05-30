@@ -25,12 +25,12 @@ const StyledNav = styled.nav`
     height: unset;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: ${(props) => props.theme.columnGap.lg};
+    grid-column-gap: ${(props) => props.theme.columnGap.mobile};
     grid-template-areas: "logo logo . . . links links links links links links links";
     align-items: center;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   img {
     height: 28px;
@@ -46,13 +46,13 @@ const StyledLinksContainer = styled.div`
     grid-area: links;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-column-gap: ${(props) => props.theme.columnGap.lg};
+    grid-column-gap: ${(props) => props.theme.columnGap.mobile};
     opacity: 1;
     height: unset;
     visibility: visible;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   a {
     padding: 15px 0;

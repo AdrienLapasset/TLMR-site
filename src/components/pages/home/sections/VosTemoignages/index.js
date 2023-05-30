@@ -16,14 +16,14 @@ const StyledGrid = styled.div`
   row-gap: 20px;
   @media ${(props) => props.theme.minWidth.sm} {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: ${(props) => props.theme.columnGap.lg};
+    grid-column-gap: ${(props) => props.theme.columnGap.mobile};
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    column-gap: ${(props) => props.theme.columnGap.lg};
+    column-gap: ${(props) => props.theme.columnGap.mobile};
     grid-template-columns: repeat(4, 1fr);
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
 `;
 

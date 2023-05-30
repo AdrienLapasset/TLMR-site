@@ -5,10 +5,10 @@ const StyledContainer = styled.div`
   @media ${(props) => props.theme.minWidth.sm} {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: ${(props) => props.theme.columnGap.lg};
+    grid-column-gap: ${(props) => props.theme.columnGap.mobile};
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
 `;
 

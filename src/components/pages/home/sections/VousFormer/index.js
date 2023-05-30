@@ -13,10 +13,10 @@ const StyledColumns = styled.div`
   @media ${(props) => props.theme.minWidth.md} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: ${(props) => props.theme.columnGap.lg};
+    grid-column-gap: ${(props) => props.theme.columnGap.mobile};
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   .gatsby-image-wrapper {
     margin-bottom: 12px;

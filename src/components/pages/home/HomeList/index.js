@@ -24,11 +24,11 @@ const StyledCircle = styled.div`
 const StyledList = styled.ul`
   column-count: 1;
   @media ${(props) => props.theme.minWidth.md} {
-    column-gap: ${(props) => props.theme.columnGap.lg};
+    column-gap: ${(props) => props.theme.columnGap.mobile};
     column-count: 2;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    grid-column-gap: ${(props) => props.theme.columnGap.xl};
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   a,
   aside {

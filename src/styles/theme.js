@@ -4,6 +4,7 @@ const theme = {
     blackLight: "#1E1E1E",
     grey: "#939393",
     greyLight: "#AAAAAA",
+    greyLighter: "#FAFAFA",
     greyLightest: "#E4E4E4",
   },
   minWidth: {
@@ -20,8 +21,8 @@ const theme = {
   },
   transitionTime: "0.3s",
   columnGap: {
-    lg: "20px",
-    xl: "30px",
+    mobile: "20px",
+    desktop: "30px",
   },
   border: {
     black: "0.5px solid #000000",
