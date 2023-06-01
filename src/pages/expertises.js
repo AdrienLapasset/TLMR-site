@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
+import { Styled2PointsSection } from "styles/globalStyle";
 import Layout from "components/Layout";
 import Title from "components/global/Title";
 import Grid from "components/global/Grid";
@@ -13,44 +14,9 @@ import PageHero from "components/global/PageHero";
 import AnchorNavBar from "components/global/AnchorNavBar";
 import ALaUne from "components/pages/home/sections/ALaUne";
 
-const StyledSolutionsSection = styled.section`
-  border-top: ${(props) => props.theme.border.black};
-  margin-top: 300px;
-  .grid {
-    display: block;
-    @media ${(props) => props.theme.minWidth.md} {
-      display: grid;
-    }
-    & > div {
-      grid-column: 1 / span 6;
-      &:last-child {
-        grid-column: 7 / span 6;
-        border-top: ${(props) => props.theme.border.black};
-        @media ${(props) => props.theme.minWidth.sm} {
-          border-top: none;
-        }
-      }
-      & > div {
-        margin-bottom: 90px;
-        @media ${(props) => props.theme.minWidth.sm} {
-          column-count: 2;
-          margin-bottom: 0;
-        }
-        @media ${(props) => props.theme.minWidth.sm} {
-          grid-column-gap: ${(props) => props.theme.columnGap.mobile};
-        }
-        @media ${(props) => props.theme.minWidth.xl} {
-          grid-column-gap: ${(props) => props.theme.columnGap.desktop};
-        }
-        a {
-          margin-top: 10px;
-        }
-      }
-    }
-  }
-`;
 const StyledALaUne = styled(ALaUne)`
   border-top: ${(props) => props.theme.border.black};
+  padding-top: 15px;
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 100px;
   }
@@ -111,10 +77,12 @@ const ExpertisesPage = () => {
           <Expertise expertise={expertise} />
         </Element>
       ))}
-      <StyledSolutionsSection>
+      <Styled2PointsSection>
         <Grid className="grid">
           <div>
-            <Title as="h2">NOS SOLUTIONS</Title>
+            <Title size="sm" type="h2">
+              NOS SOLUTIONS
+            </Title>
             <div>
               <StaticImage
                 src="../assets/imgs/placeholder.jpg"
@@ -130,7 +98,9 @@ const ExpertisesPage = () => {
             </div>
           </div>
           <div>
-            <Title as="h2">VOUS FORMER</Title>
+            <Title size="sm" type="h2">
+              VOUS FORMER
+            </Title>
             <div>
               <StaticImage
                 src="../assets/imgs/placeholder.jpg"
@@ -146,7 +116,7 @@ const ExpertisesPage = () => {
             </div>
           </div>
         </Grid>
-      </StyledSolutionsSection>
+      </Styled2PointsSection>
       <StyledALaUne />
     </Layout>
   );

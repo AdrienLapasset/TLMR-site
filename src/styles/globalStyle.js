@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components/macro";
+import styled from "styled-components";
 import SohneBuch from "assets/fonts/soehne-buch.woff2";
 import SöhneBreitBuch from "assets/fonts/soehne-breit-buch.woff2";
 import SöhneKräftig from "assets/fonts/soehne-kraftig.woff2";
@@ -70,4 +71,44 @@ button {
     color: ${(props) => props.theme.colors.grey};
   }
 }
+`;
+
+export const Styled2PointsSection = styled.section`
+  border-top: ${(props) => props.theme.border.black};
+  margin-top: 300px;
+  .grid {
+    display: block;
+    @media ${(props) => props.theme.minWidth.md} {
+      display: grid;
+    }
+    & > div {
+      grid-column: 1 / span 6;
+      &:last-child {
+        grid-column: 7 / span 6;
+        border-top: ${(props) => props.theme.border.black};
+        @media ${(props) => props.theme.minWidth.sm} {
+          border-top: none;
+        }
+      }
+      h2 {
+        margin: 20px 0 50px;
+      }
+      & > div {
+        margin-bottom: 90px;
+        @media ${(props) => props.theme.minWidth.sm} {
+          column-count: 2;
+          margin-bottom: 0;
+        }
+        @media ${(props) => props.theme.minWidth.sm} {
+          grid-column-gap: ${(props) => props.theme.columnGap.mobile};
+        }
+        @media ${(props) => props.theme.minWidth.xl} {
+          grid-column-gap: ${(props) => props.theme.columnGap.desktop};
+        }
+        a {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 `;
