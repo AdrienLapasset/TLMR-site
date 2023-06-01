@@ -59,18 +59,24 @@ const StyledContainer = styled(Grid)`
           @media ${(props) => props.theme.minWidth.sm} {
             flex: 0 0 200px;
           }
+          @media ${(props) => props.theme.minWidth.sm} {
+            flex: 0 0 80px;
+          }
         }
       }
     }
     & > a {
       border-radius: 100px;
       padding: 5px 15px;
-      &:first-of-type {
+      &:nth-of-type(1) {
         background-color: ${(props) => props.theme.colors.blackLight};
         color: white;
         margin: 30px 0 10px;
+        @media ${(props) => props.theme.minWidth.md} {
+          margin: 60px 0 10px;
+        }
       }
-      &:last-of-type {
+      &:nth-of-type(2) {
         background-color: ${(props) => props.theme.colors.greyLightest};
       }
     }
@@ -80,11 +86,18 @@ const StyledContainer = styled(Grid)`
       padding: 5px 0;
       border-top: ${(props) => props.theme.border.greyLightest};
       border-bottom: ${(props) => props.theme.border.greyLightest};
+      &.vitalsign {
+        display: flex;
+        align-items: center;
+        & > div {
+          margin-right: 10px;
+        }
+      }
     }
   }
 `;
 
-const Eservice = ({ title, description, points, btn, imgPath }) => {
+const Eservice = ({ title, description, points, btns, imgPath }) => {
   return (
     <StyledContainer>
       <StaticImage
@@ -112,7 +125,7 @@ const Eservice = ({ title, description, points, btn, imgPath }) => {
             </li>
           ))}
         </ol>
-        {btn?.map((btn) => (
+        {btns?.map((btn) => (
           <a href={btn.link} key={btn.name}>
             {btn.name}
           </a>
@@ -120,6 +133,21 @@ const Eservice = ({ title, description, points, btn, imgPath }) => {
         {title === "Protection des créations" && (
           <aside>
             Service fourni par Deep Block™, opérateur de Blockchain Légale.
+          </aside>
+        )}
+        {title === "Signature électronique" && (
+          <aside className="vitalsign">
+            <div>
+              <StaticImage
+                src="../../../../assets/logos/logo_vitalsign.png"
+                alt="Logo Vitalsign"
+                quality="90"
+                layout="fixed"
+                width={70}
+              />
+            </div>
+            Vitalsign est une Solution de la Societé DeepBlock, LegalTech
+            française qui vous garantit un haut niveau de confidentialité.
           </aside>
         )}
       </div>

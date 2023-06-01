@@ -8,7 +8,7 @@ const EservicesData = [
       "Protégez vos créations par la Technologie Blockchain simplement.",
       "Apportez une date certaine à un Document",
     ],
-    btn: [
+    btns: [
       {
         name: "Commencer",
         link: "",
@@ -30,7 +30,7 @@ const EservicesData = [
       "Sécuriser vos Contrats à distance.",
       "Continuer à Signer avec vos clients dans le monde entier sans vous déplacer",
     ],
-    btn: [
+    btns: [
       {
         name: "Accéder à VitalSign",
         link: "",
@@ -43,10 +43,10 @@ const EservicesData = [
     imgPath: "",
   },
   {
-    title: "Besoin d’aide ? Nous contacter",
+    title: "GÉNÉRATEUR DE POLITIQUE DE CONFIDENTIALITÉ CONFORME RGPD",
     description: [
       "Le présent outil est mis à votre disposition gratuitement. L’outil se base sur des informations fondées sur l’analyse professionnelle du cabinet en matière de conformité RGPD. Toutefois, la conformité étant un processus dynamique et toute situation étant particulière, les informations transmises doivent être adaptées et ne peuvent en aucun cas être considérées comme exhaustives ou exactes.",
-      " Sauf à ce que vous demandiez une revue et validation par le Cabinet, le document généré est considéré comme une simple information. En conséquence, vous êtes seul responsable des interprétations faites des informations fournies, des conseils que vous en déduisez et des adaptations réalisées pour votre activité commerciale propre. L’utilisation et l’exploitation de l’outil se fait donc sous votre seule responsabilité et à vos risques et périls.",
+      "Sauf à ce que vous demandiez une revue et validation par le Cabinet, le document généré est considéré comme une simple information. En conséquence, vous êtes seul responsable des interprétations faites des informations fournies, des conseils que vous en déduisez et des adaptations réalisées pour votre activité commerciale propre. L’utilisation et l’exploitation de l’outil se fait donc sous votre seule responsabilité et à vos risques et périls.",
     ],
     btns: [
       {
