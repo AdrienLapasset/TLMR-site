@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 const StyledTitle = styled.h1`
-  margin-top: ${(props) => (props.as === "h1" ? "100px" : "0")};
+  margin-top: ${(props) => (props.type === "h1" ? "100px" : "0")};
   margin-bottom: 10px;
   font-family: "SöhneBreit Buch", sans-serif;
   text-transform: ${(props) => (props.lowercase ? "none" : "uppercase")};

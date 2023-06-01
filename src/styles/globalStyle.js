@@ -75,7 +75,7 @@ button {
 
 export const Styled2PointsSection = styled.section`
   border-top: ${(props) => props.theme.border.black};
-  margin-top: 300px;
+  margin-top: 100px;
   .grid {
     display: block;
     @media ${(props) => props.theme.minWidth.md} {
