@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
 import Layout from "components/Layout";
 import PageHero from "components/global/PageHero";
 import AnchorNavBar from "components/global/AnchorNavBar";
@@ -8,23 +7,6 @@ import Eservice from "components/pages/e-services/Eservice";
 import { Element } from "react-scroll";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import TwoPointsSection from "components/global/TwoPointsSection";
-
-const StyledALaUne = styled(ALaUne)`
-  border-top: ${(props) => props.theme.border.black};
-  padding-top: 15px;
-  @media ${(props) => props.theme.minWidth.md} {
-    margin-top: 100px;
-  }
-  @media ${(props) => props.theme.minWidth.lg} {
-    margin-top: 150px;
-  }
-  @media ${(props) => props.theme.minWidth.xl} {
-    margin-top: 170px;
-  }
-  @media ${(props) => props.theme.minWidth.xl} {
-    margin-top: 300px;
-  }
-`;
 
 const Eservices = () => {
   const [isNavHidden, setIsNavHidden] = useState(false);
@@ -78,7 +60,7 @@ const Eservices = () => {
         title2="VOUS FORMER"
         description2="La formation juridique et la transmission de notre savoir-faire sont au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et Jean Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne Infolawyers™."
       />
-      <StyledALaUne />
+      <ALaUne border />
     </Layout>
   );
 };

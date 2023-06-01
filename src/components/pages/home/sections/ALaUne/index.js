@@ -1,11 +1,29 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
 import Cta from "components/global/Cta";
 import Title from "components/global/Title";
 
+const border = css`
+  border-top: ${(props) => props.theme.border.black};
+  padding-top: 15px;
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 100px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-top: 150px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    margin-top: 170px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    margin-top: 300px;
+  }
+`;
+
 const StyledContainer = styled.div`
+  ${(props) => (props.border ? border : null)}
   margin-top: 160px;
   & > header {
     display: flex;
@@ -57,9 +75,9 @@ const StyledNews = styled.div`
   }
 `;
 
-const ALaUne = ({ className, home }) => {
+const ALaUne = ({ className, home, border }) => {
   return (
-    <StyledContainer className={className}>
+    <StyledContainer className={className} border={border}>
       <header>
         {home ? (
           <SectionTitle aside={"Actualités"} title={"À LA UNE"} />
