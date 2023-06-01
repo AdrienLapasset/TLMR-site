@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "styles/theme";
 import GlobalStyle from "styles/globalStyle";
@@ -18,13 +18,13 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Layout = ({ isNavHidden, children }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <StyledContainer>
-          <Navigation isNavHidden={isNavHidden} />
+          <Navigation />
           {children}
           <Footer />
         </StyledContainer>

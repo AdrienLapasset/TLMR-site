@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
+import { myContext } from "../../../../provider";
 
 const StyledNav = styled.nav`
   transition: all ${(props) => props.theme.transitionTime};
@@ -15,6 +16,8 @@ const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 13px 0;
+  transform: ${(props) =>
+    props.isNavHidden ? "translateY(-54px)" : "translateY(0px)"};
   @media ${(props) => props.theme.minWidth.sm} {
     height: ${(props) => (props.isNavOpen ? "100vh" : "70px")};
     padding: 21px 0;
@@ -96,23 +99,29 @@ const Navigation = ({ isNavHidden }) => {
   };
 
   return (
-    <StyledNav isNavOpen={isNavOpen} isNavHidden={isNavHidden}>
-      <StyledMobileLayout>
-        <Link to="/">
-          <img src={TLMRlogo} alt="Logo TLMR" />
-        </Link>
-        <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
-      </StyledMobileLayout>
-      <StyledLinksContainer isNavOpen={isNavOpen}>
-        <Link to="/expertises">Expertises</Link>
-        <Link to="/e-services">e-Services</Link>
-        <Link to="/formations">Formations</Link>
-        <Link to="/actualites">Actualités</Link>
-        <Link to="/l-equipe">L’équipe</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/paiement">Paiement</Link>
-      </StyledLinksContainer>
-    </StyledNav>
+    <myContext.Consumer>
+      {(context) => (
+        <React.Fragment>
+          <StyledNav isNavOpen={isNavOpen} isNavHidden={context.isNavHidden}>
+            <StyledMobileLayout>
+              <Link to="/">
+                <img src={TLMRlogo} alt="Logo TLMR" />
+              </Link>
+              <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
+            </StyledMobileLayout>
+            <StyledLinksContainer isNavOpen={isNavOpen}>
+              <Link to="/expertises">Expertises</Link>
+              <Link to="/e-services">e-Services</Link>
+              <Link to="/formations">Formations</Link>
+              <Link to="/actualites">Actualités</Link>
+              <Link to="/l-equipe">L’équipe</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/paiement">Paiement</Link>
+            </StyledLinksContainer>
+          </StyledNav>
+        </React.Fragment>
+      )}
+    </myContext.Consumer>
   );
 };
 

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components/macro";
-import styled from "styled-components";
 import SohneBuch from "assets/fonts/soehne-buch.woff2";
 import SöhneBreitBuch from "assets/fonts/soehne-breit-buch.woff2";
 import SöhneKräftig from "assets/fonts/soehne-kraftig.woff2";
