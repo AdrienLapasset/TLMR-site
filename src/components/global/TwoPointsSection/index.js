@@ -46,9 +46,15 @@ const StyledContainer = styled.section`
   }
 `;
 
-const TwoPointsSection = ({ title1, title2, description1, description2 }) => {
+const TwoPointsSection = ({
+  title1,
+  title2,
+  description1,
+  description2,
+  twoPointsSectionRef,
+}) => {
   return (
-    <StyledContainer>
+    <StyledContainer ref={twoPointsSectionRef}>
       <Grid className="grid">
         <div>
           <Title size="sm" type="h2">

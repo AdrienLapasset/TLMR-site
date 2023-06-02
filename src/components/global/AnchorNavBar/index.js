@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import { Link } from "react-scroll";
@@ -8,10 +8,12 @@ import { myContext } from "provider";
 const StyledContainer = styled.section`
   display: none;
   @media ${(props) => props.theme.minWidth.lg} {
-    transform: ${(props) =>
-      props.isNavHidden
-        ? "translateY(-" + props.headerHeight + "px)"
-        : "translateY(0px)"};
+    ${(props) =>
+      props.isNavHidden && !props.isHidden
+        ? `transform: translateY(-` + props.headerHeight + `px)`
+        : !props.isNavHidden && !props.isHidden
+        ? `transform: translateY(0px)`
+        : props.isHidden && `transform: translateY(-200px)`};
     transition: transform ${(props) => props.theme.transitionTime};
     ${(props) => props.theme.cubicBezier.base};
     position: sticky;
@@ -105,8 +107,21 @@ const StyledNavLink = styled(Link)`
   }
 `;
 
-const AnchorNavBar = ({ data, eservices }) => {
+const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
   const headerHeight = 71;
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleIsHidden = () => {
+      const twoPointsSectionPosition =
+        twoPointsSectionRef.current.getBoundingClientRect().top;
+      twoPointsSectionPosition < 300 ? setIsHidden(true) : setIsHidden(false);
+    };
+    window.addEventListener("scroll", handleIsHidden);
+    return () => {
+      window.removeEventListener("scroll", handleIsHidden);
+    };
+  }, [twoPointsSectionRef]);
   return (
     <myContext.Consumer>
       {(context) => (
@@ -114,6 +129,7 @@ const AnchorNavBar = ({ data, eservices }) => {
           <StyledContainer
             isNavHidden={context?.isNavHidden}
             headerHeight={headerHeight}
+            isHidden={isHidden}
           >
             <Grid>
               {!eservices && <h3>Compétences</h3>}

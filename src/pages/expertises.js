@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Layout from "components/Layout";
 import Expertise from "components/pages/expertises/Expertise";
 import ExpertisesData from "components/pages/expertises/data";
@@ -9,6 +9,8 @@ import AnchorNavBar from "components/global/AnchorNavBar";
 import ALaUne from "components/pages/home/sections/ALaUne";
 
 const ExpertisesPage = () => {
+  const twoPointsSectionRef = useRef(null);
+
   return (
     <Layout>
       <PageHero
@@ -22,13 +24,17 @@ const ExpertisesPage = () => {
           permet une résolution opérationnelle des problématiques juridiques et
           une défense contentieuse efficace."
       />
-      <AnchorNavBar data={ExpertisesData} />
+      <AnchorNavBar
+        data={ExpertisesData}
+        twoPointsSectionRef={twoPointsSectionRef}
+      />
       {ExpertisesData.map((expertise, index) => (
         <Element key={index} name={expertise.title}>
           <Expertise expertise={expertise} />
         </Element>
       ))}
       <TwoPointsSection
+        twoPointsSectionRef={twoPointsSectionRef}
         title1="NOS SOLUTIONS"
         title2="VOUS FORMER"
         description1="Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."
