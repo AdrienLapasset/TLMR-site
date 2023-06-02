@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 export const myContext = React.createContext();
 
 const Provider = (props) => {
-  const [isDark, setTheme] = useState(false);
-
   const [isNavHidden, setIsNavHidden] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 

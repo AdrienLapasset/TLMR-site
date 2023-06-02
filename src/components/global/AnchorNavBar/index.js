@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Grid from "components/global/Grid";
 import { Link } from "react-scroll";
 import Dot from "components/global/Dot";
+import { myContext } from "provider";
 
 const StyledContainer = styled.section`
   display: none;
@@ -104,36 +105,36 @@ const StyledNavLink = styled(Link)`
   }
 `;
 
-const AnchorNavBar = ({
-  data,
-  expertisesNavRef,
-  isNavHidden,
-  headerHeight,
-  eservices,
-}) => {
+const AnchorNavBar = ({ data, eservices }) => {
+  const headerHeight = 71;
   return (
-    <StyledContainer
-      ref={expertisesNavRef}
-      isNavHidden={isNavHidden}
-      headerHeight={headerHeight}
-    >
-      <Grid>
-        {!eservices && <h3>Compétences</h3>}
-        {data.map(({ title }, index) => (
-          <StyledNavLink
-            key={index}
-            offset={-200}
-            to={title}
-            activeClass="active"
-            smooth
-            spy
+    <myContext.Consumer>
+      {(context) => (
+        <React.Fragment>
+          <StyledContainer
+            isNavHidden={context?.isNavHidden}
+            headerHeight={headerHeight}
           >
-            <Dot square={eservices} />
-            {title}
-          </StyledNavLink>
-        ))}
-      </Grid>
-    </StyledContainer>
+            <Grid>
+              {!eservices && <h3>Compétences</h3>}
+              {data.map(({ title }, index) => (
+                <StyledNavLink
+                  key={index}
+                  offset={-200}
+                  to={title}
+                  activeClass="active"
+                  smooth
+                  spy
+                >
+                  <Dot square={eservices} />
+                  {title}
+                </StyledNavLink>
+              ))}
+            </Grid>
+          </StyledContainer>
+        </React.Fragment>
+      )}
+    </myContext.Consumer>
   );
 };
 
