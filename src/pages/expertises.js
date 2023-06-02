@@ -7,7 +7,7 @@ import TwoPointsSection from "components/global/TwoPointsSection";
 import PageHero from "components/global/PageHero";
 import AnchorNavBar from "components/global/AnchorNavBar";
 import ALaUne from "components/pages/home/sections/ALaUne";
-import { myContext } from "../../provider";
+import { myContext } from "provider";
 
 const ExpertisesPage = () => {
   // TODO global Custom hook for navbar
@@ -51,7 +51,7 @@ const ExpertisesPage = () => {
               headerHeight={headerHeight}
               data={ExpertisesData}
               expertisesNavRef={expertisesNavRef}
-              isNavHidden={context.isNavHidden}
+              isNavHidden={context?.isNavHidden}
             />
             {ExpertisesData.map((expertise, index) => (
               <Element key={index} name={expertise.title}>

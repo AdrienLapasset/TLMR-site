@@ -110,9 +110,7 @@ const AnchorNavBar = ({
   isNavHidden,
   headerHeight,
   eservices,
-  context,
 }) => {
-  console.log(context);
   return (
     <StyledContainer
       ref={expertisesNavRef}

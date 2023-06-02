@@ -3,7 +3,7 @@ import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
-import { myContext } from "../../../../provider";
+import { myContext } from "provider";
 
 const StyledNav = styled.nav`
   transition: all ${(props) => props.theme.transitionTime};
@@ -83,7 +83,7 @@ const StyledMobileLayout = styled.div`
   align-items: center;
   grid-area: logo;
 `;
-const Navigation = ({ isNavHidden }) => {
+const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
@@ -102,7 +102,7 @@ const Navigation = ({ isNavHidden }) => {
     <myContext.Consumer>
       {(context) => (
         <React.Fragment>
-          <StyledNav isNavOpen={isNavOpen} isNavHidden={context.isNavHidden}>
+          <StyledNav isNavOpen={isNavOpen} isNavHidden={context?.isNavHidden}>
             <StyledMobileLayout>
               <Link to="/">
                 <img src={TLMRlogo} alt="Logo TLMR" />
