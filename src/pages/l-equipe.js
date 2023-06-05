@@ -6,13 +6,22 @@ import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
 
-const StyledGrid = styled(Grid)`
+const StyledContainer = styled.section`
   margin: 110px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 110px 0;
   }
   h1 {
     margin-bottom: 30px;
+  }
+`;
+const StyledColumn = styled.section`
+  @media ${(props) => props.theme.minWidth.md} {
+    column-count: 2;
+    grid-column-gap: ${(props) => props.theme.columnGap.mobile};
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   p {
     margin-bottom: 30px;
@@ -50,17 +59,19 @@ const Lequipe = () => {
 
   return (
     <Layout>
-      <StyledGrid>
+      <StyledContainer>
         <Title as="h1">Le Cabinet</Title>
-        {leCabinet.map((paragraph, index) => (
-          <Paragraph key={index} size="xxl">
-            {paragraph}
-          </Paragraph>
-        ))}
-      </StyledGrid>
-      <StyledSeeMoreBtn as="button" onClick={handleSeeMore}>
-        Voir plus
-      </StyledSeeMoreBtn>
+        <StyledColumn>
+          {leCabinet.map((paragraph, index) => (
+            <Paragraph key={index} size="xxl">
+              {paragraph}
+            </Paragraph>
+          ))}
+        </StyledColumn>
+        <StyledSeeMoreBtn as="button" onClick={handleSeeMore}>
+          Voir plus
+        </StyledSeeMoreBtn>
+      </StyledContainer>
     </Layout>
   );
 };
