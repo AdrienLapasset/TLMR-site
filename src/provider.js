@@ -9,8 +9,8 @@ const Provider = (props) => {
   useEffect(() => {
     const handleIsHeaderVisible = () => {
       const currentScrollY = window.scrollY;
-      currentScrollY > scrollY && setIsNavHidden(true);
-      currentScrollY < scrollY && setIsNavHidden(false);
+      currentScrollY > scrollY + 10 && setIsNavHidden(true);
+      currentScrollY < scrollY - 10 && setIsNavHidden(false);
       setScrollY(currentScrollY);
     };
     window.addEventListener("scroll", handleIsHeaderVisible);
