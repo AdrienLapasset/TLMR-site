@@ -144,7 +144,42 @@ const StyledSeeMoreBtn = styled(Cta)`
     display: none;
   }
 `;
-const StyledLequipeContainer = styled.section``;
+const StyledLequipeContainer = styled(Grid)`
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-bottom: 150px;
+  }
+  & > div {
+    @media ${(props) => props.theme.minWidth.sm} {
+      grid-column: 1 / span 6;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      grid-column: 1 / span 4;
+    }
+    &:nth-child(even) {
+      @media ${(props) => props.theme.minWidth.sm} {
+        grid-column: 7 / span 6;
+      }
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 5 / span 4;
+      }
+    }
+    &:nth-child(3n) {
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 9 / span 4;
+      }
+    }
+    &:nth-child(4) {
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 1 / span 4;
+      }
+    }
+    &:nth-child(5) {
+      @media ${(props) => props.theme.minWidth.lg} {
+        grid-column: 5 / span 4;
+      }
+    }
+  }
+`;
 const StyledSupportTeam = styled.section`
   h2 {
     margin-bottom: 10px;
@@ -220,16 +255,16 @@ const Lequipe = () => {
       </StyledLequipeContainer>
       <StyledSupportTeam>
         <Paragraph as="h2">Équipe support et opérationnelle</Paragraph>
-        <Paragraph size="lg">Christophe Lemée</Paragraph>
-        <Paragraph as="aside" size="lg" color="greyLight">
+        <Paragraph size="xxl">Christophe Lemée</Paragraph>
+        <Paragraph as="aside" size="xxl" color="greyLight">
           Informatique et R&D e-services
         </Paragraph>
-        <Paragraph size="lg"> Thomas Gasio</Paragraph>
-        <Paragraph as="aside" size="lg" color="greyLight">
+        <Paragraph size="xxl"> Thomas Gasio</Paragraph>
+        <Paragraph as="aside" size="xxl" color="greyLight">
           Marketing et e-commerce
         </Paragraph>
-        <Paragraph size="lg">Goran Mladenovic</Paragraph>
-        <Paragraph as="aside" size="lg" color="greyLight">
+        <Paragraph size="xxl">Goran Mladenovic</Paragraph>
+        <Paragraph as="aside" size="xxl" color="greyLight">
           Administratif et Comptabilité
         </Paragraph>
       </StyledSupportTeam>
