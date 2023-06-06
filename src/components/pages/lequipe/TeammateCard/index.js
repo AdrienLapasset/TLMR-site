@@ -17,7 +17,7 @@ const StyledContainer = styled.div`
     margin-bottom: 20px;
   }
   p {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -38,7 +38,7 @@ const TeammateCard = ({
       )}
       <h3>{name}</h3>
       <aside>{post}</aside>
-      <Paragraph>{description}</Paragraph>
+      <Paragraph size="lg">{description}</Paragraph>
       <AccordionSection title="Formation et expérience" data={experiences} />
       <AccordionSection title="Engagements" data={engagements} />
     </StyledContainer>

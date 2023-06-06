@@ -1,37 +1,40 @@
 import * as React from "react";
 import styled from "styled-components";
 
-// TODO refactorer en fonction de "size" et pas en fonction du minwidth
 const StyledParagraph = styled.p`
-  font-size: ${(props) => props.size === "xxl" && "20px"};
-  ${(props) => (props.size === "lg" || props.size === "xl") && "16px"};
-  ${(props) => props.size === "sm" && "12px"};
-  ${(props) => props.size === "" && "14px"};
-
-  color: ${(props) =>
-    props.color === "greyLight"
-      ? (props) => props.theme.colors.greyLight
-      : (props) => props.theme.colors.black};
-
-  @media ${(props) => props.theme.minWidth.lg} {
-    font-size: ${(props) => props.size === "xxl" && "22px"};
-    ${(props) => props.size === "xl" && "18px"};
-    ${(props) => props.size === "lg" && "18px"};
-    ${(props) => props.size === "sm" && "14px"}
-    ${(props) => props.size === "" && "16px"};
+  font-size: ${({ size }) =>
+    size === "sm"
+      ? 12
+      : size === "lg" || size === "xl"
+      ? 16
+      : size === "xxl"
+      ? 20
+      : 14}px;
+  color: ${({ color }) =>
+    color === "greyLight"
+      ? ({ theme }) => theme.colors.greyLight
+      : ({ theme }) => theme.colors.black};
+  @media ${({ theme }) => theme.minWidth.lg} {
+    font-size: ${({ size }) =>
+      size === "sm"
+        ? 14
+        : size === "lg" || size === "xl"
+        ? 18
+        : size === "xxl"
+        ? 22
+        : 16}px;
   }
-
-  @media ${(props) => props.theme.minWidth.xl} {
-    font-size: ${(props) =>
-      props.size === "xxl"
-        ? "25px"
-        : props.size === "xl"
-        ? "20px"
-        : props.size === "lg"
-        ? "18px"
-        : props.size === "sm"
-        ? "14px"
-        : "16px"};
+  @media ${({ theme }) => theme.minWidth.xl} {
+    font-size: ${({ size }) =>
+      size === "sm"
+        ? 14
+        : size === "lg"
+        ? 18
+        : size === "xl"
+        ? 20
+        : size === "xxl"
+        ? 25
+        : 16}px;
   }
 `;
 
