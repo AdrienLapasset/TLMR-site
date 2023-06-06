@@ -9,12 +9,12 @@ import TeammateCard from "components/pages/lequipe/TeammateCard";
 
 const lequipe = [
   {
-    imgName: "placeholder",
+    imgName: "henri",
     name: "Henri de La Motte Rouge",
     post: " Avocat associé",
     description:
       "Henri est avocat. Il a plus de 12 ans d’expérience en droit des Technologies, de la propriété intellectuelle et de la protection des données personnelles et cybercriminalité. Doté d’une excellente expertise et compréhension du secteur du digital et de l’informatique, il accompagne des start-ups et des entreprises innovantes mais aussi des personnalités et décideurs. Il est réputé pour ses conseils stratégiques et opérationnels autant que pour sa combativité contentieuse et sa force mentale dans les dossiers sensibles. Il intervient également en droit des affaires, droit pénal et de la presse. Henri est aussi responsable pédagogique du cycle l’Avocat Connecté à l’École de Formation du Barreau de Paris et donne des formations auprès de la Chambre de Commerce et d’Industrie et de nombreuses conférences notamment sur la LegalTech.",
-    experience: [
+    experiences: [
       "Cabinet e-touati.com, avocat 2.0",
       "Cabinet BWT",
       "Cabinet Moreau Defarges & Bluyse",
@@ -97,14 +97,14 @@ const Lequipe = () => {
       <Title as="h1">Notre équipe</Title>
       <StyledLequipeContainer>
         {lequipe.map(
-          ({ imgName, name, post, description, experience, engagements }) => (
+          ({ imgName, name, post, description, experiences, engagements }) => (
             <TeammateCard
               key={name}
               imgName={imgName}
               name={name}
               post={post}
               description={description}
-              experience={experience}
+              experiences={experiences}
               engagements={engagements}
             />
           )
