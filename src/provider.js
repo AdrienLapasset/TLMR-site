@@ -29,4 +29,6 @@ const Provider = (props) => {
   );
 };
 
-export default ({ element }) => <Provider>{element}</Provider>;
+const thisProvider = ({ element }) => <Provider>{element}</Provider>;
+
+export default thisProvider;

@@ -5,8 +5,29 @@ import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
+import TeammateCard from "components/pages/lequipe/TeammateCard";
 
-const StyledContainer = styled.section`
+const lequipe = [
+  {
+    imgName: "placeholder",
+    name: "Henri de La Motte Rouge",
+    post: " Avocat associé",
+    description:
+      "Henri est avocat. Il a plus de 12 ans d’expérience en droit des Technologies, de la propriété intellectuelle et de la protection des données personnelles et cybercriminalité. Doté d’une excellente expertise et compréhension du secteur du digital et de l’informatique, il accompagne des start-ups et des entreprises innovantes mais aussi des personnalités et décideurs. Il est réputé pour ses conseils stratégiques et opérationnels autant que pour sa combativité contentieuse et sa force mentale dans les dossiers sensibles. Il intervient également en droit des affaires, droit pénal et de la presse. Henri est aussi responsable pédagogique du cycle l’Avocat Connecté à l’École de Formation du Barreau de Paris et donne des formations auprès de la Chambre de Commerce et d’Industrie et de nombreuses conférences notamment sur la LegalTech.",
+    experience: [
+      "Cabinet e-touati.com, avocat 2.0",
+      "Cabinet BWT",
+      "Cabinet Moreau Defarges & Bluyse",
+    ],
+    engagements: [
+      "Cabinet e-touati.com, avocat 2.0",
+      "Cabinet BWT",
+      "Cabinet Moreau Defarges & Bluyse",
+    ],
+  },
+];
+
+const StyledCabinetContainer = styled.section`
   margin: 110px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 110px 0;
@@ -32,6 +53,7 @@ const StyledSeeMoreBtn = styled(Cta)`
     display: none;
   }
 `;
+const StyledLequipeContainer = styled.section``;
 
 const Lequipe = () => {
   const leCabinetParagraphs = [
@@ -59,11 +81,11 @@ const Lequipe = () => {
 
   return (
     <Layout>
-      <StyledContainer>
-        <Title as="h1">Le Cabinet</Title>
+      <StyledCabinetContainer>
+        <Title as="h2">Le Cabinet</Title>
         <StyledColumn>
-          {leCabinet.map((paragraph, index) => (
-            <Paragraph key={index} size="xxl">
+          {leCabinet.map((paragraph) => (
+            <Paragraph key={paragraph} size="xxl">
               {paragraph}
             </Paragraph>
           ))}
@@ -71,7 +93,23 @@ const Lequipe = () => {
         <StyledSeeMoreBtn as="button" onClick={handleSeeMore}>
           Voir plus
         </StyledSeeMoreBtn>
-      </StyledContainer>
+      </StyledCabinetContainer>
+      <Title as="h1">Notre équipe</Title>
+      <StyledLequipeContainer>
+        {lequipe.map(
+          ({ imgName, name, post, description, experience, engagements }) => (
+            <TeammateCard
+              key={name}
+              imgName={imgName}
+              name={name}
+              post={post}
+              description={description}
+              experience={experience}
+              engagements={engagements}
+            />
+          )
+        )}
+      </StyledLequipeContainer>
     </Layout>
   );
 };
