@@ -37,7 +37,7 @@ const AccordionSection = ({ title, data }) => {
   return (
     <StyledContainer>
       <StyledHeader onClick={toggleSection}>
-        <Paragraph size="sm" as="h4">
+        <Paragraph size="lg" as="h4">
           {title}
         </Paragraph>
         <ToggleBtn isSectionOpen={isSectionOpen} />
@@ -49,7 +49,7 @@ const AccordionSection = ({ title, data }) => {
       >
         <ul>
           {data.map((item) => (
-            <Paragraph size="sm" as="li">
+            <Paragraph size="lg" as="li">
               → {item}
             </Paragraph>
           ))}
