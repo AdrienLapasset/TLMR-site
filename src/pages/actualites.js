@@ -6,7 +6,10 @@ import Title from "components/global/Title";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const StyledSupportTeam = styled.section``;
+const StyledGrid = styled(Grid)`
+  grid-template-columns: repeat(4, 1fr);
+`;
+const StyledArticleCard = styled.div``;
 
 const Actualites = () => {
   const data = useStaticQuery(
@@ -15,6 +18,7 @@ const Actualites = () => {
         allSanityArticle {
           nodes {
             title
+            date
             heroImg {
               asset {
                 gatsbyImageData
@@ -36,6 +40,18 @@ const Actualites = () => {
   return (
     <Layout>
       <Title as="h1">Actualités</Title>
+      <StyledGrid>
+        {articles.map(({ date, title, heroImg }) => {
+          const thumbImg = getImage(heroImg.asset);
+          return (
+            <StyledArticleCard key={title}>
+              <GatsbyImage image={thumbImg} alt={title} aspectRatio={1} />
+              <aside>{date}</aside>
+              <h3>{title}</h3>
+            </StyledArticleCard>
+          );
+        })}
+      </StyledGrid>
     </Layout>
   );
 };
