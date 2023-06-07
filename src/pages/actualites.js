@@ -9,7 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const StyledGrid = styled(Grid)`
   grid-template-columns: repeat(4, 1fr);
 `;
-const StyledArticleCard = styled.div``;
+const StyledArticleCard = styled(Link)``;
 
 const Actualites = () => {
   const data = useStaticQuery(
@@ -41,10 +41,10 @@ const Actualites = () => {
     <Layout>
       <Title as="h1">Actualités</Title>
       <StyledGrid>
-        {articles.map(({ date, title, heroImg }) => {
+        {articles.map(({ date, title, heroImg, slug }) => {
           const thumbImg = getImage(heroImg.asset);
           return (
-            <StyledArticleCard key={title}>
+            <StyledArticleCard key={title} to={"/article/" + slug.current}>
               <GatsbyImage image={thumbImg} alt={title} aspectRatio={1} />
               <aside>{date}</aside>
               <h3>{title}</h3>
