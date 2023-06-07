@@ -1,15 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "components/Layout";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import Title from "components/global/Title";
+import Paragraph from "components/global/Paragraph";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const StyledGrid = styled(Grid)`
   grid-template-columns: repeat(4, 1fr);
 `;
-const StyledArticleCard = styled(Link)``;
+const StyledContainer = styled.div`
+  margin: 110px 0 75px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin: 110px 0;
+  }
+`;
+const StyledYearContainer = styled.div`
+  margin: 100px 0;
+`;
+const StyledArticleCard = styled(Link)`
+  .gatsby-image-wrapper {
+    aspect-ratio: 1;
+  }
+`;
 
 const Actualites = () => {
   const data = useStaticQuery(
@@ -35,23 +49,53 @@ const Actualites = () => {
 
   const articles = data.allSanityArticle.nodes;
 
-  console.log(articles);
+  const years = [];
+
+  const getYearFromDateString = (dateString) => {
+    var date = new Date(dateString);
+    var year = date.getFullYear();
+    return year;
+  };
+
+  articles.map(({ date }) => {
+    const articleYear = getYearFromDateString(date);
+    return years.indexOf(articleYear) === -1 && years.push(articleYear);
+  });
+
+  years.sort((a, b) => b - a);
 
   return (
     <Layout>
-      <Title as="h1">Actualités</Title>
-      <StyledGrid>
-        {articles.map(({ date, title, heroImg, slug }) => {
-          const thumbImg = getImage(heroImg.asset);
+      <StyledContainer>
+        <Title as="h1">Actualités</Title>
+        {years.map((year) => {
+          const articlesByYear = articles.filter(
+            ({ date }) => getYearFromDateString(date) === year
+          );
           return (
-            <StyledArticleCard key={title} to={"/article/" + slug.current}>
-              <GatsbyImage image={thumbImg} alt={title} aspectRatio={1} />
-              <aside>{date}</aside>
-              <h3>{title}</h3>
-            </StyledArticleCard>
+            <StyledYearContainer key={year}>
+              <Title as="h2">{year}</Title>
+              <StyledGrid>
+                {articlesByYear.map(({ date, title, heroImg, slug }) => {
+                  const thumbImg = getImage(heroImg.asset);
+                  return (
+                    <StyledArticleCard
+                      key={title}
+                      to={"/article/" + slug.current}
+                    >
+                      <GatsbyImage image={thumbImg} alt={title} />
+                      <Paragraph size="sm">{date}</Paragraph>
+                      <Paragraph size="lg" as="h3">
+                        {title}
+                      </Paragraph>
+                    </StyledArticleCard>
+                  );
+                })}
+              </StyledGrid>
+            </StyledYearContainer>
           );
         })}
-      </StyledGrid>
+      </StyledContainer>
     </Layout>
   );
 };

@@ -12,7 +12,6 @@ export const query = graphql`
 
 const Article = ({ data }) => {
   const article = data.sanityArticle;
-  console.log(article);
   return (
     <Layout>
       <h1>{article.title}</h1>
