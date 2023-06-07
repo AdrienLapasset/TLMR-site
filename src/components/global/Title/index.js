@@ -23,10 +23,10 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const Title = ({ type, size, lowercase, children, className }) => {
+const Title = ({ as, size, lowercase, children, className }) => {
   return (
     <StyledTitle
-      as={type}
+      as={as}
       className={className}
       size={size}
       lowercase={lowercase}

@@ -57,7 +57,7 @@ const TwoPointsSection = ({
     <StyledContainer ref={twoPointsSectionRef}>
       <Grid className="grid">
         <div>
-          <Title size="sm" type="h2">
+          <Title size="sm" as="h2">
             {title1}
           </Title>
           <div>
@@ -70,7 +70,7 @@ const TwoPointsSection = ({
           </div>
         </div>
         <div>
-          <Title size="sm" type="h2">
+          <Title size="sm" as="h2">
             {title2}
           </Title>
           <div>

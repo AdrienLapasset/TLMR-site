@@ -107,7 +107,7 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
         aspectRatio={1.12}
       />
       <div>
-        <Title size="xs" type="h2">
+        <Title size="xs" as="h2">
           {title}
         </Title>
         {description.map((paragraph) => (

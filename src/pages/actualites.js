@@ -7,21 +7,47 @@ import Paragraph from "components/global/Paragraph";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const StyledGrid = styled(Grid)`
-  grid-template-columns: repeat(4, 1fr);
-`;
 const StyledContainer = styled.div`
   margin: 110px 0 75px;
+  h1 {
+    margin-bottom: 20px;
+  }
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 110px 0;
   }
 `;
 const StyledYearContainer = styled.div`
-  margin: 100px 0;
+  margin-bottom: 50px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-bottom: 70px;
+  }
+  h2 {
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 10px;
+    }
+  }
+`;
+const StyledGrid = styled(Grid)`
+  @media ${(props) => props.theme.minWidth.sm} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 const StyledArticleCard = styled(Link)`
+  margin-bottom: 30px;
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-bottom: 50px;
+  }
   .gatsby-image-wrapper {
-    aspect-ratio: 1;
+    aspect-ratio: 1.6;
+    @media ${(props) => props.theme.minWidth.md} {
+      aspect-ratio: 1;
+    }
+  }
+  p {
+    margin: 7px 0 5px;
   }
 `;
 
@@ -84,7 +110,13 @@ const Actualites = () => {
                       to={"/article/" + slug.current}
                     >
                       <GatsbyImage image={thumbImg} alt={title} />
-                      <Paragraph size="sm">{date}</Paragraph>
+                      <Paragraph size="sm">
+                        {new Date(date).toLocaleDateString("fr-FR", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </Paragraph>
                       <Paragraph size="lg" as="h3">
                         {title}
                       </Paragraph>
