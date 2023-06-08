@@ -75,7 +75,7 @@ const StyledNews = styled.div`
   }
 `;
 
-const ALaUne = ({ className, home, border }) => {
+const ALaUne = ({ className, home, border, article }) => {
   return (
     <StyledContainer className={className} border={border}>
       <header>

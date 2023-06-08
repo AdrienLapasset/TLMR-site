@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import Cta from "components/global/Cta";
 import Paragraph from "components/global/Paragraph";
+import Grid from "components/global/Grid";
+import ALaUne from "components/pages/home/sections/ALaUne";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import linkedinLogo from "assets/logos/linkedin.svg";
@@ -28,24 +30,63 @@ export const query = graphql`
 `;
 
 const StyledContainer = styled.div`
-  .gatsby-image-wrapper {
+  & > .gatsby-image-wrapper {
     aspect-ratio: 1;
     margin-bottom: 10px;
-    @media ${(props) => props.theme.minWidth.md} {
+    @media ${(props) => props.theme.minWidth.sm} {
       aspect-ratio: 2.25;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      margin-bottom: 20px;
+    }
+  }
+`;
+const StyledHeader = styled(Grid)`
+  display: block;
+
+  @media ${(props) => props.theme.minWidth.md} {
+    display: grid;
+  }
+  & > div {
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 1 / span 2;
     }
   }
   h1 {
     font-size: 28px;
+    @media ${(props) => props.theme.minWidth.md} {
+      grid-column: 3 / span 8;
+      font-size: 40px;
+    }
   }
 `;
+
 const StyledMobileInfo = styled.div`
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: ${(props) => props.theme.columnGap.mobile};
+  @media ${(props) => props.theme.minWidth.sm} {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    display: none;
+  }
   @media ${(props) => props.theme.minWidth.xl} {
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
+  }
+  & > div {
+    &:nth-child(3) {
+      @media ${(props) => props.theme.minWidth.sm} {
+        grid-row: 2;
+      }
+    }
+    &:nth-child(4) {
+      @media ${(props) => props.theme.minWidth.sm} {
+        grid-row: 2;
+      }
+    }
   }
   img {
     height: 18px;
@@ -58,16 +99,38 @@ const StyledMobileInfo = styled.div`
     }
   }
 `;
+const StyledDesktopInfo = styled.div`
+  display: none;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: block;
+  }
+`;
 const StyledInfoLabel = styled(Paragraph)`
   font-family: "Söhne-Kräftig", sans-serif;
+`;
+const StyledDesktopContentInfo = styled.div`
+  display: none;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: block;
+    grid-column: 1 / span 2;
+  }
 `;
 const StyledInfo = styled(Paragraph)`
   margin: 3px 0 20px;
 `;
-const StyledContent = styled.section`
+const StyledContentContainer = styled(Grid)`
+  display: block;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: grid;
+  }
   border-top: ${(props) => props.theme.border.black};
   padding: 15px 0;
   margin-top: 50px;
+`;
+const StyledContent = styled.section`
+  @media ${(props) => props.theme.minWidth.md} {
+    grid-column: 3 / span 8;
+  }
   p {
     font-family: "Signifier Light";
     font-size: 18px;
@@ -99,7 +162,9 @@ const StyledContent = styled.section`
 
 const myPortableTextComponents = {
   types: {
-    image: ({ value }) => <SanityImg asset={value.asset} />,
+    image: ({ value }) => (
+      <SanityImg asset={value.asset} alt={value.asset.filename} />
+    ),
   },
 };
 
@@ -111,7 +176,25 @@ const Article = ({ data }) => {
     <Layout>
       <StyledContainer>
         <GatsbyImage image={heroImage} alt={title} />
-        <h1>{title}</h1>
+        <StyledHeader>
+          <StyledDesktopInfo>
+            <div>
+              <StyledInfoLabel size="sm">Date</StyledInfoLabel>
+              <StyledInfo>
+                {new Date(date).toLocaleDateString("fr-FR", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </StyledInfo>
+            </div>
+            <div>
+              <StyledInfoLabel size="sm">Par</StyledInfoLabel>
+              <StyledInfo>{author}</StyledInfo>
+            </div>
+          </StyledDesktopInfo>
+          <h1>{title}</h1>
+        </StyledHeader>
         <StyledMobileInfo>
           <div>
             <StyledInfoLabel size="sm">Date</StyledInfoLabel>
@@ -137,12 +220,26 @@ const Article = ({ data }) => {
             <Cta>Nous contacter</Cta>
           </div>
         </StyledMobileInfo>
-        <StyledContent>
-          <PortableText
-            value={_rawContent}
-            components={myPortableTextComponents}
-          />
-        </StyledContent>
+        <StyledContentContainer>
+          <StyledDesktopContentInfo>
+            <div>
+              <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
+              <img src={facebookLogo} alt="" />
+              <img src={twitterLogo} alt="" />
+              <img src={linkedinLogo} alt="" />
+            </div>
+            <div>
+              <Cta>Nous contacter</Cta>
+            </div>
+          </StyledDesktopContentInfo>
+          <StyledContent>
+            <PortableText
+              value={_rawContent}
+              components={myPortableTextComponents}
+            />
+          </StyledContent>
+        </StyledContentContainer>
+        <ALaUne article border />
       </StyledContainer>
     </Layout>
   );
