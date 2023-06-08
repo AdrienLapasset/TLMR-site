@@ -3,12 +3,13 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import Cta from "components/global/Cta";
 import Paragraph from "components/global/Paragraph";
-import ArticleContentBlock from "components/pages/article/ArticleContentBlock";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import linkedinLogo from "assets/logos/linkedin.svg";
 import facebookLogo from "assets/logos/facebook.svg";
 import twitterLogo from "assets/logos/twitter.svg";
+import { PortableText } from "@portabletext/react";
+import SanityImg from "gatsby-plugin-sanity-image";
 
 export const query = graphql`
   query ArticleBySlug($slug: String!) {
@@ -31,7 +32,7 @@ const StyledContainer = styled.div`
     aspect-ratio: 1;
     margin-bottom: 10px;
     @media ${(props) => props.theme.minWidth.md} {
-      aspect-ratio: 1.6;
+      aspect-ratio: 2.25;
     }
   }
   h1 {
@@ -67,7 +68,40 @@ const StyledContent = styled.section`
   border-top: ${(props) => props.theme.border.black};
   padding: 15px 0;
   margin-top: 50px;
+  p {
+    font-family: "Signifier Light";
+    font-size: 18px;
+    margin-bottom: 30px;
+    em {
+      font-family: "Signifier Light Italic";
+    }
+  }
+  h2 {
+    font-size: 18px;
+    margin: 55px 0 30px;
+    font-family: "Söhne Kräftig";
+  }
+  ul {
+    margin-bottom: 20px;
+    li {
+      font-size: 18px;
+      font-family: "Signifier Light";
+      &:before {
+        content: "- ";
+        text-indent: -5px;
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+  }
 `;
+
+const myPortableTextComponents = {
+  types: {
+    image: ({ value }) => <SanityImg asset={value.asset} />,
+  },
+};
 
 const Article = ({ data }) => {
   const { title, date, author, _rawContent, heroImg } = data.sanityArticle;
@@ -104,34 +138,10 @@ const Article = ({ data }) => {
           </div>
         </StyledMobileInfo>
         <StyledContent>
-          {_rawContent.map((content, i) => {
-            let text = "";
-            let italic = "";
-            let imgId = "";
-            if (content.children) {
-              if (content.children[0].text !== undefined) {
-                text = content.children[0].text;
-              }
-              if (content.children[0].marks !== undefined) {
-                italic = content.children[0].marks[0];
-              }
-            }
-            if (content._type === "image") {
-              imgId = content.asset;
-            }
-            return (
-              <ArticleContentBlock
-                key={i}
-                style={content.style}
-                italic={italic}
-                listItem={content.listItem}
-                type={content._type}
-                imgId={imgId}
-              >
-                {text}
-              </ArticleContentBlock>
-            );
-          })}
+          <PortableText
+            value={_rawContent}
+            components={myPortableTextComponents}
+          />
         </StyledContent>
       </StyledContainer>
     </Layout>
