@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import Cta from "components/global/Cta";
 import Paragraph from "components/global/Paragraph";
-import ArticleText from "components/pages/Article/ArticleText";
+import ArticleContentBlock from "components/pages/Article/ArticleContentBlock";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import linkedinLogo from "assets/logos/linkedin.svg";
@@ -107,6 +107,7 @@ const Article = ({ data }) => {
           {_rawContent.map((content, i) => {
             let text = "";
             let italic = "";
+            let imgId = "";
             if (content.children) {
               if (content.children[0].text !== undefined) {
                 text = content.children[0].text;
@@ -115,15 +116,20 @@ const Article = ({ data }) => {
                 italic = content.children[0].marks[0];
               }
             }
+            if (content._type === "image") {
+              imgId = content.asset._ref;
+            }
             return (
-              <ArticleText
+              <ArticleContentBlock
                 key={i}
                 style={content.style}
                 italic={italic}
                 listItem={content.listItem}
+                type={content._type}
+                imgId={imgId}
               >
                 {text}
-              </ArticleText>
+              </ArticleContentBlock>
             );
           })}
         </StyledContent>

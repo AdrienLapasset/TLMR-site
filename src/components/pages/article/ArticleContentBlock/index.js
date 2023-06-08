@@ -1,6 +1,16 @@
 import React from "react";
-
 import styled from "styled-components";
+import { createClient } from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+
+const client = createClient({
+  projectId: "i7u835te",
+  dataset: "production",
+  useCdn: true, // set to `false` to bypass the edge cache
+  apiVersion: "2023-05-03", // use current date (YYYY-MM-DD) to target the latest API version
+});
+
+const builder = imageUrlBuilder(client);
 
 const StyledP = styled.p`
   font-family: "Signifier Light";
@@ -20,8 +30,18 @@ const StyledLi = styled.li`
     margin-bottom: 20px;
   }
 `;
+const StyledImg = styled.img`
+  max-width: 100%;
+`;
 
-const ArticleText = ({ children, style, italic, listItem }) => {
+const ArticleContentBlock = ({
+  children,
+  style,
+  italic,
+  listItem,
+  type,
+  imgId,
+}) => {
   if (listItem !== "bullet") {
     if (style === "normal")
       return <StyledP italic={italic}>{children}</StyledP>;
@@ -29,6 +49,9 @@ const ArticleText = ({ children, style, italic, listItem }) => {
   } else {
     return <StyledLi>- {children}</StyledLi>;
   }
+  if (type === "image") {
+    return <StyledImg src={builder.image(imgId).url()} />;
+  }
 };
 
-export default ArticleText;
+export default ArticleContentBlock;
