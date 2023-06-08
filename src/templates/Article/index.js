@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import Cta from "components/global/Cta";
 import Paragraph from "components/global/Paragraph";
-import ArticleContentBlock from "components/pages/Article/ArticleContentBlock";
+import ArticleContentBlock from "components/pages/article/ArticleContentBlock";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import linkedinLogo from "assets/logos/linkedin.svg";
