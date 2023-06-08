@@ -55,26 +55,26 @@ const TeammateCard = ({
         <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
       )}
       {imgName === "jean-philippe" && (
-        <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
+        <StaticImage src={imgPathJean} alt={name} aspectRatio={1} />
       )}
       {imgName === "elea" && (
-        <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
+        <StaticImage src={imgPathElea} alt={name} aspectRatio={1} />
       )}
       {imgName === "myriam" && (
-        <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
+        <StaticImage src={imgPathMyriam} alt={name} aspectRatio={1} />
       )}
       {imgName === "claudia" && (
-        <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
+        <StaticImage src={imgPathClaudia} alt={name} aspectRatio={1} />
       )}
       {imgName === "evanthia" && (
-        <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
+        <StaticImage src={imgPathEvanthia} alt={name} aspectRatio={1} />
       )}
       <h3>{name}</h3>
       <aside>{post}</aside>
       <Paragraph size="lg">{description}</Paragraph>
       <AccordionSection title="Formation et expérience" data={experiences} />
       <AccordionSection title="Engagements" data={engagements} />
-      <a href={linkedinUrl} target="_blank">
+      <a href={linkedinUrl} target="_blank" rel="noreferrer">
         <img src={linkedinLogo} alt="" />
       </a>
     </StyledContainer>

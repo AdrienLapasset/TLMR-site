@@ -16,12 +16,7 @@ export const query = graphql`
       title
       date
       author
-      content {
-        style
-        children {
-          text
-        }
-      }
+      _rawContent(resolveReferences: { maxDepth: 1 })
       heroImg {
         asset {
           gatsbyImageData
@@ -75,7 +70,7 @@ const StyledContent = styled.section`
 `;
 
 const Article = ({ data }) => {
-  const { title, date, author, content, heroImg } = data.sanityArticle;
+  const { title, date, author, _rawContent, heroImg } = data.sanityArticle;
   const heroImage = getImage(heroImg.asset);
 
   return (
@@ -109,11 +104,25 @@ const Article = ({ data }) => {
           </div>
         </StyledMobileInfo>
         <StyledContent>
-          {content.map(({ children, style }, i) => {
-            const paragraph = children[0]?.text;
+          {_rawContent.map((content, i) => {
+            let text = "";
+            let italic = "";
+            if (content.children) {
+              if (content.children[0].text !== undefined) {
+                text = content.children[0].text;
+              }
+              if (content.children[0].marks !== undefined) {
+                italic = content.children[0].marks[0];
+              }
+            }
             return (
-              <ArticleText key={i} style={style}>
-                {paragraph}
+              <ArticleText
+                key={i}
+                style={content.style}
+                italic={italic}
+                listItem={content.listItem}
+              >
+                {text}
               </ArticleText>
             );
           })}
