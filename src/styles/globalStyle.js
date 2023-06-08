@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components/macro";
 import SohneBuch from "assets/fonts/soehne-buch.woff2";
 import SöhneBreitBuch from "assets/fonts/soehne-breit-buch.woff2";
 import SöhneKräftig from "assets/fonts/soehne-kraftig.woff2";
+import SignifierLight from "assets/fonts/signifier-light.woff2";
 
 export default createGlobalStyle`
 
@@ -16,6 +17,10 @@ export default createGlobalStyle`
 @font-face {
   font-family: "SöhneBreit Buch";
   src: url(${SöhneBreitBuch}) format("woff2");
+}
+@font-face {
+  font-family: "Signifier Light";
+  src: url(${SignifierLight}) format("woff2");
 }
 
 * {

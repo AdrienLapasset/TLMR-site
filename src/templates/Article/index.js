@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "components/Layout";
 import Cta from "components/global/Cta";
 import Paragraph from "components/global/Paragraph";
+import ArticleText from "components/pages/Article/ArticleText";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import linkedinLogo from "assets/logos/linkedin.svg";
@@ -67,6 +68,11 @@ const StyledInfoLabel = styled(Paragraph)`
 const StyledInfo = styled(Paragraph)`
   margin: 3px 0 20px;
 `;
+const StyledContent = styled.section`
+  border-top: ${(props) => props.theme.border.black};
+  padding: 15px 0;
+  margin-top: 50px;
+`;
 
 const Article = ({ data }) => {
   const { title, date, author, content, heroImg } = data.sanityArticle;
@@ -102,6 +108,16 @@ const Article = ({ data }) => {
             <Cta>Nous contacter</Cta>
           </div>
         </StyledMobileInfo>
+        <StyledContent>
+          {content.map(({ children, style }, i) => {
+            const paragraph = children[0]?.text;
+            return (
+              <ArticleText key={i} style={style}>
+                {paragraph}
+              </ArticleText>
+            );
+          })}
+        </StyledContent>
       </StyledContainer>
     </Layout>
   );
