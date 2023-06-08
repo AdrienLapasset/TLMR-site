@@ -1,26 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { createClient } from "@sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
-
-const client = createClient({
-  projectId: "i7u835te",
-  dataset: "production",
-  useCdn: true, // set to `false` to bypass the edge cache
-  apiVersion: "2023-05-03", // use current date (YYYY-MM-DD) to target the latest API version
-});
-
-const builder = imageUrlBuilder(client);
+import SanityImg from "gatsby-plugin-sanity-image";
 
 const StyledP = styled.p`
   font-family: "Signifier Light";
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-style: ${({ italic }) => (italic === "em" ? "italic" : "normal")};
 `;
 const StyledH2 = styled.h2`
   font-size: 18px;
-  margin: 40px 0 20px;
+  margin: 55px 0 30px;
   font-family: "Söhne Kräftig";
 `;
 const StyledLi = styled.li`
@@ -30,7 +20,7 @@ const StyledLi = styled.li`
     margin-bottom: 20px;
   }
 `;
-const StyledImg = styled.img`
+const StyledImg = styled(SanityImg)`
   max-width: 100%;
 `;
 
@@ -50,7 +40,7 @@ const ArticleContentBlock = ({
     return <StyledLi>- {children}</StyledLi>;
   }
   if (type === "image") {
-    return <StyledImg src={builder.image(imgId).url()} />;
+    return <StyledImg asset={imgId} alt={imgId.filename} />;
   }
 };
 

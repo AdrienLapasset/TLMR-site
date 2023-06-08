@@ -16,7 +16,7 @@ export const query = graphql`
       title
       date
       author
-      _rawContent(resolveReferences: { maxDepth: 1 })
+      _rawContent(resolveReferences: { maxDepth: 10 })
       heroImg {
         asset {
           gatsbyImageData
@@ -117,7 +117,7 @@ const Article = ({ data }) => {
               }
             }
             if (content._type === "image") {
-              imgId = content.asset._ref;
+              imgId = content.asset;
             }
             return (
               <ArticleContentBlock
