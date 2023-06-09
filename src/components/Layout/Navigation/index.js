@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
   }
   @media ${(props) => props.theme.minWidth.lg} {
     transform: ${(props) =>
-      props.isNavHidden ? "translateY(-69px)" : "translateY(0px)"};
+      props.isNavHidden ? "translateY(-74px)" : "translateY(0px)"};
     height: unset;
     display: grid;
     grid-template-columns: repeat(12, 1fr);

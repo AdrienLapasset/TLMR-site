@@ -2,24 +2,22 @@ import * as React from "react";
 import styled from "styled-components";
 
 const StyledTitle = styled.h1`
-  margin-top: ${(props) => (props.type === "h1" ? "100px" : "0")};
+  margin-top: ${({ type }) => (type === "h1" ? 100 : 0)}px;
   margin-bottom: 10px;
   font-family: "SöhneBreit Buch", sans-serif;
-  text-transform: ${(props) => (props.lowercase ? "none" : "uppercase")};
-  font-size: ${(props) =>
-    props.size === "xs" ? "28px" : props.size === "sm" ? "28px" : "32px"};
+  text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
+  font-size: ${({ size }) => (size === "xs" ? 28 : size === "sm" ? 28 : 32)}px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-bottom: ${(props) =>
-      props.size === "xs" ? "" : props.size === "sm" ? "10px" : "40px"};
-    font-size: ${(props) => (props.size ? "35px" : "45px")};
+    margin-bottom: ${({ size }) =>
+      size === "xs" ? "" : size === "sm" ? 10 : 40}px;
+    font-size: ${({ size }) => (size === "sm" ? 35 : 45)}px;
   }
   @media ${(props) => props.theme.minWidth.md} {
-    font-size: ${(props) =>
-      props.size === "xs" ? "" : props.size === "sm" ? "35px" : "50px"};
+    font-size: ${({ size }) => (size === "sm" ? 35 : 50)}px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    font-size: ${(props) =>
-      props.size === "xs" ? "30px" : props.size === "sm" ? "45px" : "60px"};
+    font-size: ${({ size }) =>
+      size === "xs" ? 30 : size === "sm" ? 45 : 60}px;
   }
 `;
 

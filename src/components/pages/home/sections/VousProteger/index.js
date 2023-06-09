@@ -21,7 +21,7 @@ const StyledContainer = styled.div`
 const VousProteger = () => {
   return (
     <StyledContainer>
-      <SectionTitle aside={"Expertise"} title={"VOUS PROTÉGER"} />
+      <SectionTitle aside="Expertise" title="VOUS PROTÉGER" />
       <StaticImage
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"

@@ -21,7 +21,7 @@ const StyledContainer = styled.div`
 const NosSolution = () => {
   return (
     <StyledContainer>
-      <SectionTitle aside={"e-Services"} title={"NOS SOLUTIONS"} />
+      <SectionTitle aside="e-Services" title="NOS SOLUTIONS" />
       <StaticImage
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"

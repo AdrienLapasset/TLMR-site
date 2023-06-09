@@ -5,7 +5,7 @@ import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 // import { GoogleMap, Marker } from "react-google-maps";
 
 const StyledContainer = styled.div`
