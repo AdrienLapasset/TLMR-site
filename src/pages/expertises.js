@@ -29,7 +29,7 @@ const ExpertisesPage = () => {
         twoPointsSectionRef={twoPointsSectionRef}
       />
       {ExpertisesData.map((expertise, index) => (
-        <Element key={index} name={expertise.title}>
+        <Element key={index} name={expertise.title} id={expertise.title}>
           <Expertise expertise={expertise} />
         </Element>
       ))}

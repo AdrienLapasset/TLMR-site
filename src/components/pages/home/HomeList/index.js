@@ -47,14 +47,6 @@ const StyledList = styled.ul`
 `;
 
 const HomeList = ({ type, list }) => {
-  const listRender = list?.map((element, index) => {
-    return (
-      <Link to={"/" + element} key={index}>
-        {element}
-      </Link>
-    );
-  });
-
   return (
     <StyledContainer>
       <div>
@@ -62,7 +54,20 @@ const HomeList = ({ type, list }) => {
         <h3>{type}</h3>
       </div>
       <StyledList>
-        {listRender}
+        {list?.map((sectionTitle, index) => {
+          return (
+            <Link
+              to={
+                type === "e-Services"
+                  ? "/e-services/#" + sectionTitle
+                  : "/expertises/#" + sectionTitle
+              }
+              key={index}
+            >
+              {sectionTitle}
+            </Link>
+          );
+        })}
         {type === "e-Services" ? <aside className="blank"></aside> : null}
       </StyledList>
     </StyledContainer>

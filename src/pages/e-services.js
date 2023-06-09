@@ -24,7 +24,7 @@ const Eservices = () => {
         eservices
       />
       {EservicesData.map(({ title, description, points, btns, imgPath }) => (
-        <Element key={title} name={title}>
+        <Element key={title} name={title} id={title}>
           <Eservice
             title={title}
             description={description}
