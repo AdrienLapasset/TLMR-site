@@ -55,7 +55,7 @@ const Contact = () => {
   return (
     <Layout>
       <StyledContainer>
-        <Title as="h1">Contact</Title>
+        <Title type="h1">Contact</Title>
         <Grid>
           <div>
             <div>

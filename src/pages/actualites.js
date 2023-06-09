@@ -93,14 +93,14 @@ const Actualites = () => {
   return (
     <Layout>
       <StyledContainer>
-        <Title as="h1">Actualités</Title>
+        <Title type="h1">Actualités</Title>
         {years.map((year) => {
           const articlesByYear = articles.filter(
             ({ date }) => getYearFromDateString(date) === year
           );
           return (
             <StyledYearContainer key={year}>
-              <Title as="h2">{year}</Title>
+              <Title type="h2">{year}</Title>
               <StyledGrid>
                 {articlesByYear.map(({ date, title, heroImg, slug }) => {
                   const thumbImg = getImage(heroImg.asset);

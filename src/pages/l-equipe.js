@@ -216,7 +216,7 @@ const Lequipe = () => {
   return (
     <Layout>
       <StyledCabinetContainer>
-        <Title as="h2">Le Cabinet</Title>
+        <Title type="h2">Le Cabinet</Title>
         <StyledColumn>
           {leCabinet.map((paragraph) => (
             <Paragraph key={paragraph} size="xxl">
@@ -228,7 +228,7 @@ const Lequipe = () => {
           Voir plus
         </StyledSeeMoreBtn>
       </StyledCabinetContainer>
-      <Title as="h1">Notre équipe</Title>
+      <Title type="h1">Notre équipe</Title>
       <StyledLequipeContainer>
         {lequipe.map(
           ({

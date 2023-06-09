@@ -27,7 +27,7 @@ const SectionTitle = ({ aside, title, className }) => {
   return (
     <StyledContainer className={className}>
       <aside>{aside}</aside>
-      <StyledTitle as="h2" className={className}>
+      <StyledTitle type="h2" className={className}>
         {title}
       </StyledTitle>
     </StyledContainer>

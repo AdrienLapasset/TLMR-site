@@ -148,7 +148,7 @@ const Expertise = ({ expertise }) => {
   return (
     <StyledContainer>
       <StyledTitleGrid>
-        <Title as="h2" size="sm" lowercase>
+        <Title type="h2" size="sm" lowercase>
           {expertise.title}
         </Title>
       </StyledTitleGrid>

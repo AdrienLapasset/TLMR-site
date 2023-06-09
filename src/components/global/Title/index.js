@@ -8,8 +8,7 @@ const StyledTitle = styled.h1`
   text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
   font-size: ${({ size }) => (size === "xs" ? 28 : size === "sm" ? 28 : 32)}px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-bottom: ${({ size }) =>
-      size === "xs" ? "" : size === "sm" ? 10 : 40}px;
+    margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
     font-size: ${({ size }) => (size === "sm" ? 35 : 45)}px;
   }
   @media ${(props) => props.theme.minWidth.md} {
@@ -21,10 +20,10 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const Title = ({ as, size, lowercase, children, className }) => {
+const Title = ({ type, size, lowercase, children, className }) => {
   return (
     <StyledTitle
-      as={as}
+      as={type}
       className={className}
       size={size}
       lowercase={lowercase}
