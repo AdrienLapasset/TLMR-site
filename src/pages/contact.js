@@ -107,12 +107,6 @@ const Contact = () => {
           <Marker position={{ lat: -34.397, lng: 150.644 }} />
         </GoogleMap> */}
 
-        {/* <StyledMap
-          loading="lazy"
-          allowfullscreen
-          src="https://www.google.com/maps/embed/v1/place?q=69%20place%20du%20Docteur%20F%C3%A9lix%20Lobligeois%2075017%20Paris&key=AIzaSyCSJLVUq4HolKhq627a3Yqb0BhPhzmF4t8"
-        ></StyledMap> */}
-
         <StyledMap
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.522656492757!2d2.315187377214123!3d48.88637569873561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fb1e5e86ddb%3A0x54ec094d27f8b042!2s69%20Place%20du%20Dr%20F%C3%A9lix%20Lobligeois%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1686312302965!5m2!1sfr!2sfr"
           allowfullscreen=""
