@@ -28,14 +28,14 @@ const StyledButtonsContainer = styled.div`
 `;
 
 const SectionDescription = ({ description, links, className }) => {
-  const linksRender = links?.map((link) => {
-    return <Cta key={link.text}>{link.text}</Cta>;
-  });
-
   return (
     <StyledContainer className={className}>
       <p>{description}</p>
-      <StyledButtonsContainer>{linksRender}</StyledButtonsContainer>
+      <StyledButtonsContainer>
+        {links.map(({ text, to }) => (
+          <Cta href={to}>{text}</Cta>
+        ))}
+      </StyledButtonsContainer>
     </StyledContainer>
   );
 };

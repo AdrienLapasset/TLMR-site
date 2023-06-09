@@ -33,8 +33,8 @@ const NosSolution = () => {
           "Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."
         }
         links={[
-          { text: "En savoir plus", link: "" },
-          { text: "Nous contacter", link: "" },
+          { text: "En savoir plus", to: "/" },
+          { text: "Nous contacter", to: "contact" },
         ]}
       />
       <HomeList

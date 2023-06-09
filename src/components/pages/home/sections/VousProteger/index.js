@@ -33,8 +33,8 @@ const VousProteger = () => {
           "Vous protéger en toute circonstance que ce soit pour relever vos défis d'entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à des problématiques diverses avec rigueur et pragmatisme."
         }
         links={[
-          { text: "En savoir plus", link: "" },
-          { text: "Nous contacter", link: "" },
+          { text: "En savoir plus", to: "/" },
+          { text: "Nous contacter", to: "contact" },
         ]}
       />
       <HomeList
