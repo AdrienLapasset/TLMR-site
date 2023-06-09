@@ -21,7 +21,7 @@ const StyledA = styled.a`
   ${StyledCta}
 `;
 
-const Cta = ({ as, children, className, onClick, href, to }) => {
+const Cta = ({ children, className, onClick, href, to }) => {
   if (onClick)
     return (
       <StyledButton className={className} onClick={() => onClick()}>
@@ -30,13 +30,7 @@ const Cta = ({ as, children, className, onClick, href, to }) => {
     );
   if (to)
     return (
-      <StyledLink
-        to={to}
-        as={as}
-        className={className}
-        onClick={() => onClick()}
-        href={href}
-      >
+      <StyledLink to={to} className={className} href={href}>
         {children}
       </StyledLink>
     );

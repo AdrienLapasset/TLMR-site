@@ -52,6 +52,8 @@ const TwoPointsSection = ({
   description1,
   description2,
   twoPointsSectionRef,
+  link1,
+  link2,
 }) => {
   return (
     <StyledContainer ref={twoPointsSectionRef}>
@@ -66,7 +68,7 @@ const TwoPointsSection = ({
               alt="TLMR - L’excellence accessible"
             />
             <Paragraph>{description1}</Paragraph>
-            <Cta>En savoir plus</Cta>
+            <Cta to={"/" + link1}>En savoir plus</Cta>
           </div>
         </div>
         <div>
@@ -79,7 +81,7 @@ const TwoPointsSection = ({
               alt="TLMR - L’excellence accessible"
             />
             <Paragraph>{description2}</Paragraph>
-            <Cta>En savoir plus</Cta>
+            <Cta to={"/" + link2}>En savoir plus</Cta>
           </div>
         </div>
       </Grid>
