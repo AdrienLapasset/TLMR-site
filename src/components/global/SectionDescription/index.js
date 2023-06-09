@@ -33,7 +33,9 @@ const SectionDescription = ({ description, links, className }) => {
       <p>{description}</p>
       <StyledButtonsContainer>
         {links.map(({ text, to }) => (
-          <Cta href={to}>{text}</Cta>
+          <Cta key={text} href={to}>
+            {text}
+          </Cta>
         ))}
       </StyledButtonsContainer>
     </StyledContainer>
