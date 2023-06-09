@@ -51,12 +51,22 @@ const StyledHeader = styled(Grid)`
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 1 / span 2;
     }
+    @media ${(props) => props.theme.minWidth.lg} {
+      grid-column: 1 / span 3;
+    }
   }
   h1 {
     font-size: 28px;
     @media ${(props) => props.theme.minWidth.md} {
-      grid-column: 3 / span 8;
+      grid-column: 3 / span 10;
       font-size: 40px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      grid-column: 4 / span 9;
+      font-size: 45px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 60px;
     }
   }
 `;
@@ -103,6 +113,7 @@ const StyledDesktopInfo = styled.div`
   display: none;
   @media ${(props) => props.theme.minWidth.md} {
     display: block;
+    padding-top: 15px;
   }
 `;
 const StyledInfoLabel = styled(Paragraph)`
@@ -114,40 +125,59 @@ const StyledDesktopContentInfo = styled.div`
     display: block;
     grid-column: 1 / span 2;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    grid-column: 1 / span 3;
+  }
+  img {
+    height: 18px;
+    margin: 5px 5px 0 0;
+  }
+  & > div {
+    margin-bottom: 30px;
+  }
 `;
 const StyledInfo = styled(Paragraph)`
   margin: 3px 0 20px;
 `;
 const StyledContentContainer = styled(Grid)`
   display: block;
+  border-top: ${(props) => props.theme.border.black};
+  padding-top: 15px;
+  margin-top: 50px;
   @media ${(props) => props.theme.minWidth.md} {
     display: grid;
+    margin-top: 20px;
+    padding: 25px 0;
   }
-  border-top: ${(props) => props.theme.border.black};
-  padding: 15px 0;
-  margin-top: 50px;
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 30px;
+  }
 `;
 const StyledContent = styled.section`
   @media ${(props) => props.theme.minWidth.md} {
     grid-column: 3 / span 8;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    grid-column: 4 / span 7;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column: 4 / span 6;
+  }
   p {
     font-family: "Signifier Light";
-    font-size: 18px;
     margin-bottom: 30px;
+
     em {
       font-family: "Signifier Light Italic";
     }
   }
   h2 {
-    font-size: 18px;
     margin: 55px 0 30px;
     font-family: "Söhne Kräftig";
   }
   ul {
     margin-bottom: 20px;
     li {
-      font-size: 18px;
       font-family: "Signifier Light";
       &:before {
         content: "- ";
@@ -157,6 +187,20 @@ const StyledContent = styled.section`
   }
   img {
     max-width: 100%;
+  }
+  p,
+  h2,
+  li {
+    font-size: 18px;
+    @media ${(props) => props.theme.minWidth.md} {
+      font-size: 20px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 22px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 25px;
+    }
   }
 `;
 
