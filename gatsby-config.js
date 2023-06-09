@@ -38,6 +38,5 @@ module.exports = {
     "gatsby-plugin-root-import",
     "gatsby-plugin-anchor-links",
     "gatsby-plugin-netlify",
-    "gatsby-plugin-react-leaflet",
   ],
 };
