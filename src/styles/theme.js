@@ -19,7 +19,7 @@ const theme = {
     base: "cubic-bezier(.25, .8, .25, 1)",
     bounce: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
   },
-  transitionTime: "0.3s",
+  transitionTime: 0.3,
   columnGap: {
     mobile: "20px",
     desktop: "30px",

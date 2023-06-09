@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import { Link } from "react-scroll";
@@ -8,21 +8,20 @@ import { myContext } from "provider";
 const StyledContainer = styled.section`
   display: none;
   @media ${(props) => props.theme.minWidth.lg} {
-    ${(props) =>
-      props.isNavHidden && !props.isHidden
-        ? `transform: translateY(-` + props.headerHeight + `px)`
-        : !props.isNavHidden && !props.isHidden
-        ? `transform: translateY(0px)`
-        : props.isHidden && `transform: translateY(-200px)`};
-    transition: transform ${(props) => props.theme.transitionTime};
+    transform: translateY(
+      ${({ headerHeight, isHidden }) => isHidden && `-` + headerHeight * 2}px
+    );
+    transition: transform ${(props) => props.theme.transitionTime}s,
+      top ${(props) => props.theme.transitionTime}s;
     ${(props) => props.theme.cubicBezier.base};
     position: sticky;
-    top: ${(props) => props.headerHeight + "px"};
+    top: ${({ headerHeight, isNavHidden }) =>
+      isNavHidden ? -1 : headerHeight}px;
     z-index: 1;
     background-color: white;
     display: block;
     margin: 100px 0 70px;
-    border-top: ${(props) => props.theme.border.black};
+    border-top: ${({ theme }) => theme.border.black};
     padding: 10px 0;
   }
 
@@ -110,6 +109,8 @@ const StyledNavLink = styled(Link)`
 const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
   const headerHeight = 71;
   const [isHidden, setIsHidden] = useState(false);
+  const [isScrollToAnchorNav, setIsScrollToAnchorNav] = useState(false);
+  const anchorNavRef = useRef(null);
 
   useEffect(() => {
     const handleIsHidden = () => {
@@ -117,9 +118,18 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
         twoPointsSectionRef.current.getBoundingClientRect().top;
       twoPointsSectionPosition < 300 ? setIsHidden(true) : setIsHidden(false);
     };
+    const handleIsScrollToAnchorNav = () => {
+      const anchorNavPosition =
+        anchorNavRef.current.getBoundingClientRect().top;
+      anchorNavPosition <= 0
+        ? setIsScrollToAnchorNav(true)
+        : setIsScrollToAnchorNav(false);
+    };
     window.addEventListener("scroll", handleIsHidden);
+    window.addEventListener("scroll", handleIsScrollToAnchorNav);
     return () => {
       window.removeEventListener("scroll", handleIsHidden);
+      window.removeEventListener("scroll", handleIsScrollToAnchorNav);
     };
   }, [twoPointsSectionRef]);
   return (
@@ -130,6 +140,8 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
             isNavHidden={context?.isNavHidden}
             headerHeight={headerHeight}
             isHidden={isHidden}
+            isScrollToAnchorNav={isScrollToAnchorNav}
+            ref={anchorNavRef}
           >
             <Grid>
               {!eservices && <h3>Compétences</h3>}

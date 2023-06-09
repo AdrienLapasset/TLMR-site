@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   margin-left: auto;
-  transition: all ${(props) => props.theme.transitionTime};
+  transition: all ${(props) => props.theme.transitionTime}s;
   ${(props) => props.theme.cubicBezier.base};
   width: 12px;
   height: 12px;
@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
     transform: translateY(8px);
     background: ${(props) => props.theme.colors.black};
     height: 1px;
-    transition: ${(props) => props.theme.transitionTime};
+    transition: ${(props) => props.theme.transitionTime}s;
     ${(props) => props.theme.cubicBezier.base};
     &:nth-of-type(1) {
       ${(props) =>

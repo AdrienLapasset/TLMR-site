@@ -9,7 +9,7 @@ const StyledContainer = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    transition: all ${(props) => props.theme.transitionTime};
+    transition: all ${(props) => props.theme.transitionTime}s;
     ${(props) => props.theme.cubicBezier.base};
     ${(props) =>
       props.isNavOpen ? "width: 30px; height: 30px;" : "width: 45px;"};
@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
       background: ${(props) => props.theme.colors.black};
       height: 1px;
       margin: 4px 0;
-      transition: ${(props) => props.theme.transitionTime};
+      transition: ${(props) => props.theme.transitionTime}s;
       ${(props) => props.theme.cubicBezier.base};
       &:nth-of-type(1) {
         ${(props) =>

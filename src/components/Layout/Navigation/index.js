@@ -6,7 +6,7 @@ import ToggleBtn from "./ToggleBtn";
 import { myContext } from "provider";
 
 const StyledNav = styled.nav`
-  transition: all ${(props) => props.theme.transitionTime};
+  transition: all ${(props) => props.theme.transitionTime}s;
   ${(props) => props.theme.cubicBezier.base};
   height: ${(props) => (props.isNavOpen ? "100vh" : "54px")};
   position: sticky;
@@ -41,7 +41,7 @@ const StyledNav = styled.nav`
 `;
 const StyledLinksContainer = styled.div`
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
-  transition: all 0.4s;
+  transition: all ${(props) => props.theme.transitionTime}s;
   overflow: hidden;
   padding-top: ${(props) => (props.isNavOpen ? "50px" : "0")};
   visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
