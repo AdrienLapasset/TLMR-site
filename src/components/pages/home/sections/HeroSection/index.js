@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   }
   aside {
     margin-bottom: 5px;
-    font-family: "Söhne-Kräftig", sans-serif;
+    font-family: "Söhne Kräftig", sans-serif;
     font-size: 13px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 8px;
