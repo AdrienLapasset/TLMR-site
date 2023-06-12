@@ -21,10 +21,12 @@ const StyledContainer = styled.section`
     background-color: white;
     display: block;
     margin-top: 100px;
-    border-top: ${({ theme }) => theme.border.black};
-    padding: 10px 0;
+    padding-bottom: 10px;
+    margin-left: -45px;
+    margin-right: -45px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
-
   h3 {
     display: none;
     @media ${(props) => props.theme.minWidth.lg} {
@@ -87,6 +89,10 @@ const StyledContainer = styled.section`
     }
   }
 `;
+const StyledGrid = styled(Grid)`
+  border-top: ${({ theme }) => theme.border.black};
+  padding-top: 10px;
+`;
 const StyledNavLink = styled(Link)`
   text-align: left;
   display: flex;
@@ -119,9 +125,9 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
       twoPointsSectionPosition < 300 ? setIsHidden(true) : setIsHidden(false);
     };
     const handleIsScrollToAnchorNav = () => {
-      const anchorNavPosition =
+      const anchorNavPosFromTop =
         anchorNavRef.current.getBoundingClientRect().top;
-      anchorNavPosition <= 0
+      anchorNavPosFromTop <= 0
         ? setIsScrollToAnchorNav(true)
         : setIsScrollToAnchorNav(false);
     };
@@ -143,7 +149,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
             isScrollToAnchorNav={isScrollToAnchorNav}
             ref={anchorNavRef}
           >
-            <Grid>
+            <StyledGrid>
               {!eservices && <h3>Compétences</h3>}
               {data.map(({ title }, index) => (
                 <StyledNavLink
@@ -158,7 +164,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
                   {title}
                 </StyledNavLink>
               ))}
-            </Grid>
+            </StyledGrid>
           </StyledContainer>
         </React.Fragment>
       )}

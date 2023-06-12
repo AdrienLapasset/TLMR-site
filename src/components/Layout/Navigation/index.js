@@ -21,6 +21,10 @@ const StyledNav = styled.nav`
   @media ${(props) => props.theme.minWidth.sm} {
     height: ${(props) => (props.isNavOpen ? "100vh" : "70px")};
     padding: 21px 0;
+    margin-left: -45px;
+    margin-right: -45px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
   @media ${(props) => props.theme.minWidth.lg} {
     transform: ${(props) =>
