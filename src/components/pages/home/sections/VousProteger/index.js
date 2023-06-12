@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
 import SectionDescription from "components/global/SectionDescription";
 import HomeList from "../../HomeList";
+import expertisesData from "components/pages/expertises/data";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
@@ -19,6 +20,7 @@ const StyledContainer = styled.div`
 `;
 
 const VousProteger = () => {
+  const expertisesTitles = expertisesData.map(({ title }) => title);
   return (
     <StyledContainer>
       <SectionTitle aside="Expertise" title="VOUS PROTÉGER" />
@@ -37,19 +39,7 @@ const VousProteger = () => {
           { text: "Nous contacter", to: "/contact" },
         ]}
       />
-      <HomeList
-        type={"Compétences"}
-        list={[
-          "Innovation, Propriété intellectuelle et industrielle",
-          "Internet, plateformes et e-commerce",
-          "Affaires complexes et contentieux à risque",
-          "Pénal, Cybercriminalité et e-réputation",
-          "Droit Immobilier, baux et construction",
-          "Informatique, logiciel, Intelligence artificielle, Blockchain",
-          "Données personnelles et conformité CNIL/RGPD",
-          "Droit du travail numérique et de la formation",
-        ]}
-      />
+      <HomeList type={"Compétences"} list={expertisesTitles} />
     </StyledContainer>
   );
 };

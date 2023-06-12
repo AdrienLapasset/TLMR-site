@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
 import SectionDescription from "components/global/SectionDescription";
 import HomeList from "../../HomeList";
+import eservicesData from "components/pages/e-services/data";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
@@ -19,6 +20,7 @@ const StyledContainer = styled.div`
 `;
 
 const NosSolution = () => {
+  const eservicesTitles = eservicesData.map(({ title }) => title);
   return (
     <StyledContainer>
       <SectionTitle aside="e-Services" title="NOS SOLUTIONS" />
@@ -37,16 +39,7 @@ const NosSolution = () => {
           { text: "Nous contacter", to: "/contact" },
         ]}
       />
-      <HomeList
-        type={"e-Services"}
-        list={[
-          "Signature électronique",
-          "Protection des créations",
-          "Consultation juridique",
-          "Générateur de Politique de Confidentialité conforme RGPD",
-          "Legal Design",
-        ]}
-      />
+      <HomeList type={"e-Services"} list={eservicesTitles} />
     </StyledContainer>
   );
 };
