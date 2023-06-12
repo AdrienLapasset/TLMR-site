@@ -4,6 +4,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
 import Cta from "components/global/Cta";
 import Title from "components/global/Title";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const border = css`
   border-top: ${(props) => props.theme.border.black};
@@ -60,7 +62,7 @@ const StyledColumns = styled.div`
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
 `;
-const StyledNews = styled.div`
+const StyledNews = styled(Link)`
   aside {
     margin: 6px 0;
     @media ${(props) => props.theme.minWidth.lg} {
@@ -76,55 +78,56 @@ const StyledNews = styled.div`
 `;
 
 const ALaUne = ({ className, home, border, article }) => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allSanityArticle(limit: 4, sort: { date: DESC }) {
+          nodes {
+            title
+            date
+            heroImg {
+              asset {
+                gatsbyImageData
+              }
+            }
+            slug {
+              current
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const articles = data.allSanityArticle.nodes;
+
   return (
     <StyledContainer className={className} border={border}>
       <header>
         {home ? (
-          <SectionTitle aside={"Actualités"} title={"À LA UNE"} />
+          <SectionTitle aside="Actualités" title="À LA UNE" />
         ) : (
           <Title>À LA UNE</Title>
         )}
         <Cta>Toutes les actualités</Cta>
       </header>
       <StyledColumns>
-        <StyledNews>
-          <StaticImage
-            src="../../../../../assets/imgs/placeholder.jpg"
-            alt="TLMR - L’excellence accessible"
-          />
-          <aside className="small">10 Octobre 2023</aside>
-          <h3>Refus de vente : licite ou non ?</h3>
-        </StyledNews>
-        <StyledNews>
-          <StaticImage
-            src="../../../../../assets/imgs/placeholder.jpg"
-            alt="TLMR - L’excellence accessible"
-          />
-          <aside className="small">10 Octobre 2023</aside>
-          <h3>
-            Cadeaux, vente à prime : ce que vous pouvez faire ou ne pas faire ?
-          </h3>
-        </StyledNews>
-        <StyledNews>
-          <StaticImage
-            src="../../../../../assets/imgs/placeholder.jpg"
-            alt="TLMR - L’excellence accessible"
-          />
-          <aside className="small">10 Octobre 2023</aside>
-          <h3>
-            Comment mettre en place un MLM licite ? Nos conseils juridiques
-          </h3>
-        </StyledNews>
-        <StyledNews>
-          <StaticImage
-            src="../../../../../assets/imgs/placeholder.jpg"
-            alt="TLMR - L’excellence accessible"
-          />
-          <aside className="small">10 Octobre 2023</aside>
-          <h3>
-            Comment mettre en place un MLM licite ? Nos conseils juridiques
-          </h3>
-        </StyledNews>
+        {articles.map(({ title, date, heroImg, slug }) => {
+          const thumbImg = getImage(heroImg.asset);
+          return (
+            <StyledNews to={"/article/" + slug.current} key={title}>
+              <GatsbyImage image={thumbImg} alt={title} />
+              <aside className="small">
+                {new Date(date).toLocaleDateString("fr-FR", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </aside>
+              <h3>{title}</h3>
+            </StyledNews>
+          );
+        })}
       </StyledColumns>
       <Cta className="mobile">Toutes les actualités</Cta>
     </StyledContainer>
