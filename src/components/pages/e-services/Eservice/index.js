@@ -8,7 +8,6 @@ import Paragraph from "components/global/Paragraph";
 const StyledContainer = styled(Grid)`
   padding-top: 15px;
   border-top: ${(props) => props.theme.border.black};
-  padding-bottom: 150px;
   @media ${(props) => props.theme.minWidth.sm} {
     padding-top: 20px;
   }

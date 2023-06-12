@@ -20,7 +20,7 @@ const StyledContainer = styled.section`
     z-index: 1;
     background-color: white;
     display: block;
-    margin: 100px 0 70px;
+    margin-top: 100px;
     border-top: ${({ theme }) => theme.border.black};
     padding: 10px 0;
   }
@@ -148,7 +148,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
               {data.map(({ title }, index) => (
                 <StyledNavLink
                   key={index}
-                  offset={-200}
+                  offset={-40}
                   to={title}
                   activeClass="active"
                   smooth

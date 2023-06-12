@@ -9,7 +9,6 @@ import Dot from "components/global/Dot";
 
 const StyledContainer = styled.div`
   padding-top: 7px;
-  padding-bottom: 150px;
   border-top: ${(props) => props.theme.border.black};
   @media ${(props) => props.theme.minWidth.md} {
     padding-bottom: 130px;

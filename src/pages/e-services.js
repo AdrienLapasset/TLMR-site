@@ -24,7 +24,12 @@ const Eservices = () => {
         eservices
       />
       {EservicesData.map(({ title, description, points, btns, imgPath }) => (
-        <Element key={title} name={title} id={title}>
+        <Element
+          key={title}
+          name={title}
+          id={title}
+          style={{ paddingTop: "150px" }}
+        >
           <Eservice
             title={title}
             description={description}

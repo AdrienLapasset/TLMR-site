@@ -18,13 +18,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -200,
-        stripHash: true,
-      },
-    },
-    {
       resolve: "gatsby-plugin-sanity-image",
       options: {
         projectId: "i7u835te",
@@ -36,7 +29,6 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-root-import",
-    "gatsby-plugin-anchor-links",
     "gatsby-plugin-netlify",
   ],
 };
