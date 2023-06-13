@@ -11,6 +11,7 @@ const StyledContainer = styled(Grid)`
   }
   h1 {
     margin-bottom: 30px;
+    grid-column: 1/12;
   }
   p {
     &:first-of-type {
