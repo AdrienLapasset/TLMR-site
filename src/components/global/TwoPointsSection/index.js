@@ -9,6 +9,7 @@ import Cta from "components/global/Cta";
 const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
   margin-top: 100px;
+  padding-top: 20px;
   .grid {
     display: block;
     @media ${(props) => props.theme.minWidth.md} {
@@ -24,7 +25,7 @@ const StyledContainer = styled.section`
         }
       }
       h2 {
-        margin: 20px 0 50px;
+        margin-bottom: 40px;
       }
       & > div {
         margin-bottom: 90px;
@@ -59,7 +60,7 @@ const TwoPointsSection = ({
     <StyledContainer ref={twoPointsSectionRef}>
       <Grid className="grid">
         <div>
-          <Title size="sm" as="h2">
+          <Title size="sm" type="h2">
             {title1}
           </Title>
           <div>
@@ -72,7 +73,7 @@ const TwoPointsSection = ({
           </div>
         </div>
         <div>
-          <Title size="sm" as="h2">
+          <Title size="sm" type="h2">
             {title2}
           </Title>
           <div>

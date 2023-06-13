@@ -84,25 +84,27 @@ const Navigation = () => {
           <div>
             <h3>Le cabinet</h3>
             <Link to="/expertises">Expertises</Link>
-            <Link to="/expertises">e-Services</Link>
-            <Link to="/expertises">Engagements RSE</Link>
+            <Link to="/e-services">e-Services</Link>
+            <Link to="/">Engagements RSE</Link>
           </div>
           <div>
             <h3>À propos</h3>
-            <Link to="/expertises">Notre équipe</Link>
-            <Link to="/expertises">Contact</Link>
-            <Link to="/expertises">Paiement</Link>
+            <Link to="/l-equipe">Notre équipe</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/">Paiement</Link>
           </div>
           <div>
             <h3>Retrouvez-nous</h3>
-            <Link to="/expertises">LinkedIn</Link>
+            <Link to="/">LinkedIn</Link>
           </div>
         </div>
         <div>
           <div>
             <h3>Légal</h3>
-            <Link to="/expertises">Mentions légales</Link>
-            <Link to="/expertises"> Politique de confidentialité</Link>
+            <Link to="/mentions-legales">Mentions légales</Link>
+            <Link to="/mentions-legales#politique-de-confidentialite">
+              Politique de confidentialité
+            </Link>
           </div>
         </div>
       </StyledLinksContainer>
