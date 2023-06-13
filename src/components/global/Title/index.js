@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledTitle = styled.h1`
   margin-top: ${({ type }) => (type === "h1" ? 100 : 0)}px;
-  margin-bottom: 10px;
+  margin-bottom: ${({ pageTitle }) => (pageTitle ? 20 : 10)}px;
   font-family: "SöhneBreit Buch", sans-serif;
   text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
   font-size: ${({ size }) => (size === "xs" ? 28 : size === "sm" ? 28 : 32)}px;
@@ -21,13 +21,14 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const Title = ({ type, size, lowercase, children, className }) => {
+const Title = ({ type, size, lowercase, children, className, pageTitle }) => {
   return (
     <StyledTitle
       as={type}
       className={className}
       size={size}
       lowercase={lowercase}
+      pageTitle={pageTitle}
     >
       {children}
     </StyledTitle>
