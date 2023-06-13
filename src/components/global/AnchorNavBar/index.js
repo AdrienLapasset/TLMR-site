@@ -9,14 +9,14 @@ const StyledContainer = styled.section`
   display: none;
   @media ${(props) => props.theme.minWidth.lg} {
     transform: translateY(
-      ${({ headerHeight, isHidden }) => isHidden && `-` + headerHeight * 2}px
+      ${({ theme, isHidden }) => isHidden && `-` + theme.headerHeight * 2}px
     );
     transition: transform ${(props) => props.theme.transitionTime}s,
       top ${(props) => props.theme.transitionTime}s;
     ${(props) => props.theme.cubicBezier.base};
     position: sticky;
-    top: ${({ headerHeight, isNavHidden }) =>
-      isNavHidden ? -1 : headerHeight}px;
+    top: ${({ theme, isNavHidden }) =>
+      isNavHidden ? -1 : theme.headerHeight}px;
     z-index: 1;
     background-color: white;
     display: block;
@@ -60,7 +60,6 @@ const StyledNavLink = styled(Link)`
 `;
 
 const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
-  const headerHeight = 71;
   const [isHidden, setIsHidden] = useState(false);
   const [isScrollToAnchorNav, setIsScrollToAnchorNav] = useState(false);
   const anchorNavRef = useRef(null);
@@ -91,7 +90,6 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
         <React.Fragment>
           <StyledContainer
             isNavHidden={context?.isNavHidden}
-            headerHeight={headerHeight}
             isHidden={isHidden}
             isScrollToAnchorNav={isScrollToAnchorNav}
             ref={anchorNavRef}

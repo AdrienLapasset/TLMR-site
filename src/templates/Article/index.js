@@ -12,6 +12,7 @@ import facebookLogo from "assets/logos/facebook.svg";
 import twitterLogo from "assets/logos/twitter.svg";
 import { PortableText } from "@portabletext/react";
 import SanityImg from "gatsby-plugin-sanity-image";
+import { myContext } from "provider";
 
 export const query = graphql`
   query ArticleBySlug($slug: String!) {
@@ -101,6 +102,9 @@ const StyledMobileInfo = styled.div`
   img {
     height: 18px;
     margin: 5px 5px 0 0;
+    @media ${(props) => props.theme.minWidth.sm} {
+      height: 20px;
+    }
   }
   a {
     font-size: 14px;
@@ -117,7 +121,7 @@ const StyledDesktopInfo = styled.div`
   }
 `;
 const StyledInfoLabel = styled(Paragraph)`
-  font-family: "Söhne-Kräftig", sans-serif;
+  font-family: "Söhne Kräftig", sans-serif;
 `;
 const StyledDesktopContentInfo = styled.div`
   display: none;
@@ -129,11 +133,15 @@ const StyledDesktopContentInfo = styled.div`
     grid-column: 1 / span 3;
   }
   img {
-    height: 18px;
-    margin: 5px 5px 0 0;
+    height: 25px;
+    margin: 7px 7px 0 0;
   }
   & > div {
+    transition: top ${(props) => props.theme.transitionTime}s;
     margin-bottom: 30px;
+    position: sticky;
+    top: ${({ theme, isNavHidden }) =>
+      isNavHidden ? 30 : theme.headerHeight}px;
   }
 `;
 const StyledInfo = styled(Paragraph)`
@@ -154,6 +162,7 @@ const StyledContentContainer = styled(Grid)`
   }
 `;
 const StyledContent = styled.section`
+  line-height: 32px;
   @media ${(props) => props.theme.minWidth.md} {
     grid-column: 3 / span 8;
   }
@@ -165,41 +174,79 @@ const StyledContent = styled.section`
   }
   p {
     font-family: "Signifier Light";
-    margin-bottom: 30px;
-
+    margin-bottom: 35px;
     em {
+      font-style: normal;
       font-family: "Signifier Light Italic";
     }
   }
   h2 {
     margin: 55px 0 30px;
     font-family: "Söhne Kräftig";
+    font-size: 22px;
+    @media ${(props) => props.theme.minWidth.md} {
+      font-size: 24px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 26px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 28px;
+    }
+  }
+  h3 {
+    font-family: "Söhne Kräftig";
+    font-size: 16px;
+    margin-bottom: 5px;
+    @media ${(props) => props.theme.minWidth.md} {
+      font-size: 18px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 20px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 22px;
+    }
+  }
+  h4 {
+    font-family: "Signifier Medium";
+    font-size: 16px;
+    margin-bottom: 2px;
+    @media ${(props) => props.theme.minWidth.md} {
+      font-size: 18px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 20px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 22px;
+    }
   }
   ul {
-    margin-bottom: 20px;
+    margin: -35px 0 35px;
+    padding-left: 20px;
     li {
       font-family: "Signifier Light";
-      &:before {
+      list-style: disc;
+      /* &:before {
         content: "- ";
         text-indent: -5px;
-      }
+      } */
     }
   }
   img {
     max-width: 100%;
   }
   p,
-  h2,
   li {
-    font-size: 18px;
     @media ${(props) => props.theme.minWidth.md} {
-      font-size: 20px;
+      font-size: 18px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      font-size: 22px;
+      font-size: 20px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      font-size: 25px;
+      font-size: 22px;
     }
   }
 `;
@@ -217,75 +264,81 @@ const Article = ({ data }) => {
   const heroImage = getImage(heroImg.asset);
 
   return (
-    <Layout>
-      <StyledContainer>
-        <GatsbyImage image={heroImage} alt={title} />
-        <StyledHeader>
-          <StyledDesktopInfo>
-            <div>
-              <StyledInfoLabel size="sm">Date</StyledInfoLabel>
-              <StyledInfo>
-                {new Date(date).toLocaleDateString("fr-FR", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </StyledInfo>
-            </div>
-            <div>
-              <StyledInfoLabel size="sm">Par</StyledInfoLabel>
-              <StyledInfo>{author}</StyledInfo>
-            </div>
-          </StyledDesktopInfo>
-          <h1>{title}</h1>
-        </StyledHeader>
-        <StyledMobileInfo>
-          <div>
-            <StyledInfoLabel size="sm">Date</StyledInfoLabel>
-            <StyledInfo>
-              {new Date(date).toLocaleDateString("fr-FR", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </StyledInfo>
-          </div>
-          <div>
-            <StyledInfoLabel size="sm">Par</StyledInfoLabel>
-            <StyledInfo>{author}</StyledInfo>
-          </div>
-          <div>
-            <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-            <img src={facebookLogo} alt="" />
-            <img src={twitterLogo} alt="" />
-            <img src={linkedinLogo} alt="" />
-          </div>
-          <div>
-            <Cta>Nous contacter</Cta>
-          </div>
-        </StyledMobileInfo>
-        <StyledContentContainer>
-          <StyledDesktopContentInfo>
-            <div>
-              <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-              <img src={facebookLogo} alt="" />
-              <img src={twitterLogo} alt="" />
-              <img src={linkedinLogo} alt="" />
-            </div>
-            <div>
-              <Cta>Nous contacter</Cta>
-            </div>
-          </StyledDesktopContentInfo>
-          <StyledContent>
-            <PortableText
-              value={_rawContent}
-              components={myPortableTextComponents}
-            />
-          </StyledContent>
-        </StyledContentContainer>
-        <ALaUne article border />
-      </StyledContainer>
-    </Layout>
+    <myContext.Consumer>
+      {(context) => (
+        <React.Fragment>
+          <Layout>
+            <StyledContainer>
+              <GatsbyImage image={heroImage} alt={title} />
+              <StyledHeader>
+                <StyledDesktopInfo>
+                  <div>
+                    <StyledInfoLabel size="sm">Date</StyledInfoLabel>
+                    <StyledInfo>
+                      {new Date(date).toLocaleDateString("fr-FR", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </StyledInfo>
+                  </div>
+                  <div>
+                    <StyledInfoLabel size="sm">Par</StyledInfoLabel>
+                    <StyledInfo>{author}</StyledInfo>
+                  </div>
+                </StyledDesktopInfo>
+                <h1>{title}</h1>
+              </StyledHeader>
+              <StyledMobileInfo>
+                <div>
+                  <StyledInfoLabel size="sm">Date</StyledInfoLabel>
+                  <StyledInfo>
+                    {new Date(date).toLocaleDateString("fr-FR", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </StyledInfo>
+                </div>
+                <div>
+                  <StyledInfoLabel size="sm">Par</StyledInfoLabel>
+                  <StyledInfo>{author}</StyledInfo>
+                </div>
+                <div>
+                  <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
+                  <img src={facebookLogo} alt="" />
+                  <img src={twitterLogo} alt="" />
+                  <img src={linkedinLogo} alt="" />
+                </div>
+                <div>
+                  <Cta>Nous contacter</Cta>
+                </div>
+              </StyledMobileInfo>
+              <StyledContentContainer>
+                <StyledDesktopContentInfo isNavHidden={context.isNavHidden}>
+                  <div>
+                    <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
+                    <img src={facebookLogo} alt="" />
+                    <img src={twitterLogo} alt="" />
+                    <img src={linkedinLogo} alt="" />
+                  </div>
+                  <div>
+                    <Cta>Nous contacter</Cta>
+                  </div>
+                </StyledDesktopContentInfo>
+                <StyledContent>
+                  <PortableText
+                    value={_rawContent}
+                    components={myPortableTextComponents}
+                  />
+                </StyledContent>
+              </StyledContentContainer>
+              <ALaUne article border />
+            </StyledContainer>
+          </Layout>
+        </React.Fragment>
+      )}
+    </myContext.Consumer>
   );
 };
 

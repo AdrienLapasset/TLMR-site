@@ -4,6 +4,7 @@ import SöhneBreitBuch from "assets/fonts/soehne-breit-buch.woff2";
 import SöhneKräftig from "assets/fonts/soehne-kraftig.woff2";
 import SignifierLight from "assets/fonts/signifier-light.woff2";
 import SignifierLightItalic from "assets/fonts/signifier-light-italic.woff2";
+import SignifierMedium from "assets/fonts/signifier-medium.woff2";
 
 export default createGlobalStyle`
 
@@ -26,6 +27,10 @@ export default createGlobalStyle`
 @font-face {
   font-family: "Signifier Light Italic";
   src: url(${SignifierLightItalic}) format("woff2");
+}
+@font-face {
+  font-family: "Signifier Medium";
+  src: url(${SignifierMedium}) format("woff2");
 }
 
 * {
