@@ -57,13 +57,20 @@ const ContactModal = ({ isVisible, handleModal }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
+      body: new URLSearchParams({
         "form-name": event.target.getAttribute("name"),
         subject: "[tlmr-avocats.com] Nouvelle prise de contact",
         Email: email,
         "Numéro de téléphone": phone,
-        Message: message,
-      }),
+        // Message: message,
+      }).toString(),
+      // body: encode({
+      //   "form-name": event.target.getAttribute("name"),
+      //   subject: "[tlmr-avocats.com] Nouvelle prise de contact",
+      //   Email: email,
+      //   "Numéro de téléphone": phone,
+      //   Message: message,
+      // }),
     })
       .then((response) => {
         console.log(response);
