@@ -20,78 +20,25 @@ const StyledContainer = styled.section`
     z-index: 1;
     background-color: white;
     display: block;
-    margin-top: 100px;
-    padding-bottom: 10px;
-    margin-left: -45px;
-    margin-right: -45px;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-  h3 {
-    display: none;
-    @media ${(props) => props.theme.minWidth.lg} {
-      display: block;
-      grid-column: 1 / span 4;
-    }
-  }
-  a {
-    &:nth-of-type(1) {
-      grid-column: 1 / span 3;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 5 / span 2;
-      }
-    }
-    &:nth-of-type(2) {
-      grid-column: 4 / span 3;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 7 / span 2;
-      }
-    }
-    &:nth-of-type(3) {
-      grid-column: 7 / span 3;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 9 / span 2;
-      }
-    }
-    &:nth-of-type(4) {
-      grid-column: 10 / span 3;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 11 / span 2;
-      }
-    }
-    &:nth-of-type(5) {
-      grid-column: 1 / span 3;
-      grid-row: 2;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 5 / span 2;
-      }
-    }
-    &:nth-of-type(6) {
-      grid-column: 4 / span 3;
-      grid-row: 2;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 7 / span 2;
-      }
-    }
-    &:nth-of-type(7) {
-      grid-column: 7 / span 3;
-      grid-row: 2;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 9 / span 2;
-      }
-    }
-    &:nth-of-type(8) {
-      grid-column: 10 / span 3;
-      grid-row: 2;
-      @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 11 / span 2;
-      }
-    }
+    margin: 100px -45px 0;
+    padding: 0 45px 10px;
   }
 `;
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  span {
+    grid-column: 1 / span 1;
+  }
+  h3 {
+    display: none;
+    @media ${(props) => props.theme.minWidth.lg} {
+      display: block;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+  }
 `;
 const StyledNavLink = styled(Link)`
   text-align: left;
@@ -150,7 +97,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
             ref={anchorNavRef}
           >
             <StyledGrid>
-              {!eservices && <h3>Compétences</h3>}
+              {eservices ? <span></span> : <h3>Compétences</h3>}
               {data.map(({ title }, index) => (
                 <StyledNavLink
                   key={index}

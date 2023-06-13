@@ -70,6 +70,21 @@ const EservicesData = [
     ],
     imgPath: "",
   },
+  {
+    title: "Consultation juridique",
+    description: [
+      "<b>Vous avez une question ou un problème juridique ?</b></br>Bienvenue dans notre solution de consultation juridique qui vous permettra d’avoir une réponse et un conseil personnalisé d’un avocat de haut niveau (le cabinet est classé parmi les meilleurs cabinets français (classements Leaders League / Le Point).",
+      "<b>Comment cela fonctionne-t-il ?</b></br>C’est simple ! Vous réservez votre consultation et vous aurez ensuite accès à l’agenda partagé de l’un de nos avocats afin de réserver le créneau horaire qui vous convient le mieux. Nous vous enverrons ensuite un lien pour vous connecter à notre plateforme de consultation en ligne, où vous pourrez discuter directement avec votre avocat par visioconférence.",
+      "Pour être le plus efficace possible, vous pouvez nous transmettre des éléments en amont. Ce service a été conçu pour vous aider et vous permettre d’être renseignée de manière rapide, efficace et personnalisé sur votre situation par un avocat compétent, alors retrouvez-nous vite en réservant une consultation.",
+    ],
+    btns: [
+      {
+        name: "Accéder à la consultation juridique",
+        link: "",
+      },
+    ],
+    imgPath: "",
+  },
 ];
 
 export default EservicesData;
