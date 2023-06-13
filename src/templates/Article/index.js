@@ -315,7 +315,7 @@ const Article = ({ data }) => {
                 </div>
               </StyledMobileInfo>
               <StyledContentContainer>
-                <StyledDesktopContentInfo isNavHidden={context.isNavHidden}>
+                <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
                   <div>
                     <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
                     <img src={facebookLogo} alt="" />
