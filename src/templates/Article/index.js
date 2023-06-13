@@ -268,30 +268,11 @@ const Article = ({ data }) => {
   return (
     <myContext.Consumer>
       {(context) => (
-        <React.Fragment>
-          <Layout>
-            <StyledContainer>
-              <GatsbyImage image={heroImage} alt={title} />
-              <StyledHeader>
-                <StyledDesktopInfo>
-                  <div>
-                    <StyledInfoLabel size="sm">Date</StyledInfoLabel>
-                    <StyledInfo>
-                      {new Date(date).toLocaleDateString("fr-FR", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </StyledInfo>
-                  </div>
-                  <div>
-                    <StyledInfoLabel size="sm">Par</StyledInfoLabel>
-                    <StyledInfo>{author}</StyledInfo>
-                  </div>
-                </StyledDesktopInfo>
-                <h1>{title}</h1>
-              </StyledHeader>
-              <StyledMobileInfo>
+        <Layout>
+          <StyledContainer>
+            <GatsbyImage image={heroImage} alt={title} />
+            <StyledHeader>
+              <StyledDesktopInfo>
                 <div>
                   <StyledInfoLabel size="sm">Date</StyledInfoLabel>
                   <StyledInfo>
@@ -306,6 +287,36 @@ const Article = ({ data }) => {
                   <StyledInfoLabel size="sm">Par</StyledInfoLabel>
                   <StyledInfo>{author}</StyledInfo>
                 </div>
+              </StyledDesktopInfo>
+              <h1>{title}</h1>
+            </StyledHeader>
+            <StyledMobileInfo>
+              <div>
+                <StyledInfoLabel size="sm">Date</StyledInfoLabel>
+                <StyledInfo>
+                  {new Date(date).toLocaleDateString("fr-FR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </StyledInfo>
+              </div>
+              <div>
+                <StyledInfoLabel size="sm">Par</StyledInfoLabel>
+                <StyledInfo>{author}</StyledInfo>
+              </div>
+              <div>
+                <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
+                <img src={facebookLogo} alt="" />
+                <img src={twitterLogo} alt="" />
+                <img src={linkedinLogo} alt="" />
+              </div>
+              <div>
+                <Cta to="/contact">Nous contacter</Cta>
+              </div>
+            </StyledMobileInfo>
+            <StyledContentContainer>
+              <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
                 <div>
                   <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
                   <img src={facebookLogo} alt="" />
@@ -315,30 +326,17 @@ const Article = ({ data }) => {
                 <div>
                   <Cta to="/contact">Nous contacter</Cta>
                 </div>
-              </StyledMobileInfo>
-              <StyledContentContainer>
-                <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
-                  <div>
-                    <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-                    <img src={facebookLogo} alt="" />
-                    <img src={twitterLogo} alt="" />
-                    <img src={linkedinLogo} alt="" />
-                  </div>
-                  <div>
-                    <Cta to="/contact">Nous contacter</Cta>
-                  </div>
-                </StyledDesktopContentInfo>
-                <StyledContent>
-                  <PortableText
-                    value={_rawContent}
-                    components={myPortableTextComponents}
-                  />
-                </StyledContent>
-              </StyledContentContainer>
-              <ALaUne article border />
-            </StyledContainer>
-          </Layout>
-        </React.Fragment>
+              </StyledDesktopContentInfo>
+              <StyledContent>
+                <PortableText
+                  value={_rawContent}
+                  components={myPortableTextComponents}
+                />
+              </StyledContent>
+            </StyledContentContainer>
+            <ALaUne article border />
+          </StyledContainer>
+        </Layout>
       )}
     </myContext.Consumer>
   );

@@ -87,31 +87,29 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
   return (
     <myContext.Consumer>
       {(context) => (
-        <React.Fragment>
-          <StyledContainer
-            isNavHidden={context?.isNavHidden}
-            isHidden={isHidden}
-            isScrollToAnchorNav={isScrollToAnchorNav}
-            ref={anchorNavRef}
-          >
-            <StyledGrid>
-              {eservices ? <span></span> : <h3>Compétences</h3>}
-              {data.map(({ title }, index) => (
-                <StyledNavLink
-                  key={index}
-                  offset={-40}
-                  to={title}
-                  activeClass="active"
-                  smooth
-                  spy
-                >
-                  <Dot square={eservices} />
-                  {title}
-                </StyledNavLink>
-              ))}
-            </StyledGrid>
-          </StyledContainer>
-        </React.Fragment>
+        <StyledContainer
+          isNavHidden={context?.isNavHidden}
+          isHidden={isHidden}
+          isScrollToAnchorNav={isScrollToAnchorNav}
+          ref={anchorNavRef}
+        >
+          <StyledGrid>
+            {eservices ? <span></span> : <h3>Compétences</h3>}
+            {data.map(({ title }, index) => (
+              <StyledNavLink
+                key={index}
+                offset={-40}
+                to={title}
+                activeClass="active"
+                smooth
+                spy
+              >
+                <Dot square={eservices} />
+                {title}
+              </StyledNavLink>
+            ))}
+          </StyledGrid>
+        </StyledContainer>
       )}
     </myContext.Consumer>
   );

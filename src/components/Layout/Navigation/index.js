@@ -105,25 +105,23 @@ const Navigation = () => {
   return (
     <myContext.Consumer>
       {(context) => (
-        <React.Fragment>
-          <StyledNav isNavOpen={isNavOpen} isNavHidden={context?.isNavHidden}>
-            <StyledMobileLayout>
-              <Link to="/">
-                <img src={TLMRlogo} alt="Logo TLMR" />
-              </Link>
-              <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
-            </StyledMobileLayout>
-            <StyledLinksContainer isNavOpen={isNavOpen}>
-              <Link to="/expertises">Expertises</Link>
-              <Link to="/e-services">e-Services</Link>
-              <Link to="/formations">Formations</Link>
-              <Link to="/actualites">Actualités</Link>
-              <Link to="/l-equipe">L’équipe</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/paiement">Paiement</Link>
-            </StyledLinksContainer>
-          </StyledNav>
-        </React.Fragment>
+        <StyledNav isNavOpen={isNavOpen} isNavHidden={context?.isNavHidden}>
+          <StyledMobileLayout>
+            <Link to="/">
+              <img src={TLMRlogo} alt="Logo TLMR" />
+            </Link>
+            <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
+          </StyledMobileLayout>
+          <StyledLinksContainer isNavOpen={isNavOpen}>
+            <Link to="/expertises">Expertises</Link>
+            <Link to="/e-services">e-Services</Link>
+            <Link to="/formations">Formations</Link>
+            <Link to="/actualites">Actualités</Link>
+            <Link to="/l-equipe">L’équipe</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/paiement">Paiement</Link>
+          </StyledLinksContainer>
+        </StyledNav>
       )}
     </myContext.Consumer>
   );
