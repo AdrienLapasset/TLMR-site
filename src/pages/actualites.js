@@ -4,8 +4,9 @@ import styled from "styled-components";
 import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const StyledContainer = styled.div`
   margin: 110px 0 75px;
@@ -35,7 +36,7 @@ const StyledGrid = styled(Grid)`
     grid-template-columns: repeat(4, 1fr);
   }
 `;
-const StyledArticleCard = styled(Link)`
+const StyledArticleCard = styled(AniLink)`
   margin-bottom: 30px;
   @media ${(props) => props.theme.minWidth.md} {
     margin-bottom: 50px;
@@ -108,6 +109,8 @@ const Actualites = () => {
                     <StyledArticleCard
                       key={title}
                       to={"/article/" + slug.current}
+                      fade
+                      duration={1}
                     >
                       <GatsbyImage image={thumbImg} alt={title} />
                       <Paragraph size="sm">

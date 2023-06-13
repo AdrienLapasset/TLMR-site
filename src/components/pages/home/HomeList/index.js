@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const StyledContainer = styled.div`
   margin: 50px 0 0 0;
@@ -56,7 +56,9 @@ const HomeList = ({ type, list }) => {
       <StyledList>
         {list?.map((sectionTitle, index) => {
           return (
-            <Link
+            <AniLink
+              fade
+              duration={1}
               to={
                 type === "e-Services"
                   ? "/e-services/#" + sectionTitle
@@ -65,7 +67,7 @@ const HomeList = ({ type, list }) => {
               key={index}
             >
               {sectionTitle}
-            </Link>
+            </AniLink>
           );
         })}
         {type === "e-Services" ? <aside className="blank"></aside> : null}
