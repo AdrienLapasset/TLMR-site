@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
+import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
 import { myContext } from "provider";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const StyledNav = styled.nav`
   transition: all ${(props) => props.theme.transitionTime}s;
@@ -108,33 +108,19 @@ const Navigation = () => {
         <React.Fragment>
           <StyledNav isNavOpen={isNavOpen} isNavHidden={context?.isNavHidden}>
             <StyledMobileLayout>
-              <AniLink fade duration={1} nk to="/">
+              <Link to="/">
                 <img src={TLMRlogo} alt="Logo TLMR" />
-              </AniLink>
+              </Link>
               <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
             </StyledMobileLayout>
             <StyledLinksContainer isNavOpen={isNavOpen}>
-              <AniLink fade duration={1} to="/expertises">
-                Expertises
-              </AniLink>
-              <AniLink fade duration={1} to="/e-services">
-                e-Services
-              </AniLink>
-              <AniLink fade duration={1} to="/formations">
-                Formations
-              </AniLink>
-              <AniLink fade duration={1} to="/actualites">
-                Actualités
-              </AniLink>
-              <AniLink fade duration={1} to="/l-equipe">
-                L’équipe
-              </AniLink>
-              <AniLink fade duration={1} to="/contact">
-                Contact
-              </AniLink>
-              <AniLink fade duration={1} to="/paiement">
-                Paiement
-              </AniLink>
+              <Link to="/expertises">Expertises</Link>
+              <Link to="/e-services">e-Services</Link>
+              <Link to="/formations">Formations</Link>
+              <Link to="/actualites">Actualités</Link>
+              <Link to="/l-equipe">L’équipe</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/paiement">Paiement</Link>
             </StyledLinksContainer>
           </StyledNav>
         </React.Fragment>

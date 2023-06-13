@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
 
 const StyledFooter = styled.footer`
   margin-top: 160px;
@@ -83,45 +83,26 @@ const Navigation = () => {
         <div>
           <div>
             <h3>Le cabinet</h3>
-            <AniLink fade duration={1} to="/expertises">
-              Expertises
-            </AniLink>
-            <AniLink fade duration={1} to="/expertises">
-              e-Services
-            </AniLink>
-            <AniLink fade duration={1} to="/expertises">
-              Engagements RSE
-            </AniLink>
+            <Link to="/expertises">Expertises</Link>
+            <Link to="/expertises">e-Services</Link>
+            <Link to="/expertises">Engagements RSE</Link>
           </div>
           <div>
             <h3>À propos</h3>
-            <AniLink fade duration={1} to="/expertises">
-              Notre équipe
-            </AniLink>
-            <AniLink fade duration={1} to="/expertises">
-              Contact
-            </AniLink>
-            <AniLink fade duration={1} to="/expertises">
-              Paiement
-            </AniLink>
+            <Link to="/expertises">Notre équipe</Link>
+            <Link to="/expertises">Contact</Link>
+            <Link to="/expertises">Paiement</Link>
           </div>
           <div>
             <h3>Retrouvez-nous</h3>
-            <AniLink fade duration={1} to="/expertises">
-              LinkedIn
-            </AniLink>
+            <Link to="/expertises">LinkedIn</Link>
           </div>
         </div>
         <div>
           <div>
             <h3>Légal</h3>
-            <AniLink fade duration={1} to="/expertises">
-              Mentions légales
-            </AniLink>
-            <AniLink fade duration={1} to="/expertises">
-              {" "}
-              Politique de confidentialité
-            </AniLink>
+            <Link to="/expertises">Mentions légales</Link>
+            <Link to="/expertises"> Politique de confidentialité</Link>
           </div>
         </div>
       </StyledLinksContainer>
