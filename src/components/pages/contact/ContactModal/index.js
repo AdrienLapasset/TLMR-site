@@ -68,6 +68,7 @@ const StyledModal = styled.div`
       align-items: flex-start;
       margin-top: 20px;
       input[type="checkbox"] {
+        cursor: pointer;
         margin-right: 10px;
         transform: translateY(4px);
       }
@@ -178,8 +179,8 @@ const ContactModal = ({ isVisible, handleModal }) => {
             rows="10"
           />
           <div className="consent">
-            <input type="checkbox" name="consent" id="consent" required></input>
-            <Paragraph as="label" for="consent">
+            <input type="checkbox" required></input>
+            <Paragraph as="label">
               En cochant la case ci-contre, j’accepte de recevoir des
               informations et offres du cabinet Touati La Motte Rouge Avocats
               (veille juridique, actualités, newsletter, formations).
