@@ -12,28 +12,32 @@ const StyledContainer = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Transition */
   visibility: ${(props) => (props.isVisible ? "visible" : "hidden")};
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   transition: all 0.4s ${(props) => props.theme.baseCubicBezier};
+  z-index: 2;
+  @media ${(props) => props.theme.minWidth.md} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const StyledModal = styled.div`
   background-color: white;
-  margin: 15px 0;
-  width: 850px;
+  width: 100%;
   border-radius: 9px;
   padding: 45px;
+  @media ${(props) => props.theme.minWidth.md} {
+    width: 850px;
+  }
   header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-
     button {
       cursor: pointer;
+      margin-left: 20px;
     }
   }
   form {
@@ -87,8 +91,15 @@ const StyledModal = styled.div`
   }
 `;
 const StyledGrid = styled(Grid)`
-  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  input {
+    margin-bottom: 10px;
+    width: 100%;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 const ContactModal = ({ isVisible, handleModal }) => {
