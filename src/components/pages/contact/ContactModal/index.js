@@ -57,9 +57,9 @@ const ContactModal = ({ isVisible, handleModal }) => {
     const formData = {
       "form-name": event.target.getAttribute("name"),
       subject: "[tlmr-avocats.com] Nouvelle prise de contact",
-      // Email: email,
-      // Téléphone: phone,
-      Message: "test",
+      Email: email,
+      Téléphone: phone,
+      // Message: "test",
     };
     console.log(new URLSearchParams(formData).toString());
 
@@ -102,14 +102,14 @@ const ContactModal = ({ isVisible, handleModal }) => {
           <div>Informations</div>
           <input
             type="email"
-            name="email"
+            name="Email"
             placeholder="Adresse email"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
             type="text"
-            name="phone"
+            name="Téléphone"
             placeholder="Numéro de téléphone"
             onChange={(e) => setPhone(e.target.value)}
             required
