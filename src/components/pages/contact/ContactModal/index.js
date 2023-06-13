@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import Paragraph from "components/global/Paragraph";
+import Paragraph from "components/global/Paragraph";
+import Grid from "components/global/Grid";
 import croix from "assets/icons/croix.svg";
 
 const StyledContainer = styled.div`
@@ -22,20 +23,72 @@ const StyledContainer = styled.div`
 
 const StyledModal = styled.div`
   background-color: white;
-  width: 100%;
-  text-align: center;
   margin: 15px 0;
   width: 850px;
   border-radius: 9px;
   padding: 45px;
   header {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
     button {
       cursor: pointer;
     }
   }
   form {
+    h3 {
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      height: 42px;
+      border-radius: none;
+      border: 1px solid ${({ theme }) => theme.colors.greyLight};
+      padding-left: 10px;
+      &::placeholder {
+        font-size: 16px;
+        color: ${(props) => props.theme.colors.grey};
+      }
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      height: auto;
+      resize: none;
+    }
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+      input[type="checkbox"] {
+        margin-right: 10px;
+        transform: translateY(4px);
+      }
+    }
+    button[type="submit"] {
+      background-color: black;
+      color: white;
+      border-radius: 100px;
+      padding: 5px 20px;
+      margin: 30px 0 0 auto;
+    }
   }
+  .mentions {
+    margin-top: 20px;
+    border-top: 1px solid ${({ theme }) => theme.colors.greyLight};
+    padding-top: 5px;
+    p {
+      color: ${({ theme }) => theme.colors.greyLight};
+      font-size: 12px;
+    }
+  }
+`;
+const StyledGrid = styled(Grid)`
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 40px;
 `;
 
 const ContactModal = ({ isVisible, handleModal }) => {
@@ -43,23 +96,14 @@ const ContactModal = ({ isVisible, handleModal }) => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  // function encode(data) {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //     )
-  //     .join("&");
-  // }
-
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const formData = {
       "form-name": event.target.getAttribute("name"),
       subject: "[tlmr-avocats.com] Nouvelle prise de contact",
       Email: email,
       Téléphone: phone,
-      // Message: "test",
+      Message: message,
     };
     console.log(new URLSearchParams(formData).toString());
 
@@ -68,8 +112,8 @@ const ContactModal = ({ isVisible, handleModal }) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then((response) => {
-        console.log(response);
+      .then(() => {
+        handleModal();
       })
       .catch((error) => alert(error));
   };
@@ -77,11 +121,10 @@ const ContactModal = ({ isVisible, handleModal }) => {
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
-        {/* <Paragraph as="h3" size="xxl">
-          Nous vous remercions d’utiliser le formulaire de contact
-        </Paragraph> */}
         <header>
-          <h3>Nous vous remercions d’utiliser le formulaire de contact</h3>
+          <Paragraph as="h2" size="xxl">
+            Nous vous remercions d’utiliser le formulaire de contact
+          </Paragraph>
           <button type="button" onClick={handleModal}>
             <img src={croix} alt="" />
           </button>
@@ -99,23 +142,49 @@ const ContactModal = ({ isVisible, handleModal }) => {
             name="subject"
             value="[tlmr-avocats.com] Nouvelle prise de contact"
           />
-          <div>Informations</div>
-          <input
-            type="email"
-            name="Email"
-            placeholder="Adresse email"
-            onChange={(e) => setEmail(e.target.value)}
-            required
+          <Paragraph as="h3">Informations</Paragraph>
+          <StyledGrid>
+            <input
+              type="email"
+              name="Email"
+              placeholder="Adresse email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="text"
+              name="Téléphone"
+              placeholder="Numéro de téléphone"
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+          </StyledGrid>
+          <Paragraph as="h3">Votre message</Paragraph>
+          <textarea
+            name="Message"
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Indiquez précisément votre problématique"
+            rows="10"
           />
-          <input
-            type="text"
-            name="Téléphone"
-            placeholder="Numéro de téléphone"
-            onChange={(e) => setPhone(e.target.value)}
-            required
-          />
+          <div className="consent">
+            <input type="checkbox" name="consent" id="consent" required></input>
+            <Paragraph as="label" for="consent">
+              En cochant la case ci-contre, j’accepte de recevoir des
+              informations et offres du cabinet Touati La Motte Rouge Avocats
+              (veille juridique, actualités, newsletter, formations).
+            </Paragraph>
+          </div>
           <button type="submit">Envoyer</button>
         </form>
+        <div className="mentions">
+          <p>
+            Les données recueillies sont traitées de manière sécurisée
+            conformément à la politique de confidentialité. À tout moment, vous
+            pouvez exercer votre droit d’accès, de rectification, d’effacement,
+            d’opposition, de limitation, aux données vous concernant en nous
+            contactant par le biais du présent formulaire.
+          </p>
+        </div>
       </StyledModal>
     </StyledContainer>
   );

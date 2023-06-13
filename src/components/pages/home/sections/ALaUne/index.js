@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../SectionTitle";
 import Cta from "components/global/Cta";
 import Title from "components/global/Title";
