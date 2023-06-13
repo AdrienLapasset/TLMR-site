@@ -42,15 +42,19 @@ const StyledContainer = styled.div`
   }
 `;
 const StyledMap = styled.iframe`
-  aspect-ratio: 2;
+  aspect-ratio: 1;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
   border: 0;
   filter: grayscale();
+  @media ${(props) => props.theme.minWidth.sm} {
+    aspect-ratio: 2;
+    margin-top: 50px;
+  }
 `;
 
 const Contact = () => {
-  const [isModal, setIsModal] = useState(true);
+  const [isModal, setIsModal] = useState(false);
 
   const handleModal = () => {
     setIsModal(!isModal);

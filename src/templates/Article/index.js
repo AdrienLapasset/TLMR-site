@@ -162,11 +162,13 @@ const StyledContentContainer = styled(Grid)`
   }
 `;
 const StyledContent = styled.section`
-  line-height: 32px;
+  line-height: 25px;
   @media ${(props) => props.theme.minWidth.md} {
     grid-column: 3 / span 8;
+    line-height: 28px;
   }
   @media ${(props) => props.theme.minWidth.lg} {
+    line-height: 32px;
     grid-column: 4 / span 7;
   }
   @media ${(props) => props.theme.minWidth.xl} {
@@ -311,7 +313,7 @@ const Article = ({ data }) => {
                   <img src={linkedinLogo} alt="" />
                 </div>
                 <div>
-                  <Cta>Nous contacter</Cta>
+                  <Cta to="/contact">Nous contacter</Cta>
                 </div>
               </StyledMobileInfo>
               <StyledContentContainer>
@@ -323,7 +325,7 @@ const Article = ({ data }) => {
                     <img src={linkedinLogo} alt="" />
                   </div>
                   <div>
-                    <Cta>Nous contacter</Cta>
+                    <Cta to="/contact">Nous contacter</Cta>
                   </div>
                 </StyledDesktopContentInfo>
                 <StyledContent>
