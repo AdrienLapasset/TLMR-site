@@ -43,30 +43,30 @@ const ContactModal = ({ isVisible, handleModal }) => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
+  // function encode(data) {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //     )
+  //     .join("&");
+  // }
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const formData = {
       "form-name": event.target.getAttribute("name"),
-      subject: "[tlmr-avocats.com] Nouvelle prise de contact",
+      // subject: "[tlmr-avocats.com] Nouvelle prise de contact",
       Email: email,
-      "Numéro de téléphone": phone,
+      Téléphone: phone,
       Message: message,
     };
-    console.log(encode(formData));
+    console.log(new URLSearchParams(formData).toString());
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode(formData),
+      body: new URLSearchParams(formData).toString(),
     })
       .then((response) => {
         console.log(response);
