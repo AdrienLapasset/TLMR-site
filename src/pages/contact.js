@@ -53,7 +53,6 @@ const Contact = () => {
   const [isModal, setIsModal] = useState(true);
 
   const handleModal = () => {
-    console.log("toto");
     setIsModal(!isModal);
   };
 
@@ -65,41 +64,45 @@ const Contact = () => {
           <div>
             <div>
               <Paragraph as="aside">Nous appeler</Paragraph>
-              <Cta href="tel:+33178766000">+33 1 78 76 60 00</Cta>
+              <Cta href="tel:+33178766000">
+                <Paragraph size="xxl">+33 1 78 76 60 00</Paragraph>
+              </Cta>
             </div>
             <div>
               <Paragraph as="aside">Nous écrire</Paragraph>
-              <Cta onClick={handleModal}>Formulaire </Cta>
+              <Cta onClick={handleModal}>
+                <Paragraph size="xxl">Formulaire</Paragraph>
+              </Cta>
             </div>
             <div>
               <Paragraph as="aside">
                 En cas d’urgence, vous pouvez nous contacter par mail
               </Paragraph>
-              <Paragraph size="lg">Me Henri de la Motte Rouge</Paragraph>
+              <Paragraph size="xxl">Me Henri de la Motte Rouge</Paragraph>
               <Cta href="mailto:lamotterouge@tlmr-avocats.com">
-                lamotterouge@tlmr-avocats.com
+                <Paragraph size="xxl">lamotterouge@tlmr-avocats.com</Paragraph>
               </Cta>
-              <Paragraph className="mt" size="lg">
+              <Paragraph className="mt" size="xxl">
                 Me Jean-Philippe Touati
               </Paragraph>
               <Cta href="mailto:touati@tlmr-avocats.com">
-                touati@tlmr-avocats.com
+                <Paragraph size="xxl">touati@tlmr-avocats.com</Paragraph>
               </Cta>
             </div>
           </div>
           <div>
             <div>
               <Paragraph as="aside">Notre adresse</Paragraph>
-              <Paragraph size="lg">
+              <Paragraph size="xxl">
                 69 place du Docteur Félix Lobligeois 75017 Paris
               </Paragraph>
             </div>
             <div>
               <Paragraph as="aside">Accés</Paragraph>
-              <Paragraph size="lg">Métro Pont Cardinet (Ligne 14)</Paragraph>
-              <Paragraph size="lg"> Villiers (Ligne 3)</Paragraph>
-              <Paragraph size="lg"> Rome (Ligne 2)</Paragraph>
-              <Paragraph size="lg">Brochant (Ligne 13) </Paragraph>
+              <Paragraph size="xxl">Métro Pont Cardinet (Ligne 14)</Paragraph>
+              <Paragraph size="xxl"> Villiers (Ligne 3)</Paragraph>
+              <Paragraph size="xxl"> Rome (Ligne 2)</Paragraph>
+              <Paragraph size="xxl">Brochant (Ligne 13) </Paragraph>
             </div>
           </div>
         </Grid>
