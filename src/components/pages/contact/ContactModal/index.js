@@ -56,10 +56,10 @@ const ContactModal = ({ isVisible, handleModal }) => {
 
     const formData = {
       "form-name": event.target.getAttribute("name"),
-      // subject: "[tlmr-avocats.com] Nouvelle prise de contact",
-      Email: email,
-      Téléphone: phone,
-      Message: message,
+      subject: "[tlmr-avocats.com] Nouvelle prise de contact",
+      // Email: email,
+      // Téléphone: phone,
+      Message: "test",
     };
     console.log(new URLSearchParams(formData).toString());
 
