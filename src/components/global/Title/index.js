@@ -7,7 +7,8 @@ const StyledTitle = styled.h1`
   font-family: "SöhneBreit Buch", sans-serif;
   text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
   font-size: ${({ size }) => (size === "xs" ? 28 : size === "sm" ? 28 : 32)}px;
-  @media ${(props) => props.theme.minWidth.sm} {
+
+  @media ${({ theme }) => theme.minWidth.sm} {
     margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
     font-size: ${({ size }) => (size === "sm" ? 35 : 45)}px;
   }

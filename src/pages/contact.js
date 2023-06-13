@@ -5,7 +5,7 @@ import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
-import ContactModal from "components/pages/contact/Modal";
+import ContactModal from "components/pages/contact/ContactModal";
 
 const StyledContainer = styled.div`
   margin: 110px 0 75px;
@@ -50,7 +50,7 @@ const StyledMap = styled.iframe`
 `;
 
 const Contact = () => {
-  const [isModal, setIsModal] = useState(false);
+  const [isModal, setIsModal] = useState(true);
 
   const handleModal = () => {
     setIsModal(!isModal);
