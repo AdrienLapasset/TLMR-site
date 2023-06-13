@@ -43,13 +43,13 @@ const ContactModal = ({ isVisible, handleModal }) => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  // function encode(data) {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //     )
-  //     .join("&");
-  // }
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,12 +61,12 @@ const ContactModal = ({ isVisible, handleModal }) => {
       "Numéro de téléphone": phone,
       Message: message,
     };
-    // console.log(new URLSearchParams(formData).toString());
+    console.log(encode(formData));
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encode(formData),
     })
       .then((response) => {
         console.log(response);
