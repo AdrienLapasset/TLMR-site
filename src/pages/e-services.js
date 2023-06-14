@@ -7,8 +7,8 @@ import Eservice from "components/pages/e-services/Eservice";
 import { Element } from "react-scroll";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import TwoPointsSection from "components/global/TwoPointsSection";
-import { Script } from "gatsby";
-import { Helmet } from "react-helmet";
+// import { Script } from "gatsby";
+// import { Helmet } from "react-helmet";
 // import $ from "jquery";
 
 const Eservices = () => {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Paragraph from "components/global/Paragraph";
 import croix from "assets/icons/croix.svg";
 // import assistant from "./assistant.html";
-// import ReactHtmlParser from "react-html-parser";
+import ReactHtmlParser from "react-html-parser";
 // import { Script } from "gatsby";
 import $ from "jquery";
 
@@ -62,22 +62,6 @@ const StyledModal = styled.div`
 const SeraphinLegalModal = ({ isVisible, handleModal }) => {
   const [seraphinLegal, setSeraphinLegal] = useState(null);
 
-  // useEffect(() => {
-  // $.ajax({
-  //   headers: {
-  //     assistantSavedCode: new URLSearchParams(window.location.search).get(
-  //       "assistantSavedCode"
-  //     ),
-  //   },
-  //   url: "https://assistant.api.seraphin.legal/api/v2/Assistant/b41c8e76-dace-4c7e-aa5a-1c8f4a906cb3/37df2c0b-a144-4dbb-ae22-a758e19de55e/Viewer?lang=fr",
-  //   method: "POST",
-  //   type: "POST",
-  // }).done(function (data) {
-  //   $("#Assistant").html(data);
-  //   // run();
-  // });
-  // }, []);
-
   useEffect(() => {
     const assistantSavedCode = new URLSearchParams(window.location.search).get(
       "assistantSavedCode"
@@ -96,10 +80,9 @@ const SeraphinLegalModal = ({ isVisible, handleModal }) => {
         const newData =
           '<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>' +
           data +
-          '<script type="text/javascript">run()</script>';
-        console.log(newData);
+          '<script type="text/javascript">run();</script>';
+        // console.log(newData);
         setSeraphinLegal(newData);
-        // run();
       });
   }, []);
 
@@ -114,12 +97,14 @@ const SeraphinLegalModal = ({ isVisible, handleModal }) => {
             <img src={croix} alt="" />
           </button>
         </header>
-        {/* {ReactHtmlParser(assistantString)} */}
+        {/* {ReactHtmlParser(seraphinLegal)} */}
+
         <div dangerouslySetInnerHTML={{ __html: seraphinLegal }} />
+
+        {/* <div dangerouslySetInnerHTML={{ __html: '' }} /> */}
 
         {/* <Script id="azer">{`run()`}</Script> */}
         {/* <iframe src="assistant.html"></iframe> */}
-        <div id="Assistant"></div>
       </StyledModal>
     </StyledContainer>
   );
