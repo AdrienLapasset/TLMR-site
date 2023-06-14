@@ -33,7 +33,8 @@ const EservicesData = [
     btns: [
       {
         name: "Accéder à VitalSign",
-        link: "",
+        link: "https://www.vitalsign.fr/",
+        externlink: true,
       },
       {
         name: "Besoin d’aide ? Nous contacter",

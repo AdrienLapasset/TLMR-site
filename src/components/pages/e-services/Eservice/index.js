@@ -159,6 +159,15 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
                 >
                   {btn.name}
                 </button>
+              ) : btn.externlink ? (
+                <a
+                  href={btn.link}
+                  key={btn.name}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {btn.name}
+                </a>
               ) : (
                 <Link to={btn.link} key={btn.name}>
                   {btn.name}
