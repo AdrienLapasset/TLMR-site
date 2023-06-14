@@ -164,7 +164,11 @@ const MentionsLegales = () => {
             <ul>
               <li>
                 –&nbsp;
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.infolawyers.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Partenariat Infolawyers / Droits d’urgence
                 </a>
                 &nbsp;:
@@ -190,7 +194,11 @@ const MentionsLegales = () => {
               </li>
               <li>
                 – Accompagnement juridique pro bono de&nbsp;
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.ose-association.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   l’Association Ose !
                 </a>
                 &nbsp;dont l’objectif est d’aider les femmes atteintes d’un

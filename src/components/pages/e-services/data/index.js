@@ -51,7 +51,7 @@ const EservicesData = [
     btns: [
       {
         name: "Lancer le générateur",
-        link: "",
+        seraphinLegal: true,
       },
     ],
     imgPath: "",

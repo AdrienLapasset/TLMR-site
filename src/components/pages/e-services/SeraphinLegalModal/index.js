@@ -55,7 +55,7 @@ const StyledModal = styled.div`
   }
 `;
 
-const DeepBlockModal = ({ isVisible, handleModal }) => {
+const SeraphinLegalModal = ({ isVisible, handleModal }) => {
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
@@ -67,13 +67,9 @@ const DeepBlockModal = ({ isVisible, handleModal }) => {
             <img src={croix} alt="" />
           </button>
         </header>
-        <iframe
-          title="Deep Block"
-          src="https://contrat.legapol.fr/iframe.php?mID=2&amp;eID=3"
-        ></iframe>
       </StyledModal>
     </StyledContainer>
   );
 };
 
-export default DeepBlockModal;
+export default SeraphinLegalModal;

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
-import { StaticImage } from "gatsby-plugin-image";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import DeepBlockModal from "../DeepBlockModal";
-import { Link } from "gatsby";
+import SeraphinLegalModal from "../SeraphinLegalModal";
 
 const StyledContainer = styled(Grid)`
   padding-top: 15px;
@@ -107,10 +108,14 @@ const StyledContainer = styled(Grid)`
 `;
 
 const Eservice = ({ title, description, points, btns, imgPath }) => {
-  const [isModal, setIsModal] = useState(false);
+  const [isDeepBlockModalModal, setIsDeepBlockModalModal] = useState(false);
+  const [isSeraphinLegalModal, setIsSeraphinLegalModal] = useState(false);
 
-  const handleModal = () => {
-    setIsModal(!isModal);
+  const handleDeepBlockModal = () => {
+    setIsDeepBlockModalModal(!isDeepBlockModalModal);
+  };
+  const handleSeraphinLegalModal = () => {
+    setIsSeraphinLegalModal(!isSeraphinLegalModal);
   };
 
   return (
@@ -144,7 +149,14 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
           <div>
             {btns?.map((btn) =>
               btn.deepBlock ? (
-                <button key={btn.name} onClick={() => handleModal()}>
+                <button key={btn.name} onClick={() => handleDeepBlockModal()}>
+                  {btn.name}
+                </button>
+              ) : btn.seraphinLegal ? (
+                <button
+                  key={btn.name}
+                  onClick={() => handleSeraphinLegalModal()}
+                >
                   {btn.name}
                 </button>
               ) : (
@@ -176,7 +188,14 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
           )}
         </div>
       </StyledContainer>
-      <DeepBlockModal isVisible={isModal} handleModal={() => handleModal()} />
+      <DeepBlockModal
+        isVisible={isDeepBlockModalModal}
+        handleModal={() => handleDeepBlockModal()}
+      />
+      <SeraphinLegalModal
+        isVisible={isSeraphinLegalModal}
+        handleModal={() => handleSeraphinLegalModal()}
+      />
     </>
   );
 };
