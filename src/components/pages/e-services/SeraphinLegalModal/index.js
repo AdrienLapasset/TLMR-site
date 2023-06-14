@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Paragraph from "components/global/Paragraph";
 import croix from "assets/icons/croix.svg";
@@ -56,6 +56,28 @@ const StyledModal = styled.div`
 `;
 
 const SeraphinLegalModal = ({ isVisible, handleModal }) => {
+  const [seraphinLegal, setSeraphinLegal] = useState(null);
+
+  useEffect(() => {
+    const assistantSavedCode = new URLSearchParams(window.location.search).get(
+      "assistantSavedCode"
+    );
+    const url =
+      "https://assistant.api.seraphin.legal/api/v2/Assistant/b41c8e76-dace-4c7e-aa5a-1c8f4a906cb3/37df2c0b-a144-4dbb-ae22-a758e19de55e/Viewer?lang=fr";
+    const options = {
+      method: "POST",
+      headers: {
+        assistantSavedCode: assistantSavedCode,
+      },
+    };
+    fetch(url, options)
+      .then((response) => response.text())
+      .then((data) => {
+        setSeraphinLegal(data);
+        // run();
+      });
+  }, []);
+
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
@@ -67,6 +89,10 @@ const SeraphinLegalModal = ({ isVisible, handleModal }) => {
             <img src={croix} alt="" />
           </button>
         </header>
+        <div
+          id="Assistant"
+          dangerouslySetInnerHTML={{ __html: seraphinLegal }}
+        />
       </StyledModal>
     </StyledContainer>
   );
