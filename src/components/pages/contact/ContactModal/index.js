@@ -24,6 +24,8 @@ const StyledContainer = styled.div`
 `;
 
 const StyledModal = styled.div`
+  max-height: 100vh;
+  overflow-y: scroll;
   background-color: white;
   width: 100%;
   border-radius: 9px;

@@ -10,10 +10,12 @@ const StyledTitle = styled.h1`
 
   @media ${({ theme }) => theme.minWidth.sm} {
     margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
-    font-size: ${({ size }) => (size === "sm" ? 35 : 45)}px;
+    font-size: ${({ size }) =>
+      size === "xs" ? 28 : size === "sm" ? 35 : 45}px;
   }
   @media ${(props) => props.theme.minWidth.md} {
-    font-size: ${({ size }) => (size === "sm" ? 35 : 50)}px;
+    font-size: ${({ size }) =>
+      size === "xs" ? 28 : size === "sm" ? 35 : 50}px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
     font-size: ${({ size }) =>
