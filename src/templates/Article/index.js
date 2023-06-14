@@ -13,6 +13,11 @@ import twitterLogo from "assets/logos/twitter.svg";
 import { PortableText } from "@portabletext/react";
 import SanityImg from "gatsby-plugin-sanity-image";
 import { myContext } from "provider";
+import {
+  LinkedinShareButton,
+  TwitterShareButton,
+  FacebookShareButton,
+} from "react-share";
 
 export const query = graphql`
   query ArticleBySlug($slug: String!) {
@@ -252,6 +257,11 @@ const StyledContent = styled.section`
     }
   }
 `;
+const StyledShareBlock = styled.div`
+  button {
+    display: inline-block;
+  }
+`;
 
 const myPortableTextComponents = {
   types: {
@@ -261,7 +271,29 @@ const myPortableTextComponents = {
   },
 };
 
-const Article = ({ data }) => {
+const ShareBlock = ({ articleUrl }) => {
+  return (
+    <>
+      <StyledShareBlock>
+        <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
+        <LinkedinShareButton url={articleUrl}>
+          <img src={linkedinLogo} alt="Linkedin logo" />
+        </LinkedinShareButton>
+        <FacebookShareButton url={articleUrl}>
+          <img src={facebookLogo} alt="Facebook logo" />
+        </FacebookShareButton>
+        <TwitterShareButton url={articleUrl}>
+          <img src={twitterLogo} alt="Twitter logo" />
+        </TwitterShareButton>
+      </StyledShareBlock>
+      <div>
+        <Cta to="/contact">Nous contacter</Cta>
+      </div>
+    </>
+  );
+};
+
+const Article = ({ data, location }) => {
   const { title, date, author, _rawContent, heroImg } = data.sanityArticle;
   const heroImage = getImage(heroImg.asset);
 
@@ -305,27 +337,11 @@ const Article = ({ data }) => {
                 <StyledInfoLabel size="sm">Par</StyledInfoLabel>
                 <StyledInfo>{author}</StyledInfo>
               </div>
-              <div>
-                <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-                <img src={facebookLogo} alt="" />
-                <img src={twitterLogo} alt="" />
-                <img src={linkedinLogo} alt="" />
-              </div>
-              <div>
-                <Cta to="/contact">Nous contacter</Cta>
-              </div>
+              <ShareBlock articleUrl={location.href} />
             </StyledMobileInfo>
             <StyledContentContainer>
               <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
-                <div>
-                  <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-                  <img src={facebookLogo} alt="" />
-                  <img src={twitterLogo} alt="" />
-                  <img src={linkedinLogo} alt="" />
-                </div>
-                <div>
-                  <Cta to="/contact">Nous contacter</Cta>
-                </div>
+                <ShareBlock articleUrl={location.href} />
               </StyledDesktopContentInfo>
               <StyledContent>
                 <PortableText
