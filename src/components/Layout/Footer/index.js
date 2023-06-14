@@ -71,9 +71,7 @@ const Navigation = () => {
   const currentYear = new Date().getFullYear();
 
   const goToTop = () => {
-    document.body.scrollIntoView({
-      behavior: "smooth",
-    });
+    document.body.scrollIntoView();
   };
 
   return (
