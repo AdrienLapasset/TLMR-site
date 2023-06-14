@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <StyledContainer>
+        <StyledContainer className="pageAnimation">
           <Navigation />
           {children}
           <Footer />

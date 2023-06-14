@@ -86,4 +86,15 @@ button {
     color: ${(props) => props.theme.colors.grey};
   }
 }
+
+.pageAnimation {
+  animation: pageAnimation 1s ${({ theme }) => theme.cubicBezier.base} forwards;
+  opacity: 0;
+}
+
+@keyframes pageAnimation {
+  100% {
+    opacity: 1;
+  }
+}
 `;
