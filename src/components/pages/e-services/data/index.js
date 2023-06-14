@@ -11,12 +11,11 @@ const EservicesData = [
     btns: [
       {
         name: "Commencer",
-        link: "",
         deepBlock: true,
       },
       {
         name: "Besoin d’aide ? Nous contacter",
-        link: "",
+        link: "/contact",
       },
     ],
     imgPath: "",
@@ -38,7 +37,7 @@ const EservicesData = [
       },
       {
         name: "Besoin d’aide ? Nous contacter",
-        link: "",
+        link: "/contact",
       },
     ],
     imgPath: "",
@@ -66,7 +65,7 @@ const EservicesData = [
     btns: [
       {
         name: "Nous contacter",
-        link: "",
+        link: "/contact",
       },
     ],
     imgPath: "",

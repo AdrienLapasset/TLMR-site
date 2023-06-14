@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Layout from "components/Layout";
 import PageHero from "components/global/PageHero";
 import AnchorNavBar from "components/global/AnchorNavBar";

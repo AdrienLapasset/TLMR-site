@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import { StaticImage } from "gatsby-plugin-image";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import DeepBlockModal from "../DeepBlockModal";
+import { Link } from "gatsby";
 
 const StyledContainer = styled(Grid)`
   padding-top: 15px;
@@ -147,9 +148,9 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
                   {btn.name}
                 </button>
               ) : (
-                <a href={btn.link} key={btn.name}>
+                <Link to={btn.link} key={btn.name}>
                   {btn.name}
-                </a>
+                </Link>
               )
             )}
           </div>
