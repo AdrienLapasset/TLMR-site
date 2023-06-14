@@ -24,6 +24,7 @@ const StyledGrid = styled(Grid)`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 15px;
+    padding-bottom: 110px;
   }
   aside {
     font-size: 80px;

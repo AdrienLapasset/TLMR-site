@@ -85,7 +85,7 @@ const Navigation = () => {
             <h3>Le cabinet</h3>
             <Link to="/expertises">Expertises</Link>
             <Link to="/e-services">e-Services</Link>
-            <Link to="/">Engagements RSE</Link>
+            <Link to="/rse">Engagements RSE</Link>
           </div>
           <div>
             <h3>À propos</h3>
