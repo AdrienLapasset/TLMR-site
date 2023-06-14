@@ -28,7 +28,7 @@ const theme = {
     black: "0.5px solid #000000",
     greyLightest: "0.5px solid #E4E4E4",
   },
-  headerHeight: 71,
+  headerHeight: 72,
   headerHeightMobile: 54,
 };
 
