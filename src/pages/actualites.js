@@ -9,9 +9,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const StyledContainer = styled.div`
   margin: 110px 0 75px;
-  h1 {
-    margin-bottom: 20px;
-  }
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 110px 0;
   }
@@ -23,7 +20,7 @@ const StyledYearContainer = styled.div`
   }
   h2 {
     @media ${(props) => props.theme.minWidth.sm} {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
 `;
