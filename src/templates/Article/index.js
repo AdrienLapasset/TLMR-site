@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "components/Layout";
+import Seo from "components/Seo";
 import Cta from "components/global/Cta";
 import Paragraph from "components/global/Paragraph";
 import Grid from "components/global/Grid";
@@ -18,22 +19,6 @@ import {
   TwitterShareButton,
   FacebookShareButton,
 } from "react-share";
-
-export const query = graphql`
-  query ArticleBySlug($slug: String!) {
-    sanityArticle(slug: { current: { eq: $slug } }) {
-      title
-      date
-      author
-      _rawContent(resolveReferences: { maxDepth: 10 })
-      heroImg {
-        asset {
-          gatsbyImageData
-        }
-      }
-    }
-  }
-`;
 
 const StyledContainer = styled.div`
   & > .gatsby-image-wrapper {
@@ -263,6 +248,23 @@ const StyledShareBlock = styled.div`
   }
 `;
 
+export const query = graphql`
+  query ArticleBySlug($slug: String!) {
+    sanityArticle(slug: { current: { eq: $slug } }) {
+      title
+      date
+      author
+      _rawContent(resolveReferences: { maxDepth: 10 })
+      heroImg {
+        asset {
+          gatsbyImageData
+          url
+        }
+      }
+    }
+  }
+`;
+
 const myPortableTextComponents = {
   types: {
     image: ({ value }) => (
@@ -298,13 +300,37 @@ const Article = ({ data, location }) => {
   const heroImage = getImage(heroImg.asset);
 
   return (
-    <myContext.Consumer>
-      {(context) => (
-        <Layout>
-          <StyledContainer>
-            <GatsbyImage image={heroImage} alt={title} />
-            <StyledHeader>
-              <StyledDesktopInfo>
+    <>
+      <Seo
+        pageTitle={title}
+        // articleDescription={accroche.accroche}
+        imageUrl={heroImg.asset.url}
+      />
+      <myContext.Consumer>
+        {(context) => (
+          <Layout>
+            <StyledContainer>
+              <GatsbyImage image={heroImage} alt={title} />
+              <StyledHeader>
+                <StyledDesktopInfo>
+                  <div>
+                    <StyledInfoLabel size="sm">Date</StyledInfoLabel>
+                    <StyledInfo>
+                      {new Date(date).toLocaleDateString("fr-FR", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </StyledInfo>
+                  </div>
+                  <div>
+                    <StyledInfoLabel size="sm">Par</StyledInfoLabel>
+                    <StyledInfo>{author}</StyledInfo>
+                  </div>
+                </StyledDesktopInfo>
+                <h1>{title}</h1>
+              </StyledHeader>
+              <StyledMobileInfo>
                 <div>
                   <StyledInfoLabel size="sm">Date</StyledInfoLabel>
                   <StyledInfo>
@@ -319,42 +345,25 @@ const Article = ({ data, location }) => {
                   <StyledInfoLabel size="sm">Par</StyledInfoLabel>
                   <StyledInfo>{author}</StyledInfo>
                 </div>
-              </StyledDesktopInfo>
-              <h1>{title}</h1>
-            </StyledHeader>
-            <StyledMobileInfo>
-              <div>
-                <StyledInfoLabel size="sm">Date</StyledInfoLabel>
-                <StyledInfo>
-                  {new Date(date).toLocaleDateString("fr-FR", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </StyledInfo>
-              </div>
-              <div>
-                <StyledInfoLabel size="sm">Par</StyledInfoLabel>
-                <StyledInfo>{author}</StyledInfo>
-              </div>
-              <ShareBlock articleUrl={location.href} />
-            </StyledMobileInfo>
-            <StyledContentContainer>
-              <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
                 <ShareBlock articleUrl={location.href} />
-              </StyledDesktopContentInfo>
-              <StyledContent>
-                <PortableText
-                  value={_rawContent}
-                  components={myPortableTextComponents}
-                />
-              </StyledContent>
-            </StyledContentContainer>
-            <ALaUne article border />
-          </StyledContainer>
-        </Layout>
-      )}
-    </myContext.Consumer>
+              </StyledMobileInfo>
+              <StyledContentContainer>
+                <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
+                  <ShareBlock articleUrl={location.href} />
+                </StyledDesktopContentInfo>
+                <StyledContent>
+                  <PortableText
+                    value={_rawContent}
+                    components={myPortableTextComponents}
+                  />
+                </StyledContent>
+              </StyledContentContainer>
+              <ALaUne article border />
+            </StyledContainer>
+          </Layout>
+        )}
+      </myContext.Consumer>
+    </>
   );
 };
 

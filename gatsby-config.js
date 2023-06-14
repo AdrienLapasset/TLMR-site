@@ -3,8 +3,14 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `TLMR`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Touati La Motte Rouge Avocats`,
+    titleTemplate: "Touati La Motte Rouge Avocats - %s",
+    siteUrl: "https://www.tlmr-avocats.com",
+    description:
+      "Choisissez l’Excellence Accessible Vous simplifier l’accès à l’excellence est un défi que nous relevons chaque jour, avec une magnifique équipe constituée pour vous offrir une très forte compréhension de vos enjeux techniques et juridiques, en particulier dans le domaines des technologies, de l’informatique de l’innovation, du digital, et d’internet. Le cabinet a été fondé par […]",
+    author: "Adrien Lapasset",
+    lang: "fr",
+    keywords: ["Avocats", "Paris", "Touati", "La Motte Rouge"],
   },
   plugins: [
     {
