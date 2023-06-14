@@ -4,6 +4,7 @@ import Paragraph from "components/global/Paragraph";
 import croix from "assets/icons/croix.svg";
 // import assistant from "./assistant.html";
 // import ReactHtmlParser from "react-html-parser";
+import { Script } from "gatsby";
 
 const StyledContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
@@ -58,26 +59,27 @@ const StyledModal = styled.div`
 `;
 
 const SeraphinLegalModal = ({ isVisible, handleModal }) => {
-  // const [seraphinLegal, setSeraphinLegal] = useState(null);
+  const [seraphinLegal, setSeraphinLegal] = useState(null);
 
-  // useEffect(() => {
-  //   const assistantSavedCode = new URLSearchParams(window.location.search).get(
-  //     "assistantSavedCode"
-  //   );
-  //   const url =
-  //     "https://assistant.api.seraphin.legal/api/v2/Assistant/b41c8e76-dace-4c7e-aa5a-1c8f4a906cb3/37df2c0b-a144-4dbb-ae22-a758e19de55e/Viewer?lang=fr";
-  //   const options = {
-  //     method: "POST",
-  //     headers: {
-  //       assistantSavedCode: assistantSavedCode,
-  //     },
-  //   };
-  //   fetch(url, options)
-  //     .then((response) => response.text())
-  //     .then((data) => {
-  //       setSeraphinLegal(data);
-  //     });
-  // }, []);
+  useEffect(() => {
+    const assistantSavedCode = new URLSearchParams(window.location.search).get(
+      "assistantSavedCode"
+    );
+    const url =
+      "https://assistant.api.seraphin.legal/api/v2/Assistant/b41c8e76-dace-4c7e-aa5a-1c8f4a906cb3/37df2c0b-a144-4dbb-ae22-a758e19de55e/Viewer?lang=fr";
+    const options = {
+      method: "POST",
+      headers: {
+        assistantSavedCode: assistantSavedCode,
+      },
+    };
+    fetch(url, options)
+      .then((response) => response.text())
+      .then((data) => {
+        setSeraphinLegal(data);
+        run();
+      });
+  }, []);
 
   return (
     <StyledContainer isVisible={isVisible}>
@@ -91,13 +93,10 @@ const SeraphinLegalModal = ({ isVisible, handleModal }) => {
           </button>
         </header>
         {/* {ReactHtmlParser(assistantString)} */}
-        {/* <div
-          dangerouslySetInnerHTML={{
-            __html: '<script type="text/javascript">run()"</script>',
-          }}
-        /> */}
+        <div dangerouslySetInnerHTML={{ __html: seraphinLegal }} />
+        {/* <Script id="azer">{`run()`}</Script> */}
         {/* <iframe src="assistant.html"></iframe> */}
-        <div id="Assistant"></div>
+        {/* <div id="Assistant"></div> */}
       </StyledModal>
     </StyledContainer>
   );

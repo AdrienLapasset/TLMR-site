@@ -51,12 +51,12 @@ const Eservices = () => {
         description2="La formation juridique et la transmission de notre savoir-faire sont au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et Jean Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne Infolawyers™."
       />
       <ALaUne border />
-      <Script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" />
+      {/* <Script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" />
       <Script
         // strategy="idle"
         type="text/javascript"
         dangerouslySetInnerHTML={{ __html: assistantString }}
-      />
+      /> */}
     </Layout>
   );
 };
