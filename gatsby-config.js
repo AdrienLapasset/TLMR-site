@@ -36,5 +36,6 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-root-import",
     "gatsby-plugin-netlify",
+    "gatsby-plugin-react-helmet",
   ],
 };
