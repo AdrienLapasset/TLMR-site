@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Paragraph from "components/global/Paragraph";
 import croix from "assets/icons/croix.svg";
 // import assistant from "./assistant.html";
-import ReactHtmlParser from "react-html-parser";
+// import ReactHtmlParser from "react-html-parser";
 // import { Script } from "gatsby";
 import $ from "jquery";
 
