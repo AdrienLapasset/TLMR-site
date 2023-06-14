@@ -81,7 +81,7 @@ const SeraphinLegalModal = ({ isVisible, handleModal }) => {
           '<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>' +
           data +
           '<script type="text/javascript">run();</script>';
-        // console.log(newData);
+        console.log(newData);
         setSeraphinLegal(newData);
       });
   }, []);
