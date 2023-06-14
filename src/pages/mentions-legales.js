@@ -17,14 +17,19 @@ const StyledTitle = styled(Title)`
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 10px;
+  margin-top: 80px;
   @media ${({ theme }) => theme.minWidth.sm} {
     display: block;
+    margin-top: 90px;
   }
   @media ${({ theme }) => theme.minWidth.md} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 15px;
-    padding-bottom: 110px;
+    margin-top: 100px;
+  }
+  @media ${({ theme }) => theme.minWidth.lg} {
+    margin-top: 110px;
   }
   aside {
     font-size: 80px;
@@ -110,7 +115,7 @@ const MentionsLegales = () => {
               </li>
             </ul>
           </p>
-          <p>
+          <p id="politique-de-confidentialite">
             Le Cabinet est inscrit au Barreau de Paris. Le Site est hébergé par
             la société OVH, SAS au capital de 10.000 euros, immatriculée au
             R.C.S de Roubaix sous le n° 424 761 419 et dont le siège social est

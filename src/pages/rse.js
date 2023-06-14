@@ -7,14 +7,20 @@ import styled from "styled-components";
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 10px;
+  margin-top: 80px;
+
   @media ${({ theme }) => theme.minWidth.sm} {
     display: block;
+    margin-top: 90px;
   }
   @media ${({ theme }) => theme.minWidth.md} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 15px;
-    padding-bottom: 110px;
+    margin-top: 100px;
+  }
+  @media ${({ theme }) => theme.minWidth.lg} {
+    margin-top: 110px;
   }
   aside {
     font-size: 80px;
