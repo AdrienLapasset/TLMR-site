@@ -29,6 +29,7 @@ const theme = {
     greyLightest: "0.5px solid #E4E4E4",
   },
   headerHeight: 71,
+  headerHeightMobile: 54,
 };
 
 export default theme;

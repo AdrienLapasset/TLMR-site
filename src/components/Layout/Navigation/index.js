@@ -16,8 +16,10 @@ const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 13px 0;
-  transform: ${(props) =>
-    props.isNavHidden ? "translateY(-54px)" : "translateY(0px)"};
+  transform: translateY(
+    ${({ isNavHidden, theme }) =>
+      isNavHidden ? -theme.headerHeightMobile : 0}px
+  );
   @media ${(props) => props.theme.minWidth.sm} {
     height: ${(props) => (props.isNavOpen ? "100vh" : "70px")};
     padding: 21px 0;
@@ -27,8 +29,9 @@ const StyledNav = styled.nav`
     padding-right: 45px;
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    transform: ${(props) =>
-      props.isNavHidden ? "translateY(-74px)" : "translateY(0px)"};
+    transform: translateY(
+      ${({ isNavHidden, theme }) => (isNavHidden ? -theme.headerHeight : 0)}px
+    );
     height: unset;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
