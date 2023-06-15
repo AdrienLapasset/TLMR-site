@@ -71,11 +71,11 @@ const SEO = ({ pageTitle, articleDescription, imageUrl }) => {
         },
         {
           name: `twitter:description`,
-          content: description,
+          content: metaDescription,
         },
         {
           name: "twitter:card",
-          content: metaImage,
+          content: "summary_large_image",
         },
       ]}
     />
