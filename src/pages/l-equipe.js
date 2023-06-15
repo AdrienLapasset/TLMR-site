@@ -6,6 +6,7 @@ import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
 import TeammateCard from "components/pages/lequipe/TeammateCard";
+import Seo from "components/Seo";
 
 const lequipe = [
   {
@@ -195,104 +196,107 @@ const Lequipe = () => {
   }, []);
 
   return (
-    <Layout>
-      <StyledCabinetContainer>
-        <Title pageTitle type="h2">
-          Le Cabinet
-        </Title>
-        <StyledColumn>
-          <div>
-            <Paragraph size="xxl">
-              Le cabinet a été fondé par Me Henri de la Motte Rouge et Me Jean
-              Philippe Touati, deux avocats expérimentés et passionnés aux
-              compétences complémentaires, partageant une éthique et une vision
-              commune de la profession d’avocat, particulièrement attachés à la
-              qualité du service rendu au client.
-            </Paragraph>
-            <Paragraph size="xxl">
-              Outre l’excellence juridique et la réputation de son équipe, le
-              cabinet s’appuie sur les compétences d’ingénieurs et d’experts
-              techniques et forensiques. Il propose à ses clients des
-              investigations numériques poussées, des outils et e-services
-              dédiés à la productivité juridique, la simplification des process
-              et à l’optimisation du service rendu.
-            </Paragraph>
-            <Paragraph size="xxl">
-              Le cabinet intervient également dans la conception des services
-              innovants de ses clients en mettant à profit des techniques
-              innovantes de Legal Design.
-            </Paragraph>
-          </div>
-          {isSeeMore && (
+    <>
+      <Seo pageTitle="l'équipe" />
+      <Layout>
+        <StyledCabinetContainer>
+          <Title pageTitle type="h2">
+            Le Cabinet
+          </Title>
+          <StyledColumn>
             <div>
               <Paragraph size="xxl">
-                Ces multiples atouts lui permettent d’offrir un accompagnement
-                de pointe ainsi que des solutions pragmatiques et
-                opérationnelles tant en matière de conseil que de contentieux à
-                une diversité de clients (grandes entreprises, start-up, PME,
-                personnalités, décideurs, entrepreneurs du web, infopreneurs…).
-                Le savoir-faire du cabinet est régulièrement sollicité par
-                d’autres cabinets d’avocats ainsi qu’au sein de commissions
-                professionnelles ou d’institutions publiques.
+                Le cabinet a été fondé par Me Henri de la Motte Rouge et Me Jean
+                Philippe Touati, deux avocats expérimentés et passionnés aux
+                compétences complémentaires, partageant une éthique et une
+                vision commune de la profession d’avocat, particulièrement
+                attachés à la qualité du service rendu au client.
               </Paragraph>
               <Paragraph size="xxl">
-                Acteur du droit des affaires, le cabinet forge sa réputation sur
-                une expertise juridique reconnue en matière de propriété
-                intellectuelle, de droit de l’informatique et des données
-                personnelles, de l’e-réputation, de l’internet et du e-commerce,
-                et de la cybercriminalité. Le cabinet intervient également en
-                droit du travail, droit de l’immobilier et droit pénal et sur la
-                fiscalité des entreprises innovantes, des plateformes et des
-                entrepreneurs du web.
+                Outre l’excellence juridique et la réputation de son équipe, le
+                cabinet s’appuie sur les compétences d’ingénieurs et d’experts
+                techniques et forensiques. Il propose à ses clients des
+                investigations numériques poussées, des outils et e-services
+                dédiés à la productivité juridique, la simplification des
+                process et à l’optimisation du service rendu.
+              </Paragraph>
+              <Paragraph size="xxl">
+                Le cabinet intervient également dans la conception des services
+                innovants de ses clients en mettant à profit des techniques
+                innovantes de Legal Design.
               </Paragraph>
             </div>
+            {isSeeMore && (
+              <div>
+                <Paragraph size="xxl">
+                  Ces multiples atouts lui permettent d’offrir un accompagnement
+                  de pointe ainsi que des solutions pragmatiques et
+                  opérationnelles tant en matière de conseil que de contentieux
+                  à une diversité de clients (grandes entreprises, start-up,
+                  PME, personnalités, décideurs, entrepreneurs du web,
+                  infopreneurs…). Le savoir-faire du cabinet est régulièrement
+                  sollicité par d’autres cabinets d’avocats ainsi qu’au sein de
+                  commissions professionnelles ou d’institutions publiques.
+                </Paragraph>
+                <Paragraph size="xxl">
+                  Acteur du droit des affaires, le cabinet forge sa réputation
+                  sur une expertise juridique reconnue en matière de propriété
+                  intellectuelle, de droit de l’informatique et des données
+                  personnelles, de l’e-réputation, de l’internet et du
+                  e-commerce, et de la cybercriminalité. Le cabinet intervient
+                  également en droit du travail, droit de l’immobilier et droit
+                  pénal et sur la fiscalité des entreprises innovantes, des
+                  plateformes et des entrepreneurs du web.
+                </Paragraph>
+              </div>
+            )}
+          </StyledColumn>
+          <StyledSeeMoreBtn onClick={() => setIsSeeMore(!isSeeMore)}>
+            Voir plus
+          </StyledSeeMoreBtn>
+        </StyledCabinetContainer>
+        <Title type="h1">Notre équipe</Title>
+        <StyledLequipeContainer>
+          {lequipe.map(
+            ({
+              imgName,
+              name,
+              post,
+              description,
+              experiences,
+              engagements,
+              linkedinUrl,
+            }) => (
+              <TeammateCard
+                key={name}
+                imgName={imgName}
+                name={name}
+                post={post}
+                description={description}
+                experiences={experiences}
+                engagements={engagements}
+                linkedinUrl={linkedinUrl}
+              />
+            )
           )}
-        </StyledColumn>
-        <StyledSeeMoreBtn onClick={() => setIsSeeMore(!isSeeMore)}>
-          Voir plus
-        </StyledSeeMoreBtn>
-      </StyledCabinetContainer>
-      <Title type="h1">Notre équipe</Title>
-      <StyledLequipeContainer>
-        {lequipe.map(
-          ({
-            imgName,
-            name,
-            post,
-            description,
-            experiences,
-            engagements,
-            linkedinUrl,
-          }) => (
-            <TeammateCard
-              key={name}
-              imgName={imgName}
-              name={name}
-              post={post}
-              description={description}
-              experiences={experiences}
-              engagements={engagements}
-              linkedinUrl={linkedinUrl}
-            />
-          )
-        )}
-      </StyledLequipeContainer>
-      <StyledSupportTeam>
-        <Paragraph as="h2">Équipe support et opérationnelle</Paragraph>
-        <Paragraph size="xxl">Christophe Lemée</Paragraph>
-        <Paragraph as="aside" size="xxl" color="greyLight">
-          Informatique et R&D e-services
-        </Paragraph>
-        <Paragraph size="xxl"> Thomas Gasio</Paragraph>
-        <Paragraph as="aside" size="xxl" color="greyLight">
-          Marketing et e-commerce
-        </Paragraph>
-        <Paragraph size="xxl">Goran Mladenovic</Paragraph>
-        <Paragraph as="aside" size="xxl" color="greyLight">
-          Administratif et Comptabilité
-        </Paragraph>
-      </StyledSupportTeam>
-    </Layout>
+        </StyledLequipeContainer>
+        <StyledSupportTeam>
+          <Paragraph as="h2">Équipe support et opérationnelle</Paragraph>
+          <Paragraph size="xxl">Christophe Lemée</Paragraph>
+          <Paragraph as="aside" size="xxl" color="greyLight">
+            Informatique et R&D e-services
+          </Paragraph>
+          <Paragraph size="xxl"> Thomas Gasio</Paragraph>
+          <Paragraph as="aside" size="xxl" color="greyLight">
+            Marketing et e-commerce
+          </Paragraph>
+          <Paragraph size="xxl">Goran Mladenovic</Paragraph>
+          <Paragraph as="aside" size="xxl" color="greyLight">
+            Administratif et Comptabilité
+          </Paragraph>
+        </StyledSupportTeam>
+      </Layout>
+    </>
   );
 };
 

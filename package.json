@@ -27,7 +27,6 @@
     "gatsby-source-filesystem": "^5.9.0",
     "gatsby-source-sanity": "^7.6.3",
     "gatsby-transformer-sharp": "^5.9.0",
-    "jquery": "^3.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -36,7 +35,6 @@
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "gatsby-plugin-root-import": "^2.0.9",
-    "html-loader": "^4.2.0"
+    "gatsby-plugin-root-import": "^2.0.9"
   }
 }

@@ -8,19 +8,23 @@ import ALaUne from "components/pages/home/sections/ALaUne";
 import VosExperts from "components/pages/home/sections/VosExperts";
 import VosTemoignages from "components/pages/home/sections/VosTemoignages";
 import DansLaPresse from "components/pages/home/sections/DansLaPresse";
+import Seo from "components/Seo";
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <HeroSection />
-      <VousProteger />
-      <NosSolution />
-      <VousFormer />
-      <ALaUne home />
-      <VosExperts />
-      <VosTemoignages />
-      <DansLaPresse />
-    </Layout>
+    <>
+      <Seo />
+      <Layout>
+        <HeroSection />
+        <VousProteger />
+        <NosSolution />
+        <VousFormer />
+        <ALaUne home />
+        <VosExperts />
+        <VosTemoignages />
+        <DansLaPresse />
+      </Layout>
+    </>
   );
 };
 

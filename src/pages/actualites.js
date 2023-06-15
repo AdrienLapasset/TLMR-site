@@ -6,6 +6,7 @@ import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Seo from "components/Seo";
 
 const StyledContainer = styled.div`
   margin: 110px 0 75px;
@@ -88,44 +89,47 @@ const Actualites = () => {
   years.sort((a, b) => b - a);
 
   return (
-    <Layout>
-      <StyledContainer>
-        <Title type="h1">Actualités</Title>
-        {years.map((year) => {
-          const articlesByYear = articles.filter(
-            ({ date }) => getYearFromDateString(date) === year
-          );
-          return (
-            <StyledYearContainer key={year}>
-              <Title type="h2">{year}</Title>
-              <StyledGrid>
-                {articlesByYear.map(({ date, title, heroImg, slug }) => {
-                  const thumbImg = getImage(heroImg.asset);
-                  return (
-                    <StyledArticleCard
-                      key={title}
-                      to={"/article/" + slug.current}
-                    >
-                      <GatsbyImage image={thumbImg} alt={title} />
-                      <Paragraph size="sm">
-                        {new Date(date).toLocaleDateString("fr-FR", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </Paragraph>
-                      <Paragraph size="lg" as="h3">
-                        {title}
-                      </Paragraph>
-                    </StyledArticleCard>
-                  );
-                })}
-              </StyledGrid>
-            </StyledYearContainer>
-          );
-        })}
-      </StyledContainer>
-    </Layout>
+    <>
+      <Seo pageTitle="Actualités" />
+      <Layout>
+        <StyledContainer>
+          <Title type="h1">Actualités</Title>
+          {years.map((year) => {
+            const articlesByYear = articles.filter(
+              ({ date }) => getYearFromDateString(date) === year
+            );
+            return (
+              <StyledYearContainer key={year}>
+                <Title type="h2">{year}</Title>
+                <StyledGrid>
+                  {articlesByYear.map(({ date, title, heroImg, slug }) => {
+                    const thumbImg = getImage(heroImg.asset);
+                    return (
+                      <StyledArticleCard
+                        key={title}
+                        to={"/article/" + slug.current}
+                      >
+                        <GatsbyImage image={thumbImg} alt={title} />
+                        <Paragraph size="sm">
+                          {new Date(date).toLocaleDateString("fr-FR", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </Paragraph>
+                        <Paragraph size="lg" as="h3">
+                          {title}
+                        </Paragraph>
+                      </StyledArticleCard>
+                    );
+                  })}
+                </StyledGrid>
+              </StyledYearContainer>
+            );
+          })}
+        </StyledContainer>
+      </Layout>
+    </>
   );
 };
 

@@ -7,12 +7,14 @@ import Eservice from "components/pages/e-services/Eservice";
 import { Element } from "react-scroll";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import TwoPointsSection from "components/global/TwoPointsSection";
+import Seo from "components/Seo";
 
 const Eservices = () => {
   const twoPointsSectionRef = useRef(null);
 
   return (
     <>
+      <Seo pageTitle="E-services" />
       <Layout>
         <PageHero
           title="E-SERVICES"
