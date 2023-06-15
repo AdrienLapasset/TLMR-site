@@ -36,6 +36,7 @@
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "gatsby-plugin-root-import": "^2.0.9"
+    "gatsby-plugin-root-import": "^2.0.9",
+    "html-loader": "^4.2.0"
   }
 }

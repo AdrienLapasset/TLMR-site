@@ -1,13 +1,26 @@
 const path = require("path");
 
-// exports.onCreateWebpackConfig = ({ actions }) => {
-//   const { setWebpackConfig } = actions;
-//   setWebpackConfig({
-//     externals: {
-//       jquery: "jQuery", // important: 'Q' capitalized
-//     },
-//   });
-// };
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.html$/,
+          loader: require.resolve("html-loader"),
+          options: {
+            minimize: false,
+          },
+        },
+      ],
+    },
+  });
+};
+
+const express = require("express");
+
+exports.onCreateDevServer = ({ app }) => {
+  app.use(express.static("public"));
+};
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
