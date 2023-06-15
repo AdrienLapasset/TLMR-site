@@ -36,7 +36,12 @@ const Cta = ({ children, className, onClick, href, to }) => {
     );
   if (href)
     return (
-      <StyledA className={className} href={href}>
+      <StyledA
+        className={className}
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+      >
         {children}
       </StyledA>
     );

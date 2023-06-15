@@ -49,7 +49,11 @@ const VousFormer = () => {
           }
           links={[
             { text: "En savoir plus", to: "/formations" },
-            { text: "Visiter infolawyers", to: "/" },
+            {
+              text: "Visiter infolawyers",
+              to: "https://www.infolawyers.fr",
+              extern: true,
+            },
           ]}
         />
       </StyledColumns>

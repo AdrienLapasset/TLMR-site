@@ -42,6 +42,8 @@ const ExpertisesPage = () => {
         twoPointsSectionRef={twoPointsSectionRef}
         title1="NOS SOLUTIONS"
         title2="VOUS FORMER"
+        link2="formations"
+        link1="e-services"
         description1="Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."
         description2="La formation juridique et la transmission de notre savoir-faire sont au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et Jean Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne Infolawyers™."
       />

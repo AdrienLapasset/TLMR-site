@@ -32,11 +32,17 @@ const SectionDescription = ({ description, links, className }) => {
     <StyledContainer className={className}>
       <p>{description}</p>
       <StyledButtonsContainer>
-        {links.map(({ text, to }) => (
-          <Cta key={text} href={to}>
-            {text}
-          </Cta>
-        ))}
+        {links.map(({ text, to, extern }) =>
+          extern ? (
+            <Cta key={text} href={to}>
+              {text}
+            </Cta>
+          ) : (
+            <Cta key={text} to={to}>
+              {text}
+            </Cta>
+          )
+        )}
       </StyledButtonsContainer>
     </StyledContainer>
   );
