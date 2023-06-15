@@ -7,23 +7,15 @@ import Eservice from "components/pages/e-services/Eservice";
 import { Element } from "react-scroll";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import TwoPointsSection from "components/global/TwoPointsSection";
-// import { Script } from "gatsby";
-// import { Helmet } from "react-helmet";
-// import $ from "jquery";
 
 const Eservices = () => {
   const twoPointsSectionRef = useRef(null);
 
+  const assistantString =
+    '$.ajax({headers: {assistantSavedCode: new URLSearchParams(window.location.search).get("assistantSavedCode"),},url: "https://assistant.api.seraphin.legal/api/v2/Assistant/b41c8e76-dace-4c7e-aa5a-1c8f4a906cb3/37df2c0b-a144-4dbb-ae22-a758e19de55e/Viewer?lang=fr",method: "POST",type: "POST",}).done(function (data) {$("#Assistant").html(data);run();})';
+
   return (
     <>
-      {/* <Helmet>
-        <script
-          key="jquery"
-          src="https://code.jquery.com/jquery-3.6.0.min.js"
-          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-          crossOrigin="anonymous"
-        ></script>
-      </Helmet> */}
       <Layout>
         <PageHero
           title="E-SERVICES"
@@ -60,11 +52,6 @@ const Eservices = () => {
         />
         <ALaUne border />
       </Layout>
-      {/* <Script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" /> */}
-      {/* <Script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{ __html: assistantString }}
-      /> */}
     </>
   );
 };
