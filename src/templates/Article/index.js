@@ -298,12 +298,14 @@ const ShareBlock = ({ articleUrl }) => {
 const Article = ({ data, location }) => {
   const { title, date, author, _rawContent, heroImg } = data.sanityArticle;
   const heroImage = getImage(heroImg.asset);
+  const articleDescription = _rawContent[0].children[0].text;
 
+  // console.log(_rawContent[0].children[0].text);
   return (
     <>
       <Seo
         pageTitle={title}
-        // articleDescription={accroche.accroche}
+        articleDescription={articleDescription}
         imageUrl={heroImg.asset.url}
       />
       <myContext.Consumer>

@@ -75,7 +75,7 @@ const SEO = ({ pageTitle, articleDescription, imageUrl }) => {
         },
         {
           name: "twitter:card",
-          content: "summary_large_image",
+          content: metaImage,
         },
       ]}
     />

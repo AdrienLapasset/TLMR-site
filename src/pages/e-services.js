@@ -11,9 +11,6 @@ import TwoPointsSection from "components/global/TwoPointsSection";
 const Eservices = () => {
   const twoPointsSectionRef = useRef(null);
 
-  const assistantString =
-    '$.ajax({headers: {assistantSavedCode: new URLSearchParams(window.location.search).get("assistantSavedCode"),},url: "https://assistant.api.seraphin.legal/api/v2/Assistant/b41c8e76-dace-4c7e-aa5a-1c8f4a906cb3/37df2c0b-a144-4dbb-ae22-a758e19de55e/Viewer?lang=fr",method: "POST",type: "POST",}).done(function (data) {$("#Assistant").html(data);run();})';
-
   return (
     <>
       <Layout>
