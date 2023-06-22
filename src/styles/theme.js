@@ -25,8 +25,8 @@ const theme = {
     desktop: "30px",
   },
   border: {
-    black: "0.5px solid #000000",
-    greyLightest: "0.5px solid #E4E4E4",
+    black: "0.8px solid #000000",
+    greyLightest: "0.8px solid #E4E4E4",
   },
   headerHeight: 72,
   headerHeightMobile: 54,

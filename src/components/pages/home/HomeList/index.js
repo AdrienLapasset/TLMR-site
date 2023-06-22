@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
   div {
     display: flex;
     align-items: center;
-    border-bottom: 0.5px solid ${(props) => props.theme.colors.black};
+    border-bottom: 0.8px solid ${(props) => props.theme.colors.black};
     padding-bottom: 10px;
   }
 `;
@@ -32,7 +32,7 @@ const StyledList = styled.ul`
   }
   a,
   aside {
-    border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLight};
+    border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLight};
     padding: 10px 0;
   }
   aside {

@@ -44,7 +44,7 @@ const VosExperts = () => {
         />
         <SectionDescription
           description={
-            "Le cabinet a été fondé par Me Henri de la Motte Rouge et Me Jean-Philippe Touati, deux avocats expérimentés et passionnés aux compétences complémentaires, partageant une éthique et une vision commune de la profession d’avocat, particulièrement attachés à la qualité du service rendu au client."
+            "Le cabinet a été fondé par M<sup>e</sup> Henri de la Motte Rouge et M<sup>e</sup> Jean-Philippe Touati, deux avocats expérimentés et passionnés aux compétences complémentaires, partageant une éthique et une vision commune de la profession d’avocat, particulièrement attachés à la qualité du service rendu au client."
           }
           links={[{ text: "Découvrez l’équipe", to: "/l-equipe" }]}
         />

@@ -30,7 +30,7 @@ const StyledButtonsContainer = styled.div`
 const SectionDescription = ({ description, links, className }) => {
   return (
     <StyledContainer className={className}>
-      <p>{description}</p>
+      <p dangerouslySetInnerHTML={{ __html: description }}></p>
       <StyledButtonsContainer>
         {links.map(({ text, to, extern }) =>
           extern ? (

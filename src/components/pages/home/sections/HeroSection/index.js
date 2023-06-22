@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import Grid from "components/global/Grid";
 
 const StyledContainer = styled.div`
   margin-top: 185px;
@@ -8,7 +9,7 @@ const StyledContainer = styled.div`
     margin-top: 240px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin-top: 400px;
+    margin-top: 330px;
   }
   aside {
     margin-bottom: 5px;
@@ -23,10 +24,13 @@ const StyledContainer = styled.div`
     }
   }
   h1 {
-    max-width: 980px;
+    grid-column: 1 / 10;
     margin-bottom: 40px;
     font-size: 22px;
     @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 25px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
       font-size: 30px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
@@ -39,11 +43,13 @@ const HeroSection = () => {
   return (
     <StyledContainer>
       <aside>L’excellence accessible</aside>
-      <h1>
-        Vous simplifier l’accès à l’excellence en particulier dans les domaines
-        des technologies, de l’informatique de l’innovation, du digital, et
-        d’internet.
-      </h1>
+      <Grid>
+        <h1>
+          Vous simplifier l’accès à l’excellence en particulier dans les
+          domaines des technologies, de l’informatique de l’innovation, du
+          digital, et d’internet.
+        </h1>
+      </Grid>
       <StaticImage
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"

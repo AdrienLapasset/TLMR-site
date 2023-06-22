@@ -43,7 +43,10 @@ const StyledNav = styled.nav`
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   img {
-    height: 28px;
+    height: 24px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      height: 28px;
+    }
   }
 `;
 const StyledLinksContainer = styled.div`
@@ -66,12 +69,12 @@ const StyledLinksContainer = styled.div`
   }
   a {
     padding: 15px 0;
-    border-bottom: 0.5px solid ${(props) => props.theme.colors.greyLightest};
+    border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     font-size: 18px;
     @media ${(props) => props.theme.minWidth.lg} {
       margin-top: 0;
-      font-size: 15px;
+      font-size: 16px;
       border-bottom: none;
       padding: 0;
       width: unset;

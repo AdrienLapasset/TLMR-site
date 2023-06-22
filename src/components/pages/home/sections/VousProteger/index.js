@@ -23,7 +23,7 @@ const VousProteger = () => {
   const expertisesTitles = expertisesData.map(({ title }) => title);
   return (
     <StyledContainer>
-      <SectionTitle aside="Expertise" title="VOUS PROTÉGER" />
+      <SectionTitle aside="Expertises" title="VOUS PROTÉGER" />
       <StaticImage
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
