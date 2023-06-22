@@ -8,8 +8,11 @@ import Cta from "components/global/Cta";
 
 const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
-  margin-top: 100px;
-  padding-top: 20px;
+  margin-top: 200px;
+  padding-top: 10px;
+  @media ${(props) => props.theme.minWidth.md} {
+    padding-top: 20px;
+  }
   .grid {
     display: block;
     @media ${(props) => props.theme.minWidth.md} {
@@ -20,8 +23,16 @@ const StyledContainer = styled.section`
       &:last-child {
         grid-column: 7 / span 6;
         border-top: ${(props) => props.theme.border.black};
-        @media ${(props) => props.theme.minWidth.sm} {
+        margin-top: 70px;
+        @media ${(props) => props.theme.minWidth.md} {
+          margin-top: 0px;
           border-top: none;
+        }
+        h2 {
+          padding-top: 10px;
+          @media ${(props) => props.theme.minWidth.md} {
+            padding-top: 0px;
+          }
         }
       }
       h2 {

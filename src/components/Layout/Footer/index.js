@@ -6,6 +6,9 @@ import Paragraph from "components/global/Paragraph";
 
 const StyledFooter = styled.footer`
   margin-top: 175px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 210px;
+  }
   border-top: ${(props) => props.theme.border.black};
   img {
     margin: 25px 0 170px;

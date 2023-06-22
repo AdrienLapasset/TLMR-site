@@ -20,7 +20,7 @@ const StyledContainer = styled.section`
     z-index: 1;
     background-color: white;
     display: block;
-    margin: 100px -45px 0;
+    margin: 100px -45px -40px;
     padding: 0 45px 10px;
   }
 `;
@@ -32,6 +32,7 @@ const StyledGrid = styled(Grid)`
     grid-column: 1 / span 1;
   }
   h3 {
+    font-size: 13px;
     display: none;
     @media ${(props) => props.theme.minWidth.lg} {
       display: block;
@@ -46,6 +47,7 @@ const StyledNavLink = styled(Link)`
   align-items: first baseline;
   color: ${(props) => props.theme.colors.greyLight};
   margin-bottom: 10px;
+  font-size: 13px;
   &.active,
   &:hover {
     color: ${(props) => props.theme.colors.black};

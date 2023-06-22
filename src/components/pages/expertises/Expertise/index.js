@@ -10,9 +10,6 @@ import Dot from "components/global/Dot";
 const StyledContainer = styled.div`
   padding-top: 7px;
   border-top: ${(props) => props.theme.border.black};
-  @media ${(props) => props.theme.minWidth.md} {
-    padding-bottom: 130px;
-  }
 `;
 const StyledPoint = styled.aside`
   margin-bottom: 40px;
@@ -37,6 +34,9 @@ const StyledAccordionContainer = styled.div`
   }
 `;
 const StyledTitleGrid = styled(Grid)`
+  h2 {
+    margin-bottom: 20px;
+  }
   & > * {
     grid-column: 1 / 13;
     @media ${(props) => props.theme.minWidth.md} {
@@ -70,7 +70,7 @@ const StyledUseCases = styled.div`
   margin-top: 40px;
   padding-bottom: 70px;
   @media ${(props) => props.theme.minWidth.sm} {
-    padding-bottom: 100px;
+    padding-bottom: 0px;
   }
   & > h3 {
     margin-bottom: 10px;
@@ -147,7 +147,7 @@ const Expertise = ({ expertise }) => {
   return (
     <StyledContainer>
       <StyledTitleGrid>
-        <Title type="h2" size="sm" lowercase>
+        <Title type="h2" lowercase>
           {expertise.title}
         </Title>
       </StyledTitleGrid>

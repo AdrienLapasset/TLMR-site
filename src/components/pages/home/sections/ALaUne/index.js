@@ -12,7 +12,7 @@ const border = css`
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 100px;
   }
-  @media ${(props) => props.theme.minWidth.lg} {
+  /* @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 150px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
@@ -20,23 +20,23 @@ const border = css`
   }
   @media ${(props) => props.theme.minWidth.xl} {
     margin-top: 300px;
-  }
+  } */
 `;
 
 const StyledContainer = styled.div`
   ${(props) => (props.border ? border : null)}
-  margin-top: 110px;
+  margin-top: 70px;
   & > header {
     display: flex;
     padding-bottom: 20px;
     @media ${(props) => props.theme.minWidth.sm} {
-      padding-bottom: 25px;
-      margin-top: 160px;
+      padding-bottom: 0;
     }
-    @media ${(props) => props.theme.minWidth.md} {
-      padding-bottom: 25px;
+    & > h2 {
+      margin-bottom: 30px;
     }
     & > a {
+      margin-bottom: 40px;
       margin-left: auto;
       align-self: flex-end;
       display: none;
@@ -81,9 +81,16 @@ const StyledNews = styled(Link)`
       font-size: 18px;
     }
   }
+  &:nth-child(3),
+  &:nth-child(4) {
+    display: none;
+    @media ${(props) => props.theme.minWidth.md} {
+      display: block;
+    }
+  }
 `;
 
-const ALaUne = ({ className, home, border, article }) => {
+const ALaUne = ({ className, home, border }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -113,9 +120,11 @@ const ALaUne = ({ className, home, border, article }) => {
         {home ? (
           <SectionTitle aside="Actualités" title="À LA UNE" />
         ) : (
-          <Title>À LA UNE</Title>
+          <Title type="h2" size="sm">
+            À la une
+          </Title>
         )}
-        <Cta>Toutes les actualités</Cta>
+        <Cta to="/actualites">Toutes les actualités</Cta>
       </header>
       <StyledColumns>
         {articles.map(({ title, date, heroImg, slug }) => {

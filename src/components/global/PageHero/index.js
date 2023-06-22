@@ -7,10 +7,10 @@ import Paragraph from "components/global/Paragraph";
 const StyledContainer = styled(Grid)`
   margin: 110px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 110px 0;
+    margin: 190px 0;
   }
   h1 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     grid-column: 1/12;
   }
   p {
@@ -36,7 +36,7 @@ const StyledContainer = styled(Grid)`
         grid-column: 1/7;
       }
       @media ${(props) => props.theme.minWidth.lg} {
-        grid-column: 1 / span 4;
+        grid-column: 1 / span 5;
       }
     }
   }

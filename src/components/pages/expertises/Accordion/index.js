@@ -16,8 +16,6 @@ const StyledHeader = styled.div`
 `;
 const StyledContent = styled.div`
   padding-bottom: ${(props) => (props.isSectionOpen ? "10px" : "0")};
-  padding-left: 10px;
-  padding-right: 10px;
   opacity: ${(props) => (props.isSectionOpen ? "1" : "0")};
   transition: all 400ms ${(props) => props.theme.cubicBezier.base};
   height: ${(props) =>
@@ -38,9 +36,7 @@ const Accordion = ({ title, content }) => {
   return (
     <StyledContainer>
       <StyledHeader onClick={toggleSection}>
-        <Paragraph size="lg" as="h3">
-          {title}
-        </Paragraph>
+        <Paragraph as="h3">{title}</Paragraph>
         <ToggleBtn isSectionOpen={isSectionOpen} />
       </StyledHeader>
       <StyledContent

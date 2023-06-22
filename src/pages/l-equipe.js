@@ -122,7 +122,7 @@ const lequipe = [
 const StyledCabinetContainer = styled.section`
   margin: 110px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 110px 0;
+    margin: 230px 0;
   }
   h1 {
     margin-bottom: 30px;
