@@ -1,9 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import SectionTitle from "../../SectionTitle";
+import Paragraph from "components/global/Paragraph";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
+  h2 {
+    margin-bottom: 70px;
+  }
   aside {
     margin-top: 15px;
     font-family: "Söhne Kräftig";
@@ -39,19 +43,21 @@ const VosTemoignages = () => {
     },
     {
       text: "Le cabinet nous a accompagné dans un contentieux informatique et une négociation délicate. Il dispose d’une forte expertise juridique et technique couplée à un sens de l’humain et du relationnel très appréciable.",
-      author: "Charles Mahé, CEO, Fosburit",
+      author: "Jean-Marie Henry, CEO, Officentrale.fr",
     },
     {
       text: "Henri est un excellent avocat, qui est capable de comprendre parfaitement les problématiques des entrepreneurs, en particulier dans le domaine IT et internet. Son approche pragmatique, orientée résultat et économique, m’a permis de sécuriser mon business dans les meilleures conditions.",
-      author: "Charles Mahé, CEO, Fosburit",
+      author: "François Solignac, CEO, Maïka Assistance",
     },
   ];
 
   const TestimoniesRender = testimoniesList.map((testimony, index) => {
     return (
       <div key={index}>
-        <p>« {testimony.text} »</p>
-        <aside>{testimony.author}</aside>
+        <Paragraph>« {testimony.text} »</Paragraph>
+        <Paragraph size="small" as="aside">
+          {testimony.author}
+        </Paragraph>
       </div>
     );
   });

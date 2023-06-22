@@ -4,7 +4,7 @@ import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
 
 const StyledFooter = styled.footer`
-  margin-top: 160px;
+  margin-top: 175px;
   border-top: ${(props) => props.theme.border.black};
   img {
     margin: 45px 0 170px;

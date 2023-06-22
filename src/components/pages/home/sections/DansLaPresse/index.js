@@ -16,11 +16,14 @@ import village from "assets/logos/dansLaPresse/village.svg";
 
 const StyledContainer = styled.div`
   margin-top: 160px;
+  h2 {
+    margin-bottom: 70px;
+  }
 `;
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 35px;
   img {
     max-width: 100%;
   }

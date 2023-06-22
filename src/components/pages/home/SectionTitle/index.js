@@ -23,13 +23,19 @@ const StyledTitle = styled(Title)`
   }
 `;
 
-const SectionTitle = ({ aside, title, className }) => {
+const SectionTitle = ({ aside, title, className, small }) => {
   return (
     <StyledContainer className={className}>
       <aside>{aside}</aside>
-      <StyledTitle type="h2" className={className}>
-        {title}
-      </StyledTitle>
+      {small ? (
+        <StyledTitle type="h2" className={className} size="sm">
+          {title}
+        </StyledTitle>
+      ) : (
+        <StyledTitle type="h2" className={className}>
+          {title}
+        </StyledTitle>
+      )}
     </StyledContainer>
   );
 };
