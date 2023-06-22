@@ -16,7 +16,7 @@ const StyledContainer = styled.section`
     ${(props) => props.theme.cubicBezier.base};
     position: sticky;
     top: ${({ theme, isNavHidden }) =>
-      isNavHidden ? 0 : theme.headerHeight}px;
+      isNavHidden ? -1 : theme.headerHeight - 1}px;
     z-index: 1;
     background-color: white;
     display: block;
