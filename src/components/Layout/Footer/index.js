@@ -2,12 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
+import Paragraph from "components/global/Paragraph";
 
 const StyledFooter = styled.footer`
   margin-top: 175px;
   border-top: ${(props) => props.theme.border.black};
   img {
-    margin: 45px 0 170px;
+    margin: 25px 0 170px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin: 25px 0 260px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      margin: 25px 0 315px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      margin: 30px 0 430px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      margin: 45px 0 430px;
+    }
   }
 `;
 const StyledLinksContainer = styled.div`
@@ -17,6 +30,10 @@ const StyledLinksContainer = styled.div`
   }
   h3 {
     color: ${(props) => props.theme.colors.greyLight};
+    margin-bottom: 7px;
+  }
+  a > p {
+    margin-bottom: 3px;
   }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {
@@ -51,9 +68,8 @@ const StyledLinksContainer = styled.div`
 const StyledCopyrightsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 80px;
   font-size: 13px;
-  padding: 10px 0;
+  padding: 50px 0 20px;
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {
       width: 200px;
@@ -80,28 +96,44 @@ const Navigation = () => {
       <StyledLinksContainer>
         <div>
           <div>
-            <h3>Le cabinet</h3>
-            <Link to="/expertises">Expertises</Link>
-            <Link to="/e-services">e-Services</Link>
-            <Link to="/rse">Engagements RSE</Link>
+            <Paragraph as="h3">Le cabinet</Paragraph>
+            <Link to="/expertises">
+              <Paragraph>Expertises</Paragraph>
+            </Link>
+            <Link to="/e-services">
+              <Paragraph>e-Services</Paragraph>
+            </Link>
+            <Link to="/rse">
+              <Paragraph>Engagements RSE</Paragraph>
+            </Link>
           </div>
           <div>
-            <h3>À propos</h3>
-            <Link to="/l-equipe">Notre équipe</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/">Paiement</Link>
+            <Paragraph as="h3">À propos</Paragraph>
+            <Link to="/l-equipe">
+              <Paragraph>Notre équipe</Paragraph>
+            </Link>
+            <Link to="/contact">
+              <Paragraph>Contact</Paragraph>
+            </Link>
+            <Link to="/">
+              <Paragraph>Paiement</Paragraph>
+            </Link>
           </div>
           <div>
-            <h3>Retrouvez-nous</h3>
-            <Link to="/">LinkedIn</Link>
+            <Paragraph as="h3">Retrouvez-nous</Paragraph>
+            <Link to="/">
+              <Paragraph>LinkedIn</Paragraph>
+            </Link>
           </div>
         </div>
         <div>
           <div>
-            <h3>Légal</h3>
-            <Link to="/mentions-legales">Mentions légales</Link>
+            <Paragraph as="h3">Légal</Paragraph>
+            <Link to="/mentions-legales">
+              <Paragraph>Mentions légales</Paragraph>
+            </Link>
             <Link to="/mentions-legales#politique-de-confidentialite">
-              Politique de confidentialité
+              <Paragraph> Politique de confidentialité</Paragraph>
             </Link>
           </div>
         </div>

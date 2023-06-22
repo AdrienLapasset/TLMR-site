@@ -5,7 +5,10 @@ import SectionTitle from "../../SectionTitle";
 import SectionDescription from "components/global/SectionDescription";
 
 const StyledContainer = styled.div`
-  margin-top: 160px;
+  margin-top: 110px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 160px;
+  }
 `;
 const StyledColumns = styled.div`
   display: flex;

@@ -7,12 +7,13 @@ import HomeList from "../../HomeList";
 import expertisesData from "components/pages/expertises/data";
 
 const StyledContainer = styled.div`
-  margin-top: 160px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   .gatsby-image-wrapper {
     margin-bottom: 12px;
     @media ${(props) => props.theme.minWidth.sm} {
+      margin-top: 160px;
       margin-bottom: 0;
       order: 1;
     }

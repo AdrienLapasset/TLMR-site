@@ -25,10 +25,14 @@ const border = css`
 
 const StyledContainer = styled.div`
   ${(props) => (props.border ? border : null)}
-  margin-top: 160px;
+  margin-top: 110px;
   & > header {
     display: flex;
     padding-bottom: 20px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      padding-bottom: 25px;
+      margin-top: 160px;
+    }
     @media ${(props) => props.theme.minWidth.md} {
       padding-bottom: 25px;
     }
@@ -52,7 +56,7 @@ const StyledContainer = styled.div`
 const StyledColumns = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 20px;
+  row-gap: 30px;
   @media ${(props) => props.theme.minWidth.sm} {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: ${(props) => props.theme.columnGap.mobile};

@@ -7,7 +7,7 @@ import HomeList from "../../HomeList";
 import eservicesData from "components/pages/e-services/data";
 
 const StyledContainer = styled.div`
-  margin-top: 160px;
+  margin-top: 110px;
   display: flex;
   flex-direction: column;
   .gatsby-image-wrapper {
@@ -15,6 +15,7 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 0;
       order: 1;
+      margin-top: 160px;
     }
   }
 `;

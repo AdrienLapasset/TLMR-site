@@ -15,20 +15,30 @@ import obs from "assets/logos/dansLaPresse/obs.svg";
 import village from "assets/logos/dansLaPresse/village.svg";
 
 const StyledContainer = styled.div`
-  margin-top: 160px;
+  margin-top: 110px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 160px;
+  }
   h2 {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 70px;
+    }
   }
 `;
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
-  img {
-    max-width: 100%;
-  }
   @media ${(props) => props.theme.minWidth.sm} {
     grid-template-columns: repeat(6, 1fr);
+  }
+`;
+const StyledImg = styled.img`
+  max-width: 100%;
+  display: ${({ isHiddenMobile }) => isHiddenMobile && "none"};
+  @media ${(props) => props.theme.minWidth.sm} {
+    display: block;
   }
 `;
 
@@ -72,20 +82,30 @@ const logosList = [
   {
     name: lja,
     alt: "LJA",
+    isHiddenMobile: true,
   },
   {
     name: obs,
     alt: "L'Obs",
+    isHiddenMobile: true,
   },
   {
     name: village,
     alt: "Village de la Justice",
+    isHiddenMobile: true,
   },
 ];
 
 const DansLaPresse = () => {
   const logosRender = logosList.map((logo, index) => {
-    return <img key={index} src={logo.name} alt={logo.alt} />;
+    return (
+      <StyledImg
+        key={index}
+        src={logo.name}
+        alt={logo.alt}
+        isHiddenMobile={logo.isHiddenMobile}
+      />
+    );
   });
 
   return (
