@@ -40,6 +40,9 @@ const StyledContainer = styled(Grid)`
       @media ${(props) => props.theme.minWidth.sm} {
         margin-top: 20px;
       }
+      @media ${(props) => props.theme.minWidth.md} {
+        margin-top: 0px;
+      }
     }
     & > p {
       margin-top: 30px;
@@ -48,7 +51,7 @@ const StyledContainer = styled(Grid)`
       margin-top: 30px;
       li {
         display: flex;
-        padding-top: 15px;
+        padding-top: 10px;
         border-top: ${(props) => props.theme.border.black};
         margin-bottom: 10px;
         & > aside {
@@ -56,13 +59,15 @@ const StyledContainer = styled(Grid)`
           font-size: 50px;
           margin-right: 30px;
           position: relative;
-          top: -10px;
+          top: -12px;
           flex: 0 0 40px;
           @media ${(props) => props.theme.minWidth.sm} {
             flex: 0 0 200px;
           }
-          @media ${(props) => props.theme.minWidth.sm} {
+          @media ${(props) => props.theme.minWidth.md} {
             flex: 0 0 80px;
+            font-size: 60px;
+            top: -15px;
           }
         }
       }
@@ -74,6 +79,7 @@ const StyledContainer = styled(Grid)`
         border-radius: 100px;
         padding: 5px 15px;
         text-align: left;
+        font-size: 15px;
         &:nth-child(1) {
           background-color: ${(props) => props.theme.colors.blackLight};
           color: white;
@@ -96,13 +102,6 @@ const StyledContainer = styled(Grid)`
       padding: 5px 0;
       border-top: ${(props) => props.theme.border.greyLightest};
       border-bottom: ${(props) => props.theme.border.greyLightest};
-      &.vitalsign {
-        display: flex;
-        align-items: center;
-        & > div {
-          margin-right: 10px;
-        }
-      }
     }
   }
 `;
@@ -132,11 +131,7 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
             {title}
           </Title>
           {description.map((paragraph) => (
-            <Paragraph
-              key={paragraph}
-              html={{ __html: paragraph }}
-              size="xl"
-            ></Paragraph>
+            <Paragraph key={paragraph} html={{ __html: paragraph }}></Paragraph>
           ))}
           <ol>
             {points?.map((point, index) => (
@@ -182,15 +177,6 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
           )}
           {title === "Signature électronique" && (
             <aside className="vitalsign">
-              <div>
-                <StaticImage
-                  src="../../../../assets/logos/logo_vitalsign.png"
-                  alt="Logo Vitalsign"
-                  quality="90"
-                  layout="fixed"
-                  width={70}
-                />
-              </div>
               Vitalsign est une Solution de la Societé DeepBlock, LegalTech
               française qui vous garantit un haut niveau de confidentialité.
             </aside>
