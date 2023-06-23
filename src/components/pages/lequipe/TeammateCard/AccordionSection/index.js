@@ -12,8 +12,6 @@ const StyledHeader = styled.div`
 `;
 const StyledContent = styled.div`
   padding-bottom: ${(props) => (props.isSectionOpen ? "10px" : "0")};
-  padding-left: 10px;
-  padding-right: 10px;
   opacity: ${(props) => (props.isSectionOpen ? "1" : "0")};
   transition: all 400ms ${(props) => props.theme.cubicBezier.base};
   height: ${(props) =>
@@ -49,7 +47,7 @@ const AccordionSection = ({ title, data }) => {
       >
         <ul>
           {data.map((item) => (
-            <Paragraph size="lg" as="li">
+            <Paragraph key={item} size="lg" as="li">
               → {item}
             </Paragraph>
           ))}

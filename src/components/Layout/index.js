@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <StyledContainer>
           <Navigation />
-          <div className="pageAnimation">{children}</div>
+          {children}
           <Footer />
         </StyledContainer>
       </ThemeProvider>

@@ -186,10 +186,13 @@ const StyledSupportTeam = styled.section`
     margin-bottom: 20px;
   }
 `;
+const StyledParagraph = styled(Paragraph)`
+  display: ${({ hidden }) => (hidden ? "none" : "block")};
+`;
 
 const Lequipe = () => {
-  const [isSeeMore, setIsSeeMore] = useState(true);
-
+  const [isSeeMore, setIsSeeMore] = useState(false);
+  console.log(isSeeMore);
   useEffect(() => {
     const screenWidth = window.innerWidth;
     screenWidth < 768 && setIsSeeMore(false);
@@ -199,7 +202,7 @@ const Lequipe = () => {
     <>
       <Seo pageTitle="l'équipe" />
       <Layout>
-        <StyledCabinetContainer>
+        <StyledCabinetContainer className="pageAnimation">
           <Title pageTitle type="h2">
             Le Cabinet
           </Title>
@@ -221,36 +224,34 @@ const Lequipe = () => {
                 dédiés à la productivité juridique, la simplification des
                 process et à l’optimisation du service rendu.
               </Paragraph>
-              <Paragraph size="xxl">
+              <StyledParagraph size="xxl" hidden={!isSeeMore}>
                 Le cabinet intervient également dans la conception des services
                 innovants de ses clients en mettant à profit des techniques
                 innovantes de Legal Design.
-              </Paragraph>
+              </StyledParagraph>
             </div>
-            {isSeeMore && (
-              <div>
-                <Paragraph size="xxl">
-                  Ces multiples atouts lui permettent d’offrir un accompagnement
-                  de pointe ainsi que des solutions pragmatiques et
-                  opérationnelles tant en matière de conseil que de contentieux
-                  à une diversité de clients (grandes entreprises, start-up,
-                  PME, personnalités, décideurs, entrepreneurs du web,
-                  infopreneurs…). Le savoir-faire du cabinet est régulièrement
-                  sollicité par d’autres cabinets d’avocats ainsi qu’au sein de
-                  commissions professionnelles ou d’institutions publiques.
-                </Paragraph>
-                <Paragraph size="xxl">
-                  Acteur du droit des affaires, le cabinet forge sa réputation
-                  sur une expertise juridique reconnue en matière de propriété
-                  intellectuelle, de droit de l’informatique et des données
-                  personnelles, de l’e-réputation, de l’internet et du
-                  e-commerce, et de la cybercriminalité. Le cabinet intervient
-                  également en droit du travail, droit de l’immobilier et droit
-                  pénal et sur la fiscalité des entreprises innovantes, des
-                  plateformes et des entrepreneurs du web.
-                </Paragraph>
-              </div>
-            )}
+            <div>
+              <StyledParagraph size="xxl" hidden={!isSeeMore}>
+                Ces multiples atouts lui permettent d’offrir un accompagnement
+                de pointe ainsi que des solutions pragmatiques et
+                opérationnelles tant en matière de conseil que de contentieux à
+                une diversité de clients (grandes entreprises, start-up, PME,
+                personnalités, décideurs, entrepreneurs du web, infopreneurs…).
+                Le savoir-faire du cabinet est régulièrement sollicité par
+                d’autres cabinets d’avocats ainsi qu’au sein de commissions
+                professionnelles ou d’institutions publiques.
+              </StyledParagraph>
+              <StyledParagraph size="xxl" hidden={!isSeeMore}>
+                Acteur du droit des affaires, le cabinet forge sa réputation sur
+                une expertise juridique reconnue en matière de propriété
+                intellectuelle, de droit de l’informatique et des données
+                personnelles, de l’e-réputation, de l’internet et du e-commerce,
+                et de la cybercriminalité. Le cabinet intervient également en
+                droit du travail, droit de l’immobilier et droit pénal et sur la
+                fiscalité des entreprises innovantes, des plateformes et des
+                entrepreneurs du web.
+              </StyledParagraph>
+            </div>
           </StyledColumn>
           <StyledSeeMoreBtn onClick={() => setIsSeeMore(!isSeeMore)}>
             Voir plus

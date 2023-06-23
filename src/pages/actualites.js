@@ -92,7 +92,7 @@ const Actualites = () => {
     <>
       <Seo pageTitle="Actualités" />
       <Layout>
-        <StyledContainer>
+        <StyledContainer className="pageAnimation">
           <Title type="h1">Actualités</Title>
           {years.map((year) => {
             const articlesByYear = articles.filter(

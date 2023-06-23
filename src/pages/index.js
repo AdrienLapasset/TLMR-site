@@ -15,14 +15,16 @@ const IndexPage = () => {
     <>
       <Seo />
       <Layout>
-        <HeroSection />
-        <VousProteger />
-        <NosSolution />
-        <VousFormer />
-        <ALaUne home />
-        <VosExperts />
-        <VosTemoignages />
-        <DansLaPresse />
+        <div className="pageAnimation">
+          <HeroSection />
+          <VousProteger />
+          <NosSolution />
+          <VousFormer />
+          <ALaUne home />
+          <VosExperts />
+          <VosTemoignages />
+          <DansLaPresse />
+        </div>
       </Layout>
     </>
   );

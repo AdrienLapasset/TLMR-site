@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
   visibility: ${(props) => (props.isVisible ? "visible" : "hidden")};
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   transition: all 0.4s ${(props) => props.theme.baseCubicBezier};
-  z-index: 2;
+  z-index: 3;
   @media ${(props) => props.theme.minWidth.md} {
     display: flex;
     justify-content: center;
@@ -81,6 +81,9 @@ const StyledModal = styled.div`
       border-radius: 100px;
       padding: 5px 20px;
       margin: 30px 0 0 auto;
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.greyLight};
+      }
     }
   }
   .mentions {

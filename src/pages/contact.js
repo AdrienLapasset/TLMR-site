@@ -45,12 +45,11 @@ const StyledContainer = styled.div`
 const StyledMap = styled.iframe`
   aspect-ratio: 1;
   width: 100%;
-  margin-top: 20px;
   border: 0;
+  margin-top: 50px;
   filter: grayscale();
   @media ${(props) => props.theme.minWidth.sm} {
     aspect-ratio: 2;
-    margin-top: 50px;
   }
 `;
 
@@ -65,7 +64,7 @@ const Contact = () => {
     <>
       <Seo pageTitle="Contact" />
       <Layout>
-        <StyledContainer>
+        <StyledContainer className="pageAnimation">
           <Title type="h1">Contact</Title>
           <Grid>
             <div>

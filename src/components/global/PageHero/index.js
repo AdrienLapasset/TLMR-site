@@ -42,9 +42,9 @@ const StyledContainer = styled(Grid)`
   }
 `;
 
-const PageHero = ({ title, firstParagraph, secondParagraph }) => {
+const PageHero = ({ title, firstParagraph, secondParagraph, className }) => {
   return (
-    <StyledContainer>
+    <StyledContainer className={className}>
       <Title type="h1">{title}</Title>
       <Paragraph size="xxl">{firstParagraph}</Paragraph>
       <Paragraph size="lg">{secondParagraph}</Paragraph>

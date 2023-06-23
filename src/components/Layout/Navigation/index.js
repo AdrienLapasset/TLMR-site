@@ -87,16 +87,18 @@ const StyledLinksContainer = styled.div`
       }
     }
     &:hover {
-      color: ${(props) => props.theme.colors.greyLight};
-      &:after {
-        content: "";
-        display: block;
-        height: 1px;
-        width: 100%;
-        background-color: ${(props) => props.theme.colors.greyLight};
-        position: absolute;
-        bottom: -1px;
-        left: 0;
+      @media ${(props) => props.theme.minWidth.lg} {
+        color: ${(props) => props.theme.colors.greyLight};
+        &:after {
+          content: "";
+          display: block;
+          height: 1px;
+          width: 100%;
+          background-color: ${(props) => props.theme.colors.greyLight};
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+        }
       }
     }
   }
