@@ -1,0 +1,147 @@
+const lequipeData = [
+  {
+    imgName: "henri",
+    name: "Henri de La Motte Rouge",
+    post: "Avocat associé",
+    description:
+      "Henri est avocat. Il a plus de 12 ans d’expérience en droit des Technologies, de la propriété intellectuelle et de la protection des données personnelles et cybercriminalité. Doté d’une excellente expertise et compréhension du secteur du digital et de l’informatique, il accompagne des start-ups et des entreprises innovantes mais aussi des personnalités et décideurs. Il est réputé pour ses conseils stratégiques et opérationnels autant que pour sa combativité contentieuse et sa force mentale dans les dossiers sensibles. Il intervient également en droit des affaires, droit pénal et de la presse. Henri est aussi responsable pédagogique du cycle l’Avocat Connecté à l’École de Formation du Barreau de Paris et donne des formations auprès de la Chambre de Commerce et d’Industrie et de nombreuses conférences notamment sur la LegalTech.",
+    experiences: [
+      "Cabinet La Motte Rouge Avocat",
+      "Cabinet Alain Bensoussan",
+      "Direction Juridique de Lagardère Active",
+      "Cabinet Nomos Paris",
+      "Geneva For Human Rights (ONU)",
+      "Ecole de la Défense Pénale du Barreau de Paris",
+      "European Certificate on Cybercrime and Electronic Evidence",
+      "Master 2 droit des nouvelles technologies",
+      "Master 2 droit de l’homme",
+    ],
+    engagements: [
+      "Responsable du Cycle l'Avocat Connecté / Enseignant à l'École des Barreaux (EFB)",
+      "Ancien Expert au Conseil National du Numérique",
+      "CIL/DPO désigné auprès de la CNIL et du Barreau de Paris",
+      "Ancien membre de la commission Technologie Cyberjustice Avocats du Barreau de Paris",
+      "Membre du Conseil d’administration de l’Association Développement Informatique Juridique (ADIJ)",
+      "Membre fondateur d’AvoTech",
+      "Membre de l’Incubateur du Barreau de Paris",
+      "Membre du Yacht Club de France",
+      "Double vainqueur de la Juris'Cup",
+    ],
+    linkedinUrl:
+      "https://www.linkedin.com/in/henri-de-la-motte-rouge-34858366/",
+  },
+  {
+    imgName: "jean-philippe",
+    name: "Jean-Philippe Touati",
+    post: "Avocat associé",
+    description:
+      "Jean Philippe est avocat depuis 27 ans, essentiellement en droit des affaires et droit immobilier. Fin stratège et très expérimenté, il est réputé pour sa détermination dans les dossiers et accompagne de nombreuses entreprises et personnalités dans la résolution de dossiers complexes. Au fil des années il a noué avec ses clients une relation de grande proximité et de confiance. « La connaissance du droit ne fait pas tout. Ce que vous êtes, ce que vous faites et votre expérience sont des données essentielles que j’intègre pleinement dans l’analyse et le traitement des dossiers que vous me confiez ».",
+    experiences: [
+      "Cabinet e-touati.com, avocat 2.0",
+      "Cabinet BWT",
+      "Cabinet Moreau Defarges & Bluysen",
+      "DEA droit des affaires",
+      "Diplôme d'Etudes Juridiques Appliquées (D.E.J.A.) - Droit anglais",
+      "Harvard Summer School",
+    ],
+    engagements: [
+      "Membre fondateur d’AvoTech",
+      "Membre de la Commission NTIC du Barreau de Paris",
+      "Membre du Club Dynamique",
+      "Violoniste",
+    ],
+    linkedinUrl: "http://www.linkedin.com/in/jean-philippe-touati-71540a19/",
+  },
+  {
+    imgName: "elea",
+    name: "Eléa Bataille",
+    post: "Avocate à la cour",
+    description:
+      "Excellente juriste, elle met sa rigueur, son talent, sa positivité et sa force de travail au service des clients du cabinet depuis sa création. Dotée d’une solide formation en corporate et droit procédural, elle s’est ensuite orientée en IP/IT et protection des données personnelles. Eléa dispose d’un excellent savoir-faire aussi bien en matière de conseil que de contentieux, notamment dans le domaine du droit des marques, cybercrimnialité, e-commerce et RGPD. Elle intervient également en contentieux des affaires, droit pénal et de la presse.",
+    experiences: [
+      "Titulaire du Certificat de spécialisation du CNAM Délégué à la Protection des Données personnelles",
+      "Ecole de la Défense Pénale du Barreau de Paris",
+      "M2 IP/IT Droit de l'innovation et propriété industrielle",
+      "Master Carrières judiciaires et sciences criminelles",
+      "Cabinet ABCM Avocats",
+      "Matrice Lab Innove",
+    ],
+    engagements: [
+      "CIL/DPO désigné auprès de la CNIL et du Barreau de Paris",
+      "Membre Active de l'AFCDP L'Association Française des Correspondants à la protection des Données à caractère Personne",
+      "Intervenante en Droit du commerce électronique au sein d'organismes de formation",
+      "Bénévole Emmaus Connect Paris",
+    ],
+    linkedinUrl: "https://fr.linkedin.com/in/el%C3%A9a-bataille-3a3a68119",
+  },
+  {
+    imgName: "myriam",
+    name: "Myriam Hertz",
+    post: "Avocate à la cour",
+    description:
+      "Avec plus de dix années d’expérience en droit de l’immobilier Myriam est réputée pour la gestion rigoureuse des dossiers, sa finesse de plaidoirie et son art du combat (Aïkido 1er Dan). Au sein du cabinet elle est en charge avec Jean-Philippe du Pôle Immobilier en fort développement et accompagne la clientèle sur des problématiques de baux, copropriété, rédaction d’actes et opérations complexes aussi bien en matière de conseil que de contentieux. Enseignante et formatrice, elle a également un savoir-faire spécifique en matière de formation, ce qui constitue également l’ADN du cabinet.",
+    experiences: [
+      "Certificat d'Aptitude à la Profession d’Avocat",
+      "Université Paris V (Master 2 - Droit des obligations civiles et commerciales).",
+      "Université Paris II, Panthéon-Assas (Master 1)",
+      "Cabinet d’Avocats MATHIEU et Associés",
+      "ICH Paris : Médiation Immobilière et Promotion Immobilière",
+      "LexisNexis",
+    ],
+    engagements: [
+      "CUSTOM Formation des Professionnels de l'immobilier",
+      "Université Paris V Descartes (Chargée d’enseignement L3)",
+      "CNAM Paris et Saint-Denis (Intervenante)",
+      "Consultante UNPI Union Nationale des Propriétaires Immobilier",
+      "Consultante Salon National de l'Immobilier",
+      "Consultante au Salon de la Copropriété",
+    ],
+    linkedinUrl: "https://fr.linkedin.com/in/myriamhertzavocat",
+  },
+  {
+    imgName: "claudia",
+    name: "Claudia Gestin-Vilion",
+    post: "Avocate à la cour",
+    description:
+      "Formée en France et à l’étranger dans des institutions et des cabinets internationaux réputés dans le domaine de la propriété intellectuelle et des technologies numériques, Claudia est une perfectionniste qui sait s’intégrer à des environnements exigeants et en perpétuel mouvement. Elle dispose d’une expertise particulière en matière de lutte contre la contrefaçon, intelligence artificielle et droit d’auteur et son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières. Elle intervient également sur la protection des données, en contentieux commercial, en droit pénal et de la presse.",
+    experiences: [
+      "Double diplôme M2 et LL.M Propriété intellectuelle fondamentale et technologies numériques (Université Paris-Sud et Université Laval, Canada)",
+      "Taylor Wessing, Paris",
+      "Ecole de Défense Pénale du Barreau de Paris",
+      "BNG Legal, Pnom Penh, Cambodge",
+      "Harlay Avocats",
+      "Institut Pasteur Paris / Boston (US)",
+      "XenoIP, Fribourg, Allemagne",
+      "Parlement du Canada, Ottawa",
+    ],
+    engagements: [
+      "Membre de l’équipe vainqueur du Hackaton Microsoft « The new way of work empowered by Artificial Intelligence »",
+      "ELSA Paris ex Vice-présidente STEP et Marketing et représentante de délégation au Comité permanent du droit d’auteur et droits connexes (Genève Suisse)",
+      "Intervenante en e-commerce en école de commerce",
+    ],
+    linkedinUrl: "https://fr.linkedin.com/in/claudiagestinvilion",
+  },
+  {
+    imgName: "evanthia",
+    name: "Evanthia Revel",
+    post: "Avocate à la cour",
+    description:
+      "Spécialisée en contentieux, Evanthia intervient principalement en droit immobilier, droit de la construction et droit social où elle a été formée dans des cabinets renommés avant de rejoindre le Cabinet TLMR. Son recrutement coïncide avec le fort développement du pôle immobilier et des contentieux complexes gérés par Jean-Philippe Touati. Excellente stratège, Evanthia met au profit des clients sa rigueur et sa détermination dans une logique d’optimisation des résultats. Elle intervient en français et en anglais.",
+    experiences: [
+      "Cabinet Pierrat & Associés",
+      "Cabinet Maudret & Hauducoeur",
+      "Cabinet Tabet",
+      "LLM de Droit international Humanitaire et Droits de l'homme",
+      "Master 2 Action et Droit humanitaires",
+      "Master 1 Droit international",
+    ],
+    engagements: [
+      "Ecole de la défense pénale et commission d'office en matière pénale",
+      "Office Français de Protection des Réfugiés et Apatrides (stage)",
+      "Avocats Sans Frontières France (stage)",
+    ],
+    linkedinUrl: "https://fr.linkedin.com/in/evanthia-revel-08409679",
+  },
+];
+
+export default lequipeData;

@@ -6,118 +6,8 @@ import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 import Cta from "components/global/Cta";
 import TeammateCard from "components/pages/lequipe/TeammateCard";
+import lequipeData from "components/pages/lequipe/data";
 import Seo from "components/Seo";
-
-const lequipe = [
-  {
-    imgName: "henri",
-    name: "Henri de La Motte Rouge",
-    post: "Avocat associé",
-    description:
-      "Henri est avocat. Il a plus de 12 ans d’expérience en droit des Technologies, de la propriété intellectuelle et de la protection des données personnelles et cybercriminalité. Doté d’une excellente expertise et compréhension du secteur du digital et de l’informatique, il accompagne des start-ups et des entreprises innovantes mais aussi des personnalités et décideurs. Il est réputé pour ses conseils stratégiques et opérationnels autant que pour sa combativité contentieuse et sa force mentale dans les dossiers sensibles. Il intervient également en droit des affaires, droit pénal et de la presse. Henri est aussi responsable pédagogique du cycle l’Avocat Connecté à l’École de Formation du Barreau de Paris et donne des formations auprès de la Chambre de Commerce et d’Industrie et de nombreuses conférences notamment sur la LegalTech.",
-    experiences: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    engagements: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    linkedinUrl: "https://www.linkedin.com",
-  },
-  {
-    imgName: "jean-philippe",
-    name: "Jean-Philippe Touati",
-    post: "Avocat associé",
-    description:
-      "Jean Philippe est avocat depuis 27 ans, essentiellement en droit des affaires et droit immobilier. Fin stratège et très expérimenté, il est réputé pour sa détermination dans les dossiers et accompagne de nombreuses entreprises et personnalités dans la résolution de dossiers complexes. Au fil des années il a noué avec ses clients une relation de grande proximité et de confiance. « La connaissance du droit ne fait pas tout. Ce que vous êtes, ce que vous faites et votre expérience sont des données essentielles que j’intègre pleinement dans l’analyse et le traitement des dossiers que vous me confiez ».",
-    experiences: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    engagements: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    linkedinUrl: "https://www.linkedin.com",
-  },
-  {
-    imgName: "elea",
-    name: "Eléa Bataille",
-    post: "Avocate à la cour",
-    description:
-      "Excellente juriste, elle met sa rigueur, son talent, sa positivité et sa force de travail au service des clients du cabinet depuis sa création. Dotée d’une solide formation en corporate et droit procédural, elle s’est ensuite orientée en IP/IT et protection des données personnelles. Eléa dispose d’un excellent savoir-faire aussi bien en matière de conseil que de contentieux, notamment dans le domaine du droit des marques, cybercrimnialité, e-commerce et RGPD. Elle intervient également en contentieux des affaires, droit pénal et de la presse.",
-    experiences: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    engagements: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    linkedinUrl: "https://www.linkedin.com",
-  },
-  {
-    imgName: "myriam",
-    name: "Myriam Hertz Avocate à la cour",
-    post: "Avocate à la cour",
-    description:
-      "Avec plus de dix années d’expérience en droit de l’immobilier Myriam est réputée pour la gestion rigoureuse des dossiers, sa finesse de plaidoirie et son art du combat (Aïkido 1er Dan). Au sein du cabinet elle est en charge avec Jean-Philippe du Pôle Immobilier en fort développement et accompagne la clientèle sur des problématiques de baux, copropriété, rédaction d’actes et opérations complexes aussi bien en matière de conseil que de contentieux. Enseignante et formatrice, elle a également un savoir-faire spécifique en matière de formation, ce qui constitue également l’ADN du cabinet.",
-    experiences: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    engagements: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    linkedinUrl: "https://www.linkedin.com",
-  },
-  {
-    imgName: "claudia",
-    name: "Claudia Gestin-Vilion",
-    post: "Avocate à la cour",
-    description:
-      "Formée en France et à l’étranger dans des institutions et des cabinets internationaux réputés dans le domaine de la propriété intellectuelle et des technologies numériques, Claudia est une perfectionniste qui sait s’intégrer à des environnements exigeants et en perpétuel mouvement. Elle dispose d’une expertise particulière en matière de lutte contre la contrefaçon, intelligence artificielle et droit d’auteur et son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières. Elle intervient également sur la protection des données, en contentieux commercial, en droit pénal et de la presse.",
-    experiences: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    engagements: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    linkedinUrl: "https://www.linkedin.com",
-  },
-  {
-    imgName: "evanthia",
-    name: "Evanthia Revel",
-    post: "Avocate à la cour",
-    description:
-      "Spécialisée en contentieux, Evanthia intervient principalement en droit immobilier, droit de la construction et droit social où elle a été formée dans des cabinets renommés avant de rejoindre le Cabinet TLMR. Son recrutement coïncide avec le fort développement du pôle immobilier et des contentieux complexes gérés par Jean-Philippe Touati. Excellente stratège, Evanthia met au profit des clients sa rigueur et sa détermination dans une logique d’optimisation des résultats. Elle intervient en français et en anglais.",
-    experiences: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    engagements: [
-      "Cabinet e-touati.com, avocat 2.0",
-      "Cabinet BWT",
-      "Cabinet Moreau Defarges & Bluyse",
-    ],
-    linkedinUrl: "https://www.linkedin.com",
-  },
-];
 
 const StyledCabinetContainer = styled.section`
   margin: 110px 0 75px;
@@ -259,7 +149,7 @@ const Lequipe = () => {
         </StyledCabinetContainer>
         <Title type="h1">Notre équipe</Title>
         <StyledLequipeContainer>
-          {lequipe.map(
+          {lequipeData.map(
             ({
               imgName,
               name,
