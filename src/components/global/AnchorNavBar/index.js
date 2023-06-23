@@ -26,7 +26,7 @@ const StyledContainer = styled.section`
 `;
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
-  padding-top: 10px;
+  padding-top: 15px;
   grid-template-columns: repeat(6, 1fr);
   span {
     grid-column: 1 / span 1;
