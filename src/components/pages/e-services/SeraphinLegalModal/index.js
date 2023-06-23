@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Paragraph from "components/global/Paragraph";
-import croix from "assets/icons/croix.svg";
+import croix from "assets/icons/croix-white.svg";
 
 const StyledContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
@@ -24,25 +23,22 @@ const StyledContainer = styled.div`
 `;
 
 const StyledModal = styled.div`
-  max-height: 100vh;
-  background-color: white;
-  width: 100%;
-  border-radius: 9px;
-  overflow-y: scroll;
   height: 100vh;
-  padding: 45px 45px 0 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
   @media ${(props) => props.theme.minWidth.md} {
-    height: 780px;
-    width: 850px;
+    width: 100%;
+    max-width: 1330px;
+    height: auto;
   }
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    button {
-      cursor: pointer;
-      margin-left: 20px;
-    }
+  button {
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    top: -10px;
+    margin-left: auto;
+    padding-top: 30px;
   }
   iframe {
     width: 100%;
@@ -50,7 +46,7 @@ const StyledModal = styled.div`
     border: 0;
     height: 100%;
     @media ${(props) => props.theme.minWidth.md} {
-      height: 650px;
+      height: 544px;
     }
   }
 `;
@@ -59,17 +55,12 @@ const SeraphinLegalModal = ({ isVisible, handleModal }) => {
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
-        <header>
-          <Paragraph as="h2" size="xxl">
-            Nous vous remercions d’utiliser le formulaire
-          </Paragraph>
-          <button type="button" onClick={handleModal}>
-            <img src={croix} alt="" />
-          </button>
-        </header>
+        <button type="button" onClick={handleModal}>
+          <img src={croix} alt="" />
+        </button>
         <div id="Assistant"></div>
         <iframe
-          title="toto"
+          title="Assistant"
           src="https://profound-horse-9a12bb.netlify.app"
         ></iframe>
       </StyledModal>

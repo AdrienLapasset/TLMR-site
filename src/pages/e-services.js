@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import PageHero from "components/global/PageHero";
@@ -9,13 +9,32 @@ import { Element } from "react-scroll";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import TwoPointsSection from "components/global/TwoPointsSection";
 import Seo from "components/Seo";
+import SeraphinLegalModal from "components/pages/e-services/SeraphinLegalModal";
+import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 
 const StyledPageHero = styled(PageHero)`
   margin-bottom: -70px;
 `;
 
 const Eservices = () => {
+  const [isDeepBlockModalModal, setIsDeepBlockModalModal] = useState(false);
+  const [isSeraphinLegalModal, setIsSeraphinLegalModal] = useState(false);
   const twoPointsSectionRef = useRef(null);
+
+  useEffect(() => {
+    if (isDeepBlockModalModal || isSeraphinLegalModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [isDeepBlockModalModal, isSeraphinLegalModal]);
+
+  const handleDeepBlockModal = () => {
+    setIsDeepBlockModalModal(!isDeepBlockModalModal);
+  };
+  const handleSeraphinLegalModal = () => {
+    setIsSeraphinLegalModal(!isSeraphinLegalModal);
+  };
   return (
     <>
       <Seo pageTitle="E-services" />
@@ -45,6 +64,8 @@ const Eservices = () => {
                   points={points}
                   btns={btns}
                   imgPath={imgPath}
+                  handleDeepBlockModal={handleDeepBlockModal}
+                  handleSeraphinLegalModal={handleSeraphinLegalModal}
                 />
               </Element>
             )
@@ -60,6 +81,14 @@ const Eservices = () => {
           />
           <ALaUne border />
         </div>
+        <DeepBlockModal
+          isVisible={isDeepBlockModalModal}
+          handleModal={() => handleDeepBlockModal()}
+        />
+        <SeraphinLegalModal
+          isVisible={isSeraphinLegalModal}
+          handleModal={() => handleSeraphinLegalModal()}
+        />
       </Layout>
     </>
   );

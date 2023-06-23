@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
-import DeepBlockModal from "../DeepBlockModal";
-import SeraphinLegalModal from "../SeraphinLegalModal";
 
 const StyledContainer = styled(Grid)`
   padding-top: 15px;
@@ -110,17 +108,14 @@ const StyledContainer = styled(Grid)`
   }
 `;
 
-const Eservice = ({ title, description, points, btns, imgPath }) => {
-  const [isDeepBlockModalModal, setIsDeepBlockModalModal] = useState(false);
-  const [isSeraphinLegalModal, setIsSeraphinLegalModal] = useState(false);
-
-  const handleDeepBlockModal = () => {
-    setIsDeepBlockModalModal(!isDeepBlockModalModal);
-  };
-  const handleSeraphinLegalModal = () => {
-    setIsSeraphinLegalModal(!isSeraphinLegalModal);
-  };
-
+const Eservice = ({
+  title,
+  description,
+  points,
+  btns,
+  handleDeepBlockModal,
+  handleSeraphinLegalModal,
+}) => {
   return (
     <>
       <StyledContainer>
@@ -187,14 +182,6 @@ const Eservice = ({ title, description, points, btns, imgPath }) => {
           )}
         </div>
       </StyledContainer>
-      <DeepBlockModal
-        isVisible={isDeepBlockModalModal}
-        handleModal={() => handleDeepBlockModal()}
-      />
-      <SeraphinLegalModal
-        isVisible={isSeraphinLegalModal}
-        handleModal={() => handleSeraphinLegalModal()}
-      />
     </>
   );
 };
