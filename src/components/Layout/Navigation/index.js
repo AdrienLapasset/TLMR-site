@@ -52,7 +52,7 @@ const StyledNav = styled.nav`
 const StyledLinksContainer = styled.div`
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
   transition: all ${(props) => props.theme.transitionTime}s;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-top: ${(props) => (props.isNavOpen ? "50px" : "0")};
   visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
   @media ${(props) => props.theme.minWidth.lg} {
@@ -72,17 +72,31 @@ const StyledLinksContainer = styled.div`
     border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     font-size: 18px;
+    position: relative;
     @media ${(props) => props.theme.minWidth.lg} {
       margin-top: 0;
       font-size: 16px;
       border-bottom: none;
       padding: 0;
-      width: unset;
+      width: fit-content;
     }
     &:first-child {
       border-top: ${(props) => props.theme.border.greyLightest};
       @media ${(props) => props.theme.minWidth.lg} {
         border-top: none;
+      }
+    }
+    &:hover {
+      color: ${(props) => props.theme.colors.greyLight};
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: ${(props) => props.theme.colors.greyLight};
+        position: absolute;
+        bottom: -1px;
+        left: 0;
       }
     }
   }

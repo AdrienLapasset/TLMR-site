@@ -11,7 +11,7 @@ const StyledContainer = styled.section`
   margin-top: 200px;
   padding-top: 10px;
   @media ${(props) => props.theme.minWidth.md} {
-    padding-top: 20px;
+    padding-top: 15px;
   }
   .grid {
     display: block;
@@ -37,6 +37,9 @@ const StyledContainer = styled.section`
       }
       h2 {
         margin-bottom: 40px;
+        @media ${(props) => props.theme.minWidth.md} {
+          margin-bottom: 45px;
+        }
       }
       & > div {
         margin-bottom: 90px;

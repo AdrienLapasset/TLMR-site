@@ -87,11 +87,15 @@ const StyledContainer = styled(Grid)`
           @media ${(props) => props.theme.minWidth.md} {
             margin: 60px 0 10px;
           }
+          &:hover {
+            background-color: ${(props) => props.theme.colors.grey};
+          }
         }
         &:nth-child(2) {
           background-color: ${(props) => props.theme.colors.greyLightest};
           &:hover {
-            color: ${(props) => props.theme.colors.black};
+            color: white;
+            background-color: ${(props) => props.theme.colors.grey};
           }
         }
       }

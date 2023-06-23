@@ -126,13 +126,6 @@ const StyledDesktopContentInfo = styled.div`
     height: 25px;
     margin: 7px 7px 0 0;
   }
-  & > div {
-    transition: top ${(props) => props.theme.transitionTime}s;
-    margin-bottom: 30px;
-    position: sticky;
-    top: ${({ theme, isNavHidden }) =>
-      isNavHidden ? 30 : theme.headerHeight}px;
-  }
 `;
 const StyledInfo = styled(Paragraph)`
   margin: 3px 0 20px;
@@ -220,10 +213,6 @@ const StyledContent = styled.section`
     li {
       font-family: "Signifier Light";
       list-style: disc;
-      /* &:before {
-        content: "- ";
-        text-indent: -5px;
-      } */
     }
   }
   img {
@@ -231,9 +220,7 @@ const StyledContent = styled.section`
   }
   p,
   li {
-    @media ${(props) => props.theme.minWidth.md} {
-      font-size: 18px;
-    }
+    font-size: 18px;
     @media ${(props) => props.theme.minWidth.lg} {
       font-size: 20px;
     }
@@ -242,11 +229,34 @@ const StyledContent = styled.section`
     }
   }
 `;
+const StyledDesktopShareBlock = styled.div`
+  transition: top ${(props) => props.theme.transitionTime}s;
+  position: sticky;
+  top: ${({ theme, isNavHidden }) => (isNavHidden ? 30 : theme.headerHeight)}px;
+`;
 const StyledShareBlock = styled.div`
+  margin-bottom: 30px;
   button {
     display: inline-block;
   }
 `;
+
+const ShareBlock = ({ articleUrl }) => {
+  return (
+    <StyledShareBlock>
+      <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
+      <LinkedinShareButton url={articleUrl}>
+        <img src={linkedinLogo} alt="Linkedin logo" />
+      </LinkedinShareButton>
+      <FacebookShareButton url={articleUrl}>
+        <img src={facebookLogo} alt="Facebook logo" />
+      </FacebookShareButton>
+      <TwitterShareButton url={articleUrl}>
+        <img src={twitterLogo} alt="Twitter logo" />
+      </TwitterShareButton>
+    </StyledShareBlock>
+  );
+};
 
 export const query = graphql`
   query ArticleBySlug($slug: String!) {
@@ -273,34 +283,11 @@ const myPortableTextComponents = {
   },
 };
 
-const ShareBlock = ({ articleUrl }) => {
-  return (
-    <>
-      <StyledShareBlock>
-        <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-        <LinkedinShareButton url={articleUrl}>
-          <img src={linkedinLogo} alt="Linkedin logo" />
-        </LinkedinShareButton>
-        <FacebookShareButton url={articleUrl}>
-          <img src={facebookLogo} alt="Facebook logo" />
-        </FacebookShareButton>
-        <TwitterShareButton url={articleUrl}>
-          <img src={twitterLogo} alt="Twitter logo" />
-        </TwitterShareButton>
-      </StyledShareBlock>
-      <div>
-        <Cta to="/contact">Nous contacter</Cta>
-      </div>
-    </>
-  );
-};
-
 const Article = ({ data, location }) => {
   const { title, date, author, _rawContent, heroImg } = data.sanityArticle;
   const heroImage = getImage(heroImg.asset);
   const articleDescription = _rawContent[0].children[0].text;
 
-  // console.log(_rawContent[0].children[0].text);
   return (
     <>
       <Seo
@@ -348,10 +335,18 @@ const Article = ({ data, location }) => {
                   <StyledInfo>{author}</StyledInfo>
                 </div>
                 <ShareBlock articleUrl={location.href} />
+                <div>
+                  <Cta to="/contact">Nous contacter</Cta>
+                </div>
               </StyledMobileInfo>
               <StyledContentContainer>
                 <StyledDesktopContentInfo isNavHidden={context?.isNavHidden}>
-                  <ShareBlock articleUrl={location.href} />
+                  <StyledDesktopShareBlock>
+                    <ShareBlock articleUrl={location.href} />
+                    <div>
+                      <Cta to="/contact">Nous contacter</Cta>
+                    </div>
+                  </StyledDesktopShareBlock>
                 </StyledDesktopContentInfo>
                 <StyledContent>
                   <PortableText

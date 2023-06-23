@@ -28,12 +28,15 @@ const StyledContainer = styled.div`
   margin-top: 70px;
   & > header {
     display: flex;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     @media ${(props) => props.theme.minWidth.sm} {
       padding-bottom: 0;
     }
     & > h2 {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      @media ${(props) => props.theme.minWidth.md} {
+        margin-bottom: 45px;
+      }
     }
     & > a {
       margin-bottom: 40px;
