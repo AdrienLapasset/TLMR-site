@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "components/Layout";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
@@ -55,6 +55,14 @@ const StyledMap = styled.iframe`
 
 const Contact = () => {
   const [isModal, setIsModal] = useState(false);
+
+  useEffect(() => {
+    if (isModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [isModal]);
 
   const handleModal = () => {
     setIsModal(!isModal);
