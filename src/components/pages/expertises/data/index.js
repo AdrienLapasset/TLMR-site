@@ -9,22 +9,22 @@ const ExpertiseData = [
       {
         title: "Droit des Marques",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Dépôts et formalités (INPI, EUIPO, OMPI - dépôts internationaux), recherche d'antériorités, action en contrefaçon et nullité, action connexe en concurrence déloyale, analyse du préjudice et indemnisation, accords de coexistence, vie et valorisation des actifs immatériels.",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title: "Dessins et modèles et Brevets",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Analyse de brevetabilité et de validité des titres. Gestion des contrats (contrats de consortium, licence, fiscalité, franchise, cession, surveillance), droit des inventeurs.",
       },
       {
         title: "Droits d’auteur",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Cession et exploitation des droits sur les supports traditionnels et les nouveaux médias (e-book, Youtube, réseaux sociaux), licences open source, rédaction et négociation des contrats, relation avec les sociétés de gestion collective, édition, multimédias, architectes, photographes, artistes et interprètes, musique, mannequins, mode et design, créations culturelles, contrefaçon et piratage, suppression de contenus illicites.",
       },
       {
         title: "Noms de domaine",
         content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Gestion des litiges, ICANN, AFNIC, exploitation licite des noms de domaines, cession des noms de domaine, parasitisme.",
       },
     ],
     useCases: [
@@ -46,24 +46,24 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Droit des Marques",
+        title: "E-commerce, plateformes, comparateurs et drop shipping",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Conditions générales (CGV, CGU), vente en ligne, courtage, droit des plateformes et comparateurs, consommation en ligne, droit de rétractation, Formulaire de vente et conformité RGPD, Contractualisation en ligne, double clic, mail récapitulatif de la commande, économie collaborative et du partage, statut des vendeurs, audit de sites web, fiscalité des ventes internationales, contentieux de la livraison et de la réception des biens, Réglementation des paris en ligne, e-sports, Réseau social et vie privée.",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title: "Concurrence déloyale et pratiques commerciales trompeuses",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Contrôles DGCCRF, contrôles DDPPP, concurrence déloyale et parasitaire, marketing et prospection électronique, diffamation et e-reputation, réseau social et vie privée, suppression de contenus illicites, noms de domaine.",
       },
       {
-        title: "Droits d’auteur",
+        title: "E-marketing et infopreneuriat",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Prospection électronique, profilage et publicité ciblée (réseaux sociaux), contentieux Google Adwords et Facebook Ads, mailings, bases de données et conformité RGPD,  politique de confidentialité. Droit de la formation et subventions",
       },
       {
-        title: "Noms de domaine",
+        title: "Négociation et sécurisation des droits à l’image",
         content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Gestion des droits pour des personnalités, artistes, sportifs, mannequins, entrepeneurs du web (infopreneurs, influenceurs, youtubeurs, blogueurs, instagrammeurs …). Droit des médias et de l’audiovisuel.",
       },
     ],
     useCases: [
@@ -82,24 +82,29 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Droit des Marques",
+        title: "Accompagnement et défense des chefs d’entreprise",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Gestion et résolution des conflits entre associés, Conflits entre associés, Responsabilité des dirigeants, accompagnement à la sécurisation des gains, assistance dans les acquisitions et reventes.",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title: "Contentieux commercial complexe",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Précontentieux, contentieux à risque et réglementaires (plateformes legaltech, exercice illégal de la profession d’avocats et médicale, immobilier) , conflits, entre actionnaires, procédures d’urgences, référés et injonctions, concurrence déloyale, action en contrefaçon, rupture des relations commerciales établies, litiges de consommateurs, actions groupées et recours collectifs, évaluation du préjudice, expertise judiciaire, assistance au recouvrement, contentieux (arbitrage, médiation, négociation amiable).",
       },
       {
-        title: "Droits d’auteur",
+        title: "Recouvrement de créances, droit des saisies et suretés",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Nous pouvons ainsi vous accompagner dans la mise en place de mesures de sécurité efficaces pour protéger vos intérêts, que ce soit par le biais de garanties réelles (hypothèque, nantissement...) ou de garanties personnelles (cautionnement...).Nous sommes également en mesure de vous représenter dans le cadre de toute procédure de saisie devant le juge de l’exécution, de la mise en place des mesures conservatoires jusqu'à la réalisation de la garantie, en veillant à défendre vos intérêts tout au long de la procédure.",
       },
       {
-        title: "Noms de domaine",
+        title: "Contrats divers et complexes",
         content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Contrats cadres, conditions générales de vente, licence, franchise, mandat), architecture contractuelle complexe, audit contractuel, clause à risque, contrats de consortium, GIE.",
+      },
+      {
+        title: "Vie des sociétés",
+        content:
+          "Création de société, statuts, AG, cession de fonds de commerce, cession partielle d’actifs, acquisition de branche d’activité, augmentation de capital, levée de fonds, accompagnement au développement international.",
       },
     ],
     useCases: [
@@ -118,28 +123,6 @@ const ExpertiseData = [
     title: "Droit immobilier, baux et construction",
     description: [
       "Disposant d’une forte expérience dans le domaine, le cabinet accompagne de nombreuses sociétés et groupes du secteur de l’immobilier (syndics, copropriétés, investisseurs, marchands de biens, administrateurs et gestionnaires des baux locatifs et commerciaux) dans la diversité de leurs problématiques immobilières tant en matière de conseil que de contentieux.",
-    ],
-    accordion: [
-      {
-        title: "Droit des Marques",
-        content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
-      },
-      {
-        title: " Dessins et modèles et Brevets",
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
-      },
-      {
-        title: "Droits d’auteur",
-        content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
-      },
-      {
-        title: "Noms de domaine",
-        content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
-      },
     ],
     useCases: [
       "Gestion des recouvrements de charge pour des leaders du secteur de l’administration de bien.",
@@ -162,6 +145,7 @@ const ExpertiseData = [
         "Le cabinet est ainsi intervenu sur des sujets d’innovation très diversifiés (contrats et projets informatiques complexes, immeubles connectés, plateformes proptech innovantes de gestion locative et de colocation, tokenisation des actifs immobiliers via la blockchain, signatures électroniques et automatisation des process, mise en conformité RGPD des acteurs…).",
       ],
     },
+    accordion: [],
   },
   {
     title: "Pénal, Cybercriminalité et e-réputation",
@@ -172,24 +156,31 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Droit des Marques",
+        title:
+          "E-réputation, investigation numérique et forensique, suppression de contenus",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Le cabinet traite de nombreux contentieux en droit à l’image, droit de la presse et vie privée, domaine mouvant dans lequel les règles procédurales doivent être pleinement maîtrisées. Sa maîtrise complémentaire de l’environnement numérique et « forensic » lui permet de donner une réponse concrète et efficace en cas d’atteinte à la réputation et notamment sur les réseaux sociaux et moteurs de recherche comme Google, Facebook, Youtube, TikTok, Instagram, Snapchat, WordPress… Identification des auteurs par voie d’investigation numérique (forensic) ou via requêtes judiciaires précontentieuses, suppression de contenus illicites, droit au déréférencement et à l’oubli, référé et requêtes LCEN",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title: "Droit de la presse, dénigrement, diffamation et vie privée",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Droit de la presse, diffamation, injure, atteinte à la présomption d’innocence, régime procédurale de la loi de 1881, atteinte à la vie privée, exception d’information, prescription, nullité de procédure, dénigrement.",
       },
       {
-        title: "Droits d’auteur",
+        title: "Cybercriminalité",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Fraude et malveillance informatique, hacking, accès, maintien frauduleux, suppression, modification, altération dans un système de traitement automatisé de données (STAD), pédopornographie, cybersurveillance, vol de données, téléchargement illégal, usurpation d’identité, fishing, diffamation et injure en ligne, harcèlement, cyberbullying et chantage, IMSI-catcher, détournement de données, contrefaçon.",
       },
       {
-        title: "Noms de domaine",
+        title:
+          "Assistance et représentation devant les juridictions pénales et au stade de l’enquete et de l’instruction",
         content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Assistance devant le juge ou pôle de l’instruction, assistance devant la chambre de l’instruction, contentieux de la détention provisoire et assistance devant le Juge des libertés et de la détention, contrôle judiciaire et mise en examen, garde à Vue, demande d’actes et nullités. Juridictions pénales du premier et second degré (Cour d’assise, Tribunal de police et Tribunal correctionnel), pénal financier, responsabilité des dirigeants, CRPC, alternatives aux poursuites, comparution immédiate.",
+      },
+      {
+        title: "Assistance des victimes et parties civiles",
+        content:
+          "Recours collectifs, évaluation et réparation du préjudice patrimonial et extrapatrimonial, collecte des preuves et constats, requêtes précontentieuses.",
       },
     ],
     useCases: [
@@ -209,24 +200,35 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Droit des Marques",
+        title: "Gestion des contentieux informatiques",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Précontentieux et règlement amiable, Expertise technique, Gestion de la négociation et de la rupture des relations commerciales, Responsabilité contractuelle et délictuelle, Médiation Arbitrage, Audit, Négociation, suivi stratégique et technique.",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title: "Redaction et negociation de contrats informatiques",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Contrats de licence logiciel, Contrats d’externalisation (SaaS, Infogérance, ASP, Sous-traitance), Contrats d’hébergement, Cahier des charges, Contrat d’intégration, Contrats mobiles, Contrats de maintenance, Contrats de développement web, Contrats Telecom, Gestion du risque informatique et prévention des conflits. Maîtrise de l’Environnement Open Source et des licences libres (BSD, CNU, APACHE, GPL, AGPL, LGPL, MPL …).",
       },
       {
-        title: "Droits d’auteur",
+        title:
+          "Intelligence artificielle, droit des robots et des objets connectes",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Ethique de l’intelligence artificielle et des algorithmes, Data Mining, Deep learning, Machine learning,  droit des robots et de la personnalité, réalité virtuelle, objets connectés, Domotique et maisons connectées, voitures connectées, drones.",
       },
       {
-        title: "Noms de domaine",
+        title: "Accompagnement de projets technologiques",
         content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Principaux secteurs d’intervention : Informatique, web, mobilité, e-santé, télécoms, médias, green IT, objets connectés, Mobil payement, Big data, cosmétique, robotique. Assistance à la dématérialisation et archivage, Suivi et structuration des projets complexes, Contrats cadres et relations sous-traitants / fournisseurs, Rédaction de Cahier des charges, Memorandum of Understanding, MOA, Représentation en Comité de pilotage, Gestion des risques juridiques, Appui aux transferts des technologies, Gestion de la fin de projet (recettage, réversibilité et migrations).",
+      },
+      {
+        title: "Blockchain et cryptomonnaies",
+        content:
+          "Le Cabinet dispose d’une compétence particulière dans le domaine de la Blockchain, les deux associés fondateurs ayant travaillé sur ces questions depuis 2015. ICO, NFT, tokenisation, Horodatage, technologie certifiante, Blockchain privée, Blockchain publique, SmartContract, compliance RGPD, régulations, cryptomonnaies.",
+      },
+      {
+        title: "Spécialité Greentech et Green IT",
+        content:
+          "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start-up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l'environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez-nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
       },
     ],
     useCases: [
@@ -253,24 +255,19 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Droit des Marques",
+        title: "Audit rgpd et conformité rgpd / cnil",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Etablissement du Registre de traitement, demande d’autorisations, transferts internationaux de données, licéité des collectes, consentement, preuve, sécurité, archivage, pseudonymisation, chiffrement, exercice et réponse aux demandes de droits des personnes concernées (accès, rectification, effacement, opposition, limitation du traitement, portabilité des données, droit de ne pas faire l’objet d’une décision individuelle automatisée, y compris le profilage). Sous-traitance, responsabilité et sécurisation contractuelle des flux.Traitement à risques : profilage, algorythme, intelligence artificielle, Crowling et exploitation prédictive des données, e-santé, e-marketing.",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title: "DPO externalisé et accompagnement des DPO",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Le cabinet Touati – La Motte Rouge Avocats est Délégué à la Protection des Données (DPO) désigné auprès de la CNIL et de l’Ordre des avocats. Le cabinet accompagne également des DPO sur les aspects juridiques de leurs missions.",
       },
       {
-        title: "Droits d’auteur",
+        title: "Contentieux judiciaires et administratifs rgpd",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
-      },
-      {
-        title: "Noms de domaine",
-        content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Assistance en cas de contrôle CNIL, inspections et audits. Accompagnement contentieux et audit précontentieux (article 82 RGPD). Contentieux des notifications et violation de données",
       },
     ],
     useCases: [
@@ -290,24 +287,26 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Droit des Marques",
+        title:
+          "Conseil, assistance et représentation devant les juridictions prud’homales (convention syntec et autres)",
         content:
-          "Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Assistance devant les juridictions du premier et second degré des salariés ou employeurs soumis à la convention SYNTEC, contentieux à risques, contentieux du licenciement, contentieux des heures supplémentaires.",
       },
       {
-        title: " Dessins et modèles et Brevets",
+        title:
+          "Gestion des risques sociaux spécifiques au sein des entreprises it, innovantes, start-ups et ssii",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Encadrement des créations des salariés (brevet, logiciel, droit d’auteur, logos), sécurité informatique, management, risques sociaux, harcèlement et burn-out.",
       },
       {
-        title: "Droits d’auteur",
+        title: "Cybersurveillance, loyauté et licéité de la preuve",
         content:
-          "Dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Contrôle des emails, réseaux sociaux et loyauté des salariés, contrôle informatique des salariés, géolocalisation, BYOD, biométrie, vidéosurveillance, enregistrement des conversations, déclarations et autorisations CNIL, charte informatique, whistelblowing et lanceurs d’alertes.",
       },
       {
-        title: "Noms de domaine",
+        title: "Télétravail, crowdsourcing et travail collaboratif",
         content:
-          "Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue",
+          "Mise en place du télétravail, opérations d’outsourcing, Crowdsourcing et économie collaborative, limitation des risques de requalification en contrat de travail et travail illégal.",
       },
     ],
     useCases: [
