@@ -34,7 +34,7 @@ const StyledSeeMoreBtn = styled(Cta)`
 `;
 const StyledLequipeContainer = styled(Grid)`
   @media ${(props) => props.theme.minWidth.lg} {
-    margin-bottom: 150px;
+    margin-bottom: 110px;
   }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {

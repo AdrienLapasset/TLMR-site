@@ -19,6 +19,10 @@ const StyledContent = styled.div`
   overflow-y: hidden;
   li {
     margin-top: 10px;
+    display: flex;
+  }
+  span {
+    flex: 0 0 17px;
   }
 `;
 
@@ -35,9 +39,7 @@ const AccordionSection = ({ title, data }) => {
   return (
     <StyledContainer>
       <StyledHeader onClick={toggleSection}>
-        <Paragraph size="lg" as="h4">
-          {title}
-        </Paragraph>
+        <Paragraph as="h4">{title}</Paragraph>
         <ToggleBtn isSectionOpen={isSectionOpen} />
       </StyledHeader>
       <StyledContent
@@ -47,8 +49,9 @@ const AccordionSection = ({ title, data }) => {
       >
         <ul>
           {data.map((item) => (
-            <Paragraph key={item} size="lg" as="li">
-              → {item}
+            <Paragraph key={item} size="sm" as="li">
+              <span>→ </span>
+              {item}
             </Paragraph>
           ))}
         </ul>

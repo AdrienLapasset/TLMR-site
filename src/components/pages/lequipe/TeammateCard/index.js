@@ -15,6 +15,7 @@ const StyledContainer = styled.div`
     }
   }
   h3 {
+    line-height: 34px;
     margin-top: 10px;
     @media ${(props) => props.theme.minWidth.lg} {
       margin-top: 20px;
@@ -22,7 +23,7 @@ const StyledContainer = styled.div`
   }
   aside {
     color: ${(props) => props.theme.colors.grey};
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
   p {
     margin-bottom: 30px;
@@ -71,7 +72,7 @@ const TeammateCard = ({
       )}
       <h3>{name}</h3>
       <aside>{post}</aside>
-      <Paragraph size="lg">{description}</Paragraph>
+      <Paragraph>{description}</Paragraph>
       <AccordionSection title="Formation et expérience" data={experiences} />
       <AccordionSection title="Engagements" data={engagements} />
       <a href={linkedinUrl} target="_blank" rel="noreferrer">
