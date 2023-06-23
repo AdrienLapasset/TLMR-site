@@ -30,6 +30,12 @@ module.exports = {
         dataset: "production",
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/imgs/favicon.jpg",
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
