@@ -22,7 +22,7 @@ const StyledContent = styled.div`
     display: flex;
   }
   span {
-    flex: 0 0 17px;
+    flex: 0 0 14px;
   }
 `;
 
