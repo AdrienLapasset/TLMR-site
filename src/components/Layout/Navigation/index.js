@@ -52,7 +52,7 @@ const StyledNav = styled.nav`
   }
 `;
 const StyledLinksContainer = styled.div`
-  transition: all 0.2s;
+  transition: all ${(props) => props.theme.transitionTime}s;
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
   padding-top: ${(props) => (props.isNavOpen ? "50px" : "0")};
   visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
@@ -135,7 +135,10 @@ const Navigation = () => {
             </Link>
             <ToggleBtn onClick={toggleNav} isNavOpen={isNavOpen} />
           </StyledMobileLayout>
-          <StyledLinksContainer isNavOpen={isNavOpen}>
+          <StyledLinksContainer
+            className="linksContainer"
+            isNavOpen={isNavOpen}
+          >
             <Link to="/expertises">Expertises</Link>
             <Link to="/e-services">e-Services</Link>
             <Link to="/formations">Formations</Link>
