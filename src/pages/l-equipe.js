@@ -81,11 +81,11 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const Lequipe = () => {
-  const [isSeeMore, setIsSeeMore] = useState(false);
-  console.log(isSeeMore);
+  const [isParagraphHidden, setIsParagraphHidden] = useState(false);
+
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    screenWidth < 768 && setIsSeeMore(false);
+    screenWidth < 768 && setIsParagraphHidden(true);
   }, []);
 
   return (
@@ -114,14 +114,14 @@ const Lequipe = () => {
                 dédiés à la productivité juridique, la simplification des
                 process et à l’optimisation du service rendu.
               </Paragraph>
-              <StyledParagraph size="xxl" hidden={!isSeeMore}>
+              <StyledParagraph size="xxl" hidden={isParagraphHidden}>
                 Le cabinet intervient également dans la conception des services
                 innovants de ses clients en mettant à profit des techniques
                 innovantes de Legal Design.
               </StyledParagraph>
             </div>
             <div>
-              <StyledParagraph size="xxl" hidden={!isSeeMore}>
+              <StyledParagraph size="xxl" hidden={isParagraphHidden}>
                 Ces multiples atouts lui permettent d’offrir un accompagnement
                 de pointe ainsi que des solutions pragmatiques et
                 opérationnelles tant en matière de conseil que de contentieux à
@@ -131,7 +131,7 @@ const Lequipe = () => {
                 d’autres cabinets d’avocats ainsi qu’au sein de commissions
                 professionnelles ou d’institutions publiques.
               </StyledParagraph>
-              <StyledParagraph size="xxl" hidden={!isSeeMore}>
+              <StyledParagraph size="xxl" hidden={isParagraphHidden}>
                 Acteur du droit des affaires, le cabinet forge sa réputation sur
                 une expertise juridique reconnue en matière de propriété
                 intellectuelle, de droit de l’informatique et des données
@@ -143,7 +143,9 @@ const Lequipe = () => {
               </StyledParagraph>
             </div>
           </StyledColumn>
-          <StyledSeeMoreBtn onClick={() => setIsSeeMore(!isSeeMore)}>
+          <StyledSeeMoreBtn
+            onClick={() => setIsParagraphHidden(!isParagraphHidden)}
+          >
             Voir plus
           </StyledSeeMoreBtn>
         </StyledCabinetContainer>
