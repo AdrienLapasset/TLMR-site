@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 const StyledContainer = styled.div`
+  position: relative;
   padding: 0 15px;
   @media ${(props) => props.theme.minWidth.sm} {
     padding: 0 24px;

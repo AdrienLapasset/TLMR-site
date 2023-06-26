@@ -7,26 +7,28 @@ import { myContext } from "provider";
 
 const StyledNav = styled.nav`
   transition: all ${(props) => props.theme.transitionTime}s;
-  ${(props) => props.theme.cubicBezier.base};
-  height: ${(props) => (props.isNavOpen ? "100vh" : "54px")};
-  position: sticky;
+  height: ${({ isNavOpen }) => (isNavOpen ? "100vh" : "54px")};
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: white;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 13px 0;
+  padding: 13px 15px;
   transform: translateY(
     ${({ isNavHidden, theme }) =>
       isNavHidden ? -theme.headerHeightMobile : 0}px
   );
   @media ${(props) => props.theme.minWidth.sm} {
     height: ${(props) => (props.isNavOpen ? "100vh" : "70px")};
-    padding: 21px 0;
+    padding: 21px 69px;
     margin-left: -45px;
     margin-right: -45px;
-    padding-left: 45px;
-    padding-right: 45px;
+    transform: translateY(
+      ${({ isNavHidden, theme }) => (isNavHidden ? -70 : 0)}px
+    );
   }
   @media ${(props) => props.theme.minWidth.lg} {
     transform: translateY(
@@ -50,9 +52,8 @@ const StyledNav = styled.nav`
   }
 `;
 const StyledLinksContainer = styled.div`
+  transition: all 0.2s;
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
-  transition: all ${(props) => props.theme.transitionTime}s;
-  /* overflow: hidden; */
   padding-top: ${(props) => (props.isNavOpen ? "50px" : "0")};
   visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
   @media ${(props) => props.theme.minWidth.lg} {

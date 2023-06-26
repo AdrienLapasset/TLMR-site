@@ -122,7 +122,6 @@ const ContactModal = ({ isVisible, handleModal }) => {
       Téléphone: phone,
       Message: message,
     };
-    console.log(new URLSearchParams(formData).toString());
 
     fetch("/", {
       method: "POST",
