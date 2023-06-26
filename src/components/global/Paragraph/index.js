@@ -9,7 +9,7 @@ const StyledParagraph = styled.p`
       ? 16
       : size === "xxl"
       ? 20
-      : 14}px;
+      : 16}px;
   color: ${({ color }) =>
     color === "greyLight"
       ? ({ theme }) => theme.colors.greyLight

@@ -6,7 +6,9 @@ import ToggleBtn from "./ToggleBtn";
 import { myContext } from "provider";
 
 const StyledNav = styled.nav`
-  transition: all ${(props) => props.theme.transitionTime}s;
+  overflow: hidden;
+  transition: height ${(props) => props.theme.transitionTime}s,
+    transform ${(props) => props.theme.transitionTime}s;
   height: ${({ isNavOpen }) => (isNavOpen ? "100vh" : "54px")};
   position: fixed;
   top: 0;
@@ -26,11 +28,10 @@ const StyledNav = styled.nav`
     padding: 21px 69px;
     margin-left: -45px;
     margin-right: -45px;
-    transform: translateY(
-      ${({ isNavHidden, theme }) => (isNavHidden ? -70 : 0)}px
-    );
+    transform: translateY(${({ isNavHidden }) => (isNavHidden ? -70 : 0)}px);
   }
   @media ${(props) => props.theme.minWidth.lg} {
+    padding: 21px 77px;
     transform: translateY(
       ${({ isNavHidden, theme }) => (isNavHidden ? -theme.headerHeight : 0)}px
     );
@@ -42,6 +43,7 @@ const StyledNav = styled.nav`
     align-items: center;
   }
   @media ${(props) => props.theme.minWidth.xl} {
+    padding: 21px 90px;
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   img {
@@ -52,10 +54,10 @@ const StyledNav = styled.nav`
   }
 `;
 const StyledLinksContainer = styled.div`
-  transition: all ${(props) => props.theme.transitionTime}s;
+  transition: opacity ${(props) => props.theme.transitionTime}s,
+    padding-top ${(props) => props.theme.transitionTime}s;
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
-  padding-top: ${(props) => (props.isNavOpen ? "50px" : "0")};
-  visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
+  padding-top: ${({ isNavOpen }) => (isNavOpen ? "50px" : "0")};
   @media ${(props) => props.theme.minWidth.lg} {
     grid-area: links;
     display: grid;
