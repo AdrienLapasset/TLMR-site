@@ -5,6 +5,7 @@ import Grid from "components/global/Grid";
 import croix from "assets/icons/croix.svg";
 
 const StyledContainer = styled.div`
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   overflow-y: scroll;
@@ -16,21 +17,25 @@ const StyledContainer = styled.div`
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
   transition: all 0.4s ${(props) => props.theme.baseCubicBezier};
   z-index: 3;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding: 24px;
+  }
   @media ${(props) => props.theme.minWidth.md} {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
 `;
 
 const StyledModal = styled.div`
-  max-height: 100vh;
   overflow-y: scroll;
   background-color: white;
   width: 100%;
   border-radius: 9px;
   padding: 45px;
   @media ${(props) => props.theme.minWidth.md} {
+    max-height: 100vh;
     width: 850px;
   }
   header {

@@ -15,8 +15,10 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 0;
       order: 1;
-      margin-top: 160px;
     }
+  }
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 160px;
   }
 `;
 

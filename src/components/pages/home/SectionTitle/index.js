@@ -19,7 +19,10 @@ const StyledContainer = styled.div`
 `;
 const StyledTitle = styled(Title)`
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-bottom: 45px;
   }
 `;
 

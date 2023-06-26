@@ -136,7 +136,10 @@ const Navigation = () => {
               <Paragraph>Mentions légales</Paragraph>
             </Link>
             <Link to="/mentions-legales#politique-de-confidentialite">
-              <Paragraph> Politique de confidentialité</Paragraph>
+              <Paragraph>Politique de confidentialité</Paragraph>
+            </Link>
+            <Link to="/mentions-legales#cookies">
+              <Paragraph>Cookies</Paragraph>
             </Link>
           </div>
         </div>

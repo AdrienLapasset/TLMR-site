@@ -11,7 +11,7 @@ import ALaUne from "components/pages/home/sections/ALaUne";
 import Seo from "components/Seo";
 
 const StyledPageHero = styled(PageHero)`
-  margin-bottom: -30px;
+  /* margin-bottom: -30px; */
 `;
 
 const ExpertisesPage = () => {

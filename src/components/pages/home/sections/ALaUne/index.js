@@ -9,23 +9,20 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const border = css`
   border-top: ${(props) => props.theme.border.black};
   padding-top: 15px;
-  @media ${(props) => props.theme.minWidth.md} {
-    margin-top: 100px;
-  }
-  /* @media ${(props) => props.theme.minWidth.lg} {
-    margin-top: 150px;
-  }
-  @media ${(props) => props.theme.minWidth.xl} {
-    margin-top: 170px;
-  }
-  @media ${(props) => props.theme.minWidth.xl} {
-    margin-top: 300px;
-  } */
 `;
 
 const StyledContainer = styled.div`
   ${(props) => (props.border ? border : null)}
   margin-top: 70px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 100px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-top: 160px;
+  }
   & > header {
     display: flex;
     /* padding-bottom: 20px; */

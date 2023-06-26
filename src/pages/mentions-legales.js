@@ -82,10 +82,10 @@ const MentionsLegales = () => {
               <span>1</span>MENTIONS LÉGALES
             </StyledTitle>
             <StyledTitle size="sm">
-              <span>2</span> POLITIQUE DE CONFIDENTIALITÉ
+              <span>2</span>POLITIQUE DE CONFIDENTIALITÉ
             </StyledTitle>
             <StyledTitle size="sm">
-              <span>3</span> COOKIES
+              <span>3</span>COOKIES
             </StyledTitle>
           </StyledTitleContainer>
           <StyledGrid>
@@ -247,7 +247,7 @@ const MentionsLegales = () => {
                 concernant.
               </p>
               <h3>Demandes</h3>
-              <p>
+              <p id="cookies">
                 Pour toute demande concernant la politique de protection des
                 données des utilisateur du Site, et pour exercer vos droits vous
                 pouvez contacter le Cabinet à l’adresse&nbsp;

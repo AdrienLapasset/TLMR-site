@@ -31,7 +31,8 @@ const StyledNav = styled.nav`
     transform: translateY(${({ isNavHidden }) => (isNavHidden ? -70 : 0)}px);
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    padding: 21px 77px;
+    position: sticky;
+    padding: 21px 45px;
     transform: translateY(
       ${({ isNavHidden, theme }) => (isNavHidden ? -theme.headerHeight : 0)}px
     );
@@ -43,7 +44,6 @@ const StyledNav = styled.nav`
     align-items: center;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    padding: 21px 90px;
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   img {
@@ -72,7 +72,7 @@ const StyledLinksContainer = styled.div`
   }
   a {
     padding: 15px 0;
-    border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLightest};
+    border-bottom: 0.8px solid black;
     width: 100%;
     font-size: 18px;
     position: relative;

@@ -13,10 +13,12 @@ const StyledContainer = styled.div`
   .gatsby-image-wrapper {
     margin-bottom: 12px;
     @media ${(props) => props.theme.minWidth.sm} {
-      margin-top: 160px;
       margin-bottom: 0;
       order: 1;
     }
+  }
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 160px;
   }
 `;
 

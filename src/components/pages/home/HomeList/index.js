@@ -32,7 +32,7 @@ const StyledList = styled.ul`
   }
   a,
   aside {
-    border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLight};
+    border-bottom: 0.8px solid black;
     padding: 10px 0;
   }
   aside {

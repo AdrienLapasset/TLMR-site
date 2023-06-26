@@ -26,7 +26,7 @@ const theme = {
   },
   border: {
     black: "0.8px solid #000000",
-    greyLightest: "0.8px solid #E4E4E4",
+    greyLightest: "0.8px solid #000000",
   },
   headerHeight: 74,
   headerHeightMobile: 54,

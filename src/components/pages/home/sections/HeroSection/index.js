@@ -35,6 +35,7 @@ const StyledContainer = styled.div`
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 36px;
+      grid-column: 1 / 9;
     }
   }
 `;
