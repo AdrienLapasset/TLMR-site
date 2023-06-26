@@ -1,17 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
 import Cta from "components/global/Cta";
+import Grid from "components/global/Grid";
 
 const StyledContainer = styled.div`
   p {
     font-size: 18px;
     font-family: "Söhne Buch", sans-serif;
-    max-width: 800px;
     margin-bottom: 30px;
+    grid-column: 1/13;
     @media ${(props) => props.theme.minWidth.sm} {
       font-size: 20px;
     }
     @media ${(props) => props.theme.minWidth.md} {
+      grid-column: ${({ column }) => !column && "1/8"};
       font-size: 22px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
@@ -27,10 +29,12 @@ const StyledButtonsContainer = styled.div`
   }
 `;
 
-const SectionDescription = ({ description, links, className }) => {
+const SectionDescription = ({ description, links, className, column }) => {
   return (
-    <StyledContainer className={className}>
-      <p dangerouslySetInnerHTML={{ __html: description }}></p>
+    <StyledContainer className={className} column={column}>
+      <Grid>
+        <p dangerouslySetInnerHTML={{ __html: description }}></p>
+      </Grid>
       <StyledButtonsContainer>
         {links.map(({ text, to, extern }) =>
           extern ? (
