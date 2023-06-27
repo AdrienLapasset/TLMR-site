@@ -94,7 +94,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
           ref={anchorNavRef}
         >
           <StyledGrid>
-            {eservices ? <span></span> : <h3>Compétences</h3>}
+            {eservices ? <h3>Solutions</h3> : <h3>Compétences</h3>}
             {data.map(({ title }, index) => (
               <StyledNavLink
                 key={index}

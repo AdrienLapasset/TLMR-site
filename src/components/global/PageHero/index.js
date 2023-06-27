@@ -8,11 +8,10 @@ import { useLocation } from "@reach/router";
 const StyledContainer = styled(Grid)`
   margin: 110px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: ${({ pathname }) =>
-        pathname === "/expertises/" || pathname === "/e-services/"
-          ? 190
-          : 230}px
-      0;
+    /* margin: ${({ pathname }) =>
+      pathname === "/expertises/" || pathname === "/e-services/" ? 190 : 230}px
+      0; */
+    margin: 230px 0;
   }
   h1 {
     margin-bottom: 40px;

@@ -41,6 +41,10 @@ const StyledContainer = styled.div`
       }
     }
   }
+  a,
+  button {
+    text-decoration-thickness: 1.5px;
+  }
 `;
 const StyledMap = styled.iframe`
   aspect-ratio: 1;

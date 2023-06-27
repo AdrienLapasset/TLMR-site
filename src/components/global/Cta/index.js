@@ -6,7 +6,7 @@ const StyledCta = css`
   text-decoration: underline;
   text-underline-offset: 7px;
   font-size: 16px;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 0.8px;
   @media ${(props) => props.theme.minWidth.md} {
     font-size: 15px;
   }

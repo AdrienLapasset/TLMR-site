@@ -46,7 +46,7 @@ const StyledTitleGrid = styled(Grid)`
   & > * {
     grid-column: 1 / 13;
     @media ${(props) => props.theme.minWidth.md} {
-      grid-column: 1 / 9;
+      grid-column: 1 / 8;
     }
   }
 `;
@@ -109,12 +109,22 @@ const StyledAdditionalSection = styled.section`
   background-color: ${(props) => props.theme.colors.greyLighter};
   grid-column: 1 / span 12;
   padding-top: 35px;
+  padding: 15px 15px 70px;
+  margin: 0 -15px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-left: -45px;
-    margin-right: -45px;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 170px;
+    margin: 45px -24px 0;
+    padding: 24px 24px 170px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 60px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin: 80px -32px;
+    padding: 24px 32px 170px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    margin: 90px -45px;
+    padding: 24px 45px 170px;
   }
   & > div {
     border-top: ${(props) => props.theme.border.black};

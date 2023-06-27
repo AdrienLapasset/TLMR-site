@@ -94,7 +94,7 @@ const StyledLinksContainer = styled.div`
         color: ${(props) => props.theme.colors.greyLight};
         text-decoration: underline;
         text-underline-offset: 7px;
-        text-decoration-thickness: 1.5px;
+        text-decoration-thickness: 0.8px;
         /* &:after {
           content: "";
           display: block;
