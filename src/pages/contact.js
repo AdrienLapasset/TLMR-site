@@ -43,7 +43,13 @@ const StyledContainer = styled.div`
   }
   a,
   button {
-    text-decoration-thickness: 1.5px;
+    overflow: visible;
+    p {
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 7px;
+      line-height: 37px;
+    }
   }
 `;
 const StyledMap = styled.iframe`
