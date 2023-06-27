@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   h2 {
     margin-bottom: 30px;
     @media ${(props) => props.theme.minWidth.sm} {
-      margin-bottom: 70px;
+      margin-bottom: 60px;
     }
   }
   aside {

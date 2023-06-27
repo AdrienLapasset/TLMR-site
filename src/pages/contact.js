@@ -93,7 +93,8 @@ const Contact = () => {
                   En cas d’urgence, vous pouvez nous contacter par mail
                 </Paragraph>
                 <Paragraph size="xxl">
-                  M<sup>e</sup> Henri de la Motte Rouge
+                  M<span className="text-ordinal">e</span> Henri de la Motte
+                  Rouge
                 </Paragraph>
                 <Cta href="mailto:lamotterouge@tlmr-avocats.com">
                   <Paragraph size="xxl">
@@ -101,7 +102,7 @@ const Contact = () => {
                   </Paragraph>
                 </Cta>
                 <Paragraph className="mt" size="xxl">
-                  M<sup>e</sup> Jean-Philippe Touati
+                  M<span className="text-ordinal">e</span> Jean-Philippe Touati
                 </Paragraph>
                 <Cta href="mailto:touati@tlmr-avocats.com">
                   <Paragraph size="xxl">touati@tlmr-avocats.com</Paragraph>

@@ -19,10 +19,10 @@ const StyledFooter = styled.footer`
       margin: 25px 0 315px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      margin: 30px 0 430px;
+      margin: 30px 0 340px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      margin: 45px 0 430px;
+      margin: 45px 0 370px;
     }
   }
 `;

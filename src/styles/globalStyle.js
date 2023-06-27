@@ -55,7 +55,7 @@ iframe {
   margin: 0;
   padding: 0;
   font-family: "Söhne Buch", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   display: block;
   box-sizing: border-box;
@@ -97,5 +97,9 @@ button {
   100% {
     opacity: 1;
   }
+}
+
+.text-ordinal {
+  font-variant-numeric: ordinal;
 }
 `;
