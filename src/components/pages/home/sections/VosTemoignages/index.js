@@ -17,7 +17,8 @@ const StyledContainer = styled.div`
   aside {
     margin-top: 15px;
     font-family: "Söhne Kräftig";
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 20px;
   }
 `;
 const StyledGrid = styled.div`
@@ -61,9 +62,7 @@ const VosTemoignages = () => {
     return (
       <div key={index}>
         <Paragraph>« {testimony.text} »</Paragraph>
-        <Paragraph size="small" as="aside">
-          {testimony.author}
-        </Paragraph>
+        <Paragraph as="aside">{testimony.author}</Paragraph>
       </div>
     );
   });

@@ -27,14 +27,18 @@ const StyledContainer = styled.div`
     grid-column: 1 / 10;
     margin-bottom: 40px;
     font-size: 22px;
+    line-height: 27px;
     @media ${(props) => props.theme.minWidth.sm} {
       font-size: 25px;
+      line-height: 31px;
     }
-    @media ${(props) => props.theme.minWidth.md} {
+    @media ${(props) => props.theme.minWidth.lg} {
       font-size: 30px;
+      line-height: 39px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 36px;
+      line-height: 45px;
       grid-column: 1 / 9;
     }
   }

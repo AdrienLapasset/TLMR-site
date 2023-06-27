@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Seo from "components/Seo";
 
 const StyledTitleContainer = styled.div`
-  margin: 100px 0;
+  margin: 230px 0 170px;
 `;
 const StyledTitle = styled(Title)`
   margin: 0;
