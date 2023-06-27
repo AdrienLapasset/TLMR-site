@@ -31,7 +31,7 @@ const VousProteger = () => {
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
         quality="90"
-        aspectRatio={1.44}
+        aspectRatio={2.34}
       />
       <SectionDescription
         description={

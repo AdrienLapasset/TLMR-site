@@ -25,7 +25,6 @@ const StyledContainer = styled.div`
   }
   & > header {
     display: flex;
-    /* padding-bottom: 20px; */
     @media ${(props) => props.theme.minWidth.sm} {
       padding-bottom: 0;
     }
@@ -81,11 +80,19 @@ const StyledNews = styled(Link)`
       font-size: 18px;
     }
   }
-  &:nth-child(3),
+  ${({ home }) =>
+    !home &&
+    `&:nth-child(3),
   &:nth-child(4) {
     display: none;
     @media ${(props) => props.theme.minWidth.md} {
       display: block;
+    }
+  }`}
+  .gatsby-image-wrapper {
+    aspect-ratio: 1.6;
+    @media ${(props) => props.theme.minWidth.md} {
+      aspect-ratio: 1;
     }
   }
 `;
@@ -130,7 +137,7 @@ const ALaUne = ({ className, home, border }) => {
         {articles.map(({ title, date, heroImg, slug }) => {
           const thumbImg = getImage(heroImg.asset);
           return (
-            <StyledNews to={"/article/" + slug.current} key={title}>
+            <StyledNews to={"/article/" + slug.current} key={title} home={home}>
               <GatsbyImage image={thumbImg} alt={title} />
               <aside className="small">
                 {new Date(date).toLocaleDateString("fr-FR", {

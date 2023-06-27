@@ -6,13 +6,14 @@ const StyledContainer = styled.div`
   aside {
     font-size: 13px;
     font-family: "Söhne Buch", sans-serif;
-    margin-bottom: -5px;
+    margin-bottom: ${({ aside }) => (aside === "Actualités" ? -3 : -5)}px;
     @media ${(props) => props.theme.minWidth.sm} {
-      margin-bottom: -8px;
+      margin-bottom: ${({ aside }) => (aside === "Actualités" ? -5 : -8)}px;
+
       font-size: 14px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      margin-bottom: -10px;
+      margin-bottom: ${({ aside }) => (aside === "Actualités" ? -7 : -10)}px;
       font-size: 16px;
     }
   }
@@ -24,11 +25,14 @@ const StyledTitle = styled(Title)`
   @media ${(props) => props.theme.minWidth.md} {
     margin-bottom: 45px;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-bottom: 65px;
+  }
 `;
 
 const SectionTitle = ({ aside, title, className, small }) => {
   return (
-    <StyledContainer className={className}>
+    <StyledContainer aside={aside} className={className}>
       <aside>{aside}</aside>
       {small ? (
         <StyledTitle type="h2" className={className} size="sm">
