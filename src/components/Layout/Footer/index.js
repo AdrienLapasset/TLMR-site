@@ -37,6 +37,9 @@ const StyledLinksContainer = styled.div`
   }
   a > p {
     margin-bottom: 3px;
+    &:hover {
+      color: ${(props) => props.theme.colors.grey};
+    }
   }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {

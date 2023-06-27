@@ -68,6 +68,17 @@ const StyledColumns = styled.div`
   }
 `;
 const StyledNews = styled(Link)`
+  & > div {
+    overflow: hidden;
+  }
+  .gatsby-image-wrapper {
+    transition: transform 0.3s ${(props) => props.theme.cubicBezier.base};
+  }
+  &:hover {
+    .gatsby-image-wrapper {
+      transform: scale(1.05);
+    }
+  }
   aside {
     margin: 6px 0;
     @media ${(props) => props.theme.minWidth.lg} {
@@ -137,7 +148,9 @@ const ALaUne = ({ className, home, border }) => {
           const thumbImg = getImage(heroImg.asset);
           return (
             <StyledNews to={"/article/" + slug.current} key={title} home={home}>
-              <GatsbyImage image={thumbImg} alt={title} />
+              <div>
+                <GatsbyImage image={thumbImg} alt={title} />
+              </div>
               <aside className="small">
                 {new Date(date).toLocaleDateString("fr-FR", {
                   year: "numeric",

@@ -29,7 +29,7 @@ const StyledModal = styled.div`
   overflow: hidden;
   @media ${(props) => props.theme.minWidth.md} {
     width: 100%;
-    max-width: 1330px;
+    max-width: 1150px;
     height: auto;
   }
   button {

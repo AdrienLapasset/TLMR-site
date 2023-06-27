@@ -35,6 +35,17 @@ const StyledGrid = styled(Grid)`
 `;
 const StyledArticleCard = styled(Link)`
   margin-bottom: 30px;
+  & > div {
+    overflow: hidden;
+  }
+  .gatsby-image-wrapper {
+    transition: transform 0.3s ${(props) => props.theme.cubicBezier.base};
+  }
+  &:hover {
+    .gatsby-image-wrapper {
+      transform: scale(1.05);
+    }
+  }
   @media ${(props) => props.theme.minWidth.md} {
     margin-bottom: 50px;
   }
@@ -109,7 +120,9 @@ const Actualites = () => {
                         key={title}
                         to={"/article/" + slug.current}
                       >
-                        <GatsbyImage image={thumbImg} alt={title} />
+                        <div>
+                          <GatsbyImage image={thumbImg} alt={title} />
+                        </div>
                         <Paragraph size="sm">
                           {new Date(date).toLocaleDateString("fr-FR", {
                             year: "numeric",

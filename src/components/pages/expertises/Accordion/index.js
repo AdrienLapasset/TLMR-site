@@ -13,6 +13,11 @@ const StyledHeader = styled.div`
   border-top: ${(props) => props.theme.border.black};
   display: flex;
   cursor: pointer;
+  &:hover {
+    & > h3 {
+      color: ${(props) => props.theme.colors.grey};
+    }
+  }
 `;
 const StyledContent = styled.div`
   padding-bottom: ${(props) => (props.isSectionOpen ? "10px" : "0")};

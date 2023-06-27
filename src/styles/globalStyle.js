@@ -70,6 +70,9 @@ a {
   cursor: pointer;
   &:hover {
     color: ${(props) => props.theme.colors.grey};
+    & * {
+      color: ${(props) => props.theme.colors.grey};
+    }
   }
 }
 
@@ -89,7 +92,7 @@ button {
 }
 
 .pageAnimation {
-  animation: pageAnimation 3s ${({ theme }) => theme.cubicBezier.base} forwards;
+  animation: pageAnimation 4s ${({ theme }) => theme.cubicBezier.base} forwards;
   opacity: 0;
 }
 

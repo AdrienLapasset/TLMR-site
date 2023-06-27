@@ -72,7 +72,7 @@ const StyledLinksContainer = styled.div`
   }
   a {
     padding: 15px 0;
-    border-bottom: 0.8px solid black;
+    border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     font-size: 18px;
     position: relative;
@@ -84,7 +84,7 @@ const StyledLinksContainer = styled.div`
       width: fit-content;
     }
     &:first-child {
-      border-top: ${(props) => props.theme.border.greyLightest};
+      border-top: 0.8px solid ${(props) => props.theme.colors.greyLightest};
       @media ${(props) => props.theme.minWidth.lg} {
         border-top: none;
       }
