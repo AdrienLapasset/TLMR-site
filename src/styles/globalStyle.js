@@ -89,7 +89,7 @@ button {
 }
 
 .pageAnimation {
-  animation: pageAnimation 1s ${({ theme }) => theme.cubicBezier.base} forwards;
+  animation: pageAnimation 3s ${({ theme }) => theme.cubicBezier.base} forwards;
   opacity: 0;
 }
 
