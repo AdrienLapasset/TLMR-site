@@ -102,4 +102,9 @@ button {
 .text-ordinal {
   font-variant-numeric: ordinal;
 }
+
+b {
+  font-weight: normal;
+  font-family: "Söhne Kräftig", sans-serif;
+}
 `;

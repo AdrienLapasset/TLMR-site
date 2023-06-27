@@ -12,10 +12,6 @@ import Seo from "components/Seo";
 import SeraphinLegalModal from "components/pages/e-services/SeraphinLegalModal";
 import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 
-const StyledPageHero = styled(PageHero)`
-  margin-bottom: -70px;
-`;
-
 const Eservices = () => {
   const [isDeepBlockModalModal, setIsDeepBlockModalModal] = useState(false);
   const [isSeraphinLegalModal, setIsSeraphinLegalModal] = useState(false);
@@ -40,7 +36,7 @@ const Eservices = () => {
       <Seo pageTitle="E-services" />
       <Layout>
         <div className="pageAnimation">
-          <StyledPageHero
+          <PageHero
             title="E-SERVICES"
             firstParagraph="Des services en ligne LegalTech pour simplifier et améliorer notre relation et votre rapport au Droit. Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage."
             secondParagraph="L’innovation est au cœur de l’ADN du cabinet Touati La Motte Rouge Avocats et de ses fondateurs, membres fondateurs d’Avotech, l’association des avocats créateurs de LegalTech. Le cabinet a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client. Notre LegalTech Deep Block™, start-up technologique opérateur de Blockchain Légale, est un laboratoire d’innovation pour le cabinet."

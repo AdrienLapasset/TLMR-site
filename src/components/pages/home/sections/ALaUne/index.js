@@ -80,15 +80,14 @@ const StyledNews = styled(Link)`
       font-size: 18px;
     }
   }
-  ${({ home }) =>
-    !home &&
-    `&:nth-child(3),
+
+  &:nth-child(3),
   &:nth-child(4) {
-    display: none;
+    display: ${({ home }) => !home && "none"};
     @media ${(props) => props.theme.minWidth.md} {
       display: block;
     }
-  }`}
+  }
   .gatsby-image-wrapper {
     aspect-ratio: 1.6;
     @media ${(props) => props.theme.minWidth.md} {

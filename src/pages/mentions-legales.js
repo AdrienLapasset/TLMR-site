@@ -11,8 +11,9 @@ const StyledTitleContainer = styled.div`
 const StyledTitle = styled(Title)`
   margin: 0;
   display: flex;
+  /* line-height: 50px; */
   span {
-    flex: 0 0 40px;
+    flex: 0 0 70px;
   }
 `;
 const StyledGrid = styled(Grid)`
@@ -78,13 +79,13 @@ const MentionsLegales = () => {
       <Layout>
         <div className="pageAnimation">
           <StyledTitleContainer>
-            <StyledTitle size="sm">
+            <StyledTitle size="expertise">
               <span>1</span>MENTIONS LÉGALES
             </StyledTitle>
-            <StyledTitle size="sm">
+            <StyledTitle size="expertise">
               <span>2</span>POLITIQUE DE CONFIDENTIALITÉ
             </StyledTitle>
-            <StyledTitle size="sm">
+            <StyledTitle size="expertise">
               <span>3</span>COOKIES
             </StyledTitle>
           </StyledTitleContainer>

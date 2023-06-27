@@ -6,8 +6,15 @@ const StyledCta = css`
   text-decoration: underline;
   text-underline-offset: 7px;
   font-size: 16px;
+  text-decoration-thickness: 1.5px;
   @media ${(props) => props.theme.minWidth.md} {
     font-size: 15px;
+  }
+  &:hover {
+    color: ${(props) => props.theme.colors.grey};
+    & * {
+      color: ${(props) => props.theme.colors.grey};
+    }
   }
 `;
 

@@ -9,7 +9,7 @@ const StyledContainer = styled.section`
   }
 `;
 const StyledHeader = styled.div`
-  padding: 7px 0;
+  padding: 9px 0;
   border-top: ${(props) => props.theme.border.black};
   display: flex;
   cursor: pointer;

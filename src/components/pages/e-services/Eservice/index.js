@@ -46,18 +46,21 @@ const StyledContainer = styled(Grid)`
       margin-top: 30px;
     }
     & > ol {
-      margin-top: 30px;
+      margin-top: 55px;
       li {
         display: flex;
-        padding-top: 10px;
+        padding-top: 8px;
         border-top: ${(props) => props.theme.border.black};
         margin-bottom: 10px;
+        & > p {
+          font-size: 15px;
+        }
         & > aside {
           font-family: "SöhneBreit Buch", sans-serif;
           font-size: 50px;
           margin-right: 30px;
           position: relative;
-          top: -12px;
+          top: -15px;
           flex: 0 0 40px;
           @media ${(props) => props.theme.minWidth.sm} {
             flex: 0 0 200px;
@@ -75,7 +78,7 @@ const StyledContainer = styled(Grid)`
       button {
         width: 100%;
         border-radius: 100px;
-        padding: 5px 15px;
+        padding: 5px 15px 6px;
         text-align: left;
         font-size: 15px;
         &:nth-child(1) {

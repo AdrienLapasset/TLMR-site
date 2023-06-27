@@ -28,10 +28,8 @@ const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 12px;
   grid-template-columns: repeat(6, 1fr);
+  h3,
   span {
-    grid-column: 1 / span 1;
-  }
-  h3 {
     font-size: 13px;
     display: none;
     @media ${(props) => props.theme.minWidth.lg} {

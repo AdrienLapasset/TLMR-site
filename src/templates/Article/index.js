@@ -58,6 +58,7 @@ const StyledHeader = styled(Grid)`
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 60px;
+      line-height: 70px;
     }
   }
 `;
@@ -128,7 +129,7 @@ const StyledDesktopContentInfo = styled.div`
   }
 `;
 const StyledInfo = styled(Paragraph)`
-  margin: 3px 0 20px;
+  margin: 5px 0 20px;
 `;
 const StyledContentContainer = styled(Grid)`
   display: block;
@@ -245,15 +246,19 @@ const ShareBlock = ({ articleUrl }) => {
   return (
     <StyledShareBlock>
       <StyledInfoLabel size="sm">Partager</StyledInfoLabel>
-      <LinkedinShareButton url={articleUrl}>
-        <img src={linkedinLogo} alt="Linkedin logo" />
-      </LinkedinShareButton>
       <FacebookShareButton url={articleUrl}>
         <img src={facebookLogo} alt="Facebook logo" />
       </FacebookShareButton>
       <TwitterShareButton url={articleUrl}>
-        <img src={twitterLogo} alt="Twitter logo" />
+        <img
+          src={twitterLogo}
+          alt="Twitter logo"
+          style={{ transform: "translateY(1px)" }}
+        />
       </TwitterShareButton>
+      <LinkedinShareButton url={articleUrl}>
+        <img src={linkedinLogo} alt="Linkedin logo" />
+      </LinkedinShareButton>
     </StyledShareBlock>
   );
 };

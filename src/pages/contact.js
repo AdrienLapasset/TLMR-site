@@ -31,9 +31,9 @@ const StyledContainer = styled.div`
         grid-column: 7 / span 6;
       }
       & > div {
-        margin-bottom: 30px;
+        margin-bottom: 37px;
         .mt {
-          margin-top: 20px;
+          margin-top: 30px;
         }
         aside {
           margin-bottom: 7px;
@@ -113,7 +113,9 @@ const Contact = () => {
               <div>
                 <Paragraph as="aside">Notre adresse</Paragraph>
                 <Paragraph size="xxl">
-                  69 place du Docteur Félix Lobligeois 75017 Paris
+                  69 place du Docteur Félix Lobligeois
+                  <br />
+                  75017 Paris
                 </Paragraph>
               </div>
               <div>

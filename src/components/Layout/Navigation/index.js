@@ -92,7 +92,10 @@ const StyledLinksContainer = styled.div`
     &:hover {
       @media ${(props) => props.theme.minWidth.lg} {
         color: ${(props) => props.theme.colors.greyLight};
-        &:after {
+        text-decoration: underline;
+        text-underline-offset: 7px;
+        text-decoration-thickness: 1.5px;
+        /* &:after {
           content: "";
           display: block;
           height: 1px;
@@ -101,7 +104,7 @@ const StyledLinksContainer = styled.div`
           position: absolute;
           bottom: -1px;
           left: 0;
-        }
+        } */
       }
     }
   }

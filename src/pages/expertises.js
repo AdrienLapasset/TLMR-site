@@ -10,10 +10,6 @@ import AnchorNavBar from "components/global/AnchorNavBar";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import Seo from "components/Seo";
 
-const StyledPageHero = styled(PageHero)`
-  /* margin-bottom: -30px; */
-`;
-
 const ExpertisesPage = () => {
   const twoPointsSectionRef = useRef(null);
   return (
@@ -21,7 +17,7 @@ const ExpertisesPage = () => {
       <Seo pageTitle="Expertises" />
       <Layout>
         <div className="pageAnimation">
-          <StyledPageHero
+          <PageHero
             title="Expertises"
             firstParagraph="Le cabinet Touati La Motte Rouge répond à des problématiques diverses
           avec rigueur et pragmatisme. Dans chaque domaine d’expertise, vous

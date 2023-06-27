@@ -8,6 +8,7 @@ const StyledTitle = styled.h1`
   text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
   font-size: ${({ size }) =>
     size === "xs" ? 28 : size === "sm" || size === "expertise" ? 28 : 32}px;
+  line-height: ${({ size }) => size === "expertise" && 50}px;
   @media ${({ theme }) => theme.minWidth.sm} {
     margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
     font-size: ${({ size }) =>
