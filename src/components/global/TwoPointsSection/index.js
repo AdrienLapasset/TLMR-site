@@ -53,8 +53,18 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.xl} {
           grid-column-gap: ${(props) => props.theme.columnGap.desktop};
         }
+        p {
+          margin-top: 7px;
+          @media ${(props) => props.theme.minWidth.sm} {
+            margin-top: 0px;
+            transform: translateY(-5px);
+          }
+        }
         a {
           margin-top: 10px;
+          @media ${(props) => props.theme.minWidth.sm} {
+            transform: translateY(-5px);
+          }
         }
       }
     }

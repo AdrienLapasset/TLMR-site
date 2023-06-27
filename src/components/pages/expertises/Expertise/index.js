@@ -21,6 +21,12 @@ const StyledPoint = styled.aside`
   & > span {
     margin-left: 10px;
   }
+  br {
+    display: none;
+    @media ${(props) => props.theme.minWidth.sm} {
+      display: block;
+    }
+  }
 `;
 const StyledParagraph = styled(Paragraph)`
   &:not(:last-child) {
@@ -134,20 +140,20 @@ const Expertise = ({ expertise }) => {
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    screenWidth < 768 && setUseCases((useCases) => useCases.slice(0, 5));
+    screenWidth < 768 && setUseCases((useCases) => useCases.slice(0, 2));
   }, []);
 
   const handleSeeMoreUseCases = () => {
     isSeeMoreUseCases
       ? setUseCases(expertise.useCases)
-      : setUseCases(useCases.slice(0, 5));
+      : setUseCases(useCases.slice(0, 2));
     setIsSeeMoreUseCases(!isSeeMoreUseCases);
   };
 
   return (
     <StyledContainer>
       <StyledTitleGrid>
-        <Title type="h2" lowercase>
+        <Title type="h2" lowercase size="expertise">
           {expertise.title}
         </Title>
       </StyledTitleGrid>
@@ -190,7 +196,7 @@ const Expertise = ({ expertise }) => {
           </ul>
           {expertise.useCases.length > 5 && (
             <Cta as="button" onClick={handleSeeMoreUseCases}>
-              Voir plus
+              Voir {isSeeMoreUseCases ? "plus" : "moins"}
             </Cta>
           )}
         </StyledUseCases>

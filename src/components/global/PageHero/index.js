@@ -3,11 +3,16 @@ import styled from "styled-components";
 import Grid from "components/global/Grid";
 import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
+import { useLocation } from "@reach/router";
 
 const StyledContainer = styled(Grid)`
   margin: 110px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 230px 0;
+    margin: ${({ pathname }) =>
+        pathname === "/expertises/" || pathname === "/e-services/"
+          ? 190
+          : 230}px
+      0;
   }
   h1 {
     margin-bottom: 40px;
@@ -43,8 +48,10 @@ const StyledContainer = styled(Grid)`
 `;
 
 const PageHero = ({ title, firstParagraph, secondParagraph, className }) => {
+  const { pathname } = useLocation();
+
   return (
-    <StyledContainer className={className}>
+    <StyledContainer className={className} pathname={pathname}>
       <Title type="h1">{title}</Title>
       <Paragraph size="xxl">{firstParagraph}</Paragraph>
       <Paragraph size="lg">{secondParagraph}</Paragraph>

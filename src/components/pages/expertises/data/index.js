@@ -9,7 +9,7 @@ const ExpertiseData = [
       {
         title: "Droit des Marques",
         content:
-          "Dépôts et formalités (INPI, EUIPO, OMPI - dépôts internationaux), recherche d'antériorités, action en contrefaçon et nullité, action connexe en concurrence déloyale, analyse du préjudice et indemnisation, accords de coexistence, vie et valorisation des actifs immatériels.",
+          "Dépôts et formalités (INPI, EUIPO, OMPI – dépôts internationaux), recherche d'antériorités, action en contrefaçon et nullité, action connexe en concurrence déloyale, analyse du préjudice et indemnisation, accords de coexistence, vie et valorisation des actifs immatériels.",
       },
       {
         title: "Dessins et modèles et Brevets",
@@ -48,7 +48,7 @@ const ExpertiseData = [
       {
         title: "E-commerce, plateformes, comparateurs et drop shipping",
         content:
-          "Conditions générales (CGV, CGU), vente en ligne, courtage, droit des plateformes et comparateurs, consommation en ligne, droit de rétractation, Formulaire de vente et conformité RGPD, Contractualisation en ligne, double clic, mail récapitulatif de la commande, économie collaborative et du partage, statut des vendeurs, audit de sites web, fiscalité des ventes internationales, contentieux de la livraison et de la réception des biens, Réglementation des paris en ligne, e-sports, Réseau social et vie privée.",
+          "Conditions générales (CGV, CGU), vente en ligne, courtage, droit des plateformes et comparateurs, consommation en ligne, droit de rétractation. Formulaire de vente et conformité RGPD. Contractualisation en ligne, double clic, mail récapitulatif de la commande, économie collaborative et du partage, statut des vendeurs, audit de sites web, fiscalité des ventes internationales, contentieux de la livraison et de la réception des biens. Réglementation des paris en ligne, e-sports. Réseau social et vie privée.",
       },
       {
         title: "Concurrence déloyale et pratiques commerciales trompeuses",
@@ -58,12 +58,12 @@ const ExpertiseData = [
       {
         title: "E-marketing et infopreneuriat",
         content:
-          "Prospection électronique, profilage et publicité ciblée (réseaux sociaux), contentieux Google Adwords et Facebook Ads, mailings, bases de données et conformité RGPD,  politique de confidentialité. Droit de la formation et subventions",
+          "Prospection électronique, profilage et publicité ciblée (réseaux sociaux), contentieux Google Adwords et Facebook Ads, mailings, bases de données et conformité RGPD, politique de confidentialité. Droit de la formation et subventions.",
       },
       {
         title: "Négociation et sécurisation des droits à l’image",
         content:
-          "Gestion des droits pour des personnalités, artistes, sportifs, mannequins, entrepeneurs du web (infopreneurs, influenceurs, youtubeurs, blogueurs, instagrammeurs …). Droit des médias et de l’audiovisuel.",
+          "Gestion des droits pour des personnalités, artistes, sportifs, mannequins, entrepeneurs du web (infopreneurs, influenceurs, youtubeurs, blogueurs, instagrammeurs…). Droit des médias et de l’audiovisuel.",
       },
     ],
     useCases: [
@@ -84,17 +84,17 @@ const ExpertiseData = [
       {
         title: "Accompagnement et défense des chefs d’entreprise",
         content:
-          "Gestion et résolution des conflits entre associés, Conflits entre associés, Responsabilité des dirigeants, accompagnement à la sécurisation des gains, assistance dans les acquisitions et reventes.",
+          "Gestion et résolution des conflits entre associés. Conflits entre associés. Responsabilité des dirigeants, accompagnement à la sécurisation des gains, assistance dans les acquisitions et reventes.",
       },
       {
         title: "Contentieux commercial complexe",
         content:
-          "Précontentieux, contentieux à risque et réglementaires (plateformes legaltech, exercice illégal de la profession d’avocats et médicale, immobilier) , conflits, entre actionnaires, procédures d’urgences, référés et injonctions, concurrence déloyale, action en contrefaçon, rupture des relations commerciales établies, litiges de consommateurs, actions groupées et recours collectifs, évaluation du préjudice, expertise judiciaire, assistance au recouvrement, contentieux (arbitrage, médiation, négociation amiable).",
+          "Précontentieux, contentieux à risque et réglementaires (plateformes legaltech, exercice illégal de la profession d’avocats et médicale, immobilier), conflits, entre actionnaires, procédures d’urgences, référés et injonctions, concurrence déloyale, action en contrefaçon, rupture des relations commerciales établies, litiges de consommateurs, actions groupées et recours collectifs, évaluation du préjudice, expertise judiciaire, assistance au recouvrement, contentieux (arbitrage, médiation, négociation amiable).",
       },
       {
         title: "Recouvrement de créances, droit des saisies et suretés",
         content:
-          "Nous pouvons ainsi vous accompagner dans la mise en place de mesures de sécurité efficaces pour protéger vos intérêts, que ce soit par le biais de garanties réelles (hypothèque, nantissement...) ou de garanties personnelles (cautionnement...).Nous sommes également en mesure de vous représenter dans le cadre de toute procédure de saisie devant le juge de l’exécution, de la mise en place des mesures conservatoires jusqu'à la réalisation de la garantie, en veillant à défendre vos intérêts tout au long de la procédure.",
+          "Nous pouvons ainsi vous accompagner dans la mise en place de mesures de sécurité efficaces pour protéger vos intérêts, que ce soit par le biais de garanties réelles (hypothèque, nantissement...) ou de garanties personnelles (cautionnement...). Nous sommes également en mesure de vous représenter dans le cadre de toute procédure de saisie devant le juge de l’exécution, de la mise en place des mesures conservatoires jusqu'à la réalisation de la garantie, en veillant à défendre vos intérêts tout au long de la procédure.",
       },
       {
         title: "Contrats divers et complexes",
@@ -159,7 +159,7 @@ const ExpertiseData = [
         title:
           "E-réputation, investigation numérique et forensique, suppression de contenus",
         content:
-          "Le cabinet traite de nombreux contentieux en droit à l’image, droit de la presse et vie privée, domaine mouvant dans lequel les règles procédurales doivent être pleinement maîtrisées. Sa maîtrise complémentaire de l’environnement numérique et « forensic » lui permet de donner une réponse concrète et efficace en cas d’atteinte à la réputation et notamment sur les réseaux sociaux et moteurs de recherche comme Google, Facebook, Youtube, TikTok, Instagram, Snapchat, WordPress… Identification des auteurs par voie d’investigation numérique (forensic) ou via requêtes judiciaires précontentieuses, suppression de contenus illicites, droit au déréférencement et à l’oubli, référé et requêtes LCEN",
+          "Le cabinet traite de nombreux contentieux en droit à l’image, droit de la presse et vie privée, domaine mouvant dans lequel les règles procédurales doivent être pleinement maîtrisées. Sa maîtrise complémentaire de l’environnement numérique et « forensic » lui permet de donner une réponse concrète et efficace en cas d’atteinte à la réputation et notamment sur les réseaux sociaux et moteurs de recherche comme Google, Facebook, Youtube, TikTok, Instagram, Snapchat, WordPress… Identification des auteurs par voie d’investigation numérique (forensic) ou via requêtes judiciaires précontentieuses, suppression de contenus illicites, droit au déréférencement et à l’oubli, référé et requêtes LCEN.",
       },
       {
         title: "Droit de la presse, dénigrement, diffamation et vie privée",
@@ -202,23 +202,23 @@ const ExpertiseData = [
       {
         title: "Gestion des contentieux informatiques",
         content:
-          "Précontentieux et règlement amiable, Expertise technique, Gestion de la négociation et de la rupture des relations commerciales, Responsabilité contractuelle et délictuelle, Médiation Arbitrage, Audit, Négociation, suivi stratégique et technique.",
+          "Précontentieux et règlement amiable. Expertise technique. Gestion de la négociation et de la rupture des relations commerciales. Responsabilité contractuelle et délictuelle. Médiation arbitrage, audit, négociation, suivi stratégique et technique.",
       },
       {
         title: "Redaction et negociation de contrats informatiques",
         content:
-          "Contrats de licence logiciel, Contrats d’externalisation (SaaS, Infogérance, ASP, Sous-traitance), Contrats d’hébergement, Cahier des charges, Contrat d’intégration, Contrats mobiles, Contrats de maintenance, Contrats de développement web, Contrats Telecom, Gestion du risque informatique et prévention des conflits. Maîtrise de l’Environnement Open Source et des licences libres (BSD, CNU, APACHE, GPL, AGPL, LGPL, MPL …).",
+          "Contrats de licence logiciel. Contrats d’externalisation (SaaS, Infogérance, ASP, Sous-traitance), Contrats d’hébergement. Cahier des charges, Contrat d’intégration. Contrats mobiles. Contrats de maintenance. Contrats de développement web. Contrats Telecom. Gestion du risque informatique et prévention des conflits. Maîtrise de l’Environnement Open Source et des licences libres (BSD, CNU, APACHE, GPL, AGPL, LGPL, MPL…).",
       },
       {
         title:
           "Intelligence artificielle, droit des robots et des objets connectes",
         content:
-          "Ethique de l’intelligence artificielle et des algorithmes, Data Mining, Deep learning, Machine learning,  droit des robots et de la personnalité, réalité virtuelle, objets connectés, Domotique et maisons connectées, voitures connectées, drones.",
+          "Ethique de l’intelligence artificielle et des algorithmes. Data Mining. Deep learning. Machine learning, droit des robots et de la personnalité, réalité virtuelle, objets connectés. Domotique et maisons connectées, voitures connectées, drones.",
       },
       {
         title: "Accompagnement de projets technologiques",
         content:
-          "Principaux secteurs d’intervention : Informatique, web, mobilité, e-santé, télécoms, médias, green IT, objets connectés, Mobil payement, Big data, cosmétique, robotique. Assistance à la dématérialisation et archivage, Suivi et structuration des projets complexes, Contrats cadres et relations sous-traitants / fournisseurs, Rédaction de Cahier des charges, Memorandum of Understanding, MOA, Représentation en Comité de pilotage, Gestion des risques juridiques, Appui aux transferts des technologies, Gestion de la fin de projet (recettage, réversibilité et migrations).",
+          "Principaux secteurs d’intervention : Informatique, web, mobilité, e-santé, télécoms, médias, green IT, objets connectés, Mobil payement, Big data, cosmétique, robotique. Assistance à la dématérialisation et archivage. Suivi et structuration des projets complexes. Contrats cadres et relations sous-traitants/fournisseurs. Rédaction de Cahier des charges. Memorandum of Understanding. MOA. Représentation en Comité de pilotage. Gestion des risques juridiques. Appui aux transferts des technologies. Gestion de la fin de projet (recettage, réversibilité et migrations).",
       },
       {
         title: "Blockchain et cryptomonnaies",
@@ -255,19 +255,19 @@ const ExpertiseData = [
     ],
     accordion: [
       {
-        title: "Audit rgpd et conformité rgpd / cnil",
+        title: "Audit RGPD et conformité RGPD/CNIL",
         content:
-          "Etablissement du Registre de traitement, demande d’autorisations, transferts internationaux de données, licéité des collectes, consentement, preuve, sécurité, archivage, pseudonymisation, chiffrement, exercice et réponse aux demandes de droits des personnes concernées (accès, rectification, effacement, opposition, limitation du traitement, portabilité des données, droit de ne pas faire l’objet d’une décision individuelle automatisée, y compris le profilage). Sous-traitance, responsabilité et sécurisation contractuelle des flux.Traitement à risques : profilage, algorythme, intelligence artificielle, Crowling et exploitation prédictive des données, e-santé, e-marketing.",
+          "Etablissement du Registre de traitement, demande d’autorisations, transferts internationaux de données, licéité des collectes, consentement, preuve, sécurité, archivage, pseudonymisation, chiffrement, exercice et réponse aux demandes de droits des personnes concernées (accès, rectification, effacement, opposition, limitation du traitement, portabilité des données, droit de ne pas faire l’objet d’une décision individuelle automatisée, y compris le profilage). Sous-traitance, responsabilité et sécurisation contractuelle des flux. Traitement à risques : profilage, algorythme, intelligence artificielle, Crowling et exploitation prédictive des données, e-santé, e-marketing.",
       },
       {
         title: "DPO externalisé et accompagnement des DPO",
         content:
-          "Le cabinet Touati – La Motte Rouge Avocats est Délégué à la Protection des Données (DPO) désigné auprès de la CNIL et de l’Ordre des avocats. Le cabinet accompagne également des DPO sur les aspects juridiques de leurs missions.",
+          "Le cabinet Touati La Motte Rouge Avocats est Délégué à la Protection des Données (DPO) désigné auprès de la CNIL et de l’Ordre des avocats. Le cabinet accompagne également des DPO sur les aspects juridiques de leurs missions.",
       },
       {
-        title: "Contentieux judiciaires et administratifs rgpd",
+        title: "Contentieux judiciaires et administratifs RGPD",
         content:
-          "Assistance en cas de contrôle CNIL, inspections et audits. Accompagnement contentieux et audit précontentieux (article 82 RGPD). Contentieux des notifications et violation de données",
+          "Assistance en cas de contrôle CNIL, inspections et audits. Accompagnement contentieux et audit précontentieux (article 82 RGPD). Contentieux des notifications et violation de données.",
       },
     ],
     useCases: [
@@ -294,7 +294,7 @@ const ExpertiseData = [
       },
       {
         title:
-          "Gestion des risques sociaux spécifiques au sein des entreprises it, innovantes, start-ups et ssii",
+          "Gestion des risques sociaux spécifiques au sein des entreprises IT, innovantes, start-ups et SSII",
         content:
           "Encadrement des créations des salariés (brevet, logiciel, droit d’auteur, logos), sécurité informatique, management, risques sociaux, harcèlement et burn-out.",
       },

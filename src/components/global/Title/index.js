@@ -6,20 +6,32 @@ const StyledTitle = styled.h1`
   margin-bottom: ${({ pageTitle }) => (pageTitle ? 20 : 10)}px;
   font-family: "SöhneBreit Buch", sans-serif;
   text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
-  font-size: ${({ size }) => (size === "xs" ? 28 : size === "sm" ? 28 : 32)}px;
-
+  font-size: ${({ size }) =>
+    size === "xs" ? 28 : size === "sm" || size === "expertise" ? 28 : 32}px;
   @media ${({ theme }) => theme.minWidth.sm} {
     margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
     font-size: ${({ size }) =>
-      size === "xs" ? 28 : size === "sm" ? 35 : 45}px;
+      size === "xs" ? 28 : size === "sm" || size === "expertise" ? 35 : 45}px;
   }
   @media ${(props) => props.theme.minWidth.md} {
     font-size: ${({ size }) =>
-      size === "xs" ? 28 : size === "sm" ? 35 : 50}px;
+      size === "xs"
+        ? 28
+        : size === "sm"
+        ? 35
+        : size === "expertise"
+        ? 40
+        : 50}px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
     font-size: ${({ size }) =>
-      size === "xs" ? 30 : size === "sm" ? 45 : 60}px;
+      size === "xs"
+        ? 30
+        : size === "sm"
+        ? 45
+        : size === "expertise"
+        ? 50
+        : 60}px;
   }
 `;
 
