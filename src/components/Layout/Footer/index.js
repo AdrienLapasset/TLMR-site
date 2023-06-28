@@ -5,7 +5,8 @@ import { Link } from "gatsby";
 import Paragraph from "components/global/Paragraph";
 
 const StyledFooter = styled.footer`
-  margin-top: 175px;
+  margin-top: 160px;
+  /* margin-top: 175px; */
   @media ${(props) => props.theme.minWidth.sm} {
     margin-top: 210px;
   }
@@ -74,7 +75,6 @@ const StyledLinksContainer = styled.div`
 const StyledCopyrightsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
   padding: 50px 0 20px;
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {
@@ -85,6 +85,13 @@ const StyledCopyrightsContainer = styled.div`
       @media ${(props) => props.theme.minWidth.sm} {
         display: inline-block;
       }
+    }
+  }
+  p,
+  button {
+    font-size: 13px;
+    @media ${(props) => props.theme.minWidth.md} {
+      font-size: 14px;
     }
   }
 `;

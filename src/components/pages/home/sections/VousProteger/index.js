@@ -12,7 +12,9 @@ const StyledContainer = styled.div`
   flex-direction: column;
   .gatsby-image-wrapper {
     margin-bottom: 12px;
+    aspect-ratio: 1;
     @media ${(props) => props.theme.minWidth.sm} {
+      aspect-ratio: 2.34;
       margin-bottom: 0;
       order: 1;
     }
@@ -31,7 +33,6 @@ const VousProteger = () => {
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
         quality="90"
-        aspectRatio={2.34}
       />
       <SectionDescription
         description={

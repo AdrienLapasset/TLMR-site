@@ -30,10 +30,19 @@ const StyledList = styled.ul`
   @media ${(props) => props.theme.minWidth.xl} {
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
+  a {
+    font-size: 15px;
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 16px;
+    }
+  }
   a,
   aside {
     border-bottom: 0.8px solid black;
-    padding: 10px 0;
+    padding: 7px 0;
+    @media ${(props) => props.theme.minWidth.sm} {
+      padding: 10px 0;
+    }
   }
   aside {
     height: 21px;

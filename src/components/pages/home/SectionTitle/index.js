@@ -19,6 +19,8 @@ const StyledContainer = styled.div`
   }
 `;
 const StyledTitle = styled(Title)`
+  margin-bottom: 20px;
+
   @media ${(props) => props.theme.minWidth.sm} {
     margin-bottom: 30px;
   }

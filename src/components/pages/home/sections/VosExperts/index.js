@@ -23,7 +23,9 @@ const StyledColumns = styled.div`
   }
   .gatsby-image-wrapper {
     margin-bottom: 12px;
+    aspect-ratio: 1;
     @media ${(props) => props.theme.minWidth.sm} {
+      aspect-ratio: 1.44;
       order: 1;
       margin-top: 60px;
       margin-bottom: 0;
@@ -43,7 +45,6 @@ const VosExperts = () => {
           src="../../../../../assets/imgs/placeholder.jpg"
           alt="TLMR - L’excellence accessible"
           quality="90"
-          aspectRatio={1.44}
         />
         <SectionDescription
           column

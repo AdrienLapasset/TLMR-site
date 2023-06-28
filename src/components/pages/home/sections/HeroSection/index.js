@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Grid from "components/global/Grid";
 
 const StyledContainer = styled.div`
-  margin-top: 185px;
+  margin-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
   @media ${(props) => props.theme.minWidth.sm} {
     margin-top: 240px;
   }
@@ -25,7 +25,7 @@ const StyledContainer = styled.div`
   }
   h1 {
     grid-column: 1 / 10;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 22px;
     line-height: 27px;
     @media ${(props) => props.theme.minWidth.sm} {
@@ -40,6 +40,12 @@ const StyledContainer = styled.div`
       font-size: 36px;
       line-height: 45px;
       grid-column: 1 / 9;
+    }
+  }
+  .gatsby-image-wrapper {
+    aspect-ratio: 1;
+    @media ${(props) => props.theme.minWidth.sm} {
+      aspect-ratio: 1.8;
     }
   }
 `;
@@ -59,7 +65,6 @@ const HeroSection = () => {
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
         quality="90"
-        aspectRatio={1.8}
         loading="eager"
       />
     </StyledContainer>

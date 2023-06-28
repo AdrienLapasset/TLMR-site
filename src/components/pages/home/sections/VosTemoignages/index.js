@@ -15,17 +15,21 @@ const StyledContainer = styled.div`
     }
   }
   aside {
-    margin-top: 15px;
+    margin-top: 10px;
     font-family: "Söhne Kräftig";
     font-size: 16px;
     line-height: 20px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-top: 15px;
+    }
   }
 `;
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 20px;
+  row-gap: 40px;
   @media ${(props) => props.theme.minWidth.sm} {
+    row-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: ${(props) => props.theme.columnGap.mobile};
   }

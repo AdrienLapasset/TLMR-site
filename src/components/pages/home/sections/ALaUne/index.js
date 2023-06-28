@@ -2,6 +2,7 @@ import * as React from "react";
 import styled, { css } from "styled-components";
 import SectionTitle from "../../SectionTitle";
 import Cta from "components/global/Cta";
+import Paragraph from "components/global/Paragraph";
 import Title from "components/global/Title";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -80,7 +81,7 @@ const StyledNews = styled(Link)`
     }
   }
   aside {
-    margin: 6px 0;
+    margin: 5px 0;
     @media ${(props) => props.theme.minWidth.lg} {
       margin: 12px 0;
     }
@@ -151,19 +152,21 @@ const ALaUne = ({ className, home, border }) => {
               <div>
                 <GatsbyImage image={thumbImg} alt={title} />
               </div>
-              <aside className="small">
+              <Paragraph as="aside" size="sm">
                 {new Date(date).toLocaleDateString("fr-FR", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
-              </aside>
+              </Paragraph>
               <h3>{title}</h3>
             </StyledNews>
           );
         })}
       </StyledColumns>
-      <Cta className="mobile">Toutes les actualités</Cta>
+      <Cta to="/actualites" className="mobile">
+        Toutes les actualités
+      </Cta>
     </StyledContainer>
   );
 };
