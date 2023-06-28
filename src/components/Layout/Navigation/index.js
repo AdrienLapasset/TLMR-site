@@ -57,7 +57,7 @@ const StyledLinksContainer = styled.div`
   transition: opacity ${(props) => props.theme.transitionTime}s,
     padding-top ${(props) => props.theme.transitionTime}s;
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
-  padding-top: ${({ isNavOpen }) => (isNavOpen ? "50px" : "0")};
+  padding-top: ${({ isNavOpen }) => (isNavOpen ? "35px" : "0")};
   @media ${(props) => props.theme.minWidth.lg} {
     grid-area: links;
     display: grid;
@@ -71,7 +71,7 @@ const StyledLinksContainer = styled.div`
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
   }
   a {
-    padding: 15px 0;
+    padding: 12px 0;
     border-bottom: 0.8px solid ${(props) => props.theme.colors.greyLightest};
     width: 100%;
     font-size: 18px;

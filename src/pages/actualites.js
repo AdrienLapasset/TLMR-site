@@ -9,7 +9,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "components/Seo";
 
 const StyledContainer = styled.div`
-  margin: 110px 0 75px;
+  margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 230px 0;
   }
@@ -57,6 +57,12 @@ const StyledArticleCard = styled(Link)`
   }
   p {
     margin: 7px 0 5px;
+    &.date {
+      font-size: 12px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        font-size: inherit;
+      }
+    }
   }
 `;
 
@@ -123,7 +129,7 @@ const Actualites = () => {
                         <div>
                           <GatsbyImage image={thumbImg} alt={title} />
                         </div>
-                        <Paragraph size="sm">
+                        <Paragraph className="date" size="sm">
                           {new Date(date).toLocaleDateString("fr-FR", {
                             year: "numeric",
                             month: "long",

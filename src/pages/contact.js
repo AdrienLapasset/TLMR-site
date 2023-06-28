@@ -9,7 +9,7 @@ import ContactModal from "components/pages/contact/ContactModal";
 import Seo from "components/Seo";
 
 const StyledContainer = styled.div`
-  margin: 110px 0 75px;
+  margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 230px 0;
   }
@@ -36,7 +36,12 @@ const StyledContainer = styled.div`
           margin-top: 30px;
         }
         aside {
-          margin-bottom: 7px;
+          font-size: 15px;
+          margin-bottom: 5px;
+          @media ${(props) => props.theme.minWidth.sm} {
+            margin-bottom: 7px;
+            font-size: inherit;
+          }
         }
       }
     }
@@ -48,7 +53,7 @@ const StyledContainer = styled.div`
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
       text-underline-offset: 7px;
-      line-height: 37px;
+      /* line-height: 37px; */
     }
   }
 `;

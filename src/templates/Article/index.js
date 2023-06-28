@@ -48,6 +48,7 @@ const StyledHeader = styled(Grid)`
   }
   h1 {
     font-size: 28px;
+    line-height: 34px;
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 3 / span 10;
       font-size: 40px;
@@ -64,7 +65,7 @@ const StyledHeader = styled(Grid)`
 `;
 
 const StyledMobileInfo = styled.div`
-  margin-top: 20px;
+  margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: ${(props) => props.theme.columnGap.mobile};
@@ -113,6 +114,10 @@ const StyledDesktopInfo = styled.div`
 `;
 const StyledInfoLabel = styled(Paragraph)`
   font-family: "Söhne Kräftig", sans-serif;
+  font-size: 12px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    font-size: inherit;
+  }
 `;
 const StyledDesktopContentInfo = styled.div`
   display: none;
@@ -135,13 +140,16 @@ const StyledContentContainer = styled(Grid)`
   display: block;
   border-top: ${(props) => props.theme.border.black};
   padding-top: 15px;
-  margin-top: 50px;
+  margin-top: 10px;
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-top: 20px;
+  }
   @media ${(props) => props.theme.minWidth.md} {
     display: grid;
     margin-top: 20px;
     padding: 25px 0;
   }
-  @media ${(props) => props.theme.minWidth.md} {
+  @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 30px;
   }
 `;
@@ -169,7 +177,10 @@ const StyledContent = styled.section`
   h2 {
     margin: 55px 0 30px;
     font-family: "Söhne Kräftig";
-    font-size: 22px;
+    font-size: 18px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 22px;
+    }
     @media ${(props) => props.theme.minWidth.md} {
       font-size: 24px;
     }
@@ -309,7 +320,7 @@ const Article = ({ data, location }) => {
                 <StyledDesktopInfo>
                   <div>
                     <StyledInfoLabel size="sm">Date</StyledInfoLabel>
-                    <StyledInfo>
+                    <StyledInfo size="sm">
                       {new Date(date).toLocaleDateString("fr-FR", {
                         year: "numeric",
                         month: "long",
@@ -319,7 +330,7 @@ const Article = ({ data, location }) => {
                   </div>
                   <div>
                     <StyledInfoLabel size="sm">Par</StyledInfoLabel>
-                    <StyledInfo>{author}</StyledInfo>
+                    <StyledInfo size="sm">{author}</StyledInfo>
                   </div>
                 </StyledDesktopInfo>
                 <h1>{title}</h1>
@@ -327,7 +338,7 @@ const Article = ({ data, location }) => {
               <StyledMobileInfo>
                 <div>
                   <StyledInfoLabel size="sm">Date</StyledInfoLabel>
-                  <StyledInfo>
+                  <StyledInfo size="sm">
                     {new Date(date).toLocaleDateString("fr-FR", {
                       year: "numeric",
                       month: "long",
@@ -337,7 +348,7 @@ const Article = ({ data, location }) => {
                 </div>
                 <div>
                   <StyledInfoLabel size="sm">Par</StyledInfoLabel>
-                  <StyledInfo>{author}</StyledInfo>
+                  <StyledInfo size="sm">{author}</StyledInfo>
                 </div>
                 <ShareBlock articleUrl={location.href} />
                 <div>

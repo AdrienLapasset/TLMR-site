@@ -5,11 +5,25 @@ import PageHero from "components/global/PageHero";
 import styled from "styled-components";
 import Seo from "components/Seo";
 
+const StyledPageHero = styled(PageHero)`
+  & > h1 {
+    font-size: 25px;
+    line-height: 30px;
+    @media ${({ theme }) => theme.minWidth.sm} {
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+  margin-bottom: 190px;
+  @media ${({ theme }) => theme.minWidth.sm} {
+    margin-bottom: 0px;
+  }
+`;
+
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 10px;
   margin-top: 80px;
-
   @media ${({ theme }) => theme.minWidth.sm} {
     display: block;
     margin-top: 90px;
@@ -36,9 +50,11 @@ const StyledGrid = styled(Grid)`
   }
   h2 {
     font-size: 20px;
+    line-height: 24px;
     margin-bottom: 15px;
     @media ${({ theme }) => theme.minWidth.md} {
       font-size: 25px;
+      line-height: auto;
     }
   }
   h3,
@@ -75,7 +91,7 @@ const MentionsLegales = () => {
       <Seo pageTitle="Engagements sociétaux" />
       <Layout>
         <div className="pageAnimation">
-          <PageHero
+          <StyledPageHero
             title="ENGAGEMENTS SOCIÉTAUX 2023 DU CABINET TOUATI LA MOTTE ROUGE AVOCATS"
             firstParagraph="Cabinet au cœur de l’innovation, nous avons pour ambition de rendre l’excellence juridique accessible. Pour rester en accord avec nos valeurs, nous pensons que des efforts personnels et collectifs, alignés avec un souci de contribuer à un monde plus harmonieux et équilibré sont indispensables. Ainsi, nous nous engageons pour contribuer et favoriser des pratiques plus justes et éthiques de la part des membres du cabinet, de nos clients et partenaires."
           />

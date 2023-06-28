@@ -6,20 +6,31 @@ import styled from "styled-components";
 import Seo from "components/Seo";
 
 const StyledTitleContainer = styled.div`
-  margin: 230px 0 170px;
+  margin: 160px 0 75px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin: 230px 0 170px;
+  }
 `;
 const StyledTitle = styled(Title)`
   margin: 0;
   display: flex;
-  /* line-height: 50px; */
+  line-height: 30px;
+  font-size: 25px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    line-height: inherit;
+    font-size: inherit;
+  }
   span {
-    flex: 0 0 70px;
+    flex: 0 0 40px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      flex: 0 0 70px;
+    }
   }
 `;
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 10px;
-  margin-top: 80px;
+  margin-top: 110px;
   @media ${({ theme }) => theme.minWidth.sm} {
     display: block;
     margin-top: 90px;
