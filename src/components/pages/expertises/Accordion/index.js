@@ -7,11 +7,23 @@ const StyledContainer = styled.section`
   &:last-child {
     border-bottom: ${(props) => props.theme.border.black};
   }
+  h3,
+  p {
+    font-size: 15px;
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 16px;
+    }
+  }
 `;
 const StyledHeader = styled.div`
-  padding: 9px 0;
+  padding: 7px 0;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding: 9px 0;
+  }
   border-top: ${(props) => props.theme.border.black};
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   &:hover {
     & > h3 {

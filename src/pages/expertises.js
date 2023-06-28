@@ -10,6 +10,15 @@ import AnchorNavBar from "components/global/AnchorNavBar";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import Seo from "components/Seo";
 
+const StyledElement = styled(Element)`
+  padding-top: 30px;
+  margin-bottom: 35px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 150px;
+    margin-bottom: 0;
+  }
+`;
+
 const ExpertisesPage = () => {
   const twoPointsSectionRef = useRef(null);
   return (
@@ -33,16 +42,16 @@ const ExpertisesPage = () => {
             twoPointsSectionRef={twoPointsSectionRef}
           />
           {ExpertisesData.map((expertise, index) => (
-            <Element
+            <StyledElement
               key={index}
               name={expertise.title}
               id={expertise.title}
-              style={{ paddingTop: "150px" }}
             >
               <Expertise expertise={expertise} />
-            </Element>
+            </StyledElement>
           ))}
           <TwoPointsSection
+            // style={{ marginTop: "70px" }}
             twoPointsSectionRef={twoPointsSectionRef}
             title1="NOS SOLUTIONS"
             title2="VOUS FORMER"

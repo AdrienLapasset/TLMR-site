@@ -8,9 +8,10 @@ import Cta from "components/global/Cta";
 
 const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
-  margin-top: 200px;
   padding-top: 10px;
+  margin-top: 70px;
   @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 200px;
     padding-top: 15px;
   }
   .grid {
@@ -21,22 +22,24 @@ const StyledContainer = styled.section`
     & > div {
       grid-column: 1 / span 6;
       &:last-child {
+        padding-top: 10px;
         grid-column: 7 / span 6;
         border-top: ${(props) => props.theme.border.black};
         margin-top: 70px;
+        @media ${(props) => props.theme.minWidth.sm} {
+          padding-top: 0px;
+        }
         @media ${(props) => props.theme.minWidth.md} {
           margin-top: 0px;
           border-top: none;
         }
-        h2 {
-          padding-top: 10px;
-          @media ${(props) => props.theme.minWidth.md} {
-            padding-top: 0px;
-          }
-        }
       }
       h2 {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        font-size: 32px;
+        @media ${(props) => props.theme.minWidth.sm} {
+          font-size: inherit;
+        }
         @media ${(props) => props.theme.minWidth.md} {
           margin-bottom: 45px;
         }
@@ -79,9 +82,10 @@ const TwoPointsSection = ({
   twoPointsSectionRef,
   link1,
   link2,
+  style,
 }) => {
   return (
-    <StyledContainer ref={twoPointsSectionRef}>
+    <StyledContainer style={style} ref={twoPointsSectionRef}>
       <Grid className="grid">
         <div>
           <Title size="sm" type="h2">

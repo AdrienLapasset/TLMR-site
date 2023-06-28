@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  margin-left: auto;
+  position: relative;
+  top: -5px;
+  margin-left: 10px;
+  flex-shrink: 0;
   transition: all ${(props) => props.theme.transitionTime}s;
   ${(props) => props.theme.cubicBezier.base};
   width: 12px;

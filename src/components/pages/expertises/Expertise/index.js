@@ -18,6 +18,9 @@ const StyledPoint = styled.aside`
   @media ${(props) => props.theme.minWidth.sm} {
     margin-bottom: 60px;
   }
+  & > div {
+    flex: 0 0 10px;
+  }
   & > span {
     margin-left: 10px;
   }
@@ -52,7 +55,11 @@ const StyledTitleGrid = styled(Grid)`
 `;
 const StyledContentGrid = styled(Grid)`
   display: block;
+  border-top: ${(props) => props.theme.border.black};
+  padding-top: 7px;
   @media ${(props) => props.theme.minWidth.md} {
+    border-top: none;
+    padding-top: 0;
     display: grid;
     grid-template-rows: repeat(2, auto);
     & > * {
@@ -87,6 +94,12 @@ const StyledUseCases = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       column-count: 2;
     }
+    li {
+      font-size: 15px;
+      @media ${(props) => props.theme.minWidth.xl} {
+        font-size: 16px;
+      }
+    }
     & > div {
       display: flex;
       margin-bottom: 10px;
@@ -98,10 +111,14 @@ const StyledUseCases = styled.div`
       }
     }
   }
-  button {
+  & > button {
     margin-left: 17px;
+    font-size: 15px;
     @media ${(props) => props.theme.minWidth.sm} {
       display: none;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 16px;
     }
   }
 `;
@@ -110,7 +127,7 @@ const StyledAdditionalSection = styled.section`
   grid-column: 1 / span 12;
   padding-top: 35px;
   padding: 15px 15px 70px;
-  margin: 0 -15px;
+  margin: 0 -15px 95px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 45px -24px 0;
     padding: 24px 24px 170px;

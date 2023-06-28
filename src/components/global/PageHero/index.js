@@ -6,14 +6,17 @@ import Paragraph from "components/global/Paragraph";
 import { useLocation } from "@reach/router";
 
 const StyledContainer = styled(Grid)`
-  margin: 110px 0 75px;
+  margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: ${({ pathname }) =>
       pathname === "/formations/" ? "230px 0 70px" : "230px 0"};
   }
   h1 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     grid-column: 1/12;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 40px;
+    }
   }
   p {
     &:first-of-type {

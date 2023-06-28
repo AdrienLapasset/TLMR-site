@@ -17,7 +17,7 @@ const StyledContainer = styled.div`
   aside {
     margin-top: 10px;
     font-family: "Söhne Kräftig";
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin-top: 15px;

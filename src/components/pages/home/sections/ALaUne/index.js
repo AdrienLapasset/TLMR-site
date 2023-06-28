@@ -6,10 +6,11 @@ import Paragraph from "components/global/Paragraph";
 import Title from "components/global/Title";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useLocation } from "@reach/router";
 
 const border = css`
   border-top: ${(props) => props.theme.border.black};
-  padding-top: 15px;
+  padding-top: 10px;
 `;
 
 const StyledContainer = styled.div`
@@ -30,7 +31,12 @@ const StyledContainer = styled.div`
       padding-bottom: 0;
     }
     & > h2 {
-      margin-bottom: 40px;
+      font-size: 32px;
+      margin-bottom: 20px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        margin-bottom: 40px;
+        font-size: inherit;
+      }
       @media ${(props) => props.theme.minWidth.md} {
         margin-bottom: 45px;
       }
@@ -132,6 +138,8 @@ const ALaUne = ({ className, home, border }) => {
 
   const articles = data.allSanityArticle.nodes;
 
+  const { pathname } = useLocation();
+
   return (
     <StyledContainer className={className} border={border}>
       <header>
@@ -164,9 +172,11 @@ const ALaUne = ({ className, home, border }) => {
           );
         })}
       </StyledColumns>
-      <Cta to="/actualites" className="mobile">
-        Toutes les actualités
-      </Cta>
+      {pathname === "/" && (
+        <Cta to="/actualites" className="mobile">
+          Toutes les actualités
+        </Cta>
+      )}
     </StyledContainer>
   );
 };
