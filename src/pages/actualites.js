@@ -11,7 +11,7 @@ import Seo from "components/Seo";
 const StyledContainer = styled.div`
   margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 230px 0;
+    margin: 190px 0 -20px;
   }
 `;
 const StyledYearContainer = styled.div`
@@ -59,9 +59,9 @@ const StyledArticleCard = styled(Link)`
     margin: 7px 0 5px;
     &.date {
       font-size: 12px;
-      @media ${(props) => props.theme.minWidth.sm} {
+      /* @media ${(props) => props.theme.minWidth.sm} {
         font-size: inherit;
-      }
+      } */
     }
   }
 `;

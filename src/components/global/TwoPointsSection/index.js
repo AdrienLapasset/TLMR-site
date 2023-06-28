@@ -10,6 +10,9 @@ const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
   padding-top: 10px;
   margin-top: 70px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 15px;
+  }
   @media ${(props) => props.theme.minWidth.md} {
     margin-top: 200px;
     padding-top: 15px;
@@ -84,9 +87,14 @@ const TwoPointsSection = ({
   link1,
   link2,
   style,
+  className,
 }) => {
   return (
-    <StyledContainer style={style} ref={twoPointsSectionRef}>
+    <StyledContainer
+      style={style}
+      className={className}
+      ref={twoPointsSectionRef}
+    >
       <Grid className="grid">
         <div>
           <Title size="sm" type="h2">

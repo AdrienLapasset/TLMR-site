@@ -12,6 +12,7 @@ const StyledContainer = styled(Grid)`
   border-top: ${(props) => props.theme.border.black};
   @media ${(props) => props.theme.minWidth.sm} {
     padding-top: 20px;
+    padding-bottom: 30px;
   }
   @media ${(props) => props.theme.minWidth.md} {
     padding-top: 35px;
@@ -19,10 +20,14 @@ const StyledContainer = styled(Grid)`
   & > .gatsby-image-wrapper {
     max-height: 600px;
     grid-column: 1 / span 12;
+    aspect-ratio: 1.12;
+    @media ${(props) => props.theme.minWidth.sm} {
+      aspect-ratio: 1.85;
+    }
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 1 / span 6;
     }
-    @media ${(props) => props.theme.minWidth.md} {
+    @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 1 / span 7;
     }
   }
@@ -48,6 +53,9 @@ const StyledContainer = styled(Grid)`
     }
     & > ol {
       margin-top: 55px;
+      @media ${(props) => props.theme.minWidth.sm} {
+        margin-top: 45px;
+      }
       li {
         display: flex;
         padding-top: 8px;
@@ -127,7 +135,6 @@ const Eservice = ({
           src="../../../../assets/imgs/placeholder.jpg"
           alt="TLMR - L’excellence accessible"
           quality="90"
-          aspectRatio={1.12}
         />
         <div>
           <Title size="xs" type="h2">

@@ -12,7 +12,7 @@ import Seo from "components/Seo";
 const StyledCabinetContainer = styled.section`
   margin: 160px 0 80px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 230px 0;
+    margin: 230px 0 120px;
   }
   h1 {
     margin-bottom: 30px;
@@ -39,7 +39,8 @@ const StyledLequipeContainer = styled(Grid)`
   h1 {
     margin-bottom: 30px;
     @media ${(props) => props.theme.minWidth.sm} {
-      margin-bottom: 0;
+      margin-bottom: 50px;
+      grid-column: 1 / span 12;
     }
   }
   @media ${(props) => props.theme.minWidth.lg} {
@@ -52,7 +53,7 @@ const StyledLequipeContainer = styled(Grid)`
     @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 1 / span 4;
     }
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       @media ${(props) => props.theme.minWidth.sm} {
         grid-column: 7 / span 6;
       }
@@ -60,17 +61,17 @@ const StyledLequipeContainer = styled(Grid)`
         grid-column: 5 / span 4;
       }
     }
-    &:nth-child(3n) {
+    &:nth-of-type(3n) {
       @media ${(props) => props.theme.minWidth.lg} {
         grid-column: 9 / span 4;
       }
     }
-    &:nth-child(4) {
+    &:nth-of-type(4) {
       @media ${(props) => props.theme.minWidth.lg} {
         grid-column: 1 / span 4;
       }
     }
-    &:nth-child(5) {
+    &:nth-of-type(5) {
       @media ${(props) => props.theme.minWidth.lg} {
         grid-column: 5 / span 4;
       }
@@ -78,6 +79,9 @@ const StyledLequipeContainer = styled(Grid)`
   }
 `;
 const StyledSupportTeam = styled.section`
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 70px;
+  }
   h2 {
     margin-bottom: 10px;
   }

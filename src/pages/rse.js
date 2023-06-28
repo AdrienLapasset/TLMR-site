@@ -6,17 +6,17 @@ import styled from "styled-components";
 import Seo from "components/Seo";
 
 const StyledPageHero = styled(PageHero)`
+  margin-bottom: 190px;
+  @media ${({ theme }) => theme.minWidth.sm} {
+    margin-bottom: 110px;
+  }
   & > h1 {
     font-size: 25px;
     line-height: 30px;
     @media ${({ theme }) => theme.minWidth.sm} {
-      font-size: inherit;
-      line-height: inherit;
+      font-size: 35px;
+      line-height: 40px;
     }
-  }
-  margin-bottom: 190px;
-  @media ${({ theme }) => theme.minWidth.sm} {
-    margin-bottom: 0px;
   }
 `;
 
@@ -25,8 +25,9 @@ const StyledGrid = styled(Grid)`
   padding-top: 10px;
   margin-top: 80px;
   @media ${({ theme }) => theme.minWidth.sm} {
+    padding-top: 20px;
     display: block;
-    margin-top: 90px;
+    margin-top: 120px;
   }
   @media ${({ theme }) => theme.minWidth.md} {
     display: grid;
@@ -42,6 +43,9 @@ const StyledGrid = styled(Grid)`
     font-family: "SöhneBreit Buch", sans-serif;
     margin-bottom: 37px;
     line-height: 60px;
+    @media ${({ theme }) => theme.minWidth.sm} {
+      margin-bottom: 60px;
+    }
     @media ${({ theme }) => theme.minWidth.md} {
       grid-column: 1/2;
       font-size: 120px;

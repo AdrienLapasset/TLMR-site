@@ -12,6 +12,10 @@ const StyledContainer = styled.div`
     font-size: 22px;
     line-height: 26px;
     @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 25px;
+      line-height: 30px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
       line-height: 34px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
@@ -20,7 +24,6 @@ const StyledContainer = styled.div`
   }
   h3 {
     margin-top: 10px;
-
     @media ${(props) => props.theme.minWidth.lg} {
       margin-top: 20px;
     }
@@ -28,7 +31,7 @@ const StyledContainer = styled.div`
   aside {
     color: ${(props) => props.theme.colors.grey};
     margin-bottom: 25px;
-    @media ${(props) => props.theme.minWidth.sm} {
+    @media ${(props) => props.theme.minWidth.md} {
       margin-bottom: 35px;
     }
   }

@@ -12,16 +12,30 @@ import Seo from "components/Seo";
 import SeraphinLegalModal from "components/pages/e-services/SeraphinLegalModal";
 import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 
-const StyledElement = styled(Element)`
+const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
-    padding-top: 150px;
-    margin-bottom: 0;
+    margin: 210px 0 10px;
   }
 `;
-const StyledEserviceContainer = styled(Element)`
+const StyledElement = styled(Element)`
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 90px;
+    margin-bottom: 0;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    padding-top: 150px;
+  }
+`;
+const StyledEserviceContainer = styled.div`
   padding-top: 30px;
   @media ${(props) => props.theme.minWidth.sm} {
     padding-top: 0px;
+  }
+`;
+const StyledTwoPointsSection = styled(TwoPointsSection)`
+  margin-top: 20px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 120px;
   }
 `;
 
@@ -49,7 +63,7 @@ const Eservices = () => {
       <Seo pageTitle="E-services" />
       <Layout>
         <div className="pageAnimation">
-          <PageHero
+          <StyledPageHero
             title="E-SERVICES"
             firstParagraph="Des services en ligne LegalTech pour simplifier et améliorer notre relation et votre rapport au Droit. Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage."
             secondParagraph="L’innovation est au cœur de l’ADN du cabinet Touati La Motte Rouge Avocats et de ses fondateurs, membres fondateurs d’Avotech, l’association des avocats créateurs de LegalTech. Le cabinet a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client. Notre LegalTech Deep Block™, start-up technologique opérateur de Blockchain Légale, est un laboratoire d’innovation pour le cabinet."
@@ -76,8 +90,7 @@ const Eservices = () => {
               )
             )}
           </StyledEserviceContainer>
-          <TwoPointsSection
-            style={{ marginTop: "20px" }}
+          <StyledTwoPointsSection
             twoPointsSectionRef={twoPointsSectionRef}
             title1="VOUS PROTÉGER"
             description1=" Vous protéger en toute circonstance que ce soit pour relever vos défis d’entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à vos diverses problématiques avec rigueur et pragmatisme."

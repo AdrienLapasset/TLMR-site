@@ -8,7 +8,7 @@ import Seo from "components/Seo";
 const StyledTitleContainer = styled.div`
   margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 230px 0 170px;
+    margin: 200px 0 120px;
   }
 `;
 const StyledTitle = styled(Title)`
@@ -17,8 +17,8 @@ const StyledTitle = styled(Title)`
   line-height: 30px;
   font-size: 25px;
   @media ${(props) => props.theme.minWidth.sm} {
-    line-height: inherit;
-    font-size: inherit;
+    font-size: 32px;
+    line-height: 38px;
   }
   span {
     flex: 0 0 40px;
@@ -33,7 +33,8 @@ const StyledGrid = styled(Grid)`
   margin-top: 110px;
   @media ${({ theme }) => theme.minWidth.sm} {
     display: block;
-    margin-top: 90px;
+    margin-top: 120px;
+    padding-top: 20px;
   }
   @media ${({ theme }) => theme.minWidth.md} {
     display: grid;
@@ -49,6 +50,9 @@ const StyledGrid = styled(Grid)`
     font-family: "SöhneBreit Buch", sans-serif;
     margin-bottom: 37px;
     line-height: 60px;
+    @media ${({ theme }) => theme.minWidth.sm} {
+      margin-bottom: 60px;
+    }
     @media ${({ theme }) => theme.minWidth.md} {
       grid-column: 1/2;
       font-size: 120px;

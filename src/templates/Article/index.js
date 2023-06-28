@@ -34,7 +34,6 @@ const StyledContainer = styled.div`
 `;
 const StyledHeader = styled(Grid)`
   display: block;
-
   @media ${(props) => props.theme.minWidth.md} {
     display: grid;
   }
@@ -178,9 +177,6 @@ const StyledContent = styled.section`
     margin: 55px 0 30px;
     font-family: "Söhne Kräftig";
     font-size: 18px;
-    @media ${(props) => props.theme.minWidth.sm} {
-      font-size: 22px;
-    }
     @media ${(props) => props.theme.minWidth.md} {
       font-size: 24px;
     }

@@ -25,7 +25,7 @@ const StyledParagraph = styled.p`
   @media ${({ theme }) => theme.minWidth.sm} {
     font-size: ${({ size }) =>
       size === "sm"
-        ? 12
+        ? 14
         : size === "lg" || size === "xl"
         ? 16
         : size === "xxl"

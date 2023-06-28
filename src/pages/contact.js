@@ -11,7 +11,7 @@ import Seo from "components/Seo";
 const StyledContainer = styled.div`
   margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 230px 0;
+    margin: 180px 0;
   }
   h1 {
     margin-bottom: 30px;
@@ -61,10 +61,11 @@ const StyledMap = styled.iframe`
   aspect-ratio: 1;
   width: 100%;
   border: 0;
-  margin-top: 50px;
+  margin: 50px 0 0;
   filter: grayscale();
   @media ${(props) => props.theme.minWidth.sm} {
     aspect-ratio: 2;
+    margin: 5px 0 -40px;
   }
 `;
 
