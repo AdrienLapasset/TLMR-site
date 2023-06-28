@@ -5,14 +5,14 @@ import affiches from "assets/logos/dansLaPresse/affiches.svg";
 import bfm from "assets/logos/dansLaPresse/bfm.svg";
 import doctrine from "assets/logos/dansLaPresse/doctrine.svg";
 import dsih from "assets/logos/dansLaPresse/dsih.svg";
-import leaders from "assets/logos/dansLaPresse/leaders.svg";
-import lefebvre from "assets/logos/dansLaPresse/lefebvre.svg";
+import leaders from "assets/logos/dansLaPresse/leaders.png";
+import lefebvre from "assets/logos/dansLaPresse/lefebvre.png";
 import legalis from "assets/logos/dansLaPresse/legalis.svg";
 import lepoint from "assets/logos/dansLaPresse/lepoint.svg";
 import lexbase from "assets/logos/dansLaPresse/lexbase.svg";
 import lja from "assets/logos/dansLaPresse/lja.svg";
 import obs from "assets/logos/dansLaPresse/obs.svg";
-import village from "assets/logos/dansLaPresse/village.svg";
+import village from "assets/logos/dansLaPresse/village.png";
 
 const StyledContainer = styled.div`
   margin-top: 110px;
