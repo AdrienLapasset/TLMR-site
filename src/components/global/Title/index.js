@@ -14,7 +14,7 @@ const StyledTitle = styled.h1`
     margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
     font-size: ${({ size }) =>
       size === "xs" ? 28 : size === "sm" || size === "expertise" ? 35 : 45}px;
-    line-height: ${({ size }) => size === "expertise" && 50}px;
+    line-height: ${({ size }) => size === "expertise" && 45}px;
   }
   @media ${(props) => props.theme.minWidth.md} {
     font-size: ${({ size }) =>
@@ -25,6 +25,7 @@ const StyledTitle = styled.h1`
         : size === "expertise"
         ? 40
         : 50}px;
+    line-height: ${({ size }) => size === "expertise" && 50}px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
     font-size: ${({ size }) =>
@@ -35,6 +36,7 @@ const StyledTitle = styled.h1`
         : size === "expertise"
         ? 50
         : 60}px;
+    line-height: ${({ size }) => size === "expertise" && 50}px;
   }
 `;
 

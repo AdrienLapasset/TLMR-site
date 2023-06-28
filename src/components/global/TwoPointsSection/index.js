@@ -27,7 +27,7 @@ const StyledContainer = styled.section`
         border-top: ${(props) => props.theme.border.black};
         margin-top: 70px;
         @media ${(props) => props.theme.minWidth.sm} {
-          padding-top: 0px;
+          padding-top: 15px;
         }
         @media ${(props) => props.theme.minWidth.md} {
           margin-top: 0px;
@@ -38,7 +38,8 @@ const StyledContainer = styled.section`
         margin-bottom: 20px;
         font-size: 32px;
         @media ${(props) => props.theme.minWidth.sm} {
-          font-size: inherit;
+          font-size: 35px;
+          margin-bottom: 40px;
         }
         @media ${(props) => props.theme.minWidth.md} {
           margin-bottom: 45px;

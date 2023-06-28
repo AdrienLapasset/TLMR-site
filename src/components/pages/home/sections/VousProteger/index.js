@@ -10,6 +10,12 @@ const StyledContainer = styled.div`
   margin-top: 80px;
   display: flex;
   flex-direction: column;
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 100px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 160px;
+  }
   .gatsby-image-wrapper {
     margin-bottom: 12px;
     aspect-ratio: 1;
@@ -18,9 +24,6 @@ const StyledContainer = styled.div`
       margin-bottom: 0;
       order: 1;
     }
-  }
-  @media ${(props) => props.theme.minWidth.sm} {
-    margin-top: 160px;
   }
 `;
 

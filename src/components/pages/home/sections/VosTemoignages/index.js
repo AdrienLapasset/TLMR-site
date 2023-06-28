@@ -6,11 +6,17 @@ import Paragraph from "components/global/Paragraph";
 const StyledContainer = styled.div`
   margin-top: 110px;
   @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 100px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
     margin-top: 160px;
   }
   h2 {
     margin-bottom: 30px;
     @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 40px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
       margin-bottom: 60px;
     }
   }

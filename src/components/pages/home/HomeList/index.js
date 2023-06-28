@@ -5,6 +5,9 @@ import { Link } from "gatsby";
 const StyledContainer = styled.div`
   margin: 50px 0 0 0;
   @media ${(props) => props.theme.minWidth.sm} {
+    margin: 70px 0 30px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
     margin: 70px 0 45px;
   }
   div {

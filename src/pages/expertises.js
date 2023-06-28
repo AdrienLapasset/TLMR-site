@@ -10,12 +10,20 @@ import AnchorNavBar from "components/global/AnchorNavBar";
 import ALaUne from "components/pages/home/sections/ALaUne";
 import Seo from "components/Seo";
 
+const StyledPageHero = styled(PageHero)`
+  @media ${(props) => props.theme.minWidth.sm} {
+    margin: 210px 0 10px;
+  }
+`;
 const StyledElement = styled(Element)`
   padding-top: 30px;
   margin-bottom: 35px;
   @media ${(props) => props.theme.minWidth.sm} {
-    padding-top: 150px;
+    padding-top: 120px;
     margin-bottom: 0;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    padding-top: 150px;
   }
 `;
 
@@ -26,7 +34,7 @@ const ExpertisesPage = () => {
       <Seo pageTitle="Expertises" />
       <Layout>
         <div className="pageAnimation">
-          <PageHero
+          <StyledPageHero
             title="Expertises"
             firstParagraph="Le cabinet Touati La Motte Rouge répond à des problématiques diverses
           avec rigueur et pragmatisme. Dans chaque domaine d’expertise, vous

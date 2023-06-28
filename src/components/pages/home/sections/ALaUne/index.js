@@ -11,6 +11,9 @@ import { useLocation } from "@reach/router";
 const border = css`
   border-top: ${(props) => props.theme.border.black};
   padding-top: 10px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 15px;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -30,24 +33,16 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       padding-bottom: 0;
     }
-    & > h2 {
+    h2 {
       font-size: 32px;
       margin-bottom: 20px;
       @media ${(props) => props.theme.minWidth.sm} {
-        margin-bottom: 40px;
-        font-size: inherit;
+        margin-bottom: 0;
+        font-size: 35px;
       }
       @media ${(props) => props.theme.minWidth.md} {
+        font-size: 45px;
         margin-bottom: 45px;
-      }
-    }
-    & > a {
-      margin-bottom: 40px;
-      margin-left: auto;
-      align-self: flex-end;
-      display: none;
-      @media ${(props) => props.theme.minWidth.sm} {
-        display: block;
       }
     }
   }
@@ -57,6 +52,14 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       display: none;
     }
+  }
+`;
+const StyledDesktopCta = styled(Cta)`
+  display: none;
+  @media ${(props) => props.theme.minWidth.sm} {
+    display: block;
+    margin-bottom: 25px;
+    text-align: right;
   }
 `;
 const StyledColumns = styled.div`
@@ -150,8 +153,10 @@ const ALaUne = ({ className, home, border }) => {
             À la une
           </Title>
         )}
-        <Cta to="/actualites">Toutes les actualités</Cta>
       </header>
+      <StyledDesktopCta to="/actualites">
+        Toutes les actualités
+      </StyledDesktopCta>
       <StyledColumns>
         {articles.map(({ title, date, heroImg, slug }) => {
           const thumbImg = getImage(heroImg.asset);

@@ -6,15 +6,14 @@ import Paragraph from "components/global/Paragraph";
 
 const StyledFooter = styled.footer`
   margin-top: 160px;
-  /* margin-top: 175px; */
-  @media ${(props) => props.theme.minWidth.sm} {
+  @media ${(props) => props.theme.minWidth.md} {
     margin-top: 210px;
   }
   border-top: ${(props) => props.theme.border.black};
   img {
     margin: 25px 0 170px;
     @media ${(props) => props.theme.minWidth.sm} {
-      margin: 25px 0 260px;
+      margin: 25px 0 230px;
     }
     @media ${(props) => props.theme.minWidth.md} {
       margin: 25px 0 315px;
@@ -80,6 +79,9 @@ const StyledCopyrightsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 50px 0 20px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding: 20px 0 10px;
+  }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {
       width: 200px;

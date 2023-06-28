@@ -24,15 +24,16 @@ const StyledContainer = styled.div`
     }
   }
   h1 {
-    grid-column: 1 / 10;
     margin-bottom: 20px;
     font-size: 22px;
     line-height: 27px;
     @media ${(props) => props.theme.minWidth.sm} {
       font-size: 25px;
       line-height: 31px;
+      grid-column: 1 / 13;
     }
     @media ${(props) => props.theme.minWidth.lg} {
+      grid-column: 1 / 10;
       font-size: 30px;
       line-height: 39px;
     }

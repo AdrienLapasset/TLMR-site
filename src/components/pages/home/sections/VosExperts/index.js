@@ -7,6 +7,9 @@ import SectionDescription from "components/global/SectionDescription";
 const StyledContainer = styled.div`
   margin-top: 110px;
   @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 90px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
     margin-top: 160px;
   }
 `;

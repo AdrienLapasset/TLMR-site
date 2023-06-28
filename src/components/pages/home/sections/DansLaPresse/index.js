@@ -17,6 +17,9 @@ import village from "assets/logos/dansLaPresse/village.png";
 const StyledContainer = styled.div`
   margin-top: 110px;
   @media ${(props) => props.theme.minWidth.sm} {
+    margin-top: 80px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
     margin-top: 160px;
   }
   h2 {
