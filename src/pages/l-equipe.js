@@ -10,7 +10,7 @@ import lequipeData from "components/pages/lequipe/data";
 import Seo from "components/Seo";
 
 const StyledCabinetContainer = styled.section`
-  margin: 110px 0 75px;
+  margin: 160px 0 80px;
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 230px 0;
   }
@@ -24,7 +24,10 @@ const StyledColumn = styled(Grid)`
     grid-template-columns: repeat(2, 1fr);
   }
   p {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 30px;
+    }
   }
 `;
 const StyledSeeMoreBtn = styled(Cta)`
@@ -33,6 +36,12 @@ const StyledSeeMoreBtn = styled(Cta)`
   }
 `;
 const StyledLequipeContainer = styled(Grid)`
+  h1 {
+    margin-bottom: 30px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 0;
+    }
+  }
   @media ${(props) => props.theme.minWidth.lg} {
     margin-bottom: 110px;
   }
@@ -147,11 +156,11 @@ const Lequipe = () => {
           <StyledSeeMoreBtn
             onClick={() => setIsParagraphHidden(!isParagraphHidden)}
           >
-            Voir plus
+            Voir {isParagraphHidden ? "plus" : "moins"}
           </StyledSeeMoreBtn>
         </StyledCabinetContainer>
-        <Title type="h1">Notre équipe</Title>
         <StyledLequipeContainer>
+          <Title type="h1">Notre équipe</Title>
           {lequipeData.map(
             ({
               imgName,

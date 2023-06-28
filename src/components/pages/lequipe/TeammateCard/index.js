@@ -10,20 +10,27 @@ const StyledContainer = styled.div`
   h3,
   aside {
     font-size: 22px;
+    line-height: 26px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      line-height: 34px;
+    }
     @media ${(props) => props.theme.minWidth.lg} {
       font-size: 30px;
     }
   }
   h3 {
-    line-height: 34px;
     margin-top: 10px;
+
     @media ${(props) => props.theme.minWidth.lg} {
       margin-top: 20px;
     }
   }
   aside {
     color: ${(props) => props.theme.colors.grey};
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 35px;
+    }
   }
   p {
     margin-bottom: 30px;

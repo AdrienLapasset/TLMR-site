@@ -12,6 +12,19 @@ import Seo from "components/Seo";
 import SeraphinLegalModal from "components/pages/e-services/SeraphinLegalModal";
 import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 
+const StyledElement = styled(Element)`
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 150px;
+    margin-bottom: 0;
+  }
+`;
+const StyledEserviceContainer = styled(Element)`
+  padding-top: 30px;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding-top: 0px;
+  }
+`;
+
 const Eservices = () => {
   const [isDeepBlockModalModal, setIsDeepBlockModalModal] = useState(false);
   const [isSeraphinLegalModal, setIsSeraphinLegalModal] = useState(false);
@@ -46,27 +59,25 @@ const Eservices = () => {
             twoPointsSectionRef={twoPointsSectionRef}
             eservices
           />
-          {EservicesData.map(
-            ({ title, description, points, btns, imgPath }) => (
-              <Element
-                key={title}
-                name={title}
-                id={title}
-                style={{ paddingTop: "150px" }}
-              >
-                <Eservice
-                  title={title}
-                  description={description}
-                  points={points}
-                  btns={btns}
-                  imgPath={imgPath}
-                  handleDeepBlockModal={handleDeepBlockModal}
-                  handleSeraphinLegalModal={handleSeraphinLegalModal}
-                />
-              </Element>
-            )
-          )}
+          <StyledEserviceContainer>
+            {EservicesData.map(
+              ({ title, description, points, btns, imgPath }) => (
+                <StyledElement key={title} name={title} id={title}>
+                  <Eservice
+                    title={title}
+                    description={description}
+                    points={points}
+                    btns={btns}
+                    imgPath={imgPath}
+                    handleDeepBlockModal={handleDeepBlockModal}
+                    handleSeraphinLegalModal={handleSeraphinLegalModal}
+                  />
+                </StyledElement>
+              )
+            )}
+          </StyledEserviceContainer>
           <TwoPointsSection
+            style={{ marginTop: "20px" }}
             twoPointsSectionRef={twoPointsSectionRef}
             title1="VOUS PROTÉGER"
             description1=" Vous protéger en toute circonstance que ce soit pour relever vos défis d’entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à vos diverses problématiques avec rigueur et pragmatisme."

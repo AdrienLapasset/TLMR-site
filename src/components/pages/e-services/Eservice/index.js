@@ -7,6 +7,7 @@ import Title from "components/global/Title";
 import Paragraph from "components/global/Paragraph";
 
 const StyledContainer = styled(Grid)`
+  padding-bottom: 90px;
   padding-top: 15px;
   border-top: ${(props) => props.theme.border.black};
   @media ${(props) => props.theme.minWidth.sm} {
@@ -43,7 +44,7 @@ const StyledContainer = styled(Grid)`
       }
     }
     & > p {
-      margin-top: 30px;
+      margin-top: 35px;
     }
     & > ol {
       margin-top: 55px;
@@ -61,7 +62,7 @@ const StyledContainer = styled(Grid)`
           margin-right: 30px;
           position: relative;
           top: -15px;
-          flex: 0 0 40px;
+          flex: 0 0 50px;
           @media ${(props) => props.theme.minWidth.sm} {
             flex: 0 0 200px;
           }
@@ -80,11 +81,11 @@ const StyledContainer = styled(Grid)`
         border-radius: 100px;
         padding: 5px 15px 6px;
         text-align: left;
-        font-size: 15px;
+        font-size: 14px;
         &:nth-child(1) {
           background-color: ${(props) => props.theme.colors.blackLight};
           color: white;
-          margin: 30px 0 10px;
+          margin: 35px 0 10px;
           @media ${(props) => props.theme.minWidth.md} {
             margin: 60px 0 10px;
           }

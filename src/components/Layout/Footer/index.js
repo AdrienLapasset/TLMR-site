@@ -35,11 +35,15 @@ const StyledLinksContainer = styled.div`
   h3 {
     color: ${(props) => props.theme.colors.greyLight};
     margin-bottom: 7px;
+    font-size: 14px;
   }
   a > p {
-    margin-bottom: 3px;
+    font-size: 14px;
     &:hover {
       color: ${(props) => props.theme.colors.grey};
+    }
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 3px;
     }
   }
   & > div {

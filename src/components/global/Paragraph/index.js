@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledParagraph = styled.p`
   font-size: ${({ size }) =>
     size === "sm"
-      ? 12
+      ? 14
       : size === "lg" || size === "xl"
       ? 16
       : size === "xxl"

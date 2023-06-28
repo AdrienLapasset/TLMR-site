@@ -8,12 +8,13 @@ const StyledTitle = styled.h1`
   text-transform: ${({ lowercase }) => (lowercase ? "none" : "uppercase")};
   font-size: ${({ size }) =>
     size === "xs" ? 28 : size === "sm" || size === "expertise" ? 28 : 32}px;
-  line-height: ${({ size }) => size === "expertise" && 34}px;
+  line-height: ${({ size }) =>
+    size === "xs" ? 34 : size === "expertise" && 34}px;
   @media ${({ theme }) => theme.minWidth.sm} {
-    line-height: ${({ size }) => size === "expertise" && 50}px;
     margin-bottom: ${({ size }) => (size === "sm" ? 10 : 40)}px;
     font-size: ${({ size }) =>
       size === "xs" ? 28 : size === "sm" || size === "expertise" ? 35 : 45}px;
+    line-height: ${({ size }) => size === "expertise" && 50}px;
   }
   @media ${(props) => props.theme.minWidth.md} {
     font-size: ${({ size }) =>

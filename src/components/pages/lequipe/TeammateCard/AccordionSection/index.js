@@ -5,7 +5,10 @@ import Paragraph from "components/global/Paragraph";
 
 const StyledContainer = styled.section``;
 const StyledHeader = styled.div`
-  padding: 9px 0;
+  padding: 7px 0;
+  @media ${(props) => props.theme.minWidth.sm} {
+    padding: 9px 0;
+  }
   border-bottom: ${(props) => props.theme.border.greyLightest};
   display: flex;
   cursor: pointer;
