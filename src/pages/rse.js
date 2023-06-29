@@ -13,6 +13,9 @@ const StyledPageHero = styled(PageHero)`
   @media ${({ theme }) => theme.minWidth.md} {
     margin: 210px 0;
   }
+  @media ${({ theme }) => theme.minWidth.lg} {
+    margin: 280px 0;
+  }
   & > h1 {
     font-size: 25px;
     line-height: 30px;
@@ -23,6 +26,14 @@ const StyledPageHero = styled(PageHero)`
     @media ${(props) => props.theme.minWidth.md} {
       font-size: 35px;
       line-height: 40px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 50px;
+      line-height: 50px;
     }
   }
 `;

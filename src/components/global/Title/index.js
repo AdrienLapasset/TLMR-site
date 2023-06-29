@@ -27,6 +27,17 @@ const StyledTitle = styled.h1`
         : 50}px;
     line-height: ${({ size }) => size === "expertise" && 50}px;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    font-size: ${({ size }) =>
+      size === "xs"
+        ? 28
+        : size === "sm"
+        ? 35
+        : size === "expertise"
+        ? 40
+        : 55}px;
+    line-height: ${({ size }) => size === "expertise" && 45}px;
+  }
   @media ${(props) => props.theme.minWidth.xl} {
     font-size: ${({ size }) =>
       size === "xs"

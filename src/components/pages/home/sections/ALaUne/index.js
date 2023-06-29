@@ -14,8 +14,10 @@ const border = css`
   @media ${(props) => props.theme.minWidth.sm} {
     padding-top: 15px;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    padding-top: 30px;
+  }
 `;
-
 const StyledContainer = styled.div`
   ${(props) => (props.border ? border : null)}
   margin-top: 70px;
@@ -45,8 +47,8 @@ const StyledContainer = styled.div`
         margin-bottom: ${({ home }) => (home ? 20 : 0)}px;
       }
       @media ${(props) => props.theme.minWidth.lg} {
-        font-size: 45px;
-        margin-bottom: 45px;
+        font-size: ${({ home }) => (home ? 55 : 40)}px;
+        line-height: ${({ home }) => (home ? 70 : 35)}px;
       }
     }
   }

@@ -33,6 +33,10 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.md} {
       margin-bottom: 50px;
     }
+    @media ${(props) => props.theme.minWidth.lg} {
+      margin-bottom: 50px;
+      font-size: 45px;
+    }
   }
 `;
 const StyledGrid = styled.div`

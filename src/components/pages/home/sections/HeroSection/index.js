@@ -36,6 +36,7 @@ const StyledContainer = styled.div`
       grid-column: 1 / 10;
       font-size: 30px;
       line-height: 39px;
+      margin-bottom: 35px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 36px;

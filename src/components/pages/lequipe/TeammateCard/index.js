@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
       font-size: 25px;
       line-height: 30px;
     }
-    @media ${(props) => props.theme.minWidth.lg} {
+    @media ${(props) => props.theme.minWidth.xl} {
       font-size: 30px;
       line-height: 34px;
     }

@@ -117,6 +117,9 @@ const StyledInfoLabel = styled(Paragraph)`
   @media ${(props) => props.theme.minWidth.md} {
     font-size: 13px;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    font-size: 14px;
+  }
 `;
 const StyledDesktopContentInfo = styled.div`
   display: none;
@@ -134,6 +137,9 @@ const StyledDesktopContentInfo = styled.div`
 `;
 const StyledInfo = styled(Paragraph)`
   margin: 5px 0 20px;
+  @media ${(props) => props.theme.minWidth.lg} {
+    font-size: 15px;
+  }
 `;
 const StyledContentContainer = styled(Grid)`
   display: block;
@@ -183,7 +189,8 @@ const StyledContent = styled.section`
       line-height: 28px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      font-size: 26px;
+      font-size: 22px;
+      line-height: 30px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 28px;
@@ -231,11 +238,12 @@ const StyledContent = styled.section`
   p,
   li {
     font-size: 18px;
-    @media ${(props) => props.theme.minWidth.lg} {
+    @media ${(props) => props.theme.minWidth.md} {
       font-size: 20px;
     }
-    @media ${(props) => props.theme.minWidth.xl} {
+    @media ${(props) => props.theme.minWidth.lg} {
       font-size: 22px;
+      line-height: 30px;
     }
   }
 `;

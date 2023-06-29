@@ -10,6 +10,9 @@ const StyledCta = css`
   @media ${(props) => props.theme.minWidth.md} {
     font-size: 15px;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    font-size: 16px;
+  }
   &:hover {
     color: ${(props) => props.theme.colors.grey};
     & * {

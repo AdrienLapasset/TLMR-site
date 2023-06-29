@@ -48,6 +48,9 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.md} {
           margin-bottom: 45px;
         }
+        @media ${(props) => props.theme.minWidth.lg} {
+          font-size: 40px;
+        }
       }
       & > div {
         margin-bottom: 90px;
@@ -75,6 +78,9 @@ const StyledContainer = styled.section`
           }
           @media ${(props) => props.theme.minWidth.md} {
             font-size: 15px;
+          }
+          @media ${(props) => props.theme.minWidth.lg} {
+            font-size: 16px;
           }
         }
         a {

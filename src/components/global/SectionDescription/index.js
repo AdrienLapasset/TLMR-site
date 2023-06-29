@@ -20,6 +20,9 @@ const StyledContainer = styled.div`
       line-height: 26px;
       margin-top: ${({ column }) => column && -8}px;
     }
+    @media ${(props) => props.theme.minWidth.lg} {
+      grid-column: ${({ column }) => !column && "1/8"};
+    }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 25px;
       line-height: 31px;

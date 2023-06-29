@@ -20,6 +20,7 @@ const StyledContainer = styled.div`
       margin-bottom: 40px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 45px;
       margin-bottom: 60px;
     }
   }
@@ -27,6 +28,9 @@ const StyledContainer = styled.div`
     font-size: 16px;
     @media ${(props) => props.theme.minWidth.sm} {
       font-size: 15px;
+    }
+    @media ${(props) => props.theme.minWidth.lg} {
+      font-size: 16px;
     }
   }
   aside {

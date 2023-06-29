@@ -28,9 +28,6 @@ const StyledContainer = styled(Grid)`
       aspect-ratio: 1.1;
       grid-column: 1 / span 6;
     }
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 1 / span 7;
-    }
   }
   & > div:last-of-type {
     grid-column: 1 / span 12;
@@ -40,7 +37,7 @@ const StyledContainer = styled(Grid)`
       top: -8px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 9 / span 5;
+      grid-column: 8 / 13;
     }
     h2 {
       margin-top: 10px;
@@ -51,6 +48,10 @@ const StyledContainer = styled(Grid)`
         margin-top: 0px;
         font-size: 22px;
         line-height: 27px;
+      }
+      @media ${(props) => props.theme.minWidth.lg} {
+        font-size: 25px;
+        line-height: 30px;
       }
     }
     & > p {
