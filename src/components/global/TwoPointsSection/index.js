@@ -34,6 +34,7 @@ const StyledContainer = styled.section`
         }
         @media ${(props) => props.theme.minWidth.md} {
           margin-top: 0px;
+          padding-top: 0;
           border-top: none;
         }
       }
@@ -60,11 +61,20 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.xl} {
           grid-column-gap: ${(props) => props.theme.columnGap.desktop};
         }
+        .gatsby-image-wrapper {
+          aspect-ratio: 1.6;
+          @media ${(props) => props.theme.minWidth.md} {
+            aspect-ratio: 1.2;
+          }
+        }
         p {
           margin-top: 7px;
           @media ${(props) => props.theme.minWidth.sm} {
             margin-top: 0px;
             transform: translateY(-5px);
+          }
+          @media ${(props) => props.theme.minWidth.md} {
+            font-size: 15px;
           }
         }
         a {

@@ -59,9 +59,6 @@ const StyledArticleCard = styled(Link)`
     margin: 7px 0 5px;
     &.date {
       font-size: 12px;
-      /* @media ${(props) => props.theme.minWidth.sm} {
-        font-size: inherit;
-      } */
     }
   }
 `;

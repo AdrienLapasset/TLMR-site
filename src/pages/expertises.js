@@ -22,7 +22,7 @@ const StyledElement = styled(Element)`
     padding-top: 120px;
     margin-bottom: 0;
   }
-  @media ${(props) => props.theme.minWidth.md} {
+  @media ${(props) => props.theme.minWidth.lg} {
     padding-top: 150px;
   }
 `;
@@ -59,7 +59,6 @@ const ExpertisesPage = () => {
             </StyledElement>
           ))}
           <TwoPointsSection
-            // style={{ marginTop: "70px" }}
             twoPointsSectionRef={twoPointsSectionRef}
             title1="NOS SOLUTIONS"
             title2="VOUS FORMER"

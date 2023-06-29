@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
   }
   h1 {
     margin-bottom: 30px;
-    @media ${(props) => props.theme.minWidth.lg} {
+    @media ${(props) => props.theme.minWidth.md} {
       margin-bottom: 40px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
@@ -40,7 +40,6 @@ const StyledContainer = styled.div`
           margin-bottom: 5px;
           @media ${(props) => props.theme.minWidth.sm} {
             margin-bottom: 7px;
-            font-size: inherit;
           }
         }
       }
@@ -53,7 +52,6 @@ const StyledContainer = styled.div`
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
       text-underline-offset: 7px;
-      /* line-height: 37px; */
     }
   }
 `;
@@ -66,6 +64,9 @@ const StyledMap = styled.iframe`
   @media ${(props) => props.theme.minWidth.sm} {
     aspect-ratio: 2;
     margin: 5px 0 -40px;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin: 40px 0 -40px;
   }
 `;
 

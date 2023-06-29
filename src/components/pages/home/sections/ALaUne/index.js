@@ -41,6 +41,10 @@ const StyledContainer = styled.div`
         font-size: 35px;
       }
       @media ${(props) => props.theme.minWidth.md} {
+        font-size: ${({ home }) => (home ? 50 : 35)}px;
+        margin-bottom: ${({ home }) => (home ? 20 : 0)}px;
+      }
+      @media ${(props) => props.theme.minWidth.lg} {
         font-size: 45px;
         margin-bottom: 45px;
       }
@@ -60,6 +64,9 @@ const StyledDesktopCta = styled(Cta)`
     display: block;
     margin-bottom: 25px;
     text-align: right;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-bottom: 30px;
   }
 `;
 const StyledColumns = styled.div`
@@ -144,7 +151,7 @@ const ALaUne = ({ className, home, border }) => {
   const { pathname } = useLocation();
 
   return (
-    <StyledContainer className={className} border={border}>
+    <StyledContainer className={className} border={border} home={home}>
       <header>
         {home ? (
           <SectionTitle aside="Actualités" title="À LA UNE" />

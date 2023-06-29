@@ -14,6 +14,9 @@ const StyledContainer = styled.div`
     margin-top: 100px;
   }
   @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 160px;
   }
   .gatsby-image-wrapper {

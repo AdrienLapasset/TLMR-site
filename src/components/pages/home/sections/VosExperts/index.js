@@ -10,6 +10,9 @@ const StyledContainer = styled.div`
     margin-top: 90px;
   }
   @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 160px;
   }
 `;

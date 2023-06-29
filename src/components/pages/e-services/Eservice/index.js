@@ -25,18 +25,21 @@ const StyledContainer = styled(Grid)`
       aspect-ratio: 1.85;
     }
     @media ${(props) => props.theme.minWidth.md} {
+      aspect-ratio: 1.1;
       grid-column: 1 / span 6;
     }
     @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 1 / span 7;
     }
   }
-  & > div {
+  & > div:last-of-type {
     grid-column: 1 / span 12;
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 8 / span 6;
+      position: relative;
+      top: -8px;
     }
-    @media ${(props) => props.theme.minWidth.md} {
+    @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 9 / span 5;
     }
     h2 {
@@ -46,10 +49,19 @@ const StyledContainer = styled(Grid)`
       }
       @media ${(props) => props.theme.minWidth.md} {
         margin-top: 0px;
+        font-size: 22px;
+        line-height: 27px;
       }
     }
     & > p {
       margin-top: 35px;
+      @media ${(props) => props.theme.minWidth.md} {
+        font-size: 15px;
+        line-height: 19px;
+      }
+      &:first-of-type {
+        margin-top: -10px;
+      }
     }
     & > ol {
       margin-top: 55px;

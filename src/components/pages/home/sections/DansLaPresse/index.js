@@ -20,12 +20,18 @@ const StyledContainer = styled.div`
     margin-top: 80px;
   }
   @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 160px;
   }
   h2 {
     margin-bottom: 40px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 70px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      margin-bottom: 50px;
     }
   }
 `;

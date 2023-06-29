@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
     margin: 70px 0 30px;
   }
   @media ${(props) => props.theme.minWidth.md} {
-    margin: 70px 0 45px;
+    margin: 55px 0 30px;
   }
   div {
     display: flex;

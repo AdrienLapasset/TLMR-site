@@ -9,6 +9,9 @@ const StyledContainer = styled.div`
     margin-top: 100px;
   }
   @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 160px;
   }
   h2 {
@@ -16,8 +19,14 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 40px;
     }
-    @media ${(props) => props.theme.minWidth.md} {
+    @media ${(props) => props.theme.minWidth.lg} {
       margin-bottom: 60px;
+    }
+  }
+  p {
+    font-size: 16px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 15px;
     }
   }
   aside {

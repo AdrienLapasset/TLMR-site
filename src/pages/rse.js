@@ -10,6 +10,9 @@ const StyledPageHero = styled(PageHero)`
   @media ${({ theme }) => theme.minWidth.sm} {
     margin-bottom: 110px;
   }
+  @media ${({ theme }) => theme.minWidth.md} {
+    margin: 210px 0;
+  }
   & > h1 {
     font-size: 25px;
     line-height: 30px;
@@ -17,9 +20,12 @@ const StyledPageHero = styled(PageHero)`
       font-size: 35px;
       line-height: 40px;
     }
+    @media ${(props) => props.theme.minWidth.md} {
+      font-size: 35px;
+      line-height: 40px;
+    }
   }
 `;
-
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
   padding-top: 10px;
@@ -47,7 +53,11 @@ const StyledGrid = styled(Grid)`
       margin-bottom: 60px;
     }
     @media ${({ theme }) => theme.minWidth.md} {
-      grid-column: 1/2;
+      font-size: 80px;
+      line-height: 60px;
+    }
+    @media ${({ theme }) => theme.minWidth.lg} {
+      /* grid-column: 1/2; */
       font-size: 120px;
       line-height: 90px;
     }

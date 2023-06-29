@@ -11,6 +11,9 @@ const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
     margin-bottom: 35px;
   }
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-bottom: 80px;
+  }
 `;
 const StyledALaUne = styled(ALaUne)`
   @media ${(props) => props.theme.minWidth.sm} {
@@ -27,6 +30,9 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.sm} {
       aspect-ratio: 2.1;
       margin-bottom: 75px;
+    }
+    @media ${(props) => props.theme.minWidth.md} {
+      margin-bottom: 0px;
     }
   }
 `;

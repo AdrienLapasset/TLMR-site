@@ -20,6 +20,10 @@ const StyledTitle = styled(Title)`
     font-size: 32px;
     line-height: 38px;
   }
+  @media ${(props) => props.theme.minWidth.md} {
+    font-size: 35px;
+    line-height: 40px;
+  }
   span {
     flex: 0 0 40px;
     @media ${(props) => props.theme.minWidth.sm} {
@@ -54,7 +58,11 @@ const StyledGrid = styled(Grid)`
       margin-bottom: 60px;
     }
     @media ${({ theme }) => theme.minWidth.md} {
-      grid-column: 1/2;
+      font-size: 80px;
+      line-height: 60px;
+    }
+    @media ${({ theme }) => theme.minWidth.lg} {
+      /* grid-column: 1/2; */
       font-size: 120px;
       line-height: 90px;
     }

@@ -51,6 +51,7 @@ const StyledHeader = styled(Grid)`
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 3 / span 10;
       font-size: 40px;
+      line-height: 50px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 4 / span 9;
@@ -62,7 +63,6 @@ const StyledHeader = styled(Grid)`
     }
   }
 `;
-
 const StyledMobileInfo = styled.div`
   margin-top: 25px;
   display: grid;
@@ -114,8 +114,8 @@ const StyledDesktopInfo = styled.div`
 const StyledInfoLabel = styled(Paragraph)`
   font-family: "Söhne Kräftig", sans-serif;
   font-size: 12px;
-  @media ${(props) => props.theme.minWidth.sm} {
-    font-size: inherit;
+  @media ${(props) => props.theme.minWidth.md} {
+    font-size: 13px;
   }
 `;
 const StyledDesktopContentInfo = styled.div`
@@ -177,8 +177,10 @@ const StyledContent = styled.section`
     margin: 55px 0 30px;
     font-family: "Söhne Kräftig";
     font-size: 18px;
+    line-height: 25px;
     @media ${(props) => props.theme.minWidth.md} {
-      font-size: 24px;
+      font-size: 20px;
+      line-height: 28px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
       font-size: 26px;
