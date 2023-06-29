@@ -50,6 +50,9 @@ const StyledContainer = styled.div`
         font-size: ${({ home }) => (home ? 55 : 40)}px;
         line-height: ${({ home }) => (home ? 70 : 35)}px;
       }
+      @media ${(props) => props.theme.minWidth.xl} {
+        font-size: ${({ home }) => (home ? 60 : 45)}px;
+      }
     }
   }
   a.mobile {

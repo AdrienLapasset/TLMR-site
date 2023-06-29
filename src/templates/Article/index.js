@@ -193,7 +193,8 @@ const StyledContent = styled.section`
       line-height: 30px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      font-size: 28px;
+      font-size: 25px;
+      line-height: 35px;
     }
   }
   h3 {
@@ -244,6 +245,10 @@ const StyledContent = styled.section`
     @media ${(props) => props.theme.minWidth.lg} {
       font-size: 22px;
       line-height: 30px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 25px;
+      line-height: 35px;
     }
   }
 `;

@@ -51,6 +51,9 @@ const StyledTitleGrid = styled(Grid)`
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 1 / 8;
     }
+    @media ${(props) => props.theme.minWidth.xl} {
+      grid-column: 1 / 10;
+    }
   }
 `;
 const StyledContentGrid = styled(Grid)`
@@ -93,6 +96,9 @@ const StyledUseCases = styled.div`
     border-top: ${(props) => props.theme.border.black};
     @media ${(props) => props.theme.minWidth.sm} {
       column-count: 2;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      padding-top: 10px;
     }
     li {
       font-size: 15px;
@@ -140,7 +146,7 @@ const StyledAdditionalSection = styled.section`
     padding: 24px 32px 170px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin: 90px -45px;
+    margin: 90px -45px 0;
     padding: 24px 45px 170px;
   }
   & > div {

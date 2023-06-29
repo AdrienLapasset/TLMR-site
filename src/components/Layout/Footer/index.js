@@ -32,6 +32,9 @@ const StyledLinksContainer = styled.div`
     color: ${(props) => props.theme.colors.greyLight};
     margin-bottom: 7px;
     font-size: 14px;
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 16px;
+    }
   }
   a > p {
     font-size: 14px;
@@ -40,6 +43,9 @@ const StyledLinksContainer = styled.div`
     }
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 3px;
+    }
+    @media ${(props) => props.theme.minWidth.xl} {
+      font-size: 16px;
     }
   }
   & > div {

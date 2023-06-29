@@ -9,11 +9,10 @@ const StyledContainer = styled.div`
     margin-bottom: ${({ aside }) => (aside === "Actualités" ? -3 : -5)}px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: ${({ aside }) => (aside === "Actualités" ? -5 : -8)}px;
-
       font-size: 14px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      margin-bottom: ${({ aside }) => (aside === "Actualités" ? -7 : -10)}px;
+      margin-bottom: ${({ aside }) => (aside === "Actualités" ? 0 : -10)}px;
       font-size: 16px;
     }
   }
@@ -29,6 +28,10 @@ const StyledTitle = styled(Title)`
   @media ${(props) => props.theme.minWidth.lg} {
     margin-bottom: 65px;
     font-size: 55px;
+    line-height: 70px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    font-size: 60px;
     line-height: 70px;
   }
 `;

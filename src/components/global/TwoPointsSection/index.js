@@ -51,6 +51,9 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.lg} {
           font-size: 40px;
         }
+        @media ${(props) => props.theme.minWidth.lg} {
+          font-size: 45px;
+        }
       }
       & > div {
         margin-bottom: 90px;
