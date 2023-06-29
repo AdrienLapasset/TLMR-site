@@ -113,7 +113,6 @@ const StyledNews = styled(Link)`
       font-size: 18px;
     }
   }
-
   &:nth-child(3),
   &:nth-child(4) {
     display: ${({ home }) => !home && "none"};

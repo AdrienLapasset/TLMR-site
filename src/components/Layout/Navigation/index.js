@@ -25,14 +25,12 @@ const StyledNav = styled.nav`
   );
   @media ${(props) => props.theme.minWidth.sm} {
     height: ${(props) => (props.isNavOpen ? "100vh" : "70px")};
-    padding: 21px 69px;
-    margin-left: -45px;
-    margin-right: -45px;
+    padding: 21px 24px;
     transform: translateY(${({ isNavHidden }) => (isNavHidden ? -70 : 0)}px);
   }
   @media ${(props) => props.theme.minWidth.lg} {
     position: sticky;
-    padding: 21px 45px;
+    padding: 21px 32px;
     transform: translateY(
       ${({ isNavHidden, theme }) => (isNavHidden ? -theme.headerHeight : 0)}px
     );
@@ -45,6 +43,7 @@ const StyledNav = styled.nav`
   }
   @media ${(props) => props.theme.minWidth.xl} {
     grid-column-gap: ${(props) => props.theme.columnGap.desktop};
+    padding: 21px 45px;
   }
   img {
     height: 24px;

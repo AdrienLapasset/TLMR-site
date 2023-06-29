@@ -53,6 +53,9 @@ const StyledImg = styled.img`
   @media ${(props) => props.theme.minWidth.sm} {
     display: block;
   }
+  @media ${(props) => props.theme.minWidth.lg} {
+    max-width: 160px;
+  }
 `;
 
 const logosList = [
