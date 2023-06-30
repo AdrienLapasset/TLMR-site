@@ -89,31 +89,43 @@ const StyledUseCases = styled.div`
     padding-bottom: 0px;
   }
   & > h3 {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      margin-bottom: 10px;
+    }
   }
-  & > ul {
+  & > div {
     padding-top: 7px;
     border-top: ${(props) => props.theme.border.black};
     @media ${(props) => props.theme.minWidth.sm} {
-      column-count: 2;
+      padding-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: ${(props) => props.theme.columnGap.mobile};
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      padding-top: 10px;
+      grid-column-gap: ${(props) => props.theme.columnGap.desktop};
     }
-    li {
-      font-size: 15px;
-      @media ${(props) => props.theme.minWidth.xl} {
-        font-size: 16px;
+    & > ul {
+      &:last-of-type {
+        display: ${({ isSeeMoreUseCases }) =>
+          isSeeMoreUseCases ? "block" : "none"};
       }
-    }
-    & > div {
-      display: flex;
-      margin-bottom: 10px;
-      @media ${(props) => props.theme.minWidth.sm} {
-        margin-bottom: 15px;
+      li {
+        font-size: 15px;
+        @media ${(props) => props.theme.minWidth.xl} {
+          font-size: 16px;
+        }
       }
-      & > aside {
-        margin-right: 7px;
+      & > div {
+        display: flex;
+        margin-bottom: 10px;
+        @media ${(props) => props.theme.minWidth.sm} {
+          margin-bottom: 15px;
+        }
+        & > aside {
+          margin-right: 7px;
+        }
       }
     }
   }
@@ -168,18 +180,14 @@ const StyledAdditionalSection = styled.section`
 `;
 
 const Expertise = ({ expertise }) => {
-  const [useCases, setUseCases] = useState(expertise.useCases);
   const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(true);
-
+  console.log(expertise.useCases);
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    screenWidth < 768 && setUseCases((useCases) => useCases.slice(0, 2));
+    screenWidth < 768 && setIsSeeMoreUseCases(false);
   }, []);
 
   const handleSeeMoreUseCases = () => {
-    isSeeMoreUseCases
-      ? setUseCases(expertise.useCases)
-      : setUseCases(useCases.slice(0, 2));
     setIsSeeMoreUseCases(!isSeeMoreUseCases);
   };
 
@@ -215,23 +223,33 @@ const Expertise = ({ expertise }) => {
             <Accordion key={title} title={title} content={content} />
           ))}
         </StyledAccordionContainer>
-        <StyledUseCases>
+        <StyledUseCases isSeeMoreUseCases={isSeeMoreUseCases}>
           <h3>Exemples de cas traités</h3>
-          <ul>
-            {useCases.map((content, index) => (
-              <div key={index}>
-                <aside>→</aside>
-                <Paragraph color="greyLight" as="li">
-                  {content}
-                </Paragraph>
-              </div>
-            ))}
-          </ul>
-          {expertise.useCases.length > 5 && (
-            <Cta as="button" onClick={handleSeeMoreUseCases}>
-              Voir {isSeeMoreUseCases ? "plus" : "moins"}
-            </Cta>
-          )}
+          <div>
+            <ul>
+              {expertise?.useCases[0].map((li, index) => (
+                <div key={index}>
+                  <aside>→</aside>
+                  <Paragraph color="greyLight" as="li">
+                    {li}
+                  </Paragraph>
+                </div>
+              ))}
+            </ul>
+            <ul>
+              {expertise?.useCases[1].map((li, index) => (
+                <div key={index}>
+                  <aside>→</aside>
+                  <Paragraph color="greyLight" as="li">
+                    {li}
+                  </Paragraph>
+                </div>
+              ))}
+            </ul>
+          </div>
+          <Cta as="button" onClick={handleSeeMoreUseCases}>
+            Voir {isSeeMoreUseCases ? "moins" : "plus"}
+          </Cta>
         </StyledUseCases>
         {expertise.additionalSection && (
           <StyledAdditionalSection>

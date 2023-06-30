@@ -28,13 +28,17 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Gestion des recouvrements de charge pour des leaders du secteur de l’administration de bien.",
-      "Contentieux d’annulation d’assemblée générale de copropriété (demande / défense).",
-      "Assistance d’un syndic dans le cadre d’une expertise en malfaçons et vice de construction.",
-      "Contestation de refus de permis de construire.",
-      "Défense d’un architecte dans le cadre de sa RCP.",
-      "Accompagnement de deux sociétés du CAC 40 (secteur banque assurance) sur la contractualisation de projets IT/RGPD immobiliers informatiques immeubles connectés.",
-      "Négociation et rédaction de baux commerciaux.",
+      [
+        "Gestion des recouvrements de charge pour des leaders du secteur de l’administration de bien.",
+        "Contentieux d’annulation d’assemblée générale de copropriété (demande / défense).",
+        "Assistance d’un syndic dans le cadre d’une expertise en malfaçons et vice de construction.",
+        "Contestation de refus de permis de construire.",
+      ],
+      [
+        "Défense d’un architecte dans le cadre de sa RCP.",
+        "Accompagnement de deux sociétés du CAC 40 (secteur banque assurance) sur la contractualisation de projets IT/RGPD immobiliers informatiques immeubles connectés.",
+        "Négociation et rédaction de baux commerciaux.",
+      ],
     ],
   },
   {
@@ -67,11 +71,15 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Défense de plusieurs e-commercants devant la DGCCRF et DDPP dans le cadre de contrôle diligentés sur le fondement de pratiques commerciales trompeuses.",
-      "Accompagnement droit de l’internet et marketing e-commerce d’une enseigne de plus de 250 magasins leaders en France.",
-      "Accompagnement d’une marque de luxe et d’une chaine d’Hotels de luxes dans la récupération de son compte instagram suite à un hack.",
-      "Gestion de l’e-reputation, droit à l’oubli et suppression de contenus manifestement illicites sur les plateformes (Facebook, Instagram, Google, TikTok…).",
-      "Accompagnement juridique et lutte anticontrefaçon d’un influenceur/infopreneur leader de son marché.",
+      [
+        "Défense de plusieurs e-commercants devant la DGCCRF et DDPP dans le cadre de contrôle diligentés sur le fondement de pratiques commerciales trompeuses.",
+        "Accompagnement droit de l’internet et marketing e-commerce d’une enseigne de plus de 250 magasins leaders en France.",
+        "Accompagnement d’une marque de luxe et d’une chaine d’Hotels de luxes dans la récupération de son compte instagram suite à un hack.",
+      ],
+      [
+        "Gestion de l’e-reputation, droit à l’oubli et suppression de contenus manifestement illicites sur les plateformes (Facebook, Instagram, Google, TikTok…).",
+        "Accompagnement juridique et lutte anticontrefaçon d’un influenceur/infopreneur leader de son marché.",
+      ],
     ],
   },
   {
@@ -108,15 +116,19 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Résolution de conflits entre associés.",
-      "Accompagnement dans le cadre d’une cession de contrôle d’une start-up plateforme leader de la formation en ligne.",
-      "Recouvrement de créances de plusieurs millions d’euros.",
-      "Accompagnement d’une société d’envergure dans le cadre d’un litige complexe en matière de rupture brutale de relations commerciales établies.",
-      "Défense des intérets d’une legaltech accusée d’exercice illégal de la profession d’avocats",
-      "Obtention de rétractation d’ordonnance de saisie dans le cadre d’un référé 145.",
-      "Mise en cause de la responsabilité civile professionnels d’experts comptables et mise en œuvre de mesures d’expertise.",
-      "Préservation de créances à recouvrer par le biais de saisie conservatoires orchestrées.",
-      "Saisie conservatoire en cryptomonnaies.",
+      [
+        "Résolution de conflits entre associés.",
+        "Accompagnement dans le cadre d’une cession de contrôle d’une start-up plateforme leader de la formation en ligne.",
+        "Recouvrement de créances de plusieurs millions d’euros.",
+        "Accompagnement d’une société d’envergure dans le cadre d’un litige complexe en matière de rupture brutale de relations commerciales établies.",
+        "Défense des intérets d’une legaltech accusée d’exercice illégal de la profession d’avocats",
+      ],
+      [
+        "Obtention de rétractation d’ordonnance de saisie dans le cadre d’un référé 145.",
+        "Mise en cause de la responsabilité civile professionnels d’experts comptables et mise en œuvre de mesures d’expertise.",
+        "Préservation de créances à recouvrer par le biais de saisie conservatoires orchestrées.",
+        "Saisie conservatoire en cryptomonnaies.",
+      ],
     ],
   },
   {
@@ -125,18 +137,22 @@ const ExpertiseData = [
       "Disposant d’une forte expérience dans le domaine, le cabinet accompagne de nombreuses sociétés et groupes du secteur de l’immobilier (syndics, copropriétés, investisseurs, marchands de biens, administrateurs et gestionnaires des baux locatifs et commerciaux) dans la diversité de leurs problématiques immobilières tant en matière de conseil que de contentieux.",
     ],
     useCases: [
-      "Gestion des recouvrements de charge pour des leaders du secteur de l’administration de bien.",
-      "Contentieux d’annulation d’assemblée générale de copropriété (demande / défense).",
-      "Assistance d’un syndic dans le cadre d’une expertise en malfaçons et vice de construction.",
-      "Contestation de refus de permis de construire.",
-      "Défense d’un architecte dans le cadre de sa RCP.",
-      "Accompagnement de deux sociétés du CAC 40 (secteur banque assurance) sur la contractualisation de projets IT/RGPD immobiliers informatiques immeubles connectés.",
-      "Négociation et rédaction de baux commerciaux.",
-      "Assistance et représentation de commerçants dans le cadre du non-renouvellement de bail.",
-      "Contestation de refus de permis de construire.",
-      "Assistance et représentation de commerçants dans le cadre du non-renouvellement de bail.",
-      "Assistance et représentation d’établissements délégataires de service public dont la responsabilité est engagée.",
-      "Gestion de nombreux dossiers d’expulsion locative.",
+      [
+        "Gestion des recouvrements de charge pour des leaders du secteur de l’administration de bien.",
+        "Contentieux d’annulation d’assemblée générale de copropriété (demande / défense).",
+        "Assistance d’un syndic dans le cadre d’une expertise en malfaçons et vice de construction.",
+        "Contestation de refus de permis de construire.",
+        "Défense d’un architecte dans le cadre de sa RCP.",
+        "Accompagnement de deux sociétés du CAC 40 (secteur banque assurance) sur la contractualisation de projets IT/RGPD immobiliers informatiques immeubles connectés.",
+      ],
+      [
+        "Négociation et rédaction de baux commerciaux.",
+        "Assistance et représentation de commerçants dans le cadre du non-renouvellement de bail.",
+        "Contestation de refus de permis de construire.",
+        "Assistance et représentation de commerçants dans le cadre du non-renouvellement de bail.",
+        "Assistance et représentation d’établissements délégataires de service public dont la responsabilité est engagée.",
+        "Gestion de nombreux dossiers d’expulsion locative.",
+      ],
     ],
     additionalSection: {
       title: "Proptech et innovation du secteur",
@@ -184,13 +200,17 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Représentation de sociétés et notamment d’une société du CAC 40 dans le cas de fraude et d’usurpation d’identité.",
-      "Obtention de plusieurs relaxes de prévenus dans des affaires de cybercriminalité.",
-      "Défense des intérêts de victimes de fraudes bancaires et récupération des fonds auprès des banques.",
-      "Défense pénale de prévenus mis en examen pour des infractions STAD, carding.",
-      "Représentation des intérêts de personnalités publiques dans le cadre d’actions en diffamation et injure.",
-      "Gestion de déréférencement et accompagnement de sociétés pour l’atteinte à la réputation.",
-      "Accompagnement de victimes de cyberharcèlement et revenge porn.",
+      [
+        "Représentation de sociétés et notamment d’une société du CAC 40 dans le cas de fraude et d’usurpation d’identité.",
+        "Obtention de plusieurs relaxes de prévenus dans des affaires de cybercriminalité.",
+        "Défense des intérêts de victimes de fraudes bancaires et récupération des fonds auprès des banques.",
+        "Défense pénale de prévenus mis en examen pour des infractions STAD, carding.",
+      ],
+      [
+        "Représentation des intérêts de personnalités publiques dans le cadre d’actions en diffamation et injure.",
+        "Gestion de déréférencement et accompagnement de sociétés pour l’atteinte à la réputation.",
+        "Accompagnement de victimes de cyberharcèlement et revenge porn.",
+      ],
     ],
   },
   {
@@ -232,12 +252,16 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Accompagnement d’une plateforme d’intelligence artificielle sur ces questionnements juridiques relatifs aux droits d’auteur.",
-      "Accompagnement contractuel IT/RGPD de la plateforme Leader en matière démocratie participative.",
-      "Accompagnement juridique de plusieurs sociétés en matière de signature électronique (éditeurs et clients).",
-      "Accompagnement et sécurisation juridique de plusieurs projets Blockchains et NFT dont le projet METALEGEND et RealT.",
-      "Accompagnement litige de victimes de hack de cryptomonnaies dans leur action contre l’Exchange BINANCE.",
-      "Accompagnement d’une startup logicielle SaaS de 70 salariés (Informatique, RGPD, marques) spécialisées dans la mobilité interentreprise.",
+      [
+        "Accompagnement d’une plateforme d’intelligence artificielle sur ces questionnements juridiques relatifs aux droits d’auteur.",
+        "Accompagnement contractuel IT/RGPD de la plateforme Leader en matière démocratie participative.",
+        "Accompagnement juridique de plusieurs sociétés en matière de signature électronique (éditeurs et clients).",
+      ],
+      [
+        "Accompagnement et sécurisation juridique de plusieurs projets Blockchains et NFT dont le projet METALEGEND et RealT.",
+        "Accompagnement litige de victimes de hack de cryptomonnaies dans leur action contre l’Exchange BINANCE.",
+        "Accompagnement d’une startup logicielle SaaS de 70 salariés (Informatique, RGPD, marques) spécialisées dans la mobilité interentreprise.",
+      ],
     ],
     additionalSection: {
       title: "Spécialité Greentech et Green IT",
@@ -271,12 +295,16 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Accompagnement juridique d’un Club de Football français de premier plan sur sa protection des données et son externalisation DPO",
-      "Accompagnement juridique IP/IT RGPD d’une plateforme leader de solution de vente de formations en ligne.",
-      "Accompagnement juridique RPGD de plusieurs société e-santé et téléconsultation.",
-      "Accompagnement RGPD et DPO externalisé d’un groupe de presse et de publications légales.",
-      "DPO externalisé d’un logiciel SaaS leader en matière de staffing RH.",
-      "Accompagnement RGPD et projets IT d’une fédération de plus de 100 entreprises (secteurs intérim, espaces vert, bâtiments…) – DPO externalisé.",
+      [
+        "Accompagnement juridique d’un Club de Football français de premier plan sur sa protection des données et son externalisation DPO",
+        "Accompagnement juridique IP/IT RGPD d’une plateforme leader de solution de vente de formations en ligne.",
+        "Accompagnement juridique RPGD de plusieurs société e-santé et téléconsultation.",
+      ],
+      [
+        "Accompagnement RGPD et DPO externalisé d’un groupe de presse et de publications légales.",
+        "DPO externalisé d’un logiciel SaaS leader en matière de staffing RH.",
+        "Accompagnement RGPD et projets IT d’une fédération de plus de 100 entreprises (secteurs intérim, espaces vert, bâtiments…) – DPO externalisé.",
+      ],
     ],
   },
   {
@@ -310,12 +338,16 @@ const ExpertiseData = [
       },
     ],
     useCases: [
-      "Gestion de plusieurs litiges CPH à forte imprégnation technique.",
-      "Gestion d’un litige en requalification de développeurs indépendants.",
-      "Assistance d’une plateforme web dans la mise en place de contrats avec des freelance réduisant le risque de requalification en contrats de travail.",
-      "Contentieux CPF et déréférencement de la plateforme.",
-      "Assistance de plusieurs Organismes de formation (OF) dans leur mise en conformité.",
-      "Gestion d’un litige en requalification d’animateurs de chaines de téléachats.",
+      [
+        "Gestion de plusieurs litiges CPH à forte imprégnation technique.",
+        "Gestion d’un litige en requalification de développeurs indépendants.",
+        "Assistance d’une plateforme web dans la mise en place de contrats avec des freelance réduisant le risque de requalification en contrats de travail.",
+      ],
+      [
+        "Contentieux CPF et déréférencement de la plateforme.",
+        "Assistance de plusieurs Organismes de formation (OF) dans leur mise en conformité.",
+        "Gestion d’un litige en requalification d’animateurs de chaines de téléachats.",
+      ],
     ],
   },
 ];

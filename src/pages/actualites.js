@@ -13,6 +13,9 @@ const StyledContainer = styled.div`
   @media ${(props) => props.theme.minWidth.sm} {
     margin: 190px 0 -20px;
   }
+  @media ${(props) => props.theme.minWidth.xl} {
+    margin: 210px 0 190px;
+  }
 `;
 const StyledYearContainer = styled.div`
   margin-bottom: 50px;

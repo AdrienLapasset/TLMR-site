@@ -26,7 +26,7 @@ const StyledContainer = styled.section`
 `;
 const StyledGrid = styled(Grid)`
   border-top: ${({ theme }) => theme.border.black};
-  padding-top: 12px;
+  padding-top: 10px;
   grid-template-columns: repeat(6, 1fr);
   h3,
   span {
@@ -44,7 +44,7 @@ const StyledNavLink = styled(Link)`
   display: flex;
   align-items: first baseline;
   color: ${(props) => props.theme.colors.greyLight};
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-size: 13px;
   &.active,
   &:hover {
