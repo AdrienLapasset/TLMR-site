@@ -33,8 +33,10 @@ const StyledModal = styled.div`
   background-color: white;
   width: 100%;
   border-radius: 9px;
-  padding: 45px;
+  padding: 20px;
   @media ${(props) => props.theme.minWidth.md} {
+    padding: 45px;
+
     max-height: 100vh;
     width: 850px;
   }

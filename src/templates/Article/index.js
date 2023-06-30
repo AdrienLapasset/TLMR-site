@@ -48,6 +48,10 @@ const StyledHeader = styled(Grid)`
   h1 {
     font-size: 28px;
     line-height: 34px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 38px;
+      line-height: 45px;
+    }
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 3 / span 10;
       font-size: 40px;
@@ -56,10 +60,15 @@ const StyledHeader = styled(Grid)`
     @media ${(props) => props.theme.minWidth.lg} {
       grid-column: 4 / span 9;
       font-size: 45px;
+      line-height: 55px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      font-size: 60px;
-      line-height: 70px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+    @media ${(props) => props.theme.minWidth.xxl} {
+      font-size: 55px;
+      line-height: 65px;
     }
   }
 `;
@@ -182,47 +191,43 @@ const StyledContent = styled.section`
   h2 {
     margin: 55px 0 30px;
     font-family: "Söhne Kräftig";
-    font-size: 18px;
-    line-height: 25px;
-    @media ${(props) => props.theme.minWidth.md} {
-      font-size: 20px;
-      line-height: 28px;
-    }
-    @media ${(props) => props.theme.minWidth.lg} {
-      font-size: 22px;
+    font-size: 22px;
+    line-height: 28px;
+    @media ${(props) => props.theme.minWidth.sm} {
+      font-size: 24px;
       line-height: 30px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 28px;
+      line-height: 34px;
     }
   }
   h3 {
     font-family: "Söhne Kräftig";
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 22px;
     margin-bottom: 5px;
-    @media ${(props) => props.theme.minWidth.md} {
-      font-size: 18px;
-    }
-    @media ${(props) => props.theme.minWidth.lg} {
+    @media ${(props) => props.theme.minWidth.sm} {
       font-size: 20px;
+      line-height: 25px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 22px;
+      line-height: 27px;
     }
   }
   h4 {
     font-family: "Signifier Medium";
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 25px;
     margin-bottom: 2px;
-    @media ${(props) => props.theme.minWidth.md} {
-      font-size: 18px;
-    }
-    @media ${(props) => props.theme.minWidth.lg} {
+    @media ${(props) => props.theme.minWidth.sm} {
       font-size: 20px;
+      line-height: 30px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 22px;
+      line-height: 32px;
     }
   }
   ul {
@@ -239,16 +244,14 @@ const StyledContent = styled.section`
   p,
   li {
     font-size: 18px;
-    @media ${(props) => props.theme.minWidth.md} {
+    line-height: 25px;
+    @media ${(props) => props.theme.minWidth.sm} {
       font-size: 20px;
-    }
-    @media ${(props) => props.theme.minWidth.lg} {
-      font-size: 22px;
       line-height: 30px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 22px;
+      line-height: 32px;
     }
   }
 `;
