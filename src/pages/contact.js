@@ -54,6 +54,9 @@ const StyledContainer = styled.div`
       text-underline-offset: 7px;
     }
   }
+  button p {
+    line-height: 37px;
+  }
 `;
 const StyledMap = styled.iframe`
   aspect-ratio: 1;

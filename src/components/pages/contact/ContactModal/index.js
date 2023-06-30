@@ -86,8 +86,9 @@ const StyledModal = styled.div`
       background-color: black;
       color: white;
       border-radius: 100px;
-      padding: 5px 20px;
       margin: 30px 0 0 auto;
+      padding: 5px 20px 6px;
+      font-size: 14px;
       &:hover {
         background-color: ${({ theme }) => theme.colors.greyLight};
       }
