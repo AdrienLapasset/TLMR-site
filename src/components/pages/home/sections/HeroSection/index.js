@@ -63,8 +63,8 @@ const HeroSection = () => {
       <Grid>
         <h1>
           Vous simplifier l’accès à l’excellence en particulier dans les
-          domaines des technologies, de l’informatique de l’innovation, du
-          digital, et d’internet.
+          domaines des technologies, de l’informatique de l’innovation,
+          du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
       <StaticImage
