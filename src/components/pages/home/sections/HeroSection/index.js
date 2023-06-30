@@ -33,7 +33,7 @@ const StyledContainer = styled.div`
       grid-column: 1 / 13;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 1 / 10;
+      grid-column: 1 / 9;
       font-size: 30px;
       line-height: 39px;
       margin-bottom: 35px;
@@ -41,7 +41,11 @@ const StyledContainer = styled.div`
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 36px;
       line-height: 45px;
-      grid-column: 1 / 9;
+    }
+    @media ${(props) => props.theme.minWidth.xxl} {
+      font-size: 36px;
+      line-height: 45px;
+      grid-column: 1 / 8;
     }
   }
   .gatsby-image-wrapper {

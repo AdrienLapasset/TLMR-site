@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   margin-top: 160px;
   border-top: ${(props) => props.theme.border.black};
   img {
-    margin: 25px 0 170px;
+    margin: 25px 0 35px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin: 25px 0 230px;
     }
@@ -81,9 +81,15 @@ const StyledLinksContainer = styled.div`
 const StyledCopyrightsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 50px 0 20px;
+  padding: 0 0 12px;
   @media ${(props) => props.theme.minWidth.sm} {
-    padding: 20px 0 10px;
+    padding: 20px 0 20px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    padding: 20px 0 25px;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    padding: 20px 0 37px;
   }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {
