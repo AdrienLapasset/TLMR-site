@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   margin-top: 160px;
   border-top: ${(props) => props.theme.border.black};
   img {
-    margin: 25px 0 35px;
+    margin: 25px 0 60px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin: 25px 0 230px;
     }
@@ -89,7 +89,7 @@ const StyledCopyrightsContainer = styled.div`
     padding: 20px 0 25px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    padding: 20px 0 37px;
+    padding: 20px 0 30px;
   }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {

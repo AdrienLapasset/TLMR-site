@@ -21,7 +21,7 @@ const StyledContainer = styled.div`
       margin-top: ${({ column }) => column && -8}px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: ${({ column }) => !column && "1/8"};
+      grid-column: ${({ column }) => !column && "1/7"};
     }
     @media ${(props) => props.theme.minWidth.xl} {
       font-size: 25px;

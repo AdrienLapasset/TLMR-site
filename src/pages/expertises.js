@@ -15,7 +15,7 @@ const StyledPageHero = styled(PageHero)`
     margin: 210px 0 10px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin: 210px 0 190px;
+    margin: 210px 0 195px;
   }
 `;
 const StyledElement = styled(Element)`
