@@ -31,6 +31,9 @@ const StyledContainer = styled(Grid)`
       @media ${(props) => props.theme.minWidth.lg} {
         grid-column: 1 / span 8;
       }
+      @media ${(props) => props.theme.minWidth.xl} {
+        grid-column: 1 / span 7;
+      }
     }
     &:last-of-type {
       grid-column: 1/12;

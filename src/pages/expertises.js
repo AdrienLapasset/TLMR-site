@@ -42,7 +42,7 @@ const ExpertisesPage = () => {
             firstParagraph="Le cabinet Touati La Motte Rouge répond à des problématiques diverses
           avec rigueur et pragmatisme. Dans chaque domaine d’expertise, vous
           disposez de l’accompagnement et de l’expérience de l’associé qui
-          traite de manière réactive, accessible et opérationnelle votre"
+          traite de manière réactive, accessible et opérationnelle votre dossier."
             secondParagraph="Dans les dossiers complexes, il est déterminant de travailler en
           équipe et d’associer des compétences et visions complémentaires. Cela
           permet une résolution opérationnelle des problématiques juridiques et
