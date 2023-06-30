@@ -23,12 +23,15 @@ const StyledHeader = styled.div`
   border-top: ${(props) => props.theme.border.black};
   display: flex;
   justify-content: space-between;
-  align-items: center;
   cursor: pointer;
   &:hover {
     & > h3 {
       color: ${(props) => props.theme.colors.grey};
     }
+  }
+  & > div {
+    position: relative;
+    top: -1px;
   }
 `;
 const StyledContent = styled.div`
