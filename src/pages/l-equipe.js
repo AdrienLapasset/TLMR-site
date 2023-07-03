@@ -12,7 +12,7 @@ import Seo from "components/Seo";
 const StyledCabinetContainer = styled.section`
   margin: 160px 0 80px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 230px 0 120px;
+    margin: 210px 0 120px;
   }
   h1 {
     margin-bottom: 30px;
