@@ -43,15 +43,15 @@ const StyledContainer = styled.div`
         font-size: 35px;
       }
       @media ${(props) => props.theme.minWidth.md} {
-        font-size: ${({ home }) => (home ? 50 : 35)}px;
-        margin-bottom: ${({ home }) => (home ? 20 : 0)}px;
+        font-size: ${({ isHome }) => (isHome ? 50 : 35)}px;
+        margin-bottom: ${({ isHome }) => (isHome ? 20 : 0)}px;
       }
       @media ${(props) => props.theme.minWidth.lg} {
-        font-size: ${({ home }) => (home ? 55 : 40)}px;
-        line-height: ${({ home }) => (home ? 70 : 35)}px;
+        font-size: ${({ isHome }) => (isHome ? 55 : 40)}px;
+        line-height: ${({ isHome }) => (isHome ? 70 : 35)}px;
       }
       @media ${(props) => props.theme.minWidth.xl} {
-        font-size: ${({ home }) => (home ? 60 : 45)}px;
+        font-size: ${({ isHome }) => (isHome ? 60 : 45)}px;
       }
     }
   }
@@ -115,7 +115,7 @@ const StyledNews = styled(Link)`
   }
   &:nth-child(3),
   &:nth-child(4) {
-    display: ${({ home }) => !home && "none"};
+    display: ${({ isHome }) => !isHome && "none"};
     @media ${(props) => props.theme.minWidth.md} {
       display: block;
     }
@@ -128,7 +128,7 @@ const StyledNews = styled(Link)`
   }
 `;
 
-const ALaUne = ({ className, home, border }) => {
+const ALaUne = ({ className, border }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -153,11 +153,12 @@ const ALaUne = ({ className, home, border }) => {
   const articles = data.allSanityArticle.nodes;
 
   const { pathname } = useLocation();
+  const isHome = pathname === "/";
 
   return (
-    <StyledContainer className={className} border={border} home={home}>
+    <StyledContainer className={className} border={border} isHome={isHome}>
       <header>
-        {home ? (
+        {isHome ? (
           <SectionTitle aside="Actualités" title="À LA UNE" />
         ) : (
           <Title type="h2" size="sm">
@@ -172,7 +173,7 @@ const ALaUne = ({ className, home, border }) => {
         {articles.map(({ title, date, heroImg, slug }) => {
           const thumbImg = getImage(heroImg.asset);
           return (
-            <StyledNews to={"/article/" + slug.current} key={title} home={home}>
+            <StyledNews to={"/article/" + slug.current} key={title}>
               <div>
                 <GatsbyImage image={thumbImg} alt={title} />
               </div>
@@ -188,7 +189,7 @@ const ALaUne = ({ className, home, border }) => {
           );
         })}
       </StyledColumns>
-      {pathname === "/" && (
+      {isHome && (
         <Cta to="/actualites" className="mobile">
           Toutes les actualités
         </Cta>

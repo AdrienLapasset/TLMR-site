@@ -8,7 +8,7 @@ import Seo from "components/Seo";
 const StyledTitleContainer = styled.div`
   margin: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 200px 0 120px;
+    margin: 210px 0 120px;
   }
 `;
 const StyledTitle = styled(Title)`

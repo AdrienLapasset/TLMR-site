@@ -181,7 +181,6 @@ const StyledAdditionalSection = styled.section`
 
 const Expertise = ({ expertise }) => {
   const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(true);
-  console.log(expertise.useCases);
   useEffect(() => {
     const screenWidth = window.innerWidth;
     screenWidth < 768 && setIsSeeMoreUseCases(false);

@@ -20,7 +20,7 @@ const IndexPage = () => {
           <VousProteger />
           <NosSolution />
           <VousFormer />
-          <ALaUne home />
+          <ALaUne />
           <VosExperts />
           <VosTemoignages />
           <DansLaPresse />
