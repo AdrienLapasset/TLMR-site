@@ -78,6 +78,7 @@ const StyledModal = styled.div`
       margin-top: 20px;
       input[type="checkbox"] {
         cursor: pointer;
+        flex: 0 0 auto;
         margin-right: 10px;
         width: 12px;
         height: 12px;

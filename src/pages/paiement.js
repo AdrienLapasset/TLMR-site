@@ -51,6 +51,7 @@ const StyledTitleContainer = styled.div`
         height: 12px;
         position: relative;
         top: 5px;
+        flex: 0 0 auto;
       }
     }
     button {
