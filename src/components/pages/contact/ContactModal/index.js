@@ -79,7 +79,10 @@ const StyledModal = styled.div`
       input[type="checkbox"] {
         cursor: pointer;
         margin-right: 10px;
-        transform: translateY(4px);
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: 4px;
       }
     }
     button[type="submit"] {
