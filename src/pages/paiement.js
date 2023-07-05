@@ -47,11 +47,15 @@ const StyledTitleContainer = styled.div`
       input[type="checkbox"] {
         cursor: pointer;
         margin-right: 10px;
-        width: 12px;
-        height: 12px;
         position: relative;
-        top: 5px;
+        top: 4px;
+        width: 20px;
+        height: 20px;
         flex: 0 0 auto;
+        @media ${({ theme }) => theme.minWidth.md} {
+          width: 12px;
+          height: 12px;
+        }
       }
     }
     button {

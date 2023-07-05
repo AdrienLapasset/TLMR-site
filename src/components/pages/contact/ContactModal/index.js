@@ -80,10 +80,15 @@ const StyledModal = styled.div`
         cursor: pointer;
         flex: 0 0 auto;
         margin-right: 10px;
-        width: 12px;
-        height: 12px;
         position: relative;
         top: 4px;
+        height: 20px;
+        width: 20px;
+        flex: 0 0 auto;
+        @media ${({ theme }) => theme.minWidth.md} {
+          width: 12px;
+          height: 12px;
+        }
       }
     }
     button[type="submit"] {
