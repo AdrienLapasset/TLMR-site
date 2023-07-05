@@ -82,6 +82,13 @@ const StyledTitleContainer = styled.div`
     }
   }
   .first-step {
+    .grid {
+      @media ${({ theme }) => theme.minWidth.md} {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: ${(props) => props.theme.columnGap.desktop};
+      }
+    }
     button {
       margin: 40px 0 0 auto;
     }
@@ -91,7 +98,7 @@ const StyledTitleContainer = styled.div`
       border-top: 0.8px solid ${({ theme }) => theme.colors.greyLight};
       color: ${({ theme }) => theme.colors.greyLight};
       width: 100%;
-      padding-top: 5px;
+      padding-top: 3px;
     }
     .data {
       font-size: 25px;
@@ -102,16 +109,19 @@ const StyledTitleContainer = styled.div`
       border-top: 0.8px solid ${({ theme }) => theme.colors.greyLight};
       padding-top: 5px;
     }
+    p {
+      margin-bottom: 40px;
+    }
     .btn-container {
       display: flex;
       justify-content: flex-end;
-      margin-top: 40px;
     }
   }
 `;
 
 const Paiement = () => {
   const [formStep, setFormStep] = useState(1);
+  const [invoiceRef, setInvoiceRef] = useState("76E8Y879707");
   const [email, setEmail] = useState("test@test");
   const [firstName, setFirstName] = useState("testfirstName");
   const [lastName, setLastName] = useState("testlastName");
@@ -154,27 +164,36 @@ const Paiement = () => {
               {formStep === 1 && (
                 <div className="first-step">
                   <h2>Informations</h2>
-                  <input
-                    type="text"
-                    placeholder="Nom *"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    required
-                  />
-                  <input
-                    type="text"
-                    placeholder="Prénom *"
-                    onChange={(e) => setFirstName(e.target.value)}
-                    required
-                    value={firstName}
-                  />
-                  <input
-                    type="email"
-                    placeholder="Adresse email *"
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    value={email}
-                  />
+                  <div className="grid">
+                    <input
+                      type="text"
+                      placeholder="Référence de la facture *"
+                      value={invoiceRef}
+                      onChange={(e) => setInvoiceRef(e.target.value)}
+                      required
+                    />
+                    <input
+                      type="email"
+                      placeholder="Adresse email *"
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      value={email}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Nom *"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                    />
+                    <input
+                      type="text"
+                      placeholder="Prénom *"
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                      value={firstName}
+                    />
+                  </div>
                   <h2>Montant (€)</h2>
                   <input
                     type="text"
@@ -213,9 +232,10 @@ const Paiement = () => {
               {formStep === 2 && (
                 <div className="last-step">
                   <h2>Récapitulatif de votre paiement en ligne</h2>
+                  <h3>Référence</h3>
+                  <p className="data">{invoiceRef}</p>
                   <h3>Montant</h3>
                   <p className="data">{ammount}€</p>
-
                   <p className="en-cliquant">
                     En cliquant sur le bouton vous allez être redirigé vers
                     l’interface de paiement de la Banque.
