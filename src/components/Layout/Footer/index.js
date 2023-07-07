@@ -53,7 +53,7 @@ const StyledLinksContainer = styled.div`
       display: flex;
     }
     &:last-child {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       @media ${(props) => props.theme.minWidth.sm} {
         width: 200px;
       }

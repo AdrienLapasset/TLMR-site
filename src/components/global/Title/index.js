@@ -47,7 +47,7 @@ const StyledTitle = styled.h1`
         : size === "expertise"
         ? 50
         : 60}px;
-    line-height: ${({ size }) => size === "expertise" && 60}px;
+    line-height: ${({ size }) => size === "expertise" && 55}px;
   }
 `;
 
