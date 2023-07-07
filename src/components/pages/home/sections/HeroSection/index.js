@@ -4,12 +4,18 @@ import { StaticImage } from "gatsby-plugin-image";
 import Grid from "components/global/Grid";
 
 const StyledContainer = styled.div`
-  margin-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
+  padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-top: 240px;
+    padding-top: 280px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    padding-top: 240px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin-top: 330px;
+    padding-top: 330px;
+  }
+  @media ${(props) => props.theme.minWidth.xxl} {
+    padding-top: 360px;
   }
   aside {
     margin-bottom: 5px;

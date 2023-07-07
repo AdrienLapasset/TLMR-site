@@ -12,10 +12,10 @@ import Seo from "components/Seo";
 
 const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 210px 0 10px;
+    padding: 210px 0 10px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin: 210px 0 195px;
+    padding: 210px 0 195px;
   }
 `;
 const StyledElement = styled(Element)`

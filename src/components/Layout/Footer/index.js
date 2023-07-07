@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
       margin: 30px 0 340px;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      margin: 45px 0 370px;
+      margin: 45px 0 360px;
     }
   }
 `;
@@ -53,6 +53,7 @@ const StyledLinksContainer = styled.div`
       display: flex;
     }
     &:last-child {
+      margin-bottom: 80px;
       @media ${(props) => props.theme.minWidth.sm} {
         width: 200px;
       }
@@ -64,16 +65,14 @@ const StyledLinksContainer = styled.div`
       margin-bottom: 35px;
       @media ${(props) => props.theme.minWidth.sm} {
         margin-top: 0;
-      }
-
-      @media ${(props) => props.theme.minWidth.sm} {
+        margin-bottom: 30px;
         margin-right: 40px;
-        @media ${(props) => props.theme.minWidth.md} {
-          margin-right: 60px;
-        }
-        @media ${(props) => props.theme.minWidth.lg} {
-          margin-right: 80px;
-        }
+      }
+      @media ${(props) => props.theme.minWidth.md} {
+        margin-right: 60px;
+      }
+      @media ${(props) => props.theme.minWidth.lg} {
+        margin-right: 80px;
       }
     }
   }
@@ -111,7 +110,7 @@ const StyledCopyrightsContainer = styled.div`
   }
 `;
 
-const Navigation = () => {
+const Footer = ({ pageTop }) => {
   const currentYear = new Date().getFullYear();
 
   const goToTop = () => {
@@ -181,4 +180,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Footer;

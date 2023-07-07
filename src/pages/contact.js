@@ -9,9 +9,9 @@ import ContactModal from "components/pages/contact/ContactModal";
 import Seo from "components/Seo";
 
 const StyledContainer = styled.div`
-  margin: 160px 0 75px;
+  padding: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 210px 0;
+    padding: 210px 0;
   }
   h1 {
     margin-bottom: 30px;

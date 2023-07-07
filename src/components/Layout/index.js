@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "styles/theme";
 import GlobalStyle from "styles/globalStyle";
@@ -20,17 +20,25 @@ const StyledContainer = styled.div`
 `;
 
 const Layout = ({ children }) => {
+  const bodyRef = useRef();
+  const [pageTop, setPageTop] = useState(null);
+
+  useEffect(() => {
+    setPageTop(bodyRef.current.getBoundingClientRect().top + window.scrollY);
+    console.log(pageTop);
+  }, [bodyRef]);
+
   return (
-    <>
+    <main ref={bodyRef}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Navigation />
         <StyledContainer>
           {children}
-          <Footer />
+          <Footer pageTop={pageTop} />
         </StyledContainer>
       </ThemeProvider>
-    </>
+    </main>
   );
 };
 

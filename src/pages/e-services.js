@@ -14,10 +14,10 @@ import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 
 const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 210px 0 10px;
+    padding: 210px 0 10px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin: 210px 0 180px;
+    padding: 210px 0 180px;
   }
 `;
 const StyledElement = styled(Element)`

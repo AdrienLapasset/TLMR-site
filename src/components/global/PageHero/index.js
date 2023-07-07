@@ -6,7 +6,7 @@ import Paragraph from "components/global/Paragraph";
 import { useLocation } from "@reach/router";
 
 const StyledContainer = styled(Grid)`
-  margin: 160px 0 75px;
+  padding: 160px 0 75px;
   h1 {
     margin-bottom: 20px;
     grid-column: 1/13;
@@ -14,7 +14,7 @@ const StyledContainer = styled(Grid)`
       margin-bottom: 40px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      margin-bottom: 40px;
+      padding-bottom: 40px;
       grid-column: 1/9;
     }
   }

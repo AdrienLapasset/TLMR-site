@@ -9,12 +9,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "components/Seo";
 
 const StyledContainer = styled.div`
-  margin: 160px 0 75px;
+  padding: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin: 190px 0 -20px;
+    padding: 190px 0 -20px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    margin: 210px 0 190px;
+    padding: 210px 0 190px;
   }
 `;
 const StyledYearContainer = styled.div`

@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Grid from "components/global/Grid";
 
 const StyledTitleContainer = styled.div`
-  margin: 160px 0 75px;
+  padding: 160px 0 75px;
   grid-column: 1 / span 12;
   @media ${({ theme }) => theme.minWidth.md} {
     grid-column: 4 / span 6;
-    margin: 210px 0 120px;
+    padding: 210px 0 120px;
   }
   h1 {
     font-size: 22px;

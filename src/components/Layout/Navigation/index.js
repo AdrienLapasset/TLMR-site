@@ -48,7 +48,7 @@ const StyledNav = styled.nav`
   img {
     height: 24px;
     @media ${(props) => props.theme.minWidth.sm} {
-      height: 28px;
+      height: 26px;
     }
   }
 `;
@@ -94,16 +94,6 @@ const StyledLinksContainer = styled.div`
         text-decoration: underline;
         text-underline-offset: 7px;
         text-decoration-thickness: 0.8px;
-        /* &:after {
-          content: "";
-          display: block;
-          height: 1px;
-          width: 100%;
-          background-color: ${(props) => props.theme.colors.greyLight};
-          position: absolute;
-          bottom: -1px;
-          left: 0;
-        } */
       }
     }
   }
