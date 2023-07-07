@@ -31,6 +31,9 @@ const StyledContainer = styled(Grid)`
     @media ${(props) => props.theme.minWidth.xl} {
       width: 100%;
     }
+    @media ${(props) => props.theme.minWidth.xxl} {
+      grid-column: 1 / span 7;
+    }
   }
   & > div:last-of-type {
     grid-column: 1 / span 12;
@@ -39,8 +42,8 @@ const StyledContainer = styled(Grid)`
       position: relative;
       top: -8px;
     }
-    @media ${(props) => props.theme.minWidth.lg} {
-      grid-column: 8 / 13;
+    @media ${(props) => props.theme.minWidth.xxl} {
+      grid-column: 9 / 13;
     }
     & > h2 {
       margin-top: 10px;
