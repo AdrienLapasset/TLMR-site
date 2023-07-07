@@ -51,9 +51,6 @@ const StyledTitleGrid = styled(Grid)`
     @media ${(props) => props.theme.minWidth.md} {
       grid-column: 1 / 8;
     }
-    @media ${(props) => props.theme.minWidth.xl} {
-      grid-column: 1 / 9;
-    }
   }
 `;
 const StyledContentGrid = styled(Grid)`
