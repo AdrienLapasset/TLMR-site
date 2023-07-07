@@ -110,6 +110,9 @@ const StyledUseCases = styled.div`
       &:last-of-type {
         display: ${({ isSeeMoreUseCases }) =>
           isSeeMoreUseCases ? "block" : "none"};
+        @media ${(props) => props.theme.minWidth.md} {
+          display: block;
+        }
       }
       li {
         font-size: 15px;
@@ -120,11 +123,17 @@ const StyledUseCases = styled.div`
       & > div {
         display: flex;
         margin-bottom: 10px;
+        display: ${({ isSeeMoreUseCases }) =>
+          isSeeMoreUseCases ? "flex" : "none"};
         @media ${(props) => props.theme.minWidth.sm} {
           margin-bottom: 15px;
         }
         & > aside {
           margin-right: 7px;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: flex;
         }
       }
     }
@@ -181,6 +190,7 @@ const StyledAdditionalSection = styled.section`
 
 const Expertise = ({ expertise }) => {
   const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(true);
+
   useEffect(() => {
     const screenWidth = window.innerWidth;
     screenWidth < 768 && setIsSeeMoreUseCases(false);
