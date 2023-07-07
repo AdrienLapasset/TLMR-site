@@ -17,7 +17,7 @@ const StyledPageHero = styled(PageHero)`
     padding: 210px 0 10px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    padding: 210px 0 180px;
+    padding: 210px 0 80px;
   }
 `;
 const StyledElement = styled(Element)`

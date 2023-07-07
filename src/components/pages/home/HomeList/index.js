@@ -75,9 +75,8 @@ const HomeList = ({ type, list }) => {
                   : "/expertises/#" + sectionTitle
               }
               key={index}
-            >
-              {sectionTitle}
-            </Link>
+              dangerouslySetInnerHTML={{ __html: sectionTitle }}
+            ></Link>
           );
         })}
         {type === "e-Services" ? <aside className="blank"></aside> : null}

@@ -11,10 +11,13 @@ import Seo from "components/Seo";
 const StyledContainer = styled.div`
   padding: 160px 0 75px;
   @media ${(props) => props.theme.minWidth.sm} {
-    padding: 190px 0 -20px;
+    padding: 210px 0 0;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    padding: 210px 0 190px;
+    padding: 210px 0 0;
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    padding: 210px 0 40px;
   }
 `;
 const StyledYearContainer = styled.div`

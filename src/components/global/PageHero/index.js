@@ -14,7 +14,6 @@ const StyledContainer = styled(Grid)`
       margin-bottom: 40px;
     }
     @media ${(props) => props.theme.minWidth.lg} {
-      padding-bottom: 40px;
       grid-column: 1/9;
     }
   }
