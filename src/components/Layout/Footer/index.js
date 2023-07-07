@@ -87,9 +87,6 @@ const StyledCopyrightsContainer = styled.div`
   @media ${(props) => props.theme.minWidth.lg} {
     padding: 20px 0 25px;
   }
-  @media ${(props) => props.theme.minWidth.xl} {
-    padding: 20px 0 30px;
-  }
   & > div {
     @media ${(props) => props.theme.minWidth.sm} {
       width: 200px;
