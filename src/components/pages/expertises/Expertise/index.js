@@ -52,7 +52,7 @@ const StyledTitleGrid = styled(Grid)`
       grid-column: 1 / 8;
     }
     @media ${(props) => props.theme.minWidth.xl} {
-      grid-column: 1 / 10;
+      grid-column: 1 / 9;
     }
   }
 `;
@@ -199,9 +199,12 @@ const Expertise = ({ expertise }) => {
   return (
     <StyledContainer>
       <StyledTitleGrid>
-        <Title type="h2" lowercase size="expertise">
-          {expertise.title}
-        </Title>
+        <Title
+          type="h2"
+          lowercase
+          size="expertise"
+          html={{ __html: expertise.title }}
+        ></Title>
       </StyledTitleGrid>
       <StyledPoint>
         <Dot />
@@ -235,9 +238,11 @@ const Expertise = ({ expertise }) => {
               {expertise?.useCases[0].map((li, index) => (
                 <div key={index}>
                   <aside>→</aside>
-                  <Paragraph color="greyLight" as="li">
-                    {li}
-                  </Paragraph>
+                  <Paragraph
+                    color="greyLight"
+                    as="li"
+                    html={{ __html: li }}
+                  ></Paragraph>
                 </div>
               ))}
             </ul>
@@ -245,9 +250,11 @@ const Expertise = ({ expertise }) => {
               {expertise?.useCases[1].map((li, index) => (
                 <div key={index}>
                   <aside>→</aside>
-                  <Paragraph color="greyLight" as="li">
-                    {li}
-                  </Paragraph>
+                  <Paragraph
+                    color="greyLight"
+                    as="li"
+                    html={{ __html: li }}
+                  ></Paragraph>
                 </div>
               ))}
             </ul>
@@ -261,14 +268,18 @@ const Expertise = ({ expertise }) => {
             <Grid>
               <StyledPoint>
                 <Dot />
-                <Paragraph size="md" as="h3">
-                  {expertise.additionalSection.title}
-                </Paragraph>
+                <Paragraph
+                  size="md"
+                  as="h3"
+                  html={{ __html: expertise.additionalSection.title }}
+                ></Paragraph>
               </StyledPoint>
               {expertise.additionalSection.description.map((paragraph) => (
-                <Paragraph key={paragraph} size="md">
-                  {paragraph}
-                </Paragraph>
+                <Paragraph
+                  key={paragraph}
+                  size="md"
+                  html={{ __html: paragraph }}
+                ></Paragraph>
               ))}
             </Grid>
           </StyledAdditionalSection>

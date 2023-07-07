@@ -56,7 +56,7 @@ const Accordion = ({ title, content }) => {
   return (
     <StyledContainer>
       <StyledHeader onClick={toggleSection}>
-        <Paragraph as="h3">{title}</Paragraph>
+        <Paragraph as="h3" html={{ __html: title }}></Paragraph>
         <ToggleBtn isSectionOpen={isSectionOpen} />
       </StyledHeader>
       <StyledContent
@@ -64,7 +64,7 @@ const Accordion = ({ title, content }) => {
         contentHeight={contentHeight}
         ref={contentRef}
       >
-        <Paragraph color={"greyLight"}>{content}</Paragraph>
+        <Paragraph color={"greyLight"} html={{ __html: content }}></Paragraph>
       </StyledContent>
     </StyledContainer>
   );

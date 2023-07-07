@@ -2,7 +2,7 @@ const ExpertiseData = [
   {
     title: "Innovation, Propriété intellectuelle et industrielle",
     description: [
-      "Vous accompagner dans des projets innovants est au cœur de l’ADN du Cabinet. La création et l’innovation exigent une compétence juridique spécifique pour laquelle le Cabinet Touati La Motte Rouge dispose d’un savoir-faire reconnu et d’une excellente maîtrise des enjeux en matière de propriété intellectuelle, sur les supports traditionnels comme sur les nouveaux médias et réseaux sociaux.",
+      "Vous accompagner dans des projets innovants est au cœur de l’ADN du Cabinet. La création et l’innovation exigent une compétence juridique spécifique pour laquelle le Cabinet Touati La Motte Rouge dispose d’un savoir&#8209faire reconnu et d’une excellente maîtrise des enjeux en matière de propriété intellectuelle, sur les supports traditionnels comme sur les nouveaux médias et réseaux sociaux.",
       "Le cabinet intervient en matière de conseil et de contentieux sur tous les volets de la propriété intellectuelle (droits d’auteur, logiciels, marques, dessins et modèles, brevets, noms de domaine, bases de données) et accompagnent les entreprises dans la sécurisation de leurs actifs immatériels mais aussi les créateurs, artistes, développeurs, musiciens et inventeurs dans la défense de leurs droits.",
     ],
     accordion: [
@@ -19,7 +19,7 @@ const ExpertiseData = [
       {
         title: "Droits d’auteur",
         content:
-          "Cession et exploitation des droits sur les supports traditionnels et les nouveaux médias (e-book, Youtube, réseaux sociaux), licences open source, rédaction et négociation des contrats, relation avec les sociétés de gestion collective, édition, multimédias, architectes, photographes, artistes et interprètes, musique, mannequins, mode et design, créations culturelles, contrefaçon et piratage, suppression de contenus illicites.",
+          "Cession et exploitation des droits sur les supports traditionnels et les nouveaux médias (e&#8209book, Youtube, réseaux sociaux), licences open source, rédaction et négociation des contrats, relation avec les sociétés de gestion collective, édition, multimédias, architectes, photographes, artistes et interprètes, musique, mannequins, mode et design, créations culturelles, contrefaçon et piratage, suppression de contenus illicites.",
       },
       {
         title: "Noms de domaine",
@@ -42,25 +42,25 @@ const ExpertiseData = [
     ],
   },
   {
-    title: "Internet, plateformes et e-commerce",
+    title: "Internet, plateformes et e&#8209commerce",
     description: [
-      "Accompagner les entreprises dans leur transition numérique, les entrepreneurs du web (e-commerçants, infopreneurs, youtubeurs, influenceurs, blogueurs, instagrammeurs …) ou les start-ups et plateformes de l’internet demande un savoir-faire spécifique sur lequel le cabinet est leader.",
+      "Accompagner les entreprises dans leur transition numérique, les entrepreneurs du web (e&#8209commerçants, infopreneurs, youtubeurs, influenceurs, blogueurs, instagrammeurs …) ou les start&#8209ups et plateformes de l’internet demande un savoir&#8209faire spécifique sur lequel le cabinet est leader.",
       "L’excellence en droit du web exige non seulement d’appréhender l’ensemble des droits applicables en la matière et de suivre attentivement l’évolution des réglementations très mouvantes dans ce domaine, mais aussi de comprendre l’environnement digital extrêmement évolutif dans lequel évolue les plateformes et ceux qui font l’économie d’aujourd’hui et de demain.",
       "Henri de la Motte Rouge et Jean Philippe Touati sont à l’origine du Programme de formation en ligne infolawyers, avocats infopreneurs, dédié à l’accompagnement des entrepreneurs du web infolawyers",
     ],
     accordion: [
       {
-        title: "E-commerce, plateformes, comparateurs et drop shipping",
+        title: "E&#8209commerce, plateformes, comparateurs et drop shipping",
         content:
-          "Conditions générales (CGV, CGU), vente en ligne, courtage, droit des plateformes et comparateurs, consommation en ligne, droit de rétractation. Formulaire de vente et conformité RGPD. Contractualisation en ligne, double clic, mail récapitulatif de la commande, économie collaborative et du partage, statut des vendeurs, audit de sites web, fiscalité des ventes internationales, contentieux de la livraison et de la réception des biens. Réglementation des paris en ligne, e-sports. Réseau social et vie privée.",
+          "Conditions générales (CGV, CGU), vente en ligne, courtage, droit des plateformes et comparateurs, consommation en ligne, droit de rétractation. Formulaire de vente et conformité RGPD. Contractualisation en ligne, double clic, mail récapitulatif de la commande, économie collaborative et du partage, statut des vendeurs, audit de sites web, fiscalité des ventes internationales, contentieux de la livraison et de la réception des biens. Réglementation des paris en ligne, e&#8209sports. Réseau social et vie privée.",
       },
       {
         title: "Concurrence déloyale et pratiques commerciales trompeuses",
         content:
-          "Contrôles DGCCRF, contrôles DDPPP, concurrence déloyale et parasitaire, marketing et prospection électronique, diffamation et e-reputation, réseau social et vie privée, suppression de contenus illicites, noms de domaine.",
+          "Contrôles DGCCRF, contrôles DDPPP, concurrence déloyale et parasitaire, marketing et prospection électronique, diffamation et e&#8209reputation, réseau social et vie privée, suppression de contenus illicites, noms de domaine.",
       },
       {
-        title: "E-marketing et infopreneuriat",
+        title: "E&#8209marketing et infopreneuriat",
         content:
           "Prospection électronique, profilage et publicité ciblée (réseaux sociaux), contentieux Google Adwords et Facebook Ads, mailings, bases de données et conformité RGPD, politique de confidentialité. Droit de la formation et subventions.",
       },
@@ -72,12 +72,12 @@ const ExpertiseData = [
     ],
     useCases: [
       [
-        "Défense de plusieurs e-commercants devant la DGCCRF et DDPP dans le cadre de contrôle diligentés sur le fondement de pratiques commerciales trompeuses.",
-        "Accompagnement droit de l’internet et marketing e-commerce d’une enseigne de plus de 250 magasins leaders en France.",
+        "Défense de plusieurs e&#8209commercants devant la DGCCRF et DDPP dans le cadre de contrôle diligentés sur le fondement de pratiques commerciales trompeuses.",
+        "Accompagnement droit de l’internet et marketing e&#8209commerce d’une enseigne de plus de 250 magasins leaders en France.",
         "Accompagnement d’une marque de luxe et d’une chaine d’Hotels de luxes dans la récupération de son compte instagram suite à un hack.",
       ],
       [
-        "Gestion de l’e-reputation, droit à l’oubli et suppression de contenus manifestement illicites sur les plateformes (Facebook, Instagram, Google, TikTok…).",
+        "Gestion de l’e&#8209reputation, droit à l’oubli et suppression de contenus manifestement illicites sur les plateformes (Facebook, Instagram, Google, TikTok…).",
         "Accompagnement juridique et lutte anticontrefaçon d’un influenceur/infopreneur leader de son marché.",
       ],
     ],
@@ -118,7 +118,7 @@ const ExpertiseData = [
     useCases: [
       [
         "Résolution de conflits entre associés.",
-        "Accompagnement dans le cadre d’une cession de contrôle d’une start-up plateforme leader de la formation en ligne.",
+        "Accompagnement dans le cadre d’une cession de contrôle d’une start&#8209up plateforme leader de la formation en ligne.",
         "Recouvrement de créances de plusieurs millions d’euros.",
         "Accompagnement d’une société d’envergure dans le cadre d’un litige complexe en matière de rupture brutale de relations commerciales établies.",
         "Défense des intérets d’une legaltech accusée d’exercice illégal de la profession d’avocats",
@@ -147,9 +147,9 @@ const ExpertiseData = [
       ],
       [
         "Négociation et rédaction de baux commerciaux.",
-        "Assistance et représentation de commerçants dans le cadre du non-renouvellement de bail.",
+        "Assistance et représentation de commerçants dans le cadre du non&#8209renouvellement de bail.",
         "Contestation de refus de permis de construire.",
-        "Assistance et représentation de commerçants dans le cadre du non-renouvellement de bail.",
+        "Assistance et représentation de commerçants dans le cadre du non&#8209renouvellement de bail.",
         "Assistance et représentation d’établissements délégataires de service public dont la responsabilité est engagée.",
         "Gestion de nombreux dossiers d’expulsion locative.",
       ],
@@ -157,23 +157,23 @@ const ExpertiseData = [
     additionalSection: {
       title: "Proptech et innovation du secteur",
       description: [
-        "En complément de l’activité traditionnelle, le cabinet a développé une expertise unique en matière de proptech et d’innovation dans le domaine immobilier. Il dispose d’une pratique pluridisciplinaire unique alliant l’expertise IT/nouvelles technologies à l’immobilier et intervient sur de nombreux projets innovants dans le secteur. Ainsi, le pôle IP/IT est régulièrement sollicité, aux côtés de l’équipe immobilier, par les acteurs innovants du secteur et de la proptech (grands comptes, franchises d’agence immobilières, éditeurs de logiciel, start-up…).",
+        "En complément de l’activité traditionnelle, le cabinet a développé une expertise unique en matière de proptech et d’innovation dans le domaine immobilier. Il dispose d’une pratique pluridisciplinaire unique alliant l’expertise IT/nouvelles technologies à l’immobilier et intervient sur de nombreux projets innovants dans le secteur. Ainsi, le pôle IP/IT est régulièrement sollicité, aux côtés de l’équipe immobilier, par les acteurs innovants du secteur et de la proptech (grands comptes, franchises d’agence immobilières, éditeurs de logiciel, start&#8209up…).",
         "Le cabinet est ainsi intervenu sur des sujets d’innovation très diversifiés (contrats et projets informatiques complexes, immeubles connectés, plateformes proptech innovantes de gestion locative et de colocation, tokenisation des actifs immobiliers via la blockchain, signatures électroniques et automatisation des process, mise en conformité RGPD des acteurs…).",
       ],
     },
     accordion: [],
   },
   {
-    title: "Pénal, Cybercriminalité et e-réputation",
+    title: "Pénal, Cybercriminalité et e&#8209réputation",
     description: [
       "Faire face à vos côtés et défendre avec vigueur vos intérêts dans un monde en mouvement et digitalisé où plus que jamais associer compétences juridiques et technologiques est primordial.",
-      "Le cabinet assiste des personnalités, décideurs particuliers et des entreprises, auteurs présumés d’infractions ou parties civiles, à tous les stades de l’enquête et devant les juridictions pénales et pour leurs problématiques d’e-réputation.",
+      "Le cabinet assiste des personnalités, décideurs particuliers et des entreprises, auteurs présumés d’infractions ou parties civiles, à tous les stades de l’enquête et devant les juridictions pénales et pour leurs problématiques d’e&#8209réputation.",
       "Tous les intervenants du Cabinet ont été formés à l’Ecole de la défense pénale du Barreau de Paris. Le Cabinet a développé une expertise particulière et reconnue en matière de cybercriminalité, de preuve et d’investigations numériques et forensiques dans l’environnement digital et les systèmes informatiques. Notre équipe se compose également d’experts techniques.",
     ],
     accordion: [
       {
         title:
-          "E-réputation, investigation numérique et forensique, suppression de contenus",
+          "E&#8209réputation, investigation numérique et forensique, suppression de contenus",
         content:
           "Le cabinet traite de nombreux contentieux en droit à l’image, droit de la presse et vie privée, domaine mouvant dans lequel les règles procédurales doivent être pleinement maîtrisées. Sa maîtrise complémentaire de l’environnement numérique et « forensic » lui permet de donner une réponse concrète et efficace en cas d’atteinte à la réputation et notamment sur les réseaux sociaux et moteurs de recherche comme Google, Facebook, Youtube, TikTok, Instagram, Snapchat, WordPress… Identification des auteurs par voie d’investigation numérique (forensic) ou via requêtes judiciaires précontentieuses, suppression de contenus illicites, droit au déréférencement et à l’oubli, référé et requêtes LCEN.",
       },
@@ -185,7 +185,7 @@ const ExpertiseData = [
       {
         title: "Cybercriminalité",
         content:
-          "Fraude et malveillance informatique, hacking, accès, maintien frauduleux, suppression, modification, altération dans un système de traitement automatisé de données (STAD), pédopornographie, cybersurveillance, vol de données, téléchargement illégal, usurpation d’identité, fishing, diffamation et injure en ligne, harcèlement, cyberbullying et chantage, IMSI-catcher, détournement de données, contrefaçon.",
+          "Fraude et malveillance informatique, hacking, accès, maintien frauduleux, suppression, modification, altération dans un système de traitement automatisé de données (STAD), pédopornographie, cybersurveillance, vol de données, téléchargement illégal, usurpation d’identité, fishing, diffamation et injure en ligne, harcèlement, cyberbullying et chantage, IMSI&#8209catcher, détournement de données, contrefaçon.",
       },
       {
         title:
@@ -227,7 +227,7 @@ const ExpertiseData = [
       {
         title: "Redaction et negociation de contrats informatiques",
         content:
-          "Contrats de licence logiciel. Contrats d’externalisation (SaaS, Infogérance, ASP, Sous-traitance), Contrats d’hébergement. Cahier des charges, Contrat d’intégration. Contrats mobiles. Contrats de maintenance. Contrats de développement web. Contrats Telecom. Gestion du risque informatique et prévention des conflits. Maîtrise de l’Environnement Open Source et des licences libres (BSD, CNU, APACHE, GPL, AGPL, LGPL, MPL…).",
+          "Contrats de licence logiciel. Contrats d’externalisation (SaaS, Infogérance, ASP, Sous&#8209traitance), Contrats d’hébergement. Cahier des charges, Contrat d’intégration. Contrats mobiles. Contrats de maintenance. Contrats de développement web. Contrats Telecom. Gestion du risque informatique et prévention des conflits. Maîtrise de l’Environnement Open Source et des licences libres (BSD, CNU, APACHE, GPL, AGPL, LGPL, MPL…).",
       },
       {
         title:
@@ -238,7 +238,7 @@ const ExpertiseData = [
       {
         title: "Accompagnement de projets technologiques",
         content:
-          "Principaux secteurs d’intervention : Informatique, web, mobilité, e-santé, télécoms, médias, green IT, objets connectés, Mobil payement, Big data, cosmétique, robotique. Assistance à la dématérialisation et archivage. Suivi et structuration des projets complexes. Contrats cadres et relations sous-traitants/fournisseurs. Rédaction de Cahier des charges. Memorandum of Understanding. MOA. Représentation en Comité de pilotage. Gestion des risques juridiques. Appui aux transferts des technologies. Gestion de la fin de projet (recettage, réversibilité et migrations).",
+          "Principaux secteurs d’intervention : Informatique, web, mobilité, e&#8209santé, télécoms, médias, green IT, objets connectés, Mobil payement, Big data, cosmétique, robotique. Assistance à la dématérialisation et archivage. Suivi et structuration des projets complexes. Contrats cadres et relations sous&#8209traitants/fournisseurs. Rédaction de Cahier des charges. Memorandum of Understanding. MOA. Représentation en Comité de pilotage. Gestion des risques juridiques. Appui aux transferts des technologies. Gestion de la fin de projet (recettage, réversibilité et migrations).",
       },
       {
         title: "Blockchain et cryptomonnaies",
@@ -248,7 +248,7 @@ const ExpertiseData = [
       {
         title: "Spécialité Greentech et Green IT",
         content:
-          "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start-up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l'environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez-nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
+          "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start&#8209up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l'environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez&#8209nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
       },
     ],
     useCases: [
@@ -266,7 +266,7 @@ const ExpertiseData = [
     additionalSection: {
       title: "Spécialité Greentech et Green IT",
       description: [
-        "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start-up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l’environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez-nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
+        "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start&#8209up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l’environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez&#8209nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
       ],
     },
   },
@@ -281,7 +281,7 @@ const ExpertiseData = [
       {
         title: "Audit RGPD et conformité RGPD/CNIL",
         content:
-          "Etablissement du Registre de traitement, demande d’autorisations, transferts internationaux de données, licéité des collectes, consentement, preuve, sécurité, archivage, pseudonymisation, chiffrement, exercice et réponse aux demandes de droits des personnes concernées (accès, rectification, effacement, opposition, limitation du traitement, portabilité des données, droit de ne pas faire l’objet d’une décision individuelle automatisée, y compris le profilage). Sous-traitance, responsabilité et sécurisation contractuelle des flux. Traitement à risques : profilage, algorythme, intelligence artificielle, Crowling et exploitation prédictive des données, e-santé, e-marketing.",
+          "Etablissement du Registre de traitement, demande d’autorisations, transferts internationaux de données, licéité des collectes, consentement, preuve, sécurité, archivage, pseudonymisation, chiffrement, exercice et réponse aux demandes de droits des personnes concernées (accès, rectification, effacement, opposition, limitation du traitement, portabilité des données, droit de ne pas faire l’objet d’une décision individuelle automatisée, y compris le profilage). Sous&#8209traitance, responsabilité et sécurisation contractuelle des flux. Traitement à risques : profilage, algorythme, intelligence artificielle, Crowling et exploitation prédictive des données, e&#8209santé, e&#8209marketing.",
       },
       {
         title: "DPO externalisé et accompagnement des DPO",
@@ -298,7 +298,7 @@ const ExpertiseData = [
       [
         "Accompagnement juridique d’un Club de Football français de premier plan sur sa protection des données et son externalisation DPO",
         "Accompagnement juridique IP/IT RGPD d’une plateforme leader de solution de vente de formations en ligne.",
-        "Accompagnement juridique RPGD de plusieurs société e-santé et téléconsultation.",
+        "Accompagnement juridique RPGD de plusieurs société e&#8209santé et téléconsultation.",
       ],
       [
         "Accompagnement RGPD et DPO externalisé d’un groupe de presse et de publications légales.",
@@ -322,9 +322,9 @@ const ExpertiseData = [
       },
       {
         title:
-          "Gestion des risques sociaux spécifiques au sein des entreprises IT, innovantes, start-ups et SSII",
+          "Gestion des risques sociaux spécifiques au sein des entreprises IT, innovantes, start&#8209ups et SSII",
         content:
-          "Encadrement des créations des salariés (brevet, logiciel, droit d’auteur, logos), sécurité informatique, management, risques sociaux, harcèlement et burn-out.",
+          "Encadrement des créations des salariés (brevet, logiciel, droit d’auteur, logos), sécurité informatique, management, risques sociaux, harcèlement et burn&#8209out.",
       },
       {
         title: "Cybersurveillance, loyauté et licéité de la preuve",

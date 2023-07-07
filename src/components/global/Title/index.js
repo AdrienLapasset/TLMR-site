@@ -51,7 +51,15 @@ const StyledTitle = styled.h1`
   }
 `;
 
-const Title = ({ type, size, lowercase, children, className, pageTitle }) => {
+const Title = ({
+  type,
+  size,
+  lowercase,
+  children,
+  className,
+  pageTitle,
+  html,
+}) => {
   return (
     <StyledTitle
       as={type}
@@ -59,6 +67,7 @@ const Title = ({ type, size, lowercase, children, className, pageTitle }) => {
       size={size}
       lowercase={lowercase}
       pageTitle={pageTitle}
+      dangerouslySetInnerHTML={html}
     >
       {children}
     </StyledTitle>
