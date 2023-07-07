@@ -8,11 +8,14 @@ const StyledContainer = styled.div`
   flex-shrink: 0;
   transition: all ${(props) => props.theme.transitionTime}s;
   ${(props) => props.theme.cubicBezier.base};
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   transform: translateY(2px);
-
+  @media ${(props) => props.theme.minWidth.md} {
+    width: 12px;
+    height: 12px;
+  }
   span {
     display: block;
     transform: translateY(8px);

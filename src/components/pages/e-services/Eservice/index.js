@@ -60,6 +60,8 @@ const StyledContainer = styled(Grid)`
       }
       @media ${(props) => props.theme.minWidth.xl} {
         margin-bottom: 55px;
+        font-size: 30px;
+        line-height: 35px;
       }
     }
     & > p {
