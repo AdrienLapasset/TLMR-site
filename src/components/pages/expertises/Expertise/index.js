@@ -110,7 +110,7 @@ const StyledUseCases = styled.div`
       &:last-of-type {
         display: ${({ isSeeMoreUseCases }) =>
           isSeeMoreUseCases ? "block" : "none"};
-        @media ${(props) => props.theme.minWidth.md} {
+        @media ${(props) => props.theme.minWidth.sm} {
           display: block;
         }
       }
@@ -127,6 +127,7 @@ const StyledUseCases = styled.div`
           isSeeMoreUseCases ? "flex" : "none"};
         @media ${(props) => props.theme.minWidth.sm} {
           margin-bottom: 15px;
+          display: flex;
         }
         & > aside {
           margin-right: 7px;
@@ -189,12 +190,7 @@ const StyledAdditionalSection = styled.section`
 `;
 
 const Expertise = ({ expertise }) => {
-  const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(true);
-
-  useEffect(() => {
-    const screenWidth = window.innerWidth;
-    screenWidth < 768 && setIsSeeMoreUseCases(false);
-  }, []);
+  const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(false);
 
   const handleSeeMoreUseCases = () => {
     setIsSeeMoreUseCases(!isSeeMoreUseCases);

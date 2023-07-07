@@ -110,7 +110,7 @@ const StyledCopyrightsContainer = styled.div`
   }
 `;
 
-const Footer = ({ pageTop }) => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const goToTop = () => {
