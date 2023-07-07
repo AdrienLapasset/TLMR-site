@@ -10,7 +10,7 @@ import lequipeData from "components/pages/lequipe/data";
 import Seo from "components/Seo";
 
 const StyledCabinetContainer = styled.section`
-  margin: 160px 0 80px;
+  padding: 160px 0 80px;
   @media ${(props) => props.theme.minWidth.sm} {
     padding: 210px 0 120px;
   }

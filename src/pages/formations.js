@@ -10,6 +10,7 @@ import styled from "styled-components";
 const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
     margin-bottom: 35px;
+    padding-top: 210px;
   }
   @media ${(props) => props.theme.minWidth.md} {
     margin-bottom: 80px;
@@ -21,9 +22,6 @@ const StyledALaUne = styled(ALaUne)`
   }
 `;
 const StyledContainer = styled.div`
-  @media ${(props) => props.theme.minWidth.sm} {
-    margin-top: 210px;
-  }
   & > .gatsby-image-wrapper {
     aspect-ratio: 1;
     margin-bottom: 40px;
