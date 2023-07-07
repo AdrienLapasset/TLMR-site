@@ -11,10 +11,10 @@ const StyledPageHero = styled(PageHero)`
     margin-bottom: 110px;
   }
   @media ${({ theme }) => theme.minWidth.md} {
-    margin: 210px 0;
+    padding: 210px 0;
   }
   @media ${({ theme }) => theme.minWidth.lg} {
-    margin: 280px 0;
+    padding: 280px 0;
   }
   & > h1 {
     font-size: 25px;
