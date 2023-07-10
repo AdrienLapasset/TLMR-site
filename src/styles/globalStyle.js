@@ -38,6 +38,10 @@ export default createGlobalStyle`
   padding: 0;
 }
 
+html, body {
+  overscroll-behavior-y: none;
+}
+
 h1,
 h2,
 h3,

@@ -14,7 +14,7 @@ const Provider = (props) => {
       if (currentScrollY > scrollY && currentScrollY > headerHeight) {
         setIsNavHidden(true);
       }
-      if (currentScrollY < scrollY - 20) {
+      if (currentScrollY < scrollY) {
         setIsNavHidden(false);
       }
       setScrollY(currentScrollY);
