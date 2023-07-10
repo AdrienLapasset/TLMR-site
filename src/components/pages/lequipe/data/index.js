@@ -99,29 +99,6 @@ const lequipeData = [
     linkedinUrl: "https://fr.linkedin.com/in/myriamhertzavocat",
   },
   {
-    imgName: "claudia",
-    name: "Claudia Gestin-Vilion",
-    post: "Avocate à la cour",
-    description:
-      "Formée en France et à l’étranger dans des institutions et des cabinets internationaux réputés dans le domaine de la propriété intellectuelle et des technologies numériques, Claudia est une perfectionniste qui sait s’intégrer à des environnements exigeants et en perpétuel mouvement. Elle dispose d’une expertise particulière en matière de lutte contre la contrefaçon, intelligence artificielle et droit d’auteur et son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières. Elle intervient également sur la protection des données, en contentieux commercial, en droit pénal et de la presse.",
-    experiences: [
-      "Double diplôme M2 et LL.M Propriété intellectuelle fondamentale et technologies numériques (Université Paris-Sud et Université Laval, Canada)",
-      "Taylor Wessing, Paris",
-      "Ecole de Défense Pénale du Barreau de Paris",
-      "BNG Legal, Pnom Penh, Cambodge",
-      "Harlay Avocats",
-      "Institut Pasteur Paris / Boston (US)",
-      "XenoIP, Fribourg, Allemagne",
-      "Parlement du Canada, Ottawa",
-    ],
-    engagements: [
-      "Membre de l’équipe vainqueur du Hackaton Microsoft « The new way of work empowered by Artificial Intelligence »",
-      "ELSA Paris ex Vice-présidente STEP et Marketing et représentante de délégation au Comité permanent du droit d’auteur et droits connexes (Genève Suisse)",
-      "Intervenante en e-commerce en école de commerce",
-    ],
-    linkedinUrl: "https://fr.linkedin.com/in/claudiagestinvilion",
-  },
-  {
     imgName: "evanthia",
     name: "Evanthia Revel",
     post: "Avocate à la cour",
@@ -141,6 +118,28 @@ const lequipeData = [
       "Avocats Sans Frontières France (stage)",
     ],
     linkedinUrl: "https://fr.linkedin.com/in/evanthia-revel-08409679",
+  },
+  {
+    imgName: "camille",
+    name: "Camille Loyer",
+    post: "Avocate",
+    description:
+      "Formée au droit de la propriété intellectuelle, de l’audiovisuel et des nouvelles technologies ainsi qu’à la cybercriminalité dans plusieurs cabinets français et internationaux de référence, elle a rejoint le pôle IP/IT du Cabinet Touati-la Motte Rouge Avocats en 2023. Forte de ses expériences passées, elle dispose d’une forte expertise en matière de production audiovisuelle, droit commercial, droit de l’internet et droit des marques, en conseil comme en contentieux. Son dynamisme, sa persévérance et son sens de l’analyse et du détail garantissent la qualité du travail fournit dans chaque dossier qu’elle est amenée à traiter. Son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières complexes, ainsi que des dossiers audiovisuels.",
+    experiences: [
+      "M2 IP/IT Droit de la propriété intellectuelle et des affaires numériques",
+      "Diplôme Universitaire de Common Law",
+      "Ecole de la défense pénale du Barreau de Paris",
+      "Joffe & Partners – London",
+      "Taylor Wessing",
+      "Simmons & Simmons",
+      "Yooner",
+    ],
+    engagements: [
+      "Membre de l’association « Barreau des Arts »",
+      "Membre de l’association « En Répliques »",
+      "Intervenante en droit du cinéma à l’université Gustave Eiffel",
+    ],
+    // linkedinUrl: "https://fr.linkedin.com/in/claudiagestinvilion",
   },
 ];
 

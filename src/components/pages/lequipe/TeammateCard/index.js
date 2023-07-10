@@ -55,7 +55,7 @@ const TeammateCard = ({
   const imgPathJean = "../../../../assets/imgs/placeholder.jpg";
   const imgPathElea = "../../../../assets/imgs/placeholder.jpg";
   const imgPathMyriam = "../../../../assets/imgs/placeholder.jpg";
-  const imgPathClaudia = "../../../../assets/imgs/placeholder.jpg";
+  const imgPathCamille = "../../../../assets/imgs/placeholder.jpg";
   const imgPathEvanthia = "../../../../assets/imgs/placeholder.jpg";
 
   return (
@@ -72,8 +72,8 @@ const TeammateCard = ({
       {imgName === "myriam" && (
         <StaticImage src={imgPathMyriam} alt={name} aspectRatio={1} />
       )}
-      {imgName === "claudia" && (
-        <StaticImage src={imgPathClaudia} alt={name} aspectRatio={1} />
+      {imgName === "camille" && (
+        <StaticImage src={imgPathCamille} alt={name} aspectRatio={1} />
       )}
       {imgName === "evanthia" && (
         <StaticImage src={imgPathEvanthia} alt={name} aspectRatio={1} />
@@ -83,9 +83,11 @@ const TeammateCard = ({
       <Paragraph>{description}</Paragraph>
       <AccordionSection title="Formation et expérience" data={experiences} />
       <AccordionSection title="Engagements" data={engagements} />
-      <a href={linkedinUrl} target="_blank" rel="noreferrer">
-        <img src={linkedinLogo} alt="" />
-      </a>
+      {linkedinUrl && (
+        <a href={linkedinUrl} target="_blank" rel="noreferrer">
+          <img src={linkedinLogo} alt="" />
+        </a>
+      )}
     </StyledContainer>
   );
 };
