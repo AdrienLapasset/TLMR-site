@@ -8,9 +8,7 @@ import { myContext } from "provider";
 const StyledContainer = styled.section`
   display: none;
   @media ${(props) => props.theme.minWidth.lg} {
-    transform: translateY(
-      ${({ theme, isHidden }) => isHidden && `-` + theme.headerHeight * 2}px
-    );
+    transform: translateY(${({ isHidden }) => isHidden && `-` + 105}px);
     transition: transform ${(props) => props.theme.transitionTime}s,
       top ${(props) => props.theme.transitionTime}s;
     ${(props) => props.theme.cubicBezier.base};
