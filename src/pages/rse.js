@@ -6,12 +6,12 @@ import styled from "styled-components";
 import Seo from "components/Seo";
 
 const StyledPageHero = styled(PageHero)`
-  margin-bottom: 190px;
-  @media ${({ theme }) => theme.minWidth.sm} {
-    margin-bottom: 110px;
-  }
+  padding: 160px 0 75px;
   @media ${({ theme }) => theme.minWidth.md} {
-    padding: 210px 0;
+    padding: 210px 0 120px;
+    p:first-of-type {
+      margin-bottom: 0;
+    }
   }
   & > h1 {
     font-size: 25px;
@@ -65,7 +65,6 @@ const StyledGrid = styled(Grid)`
       line-height: 60px;
     }
     @media ${({ theme }) => theme.minWidth.lg} {
-      /* grid-column: 1/2; */
       font-size: 120px;
       line-height: 90px;
     }

@@ -1,8 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 import Grid from "components/global/Grid";
 import heroVideo from "assets/videos/TLMR_ Home 16-9.mp4";
+import videoPlacholder from "assets/imgs/placeholder.jpg";
 
 const StyledContainer = styled.div`
   padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
@@ -78,7 +79,7 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      <video autoPlay muted loop playsInline>
+      <video autoPlay muted loop playsInline poster={videoPlacholder}>
         <source src={heroVideo} type="video/mp4" />
       </video>
       {/* <StaticImage
