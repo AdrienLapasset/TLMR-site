@@ -78,7 +78,7 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      <video autoPlay muted loop>
+      <video autoPlay muted loop playsInline>
         <source src={heroVideo} type="video/mp4" />
       </video>
       {/* <StaticImage
