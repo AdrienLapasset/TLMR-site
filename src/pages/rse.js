@@ -13,9 +13,6 @@ const StyledPageHero = styled(PageHero)`
   @media ${({ theme }) => theme.minWidth.md} {
     padding: 210px 0;
   }
-  @media ${({ theme }) => theme.minWidth.lg} {
-    padding: 280px 0;
-  }
   & > h1 {
     font-size: 25px;
     line-height: 30px;

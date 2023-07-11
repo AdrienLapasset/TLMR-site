@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import Grid from "components/global/Grid";
+import heroVideo from "assets/videos/TLMR_ Home 16-9.mp4";
 
 const StyledContainer = styled.div`
   padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
@@ -61,6 +62,9 @@ const StyledContainer = styled.div`
       aspect-ratio: 1.8;
     }
   }
+  video {
+    max-width: 100%;
+  }
 `;
 
 const HeroSection = () => {
@@ -74,12 +78,15 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      <StaticImage
+      <video autoPlay muted loop>
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      {/* <StaticImage
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
         quality="90"
         loading="eager"
-      />
+      /> */}
     </StyledContainer>
   );
 };

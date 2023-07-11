@@ -42,7 +42,8 @@ const StyledContainer = styled.div`
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  row-gap: 45px;
+  column-gap: 35px;
   @media ${(props) => props.theme.minWidth.sm} {
     grid-template-columns: repeat(6, 1fr);
   }

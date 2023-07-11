@@ -43,10 +43,11 @@ const StyledNavLink = styled(Link)`
   align-items: first baseline;
   color: ${(props) => props.theme.colors.greyLight};
   margin-bottom: 6px;
-  font-size: 13px;
   &.active,
   &:hover {
-    color: ${(props) => props.theme.colors.black};
+    p {
+      color: ${(props) => props.theme.colors.black};
+    }
     & > div {
       background-color: ${(props) => props.theme.colors.black};
     }
@@ -54,6 +55,9 @@ const StyledNavLink = styled(Link)`
   & > div {
     flex: 0 0 10px;
     background-color: ${(props) => props.theme.colors.greyLight};
+  }
+  p {
+    font-size: 13px;
   }
 `;
 
@@ -103,7 +107,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
                 spy
               >
                 <Dot square={eservices} />
-                {title}
+                <p dangerouslySetInnerHTML={{ __html: title }}></p>
               </StyledNavLink>
             ))}
           </StyledGrid>

@@ -55,7 +55,7 @@ const lequipeData = [
   {
     imgName: "elea",
     name: "Eléa Bataille",
-    post: "Avocate à la cour",
+    post: "Avocate à la Cour",
     description:
       "Excellente juriste, elle met sa rigueur, son talent, sa positivité et sa force de travail au service des clients du cabinet depuis sa création. Dotée d’une solide formation en corporate et droit procédural, elle s’est ensuite orientée en IP/IT et protection des données personnelles. Eléa dispose d’un excellent savoir-faire aussi bien en matière de conseil que de contentieux, notamment dans le domaine du droit des marques, cybercrimnialité, e-commerce et RGPD. Elle intervient également en contentieux des affaires, droit pénal et de la presse.",
     experiences: [
@@ -77,7 +77,7 @@ const lequipeData = [
   {
     imgName: "myriam",
     name: "Myriam Hertz",
-    post: "Avocate à la cour",
+    post: "Avocate à la Cour",
     description:
       "Avec plus de dix années d’expérience en droit de l’immobilier Myriam est réputée pour la gestion rigoureuse des dossiers, sa finesse de plaidoirie et son art du combat (Aïkido 1er Dan). Au sein du cabinet elle est en charge avec Jean-Philippe du Pôle Immobilier en fort développement et accompagne la clientèle sur des problématiques de baux, copropriété, rédaction d’actes et opérations complexes aussi bien en matière de conseil que de contentieux. Enseignante et formatrice, elle a également un savoir-faire spécifique en matière de formation, ce qui constitue également l’ADN du cabinet.",
     experiences: [
@@ -99,9 +99,30 @@ const lequipeData = [
     linkedinUrl: "https://fr.linkedin.com/in/myriamhertzavocat",
   },
   {
+    imgName: "camille",
+    name: "Camille Loyer",
+    post: "Avocate à la Cour",
+    description:
+      "Formée au droit de la propriété intellectuelle, de l’audiovisuel et des nouvelles technologies ainsi qu’à la cybercriminalité dans plusieurs cabinets français et internationaux de référence, elle a rejoint le pôle IP/IT du Cabinet Touati La Motte Rouge Avocats en 2023. Forte de ses expériences passées, elle dispose d’une forte expertise en matière de production audiovisuelle, droit commercial, droit de l’internet et droit des marques, en conseil comme en contentieux. Son dynamisme, sa persévérance et son sens de l’analyse et du détail garantissent la qualité du travail fournit dans chaque dossier qu’elle est amenée à traiter. Son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières complexes, ainsi que des dossiers audiovisuels.",
+    experiences: [
+      "M2 IP/IT Droit de la propriété intellectuelle et des affaires numériques",
+      "Diplôme Universitaire de Common Law",
+      "Ecole de la défense pénale du Barreau de Paris",
+      "Joffe & Partners – London",
+      "Taylor Wessing",
+      "Simmons & Simmons",
+      "Yooner",
+    ],
+    engagements: [
+      "Membre de l’association « Barreau des Arts »",
+      "Membre de l’association « En Répliques »",
+      "Intervenante en droit du cinéma à l’université Gustave Eiffel",
+    ],
+  },
+  {
     imgName: "evanthia",
     name: "Evanthia Revel",
-    post: "Avocate à la cour",
+    post: "Avocate à la Cour",
     description:
       "Spécialisée en contentieux, Evanthia intervient principalement en droit immobilier, droit de la construction et droit social où elle a été formée dans des cabinets renommés avant de rejoindre le Cabinet TLMR. Son recrutement coïncide avec le fort développement du pôle immobilier et des contentieux complexes gérés par Jean-Philippe Touati. Excellente stratège, Evanthia met au profit des clients sa rigueur et sa détermination dans une logique d’optimisation des résultats. Elle intervient en français et en anglais.",
     experiences: [
@@ -118,28 +139,6 @@ const lequipeData = [
       "Avocats Sans Frontières France (stage)",
     ],
     linkedinUrl: "https://fr.linkedin.com/in/evanthia-revel-08409679",
-  },
-  {
-    imgName: "camille",
-    name: "Camille Loyer",
-    post: "Avocate",
-    description:
-      "Formée au droit de la propriété intellectuelle, de l’audiovisuel et des nouvelles technologies ainsi qu’à la cybercriminalité dans plusieurs cabinets français et internationaux de référence, elle a rejoint le pôle IP/IT du Cabinet Touati-la Motte Rouge Avocats en 2023. Forte de ses expériences passées, elle dispose d’une forte expertise en matière de production audiovisuelle, droit commercial, droit de l’internet et droit des marques, en conseil comme en contentieux. Son dynamisme, sa persévérance et son sens de l’analyse et du détail garantissent la qualité du travail fournit dans chaque dossier qu’elle est amenée à traiter. Son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières complexes, ainsi que des dossiers audiovisuels.",
-    experiences: [
-      "M2 IP/IT Droit de la propriété intellectuelle et des affaires numériques",
-      "Diplôme Universitaire de Common Law",
-      "Ecole de la défense pénale du Barreau de Paris",
-      "Joffe & Partners – London",
-      "Taylor Wessing",
-      "Simmons & Simmons",
-      "Yooner",
-    ],
-    engagements: [
-      "Membre de l’association « Barreau des Arts »",
-      "Membre de l’association « En Répliques »",
-      "Intervenante en droit du cinéma à l’université Gustave Eiffel",
-    ],
-    // linkedinUrl: "https://fr.linkedin.com/in/claudiagestinvilion",
   },
 ];
 
