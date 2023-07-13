@@ -76,6 +76,7 @@ const StyledGrid = styled(Grid)`
     @media ${({ theme }) => theme.minWidth.md} {
       font-size: 25px;
       line-height: auto;
+      line-height: 31px;
     }
   }
   h3,

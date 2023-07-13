@@ -80,9 +80,11 @@ const StyledGrid = styled(Grid)`
   }
   h2 {
     font-size: 20px;
+    line-height: 24px;
     margin-bottom: 15px;
     @media ${({ theme }) => theme.minWidth.md} {
       font-size: 25px;
+      line-height: 31px;
     }
   }
   h3,
