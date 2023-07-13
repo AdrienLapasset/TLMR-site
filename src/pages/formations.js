@@ -49,7 +49,6 @@ const Formations = () => {
             <StaticImage
               src="../assets/imgs/placeholder.jpg"
               alt="TLMR - L’excellence accessible"
-              quality="90"
             />
             <TwoPointsSection
               title1="VOUS PROTÉGER"

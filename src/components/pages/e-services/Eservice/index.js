@@ -160,7 +160,6 @@ const Eservice = ({
         <StaticImage
           src="../../../../assets/imgs/placeholder.jpg"
           alt="TLMR - L’excellence accessible"
-          quality="90"
         />
         <div>
           <Title size="xs" type="h2">

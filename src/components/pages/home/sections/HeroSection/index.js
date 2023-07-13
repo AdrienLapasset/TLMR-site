@@ -85,7 +85,7 @@ const HeroSection = () => {
       {/* <StaticImage
         src="../../../../../assets/imgs/placeholder.jpg"
         alt="TLMR - L’excellence accessible"
-        quality="90"
+        
         loading="eager"
       /> */}
     </StyledContainer>
