@@ -14,7 +14,6 @@ const query = graphql`
         description
         siteUrl
         lang
-        keywords
       }
     }
   }
@@ -40,10 +39,6 @@ const SEO = ({ pageTitle, articleDescription, imageUrl }) => {
         {
           name: `description`,
           content: description,
-        },
-        {
-          name: "keywords",
-          content: site.siteMetadata.keywords.join(","),
         },
         {
           property: `og:title`,
