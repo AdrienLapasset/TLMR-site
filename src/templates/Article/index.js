@@ -316,6 +316,13 @@ const myPortableTextComponents = {
         <SanityImg asset={value.asset} alt={value.asset.filename} />
       ),
   },
+  marks: {
+    link: ({ value, children }) => (
+      <a href={value.href} target="_blank" rel="noopener">
+        {children}
+      </a>
+    ),
+  },
 };
 
 const Article = ({ data, location }) => {
@@ -323,7 +330,7 @@ const Article = ({ data, location }) => {
   const heroImage = getImage(heroImg.asset);
   const articleDescription = _rawContent[0].children[0].text;
 
-  // console.log(_rawContent);
+  console.log(_rawContent);
 
   return (
     <>
