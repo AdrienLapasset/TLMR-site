@@ -307,9 +307,14 @@ export const query = graphql`
 
 const myPortableTextComponents = {
   types: {
-    image: ({ value }) => (
-      <SanityImg asset={value.asset} alt={value.asset.filename} />
-    ),
+    image: ({ value }) =>
+      value.link ? (
+        <a href={value.link} target="_blank" rel="noreferrer noopener">
+          <SanityImg asset={value.asset} alt={value.asset.filename} />
+        </a>
+      ) : (
+        <SanityImg asset={value.asset} alt={value.asset.filename} />
+      ),
   },
 };
 
@@ -317,6 +322,8 @@ const Article = ({ data, location }) => {
   const { title, date, author, _rawContent, heroImg } = data.sanityArticle;
   const heroImage = getImage(heroImg.asset);
   const articleDescription = _rawContent[0].children[0].text;
+
+  console.log(_rawContent);
 
   return (
     <>
