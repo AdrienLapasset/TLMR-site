@@ -330,7 +330,7 @@ const Article = ({ data, location }) => {
   const heroImage = getImage(heroImg.asset);
   const articleDescription = _rawContent[0].children[0].text;
 
-  console.log(_rawContent);
+  // console.log(_rawContent);
 
   return (
     <>
