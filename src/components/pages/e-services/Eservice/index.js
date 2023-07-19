@@ -157,10 +157,33 @@ const Eservice = ({
   return (
     <>
       <StyledContainer>
-        <StaticImage
-          src="../../../../assets/imgs/placeholder.jpg"
-          alt="TLMR - L’excellence accessible"
-        />
+        {title === "Protection des créations" ? (
+          <StaticImage
+            src="../../../../assets/imgs/ESERVICES/protection.jpg"
+            alt="TLMR - L’excellence accessible"
+          />
+        ) : title === "Signature électronique" ? (
+          <StaticImage
+            src="../../../../assets/imgs/ESERVICES/signature.jpg"
+            alt="TLMR - L’excellence accessible"
+          />
+        ) : title ===
+          "Générateur de politique de confidentialité conforme RGPD" ? (
+          <StaticImage
+            src="../../../../assets/imgs/ESERVICES/rgpd.jpg"
+            alt="TLMR - L’excellence accessible"
+          />
+        ) : title === "Legal design" ? (
+          <StaticImage
+            src="../../../../assets/imgs/ESERVICES/legaldesign.jpg"
+            alt="TLMR - L’excellence accessible"
+          />
+        ) : title === "Consultation juridique" ? (
+          <StaticImage
+            src="../../../../assets/imgs/ESERVICES/consultation.jpg"
+            alt="TLMR - L’excellence accessible"
+          />
+        ) : null}
         <div>
           <Title size="xs" type="h2">
             {title}

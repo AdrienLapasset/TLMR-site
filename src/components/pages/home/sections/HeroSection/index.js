@@ -81,12 +81,6 @@ const HeroSection = () => {
       <video autoPlay muted loop playsInline poster={videoPlacholder}>
         <source src={heroVideo} type="video/mp4" />
       </video>
-      {/* <StaticImage
-        src="../../../../../assets/imgs/placeholder.jpg"
-        alt="TLMR - L’excellence accessible"
-        
-        loading="eager"
-      /> */}
     </StyledContainer>
   );
 };

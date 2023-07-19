@@ -49,7 +49,7 @@ const VousFormer = () => {
       <SectionTitle aside={"Formations"} title={"VOUS FORMER"} />
       <StyledColumns>
         <StaticImage
-          src="../../../../../assets/imgs/placeholder.jpg"
+          src="../../../../../assets/imgs/HOME/formation.jpg"
           alt="TLMR - L’excellence accessible"
           aspectRatio={1.44}
         />

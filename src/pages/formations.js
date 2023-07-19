@@ -9,11 +9,8 @@ import styled from "styled-components";
 
 const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-bottom: 35px;
+    padding-bottom: 40px;
     padding-top: 210px;
-  }
-  @media ${(props) => props.theme.minWidth.md} {
-    margin-bottom: 80px;
   }
 `;
 const StyledALaUne = styled(ALaUne)`
@@ -47,8 +44,10 @@ const Formations = () => {
               firstParagraph="Henri de la Motte Rouge et Jean Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne Infolawyers. Dédié à l’accompagnement des entrepreneurs du web infopreneurs et e-commerçants, leur accompagnement inédit a permis à plusieurs centaines d’entrepreneurs d’être en conformité juridique de manière simple et rapide."
             />
             <StaticImage
-              src="../assets/imgs/placeholder.jpg"
+              src="../assets/imgs/FORMATIONS/formation.jpg"
               alt="TLMR - L’excellence accessible"
+              layout="fullWidth"
+              quality={100}
             />
             <TwoPointsSection
               title1="VOUS PROTÉGER"

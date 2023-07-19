@@ -19,13 +19,32 @@ const StyledContainer = styled.div`
   @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 160px;
   }
+`;
+const StyledColumns = styled.div`
+  order: 0;
+  @media ${(props) => props.theme.minWidth.sm} {
+    order: 1;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: ${(props) => props.theme.columnGap.mobile};
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
+  }
   .gatsby-image-wrapper {
     margin-bottom: 12px;
     aspect-ratio: 1;
     @media ${(props) => props.theme.minWidth.sm} {
-      aspect-ratio: 2.34;
+      aspect-ratio: 1.4;
       margin-bottom: 0;
-      order: 1;
+    }
+    &:last-child {
+      display: none;
+      @media ${(props) => props.theme.minWidth.md} {
+        display: block;
+      }
     }
   }
 `;
@@ -35,11 +54,16 @@ const NosSolution = () => {
   return (
     <StyledContainer>
       <SectionTitle aside="e-Services" title="NOS SOLUTIONS" />
-      <StaticImage
-        src="../../../../../assets/imgs/placeholder.jpg"
-        alt="TLMR - L’excellence accessible"
-        aspectRatio={2.34}
-      />
+      <StyledColumns>
+        <StaticImage
+          src="../../../../../assets/imgs/HOME/eservices_1.jpg"
+          alt="TLMR - L’excellence accessible"
+        />
+        <StaticImage
+          src="../../../../../assets/imgs/HOME/eservices_2.jpg"
+          alt="TLMR - L’excellence accessible"
+        />
+      </StyledColumns>
       <SectionDescription
         description={
           "Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."

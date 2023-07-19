@@ -5,6 +5,7 @@ import Grid from "components/global/Grid";
 import Paragraph from "components/global/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
 import Cta from "components/global/Cta";
+import infolawersVideo from "assets/imgs/SEE MORE BAS DE PAGES/TLMR__info__01.mp4";
 
 const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
@@ -67,11 +68,15 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.xl} {
           grid-column-gap: ${(props) => props.theme.columnGap.desktop};
         }
-        .gatsby-image-wrapper {
+        .gatsby-image-wrapper,
+        video {
           aspect-ratio: 1.6;
           @media ${(props) => props.theme.minWidth.md} {
             aspect-ratio: 1.2;
           }
+        }
+        video {
+          max-width: 100%;
         }
         p {
           margin-top: 7px;
@@ -120,10 +125,17 @@ const TwoPointsSection = ({
             {title1}
           </Title>
           <div>
-            <StaticImage
-              src="../../../assets/imgs/placeholder.jpg"
-              alt="TLMR - L’excellence accessible"
-            />
+            {title1 === "NOS SOLUTIONS" ? (
+              <StaticImage
+                src="../../../assets/imgs/SEE MORE BAS DE PAGES/solutions.jpeg"
+                alt="TLMR - L’excellence accessible"
+              />
+            ) : title1 === "VOUS PROTÉGER" ? (
+              <StaticImage
+                src="../../../assets/imgs/SEE MORE BAS DE PAGES/proteger.jpg"
+                alt="TLMR - L’excellence accessible"
+              />
+            ) : null}
             <Paragraph>{description1}</Paragraph>
             <Cta to={"/" + link1}>En savoir plus</Cta>
           </div>
@@ -133,10 +145,16 @@ const TwoPointsSection = ({
             {title2}
           </Title>
           <div>
-            <StaticImage
-              src="../../../assets/imgs/placeholder.jpg"
-              alt="TLMR - L’excellence accessible"
-            />
+            {title2 === "NOS SOLUTIONS" ? (
+              <StaticImage
+                src="../../../assets/imgs/SEE MORE BAS DE PAGES/solutions.jpeg"
+                alt="TLMR - L’excellence accessible"
+              />
+            ) : title2 === "VOUS FORMER" ? (
+              <video autoPlay muted loop playsInline>
+                <source src={infolawersVideo} type="video/mp4" />
+              </video>
+            ) : null}
             <Paragraph>{description2}</Paragraph>
             <Cta to={"/" + link2}>En savoir plus</Cta>
           </div>

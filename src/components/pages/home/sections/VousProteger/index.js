@@ -56,15 +56,14 @@ const VousProteger = () => {
       <SectionTitle aside="Expertises" title="VOUS PROTÉGER" />
       <StyledColumns>
         <StaticImage
-          src="../../../../../assets/imgs/expertises_1.jpg"
+          src="../../../../../assets/imgs/HOME/expertises_1.jpg"
           alt="TLMR - L’excellence accessible"
         />
         <StaticImage
-          src="../../../../../assets/imgs/expertises_2.jpg"
+          src="../../../../../assets/imgs/HOME/expertises_2.jpg"
           alt="TLMR - L’excellence accessible"
         />
       </StyledColumns>
-
       <SectionDescription
         description={
           "Vous protéger en toute circonstance que ce soit pour relever vos défis d'entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à des problématiques diverses avec rigueur et pragmatisme."
