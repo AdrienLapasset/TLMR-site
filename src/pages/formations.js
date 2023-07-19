@@ -8,8 +8,8 @@ import Seo from "components/Seo";
 import styled from "styled-components";
 
 const StyledPageHero = styled(PageHero)`
+  padding-bottom: 40px;
   @media ${(props) => props.theme.minWidth.sm} {
-    padding-bottom: 40px;
     padding-top: 210px;
   }
 `;

@@ -51,32 +51,35 @@ const TeammateCard = ({
   engagements,
   linkedinUrl,
 }) => {
-  const imgPathHenri = "../../../../assets/imgs/placeholder.jpg";
-  const imgPathJean = "../../../../assets/imgs/placeholder.jpg";
-  const imgPathElea = "../../../../assets/imgs/placeholder.jpg";
-  const imgPathMyriam = "../../../../assets/imgs/placeholder.jpg";
-  const imgPathCamille = "../../../../assets/imgs/placeholder.jpg";
-  const imgPathEvanthia = "../../../../assets/imgs/placeholder.jpg";
+  const basePath = "../../../../assets/imgs/EQUIPE/";
 
   return (
     <StyledContainer>
       {imgName === "henri" && (
-        <StaticImage src={imgPathHenri} alt={name} aspectRatio={1} />
+        <StaticImage src={basePath + "henri.jpg"} alt={name} aspectRatio={1} />
       )}
       {imgName === "jean-philippe" && (
-        <StaticImage src={imgPathJean} alt={name} aspectRatio={1} />
+        <StaticImage src={basePath + "jean.jpg"} alt={name} aspectRatio={1} />
       )}
       {imgName === "elea" && (
-        <StaticImage src={imgPathElea} alt={name} aspectRatio={1} />
+        <StaticImage src={basePath + "elea.jpg"} alt={name} aspectRatio={1} />
       )}
       {imgName === "myriam" && (
-        <StaticImage src={imgPathMyriam} alt={name} aspectRatio={1} />
+        <StaticImage src={basePath + "myriam.jpg"} alt={name} aspectRatio={1} />
       )}
       {imgName === "camille" && (
-        <StaticImage src={imgPathCamille} alt={name} aspectRatio={1} />
+        <StaticImage
+          src={basePath + "camille.jpg"}
+          alt={name}
+          aspectRatio={1}
+        />
       )}
       {imgName === "evanthia" && (
-        <StaticImage src={imgPathEvanthia} alt={name} aspectRatio={1} />
+        <StaticImage
+          src={basePath + "evanthia.jpg"}
+          alt={name}
+          aspectRatio={1}
+        />
       )}
       <h3>{name}</h3>
       <aside>{post}</aside>
