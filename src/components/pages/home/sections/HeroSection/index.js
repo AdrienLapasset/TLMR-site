@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import heroVideo from "assets/videos/TLMR_ Home 16-9 2.mp4";
-import videoPlacholder from "assets/imgs/video-placeholder.png";
 
 const StyledContainer = styled.div`
   padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
@@ -78,7 +77,7 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      <video autoPlay muted loop playsInline poster={videoPlacholder}>
+      <video autoPlay muted loop playsInline>
         <source src={heroVideo} type="video/mp4" />
       </video>
     </StyledContainer>
