@@ -1,8 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-// import { StaticImage } from "gatsby-plugin-image";
 import Grid from "components/global/Grid";
-import heroVideo from "assets/videos/TLMR_ Home 16-9.mp4";
+import heroVideo from "assets/videos/TLMR_ Home 16-9 2.mp4";
 import videoPlacholder from "assets/imgs/video-placeholder.png";
 
 const StyledContainer = styled.div`

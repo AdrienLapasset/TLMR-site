@@ -19,13 +19,32 @@ const StyledContainer = styled.div`
   @media ${(props) => props.theme.minWidth.lg} {
     margin-top: 160px;
   }
+`;
+const StyledColumns = styled.div`
+  order: 0;
+  @media ${(props) => props.theme.minWidth.sm} {
+    order: 1;
+  }
+  @media ${(props) => props.theme.minWidth.md} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: ${(props) => props.theme.columnGap.mobile};
+  }
+  @media ${(props) => props.theme.minWidth.xl} {
+    grid-column-gap: ${(props) => props.theme.columnGap.desktop};
+  }
   .gatsby-image-wrapper {
     margin-bottom: 12px;
     aspect-ratio: 1;
     @media ${(props) => props.theme.minWidth.sm} {
-      aspect-ratio: 2.34;
+      aspect-ratio: 1.4;
       margin-bottom: 0;
-      order: 1;
+    }
+    &:last-child {
+      display: none;
+      @media ${(props) => props.theme.minWidth.md} {
+        display: block;
+      }
     }
   }
 `;
@@ -35,10 +54,17 @@ const VousProteger = () => {
   return (
     <StyledContainer>
       <SectionTitle aside="Expertises" title="VOUS PROTÉGER" />
-      <StaticImage
-        src="../../../../../assets/imgs/placeholder.jpg"
-        alt="TLMR - L’excellence accessible"
-      />
+      <StyledColumns>
+        <StaticImage
+          src="../../../../../assets/imgs/expertises_1.jpg"
+          alt="TLMR - L’excellence accessible"
+        />
+        <StaticImage
+          src="../../../../../assets/imgs/expertises_2.jpg"
+          alt="TLMR - L’excellence accessible"
+        />
+      </StyledColumns>
+
       <SectionDescription
         description={
           "Vous protéger en toute circonstance que ce soit pour relever vos défis d'entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à des problématiques diverses avec rigueur et pragmatisme."
