@@ -9,6 +9,17 @@ import VosExperts from "components/pages/home/sections/VosExperts";
 import VosTemoignages from "components/pages/home/sections/VosTemoignages";
 import DansLaPresse from "components/pages/home/sections/DansLaPresse";
 import Seo from "components/Seo";
+import styled from "styled-components";
+
+const StyledALaUne = styled(ALaUne)`
+  margin-top: 110px;
+  @media ${(props) => props.theme.minWidth.md} {
+    margin-top: 130px;
+  }
+  @media ${(props) => props.theme.minWidth.lg} {
+    margin-top: 160px;
+  }
+`;
 
 const IndexPage = () => {
   return (
@@ -20,7 +31,7 @@ const IndexPage = () => {
           <VousProteger />
           <NosSolution />
           <VousFormer />
-          <ALaUne />
+          <StyledALaUne />
           <VosExperts />
           <VosTemoignages />
           <DansLaPresse />

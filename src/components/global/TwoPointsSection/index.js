@@ -5,7 +5,8 @@ import Grid from "components/global/Grid";
 import Paragraph from "components/global/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
 import Cta from "components/global/Cta";
-import infolawersVideo from "assets/videos/TLMR__info__03.mp4";
+import infolawersVideoMobile from "assets/videos/TLMR__info__03.mp4";
+import infolawersVideoDesktop from "assets/videos/TLMR__info__01.mp4";
 
 const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
@@ -52,7 +53,7 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.lg} {
           font-size: 40px;
         }
-        @media ${(props) => props.theme.minWidth.lg} {
+        @media ${(props) => props.theme.minWidth.xl} {
           font-size: 45px;
         }
       }
@@ -71,9 +72,23 @@ const StyledContainer = styled.section`
         }
         .gatsby-image-wrapper {
           aspect-ratio: 1.5;
+          @media ${(props) => props.theme.minWidth.sm} {
+            aspect-ratio: 1.12;
+          }
         }
         video {
           max-width: 100%;
+          &.video-mobile {
+            @media ${(props) => props.theme.minWidth.sm} {
+              display: none;
+            }
+          }
+          &.video-desktop {
+            display: none;
+            @media ${(props) => props.theme.minWidth.sm} {
+              display: block;
+            }
+          }
         }
         p {
           margin-top: 7px;
@@ -151,9 +166,20 @@ const TwoPointsSection = ({
                 alt="TLMR - L’excellence accessible"
               />
             ) : title2 === "VOUS FORMER" ? (
-              <video autoPlay muted loop playsInline>
-                <source src={infolawersVideo} type="video/mp4" />
-              </video>
+              <div>
+                <video className="video-mobile" autoPlay muted loop playsInline>
+                  <source src={infolawersVideoMobile} type="video/mp4" />
+                </video>
+                <video
+                  className="video-desktop"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={infolawersVideoDesktop} type="video/mp4" />
+                </video>
+              </div>
             ) : null}
             <div>
               <Paragraph>{description2}</Paragraph>
