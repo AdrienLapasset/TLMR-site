@@ -5,7 +5,7 @@ import Grid from "components/global/Grid";
 import Paragraph from "components/global/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
 import Cta from "components/global/Cta";
-import infolawersVideo from "assets/imgs/SEE MORE BAS DE PAGES/TLMR__info__01.mp4";
+import infolawersVideo from "assets/videos/TLMR__info__03.mp4";
 
 const StyledContainer = styled.section`
   border-top: ${(props) => props.theme.border.black};
@@ -69,12 +69,8 @@ const StyledContainer = styled.section`
         @media ${(props) => props.theme.minWidth.xl} {
           grid-column-gap: ${(props) => props.theme.columnGap.desktop};
         }
-        .gatsby-image-wrapper,
-        video {
-          aspect-ratio: 1.6;
-          @media ${(props) => props.theme.minWidth.md} {
-            aspect-ratio: 1.12;
-          }
+        .gatsby-image-wrapper {
+          aspect-ratio: 1.5;
         }
         video {
           max-width: 100%;
@@ -135,10 +131,13 @@ const TwoPointsSection = ({
               <StaticImage
                 src="../../../assets/imgs/SEE MORE BAS DE PAGES/proteger.jpg"
                 alt="TLMR - L’excellence accessible"
+                objectPosition="50% 20%"
               />
             ) : null}
-            <Paragraph>{description1}</Paragraph>
-            <Cta to={"/" + link1}>En savoir plus</Cta>
+            <div>
+              <Paragraph>{description1}</Paragraph>
+              <Cta to={"/" + link1}>En savoir plus</Cta>
+            </div>
           </div>
         </div>
         <div>
@@ -156,8 +155,10 @@ const TwoPointsSection = ({
                 <source src={infolawersVideo} type="video/mp4" />
               </video>
             ) : null}
-            <Paragraph>{description2}</Paragraph>
-            <Cta to={"/" + link2}>En savoir plus</Cta>
+            <div>
+              <Paragraph>{description2}</Paragraph>
+              <Cta to={"/" + link2}>En savoir plus</Cta>
+            </div>
           </div>
         </div>
       </Grid>

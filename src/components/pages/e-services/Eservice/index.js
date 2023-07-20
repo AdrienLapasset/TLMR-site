@@ -161,6 +161,7 @@ const Eservice = ({
           <StaticImage
             src="../../../../assets/imgs/ESERVICES/protection.jpg"
             alt="TLMR - L’excellence accessible"
+            objectPosition="43% 50%"
           />
         ) : title === "Signature électronique" ? (
           <StaticImage
@@ -172,6 +173,7 @@ const Eservice = ({
           <StaticImage
             src="../../../../assets/imgs/ESERVICES/rgpd.jpg"
             alt="TLMR - L’excellence accessible"
+            objectPosition="100% 50%"
           />
         ) : title === "Legal design" ? (
           <StaticImage

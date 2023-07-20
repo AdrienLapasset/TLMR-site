@@ -46,6 +46,9 @@ const StyledColumns = styled.div`
         display: block;
       }
     }
+    img {
+      /* object-position: 10% 10%; */
+    }
   }
 `;
 
