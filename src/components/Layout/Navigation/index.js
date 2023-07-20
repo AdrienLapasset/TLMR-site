@@ -53,8 +53,17 @@ const StyledNav = styled.nav`
   }
 `;
 const StyledLinksContainer = styled.div`
-  transition: opacity ${(props) => props.theme.transitionTime}s,
-    padding-top ${(props) => props.theme.transitionTime}s;
+  transition: ${({ isResize, theme }) =>
+    isResize
+      ? "none"
+      : "opacity " +
+        theme.transitionTime +
+        "s, padding-top " +
+        theme.transitionTime +
+        "s, visibility " +
+        theme.transitionTime +
+        "s"};
+  visibility: ${(props) => (props.isNavOpen ? "visible" : "hidden")};
   opacity: ${(props) => (props.isNavOpen ? "1" : "0")};
   padding-top: ${({ isNavOpen }) => (isNavOpen ? "35px" : "0")};
   @media ${(props) => props.theme.minWidth.lg} {
@@ -106,6 +115,7 @@ const StyledMobileLayout = styled.div`
 `;
 const Navigation = () => {
   const [isNavOpen, setNavOpen] = useState(false);
+  const [isResize, setIsResize] = useState(false);
 
   useEffect(() => {
     if (isNavOpen) {
@@ -113,6 +123,16 @@ const Navigation = () => {
     } else {
       document.body.style.overflow = "scroll";
     }
+    const handleResize = () => {
+      setIsResize(true);
+      setTimeout(() => {
+        setIsResize(false);
+      }, 400);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [isNavOpen]);
 
   const toggleNav = () => {
@@ -132,6 +152,7 @@ const Navigation = () => {
           <StyledLinksContainer
             className="linksContainer"
             isNavOpen={isNavOpen}
+            isResize={isResize}
           >
             <Link to="/expertises">Expertises</Link>
             <Link to="/e-services">e-Services</Link>
