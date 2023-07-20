@@ -38,7 +38,7 @@ const StyledEserviceContainer = styled.div`
 const StyledTwoPointsSection = styled(TwoPointsSection)`
   margin-top: 20px;
   @media ${(props) => props.theme.minWidth.sm} {
-    margin-top: 120px;
+    margin-top: 170px;
   }
 `;
 

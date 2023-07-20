@@ -28,7 +28,7 @@ const StyledContainer = styled.div`
     margin-top: 130px;
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    margin-top: 160px;
+    margin-top: 100px;
   }
   & > header {
     display: flex;

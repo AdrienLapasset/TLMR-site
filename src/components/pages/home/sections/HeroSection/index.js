@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
-import heroVideo from "assets/videos/TLMR_ Home 16-9 2.mp4";
+import heroVideoDesktop from "assets/videos/TLMR_ Home 16-9 2.mp4";
+import heroVideoMobile from "assets/videos/TLMR_ Home_mobile.mp4";
 
 const StyledContainer = styled.div`
   padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
@@ -63,6 +64,18 @@ const StyledContainer = styled.div`
   }
   video {
     max-width: 100%;
+    &.desktop {
+      display: none;
+      @media ${(props) => props.theme.minWidth.sm} {
+        display: block;
+      }
+    }
+    &.mobile {
+      display: block;
+      @media ${(props) => props.theme.minWidth.sm} {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -77,8 +90,11 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      <video autoPlay muted loop playsInline>
-        <source src={heroVideo} type="video/mp4" />
+      <video className="desktop" autoPlay muted loop playsInline>
+        <source src={heroVideoDesktop} type="video/mp4" />
+      </video>
+      <video className="mobile" autoPlay muted loop playsInline>
+        <source src={heroVideoMobile} type="video/mp4" />
       </video>
     </StyledContainer>
   );

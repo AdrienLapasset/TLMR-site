@@ -59,7 +59,8 @@ const StyledContainer = styled.section`
       & > div {
         margin-bottom: 90px;
         @media ${(props) => props.theme.minWidth.sm} {
-          column-count: 2;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
           margin-bottom: 0;
         }
         @media ${(props) => props.theme.minWidth.sm} {
@@ -72,7 +73,7 @@ const StyledContainer = styled.section`
         video {
           aspect-ratio: 1.6;
           @media ${(props) => props.theme.minWidth.md} {
-            aspect-ratio: 1.2;
+            aspect-ratio: 1.12;
           }
         }
         video {

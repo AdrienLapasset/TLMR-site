@@ -14,11 +14,6 @@ const StyledPageHero = styled(PageHero)`
     padding-top: 210px;
   }
 `;
-const StyledALaUne = styled(ALaUne)`
-  @media ${(props) => props.theme.minWidth.sm} {
-    margin-top: 70px;
-  }
-`;
 const StyledContainer = styled.div`
   & > .gatsby-image-wrapper {
     aspect-ratio: 1;
@@ -78,7 +73,7 @@ const Formations = () => {
               description2="Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."
               link2="formation"
             />
-            <StyledALaUne border />
+            <ALaUne border />
           </StyledContainer>
         </div>
       </Layout>
