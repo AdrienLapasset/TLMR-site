@@ -73,7 +73,7 @@ const Actualites = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allSanityArticle {
+        allSanityArticle(sort: { date: DESC }) {
           nodes {
             title
             date
