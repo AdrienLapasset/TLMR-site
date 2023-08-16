@@ -195,6 +195,7 @@ const StyledContent = styled.section`
     display: inline;
     text-decoration: underline;
     text-decoration-thickness: 0.8px;
+    text-underline-offset: 7px;
   }
   h2 {
     margin: 55px 0 30px;
