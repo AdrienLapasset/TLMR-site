@@ -180,13 +180,21 @@ const StyledContent = styled.section`
   @media ${(props) => props.theme.minWidth.xl} {
     grid-column: 4 / span 6;
   }
-  p {
+  p,
+  a {
     font-family: "Signifier Light";
-    margin-bottom: 35px;
     em {
       font-style: normal;
       font-family: "Signifier Light Italic";
     }
+  }
+  p {
+    margin-bottom: 35px;
+  }
+  a {
+    display: inline;
+    text-decoration: underline;
+    text-decoration-thickness: 0.8px;
   }
   h2 {
     margin: 55px 0 30px;
@@ -242,7 +250,8 @@ const StyledContent = styled.section`
     max-width: 100%;
   }
   p,
-  li {
+  li,
+  a {
     font-size: 18px;
     line-height: 25px;
     @media ${(props) => props.theme.minWidth.sm} {
