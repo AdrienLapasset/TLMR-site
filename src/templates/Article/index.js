@@ -180,6 +180,9 @@ const StyledContent = styled.section`
   @media ${(props) => props.theme.minWidth.xl} {
     grid-column: 4 / span 6;
   }
+  & > :first-child {
+    margin-top: 0;
+  }
   p,
   a {
     font-family: "Signifier Light";
