@@ -310,7 +310,7 @@ export const query = graphql`
       _rawContent(resolveReferences: { maxDepth: 10 })
       heroImg {
         asset {
-          gatsbyImageData
+          gatsbyImageData(placeholder: NONE)
           url
         }
       }

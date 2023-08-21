@@ -138,7 +138,7 @@ const ALaUne = ({ className, border }) => {
             date
             heroImg {
               asset {
-                gatsbyImageData
+                gatsbyImageData(placeholder: NONE)
               }
             }
             slug {
