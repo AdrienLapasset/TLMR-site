@@ -118,6 +118,7 @@ const lequipeData = [
       "Membre de l’association « En Répliques »",
       "Intervenante en droit du cinéma à l’université Gustave Eiffel",
     ],
+    linkedinUrl: "https://www.linkedin.com/in/camille-loyer-184875b5/",
   },
   {
     imgName: "evanthia",

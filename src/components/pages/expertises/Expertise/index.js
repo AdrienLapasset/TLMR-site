@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Title from "components/global/Title";
 import Grid from "components/global/Grid";
@@ -188,9 +188,14 @@ const StyledAdditionalSection = styled.section`
 
 const Expertise = ({ expertise }) => {
   const [isSeeMoreUseCases, setIsSeeMoreUseCases] = useState(false);
+  const [accordionSectionIndex, setAccordionSectionIndex] = useState(null);
 
   const handleSeeMoreUseCases = () => {
     setIsSeeMoreUseCases(!isSeeMoreUseCases);
+  };
+
+  const handleAccordion = (index) => {
+    setAccordionSectionIndex(accordionSectionIndex !== index && index);
   };
 
   return (
@@ -224,8 +229,15 @@ const Expertise = ({ expertise }) => {
           ))}
         </div>
         <StyledAccordionContainer>
-          {expertise.accordion.map(({ title, content }) => (
-            <Accordion key={title} title={title} content={content} />
+          {expertise.accordion.map(({ title, content }, index) => (
+            <Accordion
+              key={title}
+              title={title}
+              content={content}
+              index={index}
+              toggle={handleAccordion}
+              isOpen={accordionSectionIndex === index}
+            />
           ))}
         </StyledAccordionContainer>
         <StyledUseCases isSeeMoreUseCases={isSeeMoreUseCases}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Paragraph from "components/global/Paragraph";
 import { StaticImage } from "gatsby-plugin-image";
@@ -52,6 +52,11 @@ const TeammateCard = ({
   linkedinUrl,
 }) => {
   const basePath = "../../../../assets/imgs/EQUIPE/";
+  const [openAccordionSection, setOpenAccordionSection] = useState(null);
+
+  const handleAccordion = (title) => {
+    setOpenAccordionSection(openAccordionSection !== title && title);
+  };
 
   return (
     <StyledContainer>
@@ -84,8 +89,18 @@ const TeammateCard = ({
       <h3>{name}</h3>
       <aside>{post}</aside>
       <Paragraph>{description}</Paragraph>
-      <AccordionSection title="Formation et expérience" data={experiences} />
-      <AccordionSection title="Engagements" data={engagements} />
+      <AccordionSection
+        isOpen={handleAccordion}
+        openAccordionSection={openAccordionSection}
+        title="Formation et expérience"
+        data={experiences}
+      />
+      <AccordionSection
+        openAccordionSection={openAccordionSection}
+        isOpen={handleAccordion}
+        title="Engagements"
+        data={engagements}
+      />
       {linkedinUrl && (
         <a href={linkedinUrl} target="_blank" rel="noreferrer">
           <img src={linkedinLogo} alt="" />

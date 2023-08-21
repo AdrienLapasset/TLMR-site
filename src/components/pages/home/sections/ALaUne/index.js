@@ -189,11 +189,11 @@ const ALaUne = ({ className, border }) => {
           );
         })}
       </StyledColumns>
-      {isHome && (
-        <Cta to="/actualites" className="mobile">
-          Toutes les actualités
-        </Cta>
-      )}
+      {/* {isHome && ( */}
+      <Cta to="/actualites" className="mobile">
+        Toutes les actualités
+      </Cta>
+      {/* )} */}
     </StyledContainer>
   );
 };

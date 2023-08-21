@@ -34,15 +34,16 @@ const StyledContent = styled.div`
   }
 `;
 
-const AccordionSection = ({ title, data }) => {
-  const [isSectionOpen, setSectionOpen] = useState(false);
+const AccordionSection = ({ title, data, isOpen, openAccordionSection }) => {
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
 
   const toggleSection = () => {
     setContentHeight(contentRef.current.scrollHeight);
-    setSectionOpen(!isSectionOpen);
+    isOpen(title);
   };
+
+  const isSectionOpen = openAccordionSection === title;
 
   return (
     <StyledContainer>

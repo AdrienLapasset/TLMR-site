@@ -43,24 +43,23 @@ const StyledContent = styled.div`
   overflow-y: hidden;
 `;
 
-const Accordion = ({ title, content }) => {
-  const [isSectionOpen, setSectionOpen] = useState(false);
+const Accordion = ({ title, content, isOpen, toggle, index }) => {
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
 
   const toggleSection = () => {
     setContentHeight(contentRef.current.scrollHeight);
-    setSectionOpen(!isSectionOpen);
+    toggle(index);
   };
 
   return (
     <StyledContainer>
       <StyledHeader onClick={toggleSection}>
         <Paragraph as="h3" html={{ __html: title }}></Paragraph>
-        <ToggleBtn isSectionOpen={isSectionOpen} />
+        <ToggleBtn isSectionOpen={isOpen} />
       </StyledHeader>
       <StyledContent
-        isSectionOpen={isSectionOpen}
+        isSectionOpen={isOpen}
         contentHeight={contentHeight}
         ref={contentRef}
       >
