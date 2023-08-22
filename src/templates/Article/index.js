@@ -193,6 +193,11 @@ const StyledContent = styled.section`
   }
   p {
     margin-bottom: 35px;
+    em,
+    em > a {
+      font-style: normal;
+      font-family: "Signifier Light Italic";
+    }
   }
   a {
     display: inline;
