@@ -3,6 +3,7 @@ import styled from "styled-components";
 import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
 import Paragraph from "components/global/Paragraph";
+import { useLocation } from "@reach/router";
 
 const StyledFooter = styled.footer`
   margin-top: 160px;
@@ -109,10 +110,7 @@ const StyledCopyrightsContainer = styled.div`
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const goToTop = () => {
-    document.body.scrollIntoView({ behavior: "smooth" });
-  };
+  const { pathname } = useLocation();
 
   return (
     <StyledFooter>
@@ -172,9 +170,9 @@ const Footer = () => {
       <StyledCopyrightsContainer>
         <p>© Touati La Motte Rouge Avocats {currentYear}</p>
         <div>
-          <button onClick={goToTop}>
+          <Link to={pathname}>
             Retour <span>en haut</span> ↑
-          </button>
+          </Link>
         </div>
       </StyledCopyrightsContainer>
     </StyledFooter>

@@ -4,12 +4,15 @@ import Grid from "components/global/Grid";
 import { Link } from "react-scroll";
 import Dot from "components/global/Dot";
 import { myContext } from "provider";
+import { useLocation } from "@reach/router";
 
 const StyledContainer = styled.section`
   display: none;
   @media ${(props) => props.theme.minWidth.lg} {
     transform: translateY(${({ isHidden }) => isHidden && `-` + 105}px);
-    transition: transform ${(props) => props.theme.transitionTime}s,
+    transition: transform
+        ${({ theme, isPageChange }) =>
+          isPageChange ? "0" : theme.transitionTime}s,
       top ${(props) => props.theme.transitionTime}s;
     ${(props) => props.theme.cubicBezier.base};
     position: sticky;
@@ -63,9 +66,18 @@ const StyledNavLink = styled(Link)`
 `;
 
 const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
+  const [isPageChange, setIsPageChange] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [isScrollToAnchorNav, setIsScrollToAnchorNav] = useState(false);
   const anchorNavRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsPageChange(true);
+    setTimeout(() => {
+      setIsPageChange(false);
+    }, 200);
+  }, [location]);
 
   useEffect(() => {
     const handleIsHidden = () => {
@@ -99,6 +111,7 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
     <myContext.Consumer>
       {(context) => (
         <StyledContainer
+          isPageChange={isPageChange}
           isNavHidden={context?.isNavHidden}
           isHidden={isHidden}
           ref={anchorNavRef}
