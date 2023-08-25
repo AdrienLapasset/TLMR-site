@@ -14,16 +14,17 @@ const StyledContainer = styled.section`
     ${(props) => props.theme.cubicBezier.base};
     position: sticky;
     top: ${({ theme, isNavHidden }) =>
-      isNavHidden ? -1 : theme.headerHeight - 1}px;
+      isNavHidden ? -21 : theme.headerHeight - 21}px;
     z-index: 1;
     background-color: white;
     display: block;
     margin: 100px -45px -40px;
-    padding: 0 45px 10px;
+    padding: 20px 45px 10px;
   }
 `;
 const StyledGrid = styled(Grid)`
-  border-top: ${({ theme }) => theme.border.black};
+  border-top: ${({ theme, isScrollToAnchorNav }) =>
+    isScrollToAnchorNav ? "none" : theme.border.black};
   padding-top: 10px;
   grid-template-columns: repeat(6, 1fr);
   h3,
@@ -73,11 +74,18 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
       twoPointsSectionPosition < 300 ? setIsHidden(true) : setIsHidden(false);
     };
     const handleIsScrollToAnchorNav = () => {
+      let isAnchorNavReached = false;
       const anchorNavPosFromTop =
         anchorNavRef.current.getBoundingClientRect().top;
-      anchorNavPosFromTop <= 0
-        ? setIsScrollToAnchorNav(true)
-        : setIsScrollToAnchorNav(false);
+      if (anchorNavPosFromTop <= -20) {
+        setIsScrollToAnchorNav(true);
+        isAnchorNavReached = true;
+      }
+      if (isAnchorNavReached && anchorNavPosFromTop <= 51) {
+        setIsScrollToAnchorNav(true);
+      } else if (anchorNavPosFromTop > 51) {
+        setIsScrollToAnchorNav(false);
+      }
     };
     window.addEventListener("scroll", handleIsHidden);
     window.addEventListener("scroll", handleIsScrollToAnchorNav);
@@ -86,16 +94,16 @@ const AnchorNavBar = ({ data, eservices, twoPointsSectionRef }) => {
       window.removeEventListener("scroll", handleIsScrollToAnchorNav);
     };
   }, [twoPointsSectionRef]);
+
   return (
     <myContext.Consumer>
       {(context) => (
         <StyledContainer
           isNavHidden={context?.isNavHidden}
           isHidden={isHidden}
-          isScrollToAnchorNav={isScrollToAnchorNav}
           ref={anchorNavRef}
         >
-          <StyledGrid>
+          <StyledGrid isScrollToAnchorNav={isScrollToAnchorNav}>
             {eservices ? <h3>Solutions</h3> : <h3>Compétences</h3>}
             {data.map(({ title }, index) => (
               <StyledNavLink
