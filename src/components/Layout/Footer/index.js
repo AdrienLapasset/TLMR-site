@@ -111,7 +111,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const goToTop = () => {
-    document.body.scrollIntoView();
+    document.body.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -139,15 +139,19 @@ const Footer = () => {
             <Link to="/contact">
               <Paragraph>Contact</Paragraph>
             </Link>
-            <Link to="/">
+            <Link to="/paiement">
               <Paragraph>Paiement</Paragraph>
             </Link>
           </div>
           <div>
             <Paragraph as="h3">Retrouvez-nous</Paragraph>
-            <Link to="/">
+            <a
+              href="https://www.linkedin.com/company/touati-la-motte-rouge-avocats"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Paragraph>LinkedIn</Paragraph>
-            </Link>
+            </a>
           </div>
         </div>
         <div>
