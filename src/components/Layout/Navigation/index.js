@@ -4,11 +4,14 @@ import TLMRlogo from "assets/logos/TLMR-logo.svg";
 import { Link } from "gatsby";
 import ToggleBtn from "./ToggleBtn";
 import { myContext } from "provider";
+import { useLocation } from "@reach/router";
 
 const StyledNav = styled.nav`
   overflow: hidden;
-  transition: height ${(props) => props.theme.transitionTime}s,
-    transform ${(props) => props.theme.transitionTime}s;
+  transition: height ${({ theme }) => theme.transitionTime}s,
+    transform
+      ${({ theme, isPageChange }) =>
+        isPageChange ? "0" : theme.transitionTime}s;
   height: ${({ isNavOpen }) => (isNavOpen ? "100vh" : "54px")};
   position: fixed;
   top: 0;
@@ -114,8 +117,17 @@ const StyledMobileLayout = styled.div`
   grid-area: logo;
 `;
 const Navigation = () => {
+  const [isPageChange, setIsPageChange] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
   const [isResize, setIsResize] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsPageChange(true);
+    setTimeout(() => {
+      setIsPageChange(false);
+    }, 200);
+  }, [location]);
 
   useEffect(() => {
     if (isNavOpen) {
@@ -142,7 +154,11 @@ const Navigation = () => {
   return (
     <myContext.Consumer>
       {(context) => (
-        <StyledNav isNavOpen={isNavOpen} isNavHidden={context?.isNavHidden}>
+        <StyledNav
+          isPageChange={isPageChange}
+          isNavOpen={isNavOpen}
+          isNavHidden={context?.isNavHidden}
+        >
           <StyledMobileLayout>
             <Link to="/">
               <img src={TLMRlogo} alt="Logo TLMR" />
