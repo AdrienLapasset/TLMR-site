@@ -61,9 +61,15 @@ const Formations = () => {
                 src="../assets/imgs/FORMATIONS/formation.jpg"
                 alt="TLMR - L’excellence accessible"
               />
-              <video autoPlay muted loop playsInline>
-                <source src={infolawersVideo} type="video/mp4" />
-              </video>
+              <a
+                href="https://www.infolawyers.fr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <video autoPlay muted loop playsInline>
+                  <source src={infolawersVideo} type="video/mp4" />
+                </video>
+              </a>
             </StyledColumns>
             <TwoPointsSection
               title1="VOUS PROTÉGER"
@@ -71,7 +77,7 @@ const Formations = () => {
               link1="expertises"
               title2="NOS SOLUTIONS"
               description2="Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."
-              link2="formation"
+              link2="e-services"
             />
             <ALaUne border />
           </StyledContainer>
