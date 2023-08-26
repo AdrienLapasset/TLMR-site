@@ -19,6 +19,9 @@ import {
   TwitterShareButton,
   FacebookShareButton,
 } from "react-share";
+import getYouTubeId from "get-youtube-id";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 const StyledContainer = styled.div`
   & > .gatsby-image-wrapper {
@@ -272,6 +275,22 @@ const StyledContent = styled.section`
       line-height: 32px;
     }
   }
+  .yt-lite {
+    margin: 55px 0;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
+      background-position: top;
+      background-repeat: repeat-x;
+      height: 60px;
+      padding-bottom: 50px;
+      width: 100%;
+      transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
 `;
 const StyledDesktopShareBlock = styled.div`
   transition: top ${(props) => props.theme.transitionTime}s;
@@ -327,16 +346,21 @@ const myPortableTextComponents = {
   types: {
     image: ({ value }) =>
       value.link ? (
-        <a href={value.link} target="_blank" rel="noreferrer noopener">
+        <a href={value.link} target="_blank" rel="noreferrer">
           <SanityImg asset={value.asset} alt={value.asset.filename} />
         </a>
       ) : (
         <SanityImg asset={value.asset} alt={value.asset.filename} />
       ),
+    youtube: ({ value }) => {
+      const { url } = value;
+      const id = getYouTubeId(url);
+      return <LiteYouTubeEmbed id={id} poster="maxresdefault" />;
+    },
   },
   marks: {
     link: ({ value, children }) => (
-      <a href={value.href} target="_blank" rel="noopener">
+      <a href={value.href} target="_blank" rel="noreferrer">
         {children}
       </a>
     ),
