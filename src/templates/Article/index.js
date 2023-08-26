@@ -196,7 +196,6 @@ const StyledContent = styled.section`
   }
   p {
     margin-bottom: 35px;
-    em,
     em > a {
       font-style: normal;
       font-family: "Signifier Light Italic";
@@ -256,6 +255,10 @@ const StyledContent = styled.section`
     li {
       font-family: "Signifier Light";
       list-style: disc;
+      em {
+        font-style: normal;
+        font-family: "Signifier Light Italic";
+      }
     }
   }
   img {
