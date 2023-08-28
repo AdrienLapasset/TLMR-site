@@ -66,17 +66,18 @@ const HomeList = ({ type, list }) => {
         <h3>{type}</h3>
       </div>
       <StyledList>
-        {list?.map((sectionTitle, index) => {
+        {list?.map((sectionTitle) => {
           return (
-            <Link
-              to={
-                type === "e-Services"
-                  ? "/e-services/#" + sectionTitle
-                  : "/expertises/#" + sectionTitle
-              }
-              key={index}
-              dangerouslySetInnerHTML={{ __html: sectionTitle }}
-            ></Link>
+            <li key={sectionTitle}>
+              <Link
+                to={
+                  type === "e-Services"
+                    ? "/e-services/#" + sectionTitle
+                    : "/expertises/#" + sectionTitle
+                }
+                dangerouslySetInnerHTML={{ __html: sectionTitle }}
+              ></Link>
+            </li>
           );
         })}
         {type === "e-Services" ? <aside className="blank"></aside> : null}
