@@ -11,26 +11,32 @@ export default createGlobalStyle`
 @font-face {
   font-family: "Söhne Buch";
   src: url(${SohneBuch}) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Söhne Kräftig";
   src: url(${SöhneKräftig}) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "SöhneBreit Buch";
   src: url(${SöhneBreitBuch}) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Signifier Light";
   src: url(${SignifierLight}) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Signifier Light Italic";
   src: url(${SignifierLightItalic}) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Signifier Medium";
   src: url(${SignifierMedium}) format("woff2");
+  font-display: swap;
 }
 
 * {
