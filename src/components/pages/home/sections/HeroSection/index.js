@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
 import heroVideoDesktop from "assets/videos/TLMR_ Home 16-9 2.mp4";
@@ -64,22 +64,24 @@ const StyledContainer = styled.div`
   }
   video {
     max-width: 100%;
-    &.desktop {
-      display: none;
-      @media ${(props) => props.theme.minWidth.sm} {
-        display: block;
-      }
-    }
-    &.mobile {
-      display: block;
-      @media ${(props) => props.theme.minWidth.sm} {
-        display: none;
-      }
-    }
   }
 `;
 
 const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      screenWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <StyledContainer>
       <aside>L’excellence accessible</aside>
@@ -90,12 +92,16 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      <video className="desktop" autoPlay muted loop playsInline>
-        <source src={heroVideoDesktop} type="video/mp4" />
-      </video>
-      <video className="mobile" autoPlay muted loop playsInline>
-        <source src={heroVideoMobile} type="video/mp4" />
-      </video>
+      {isMobile === true && (
+        <video autoPlay muted loop playsInline>
+          <source src={heroVideoMobile} type="video/mp4" />
+        </video>
+      )}
+      {isMobile === false && (
+        <video autoPlay muted loop playsInline>
+          <source src={heroVideoDesktop} type="video/mp4" />
+        </video>
+      )}
     </StyledContainer>
   );
 };
