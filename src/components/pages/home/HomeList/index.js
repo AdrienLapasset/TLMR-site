@@ -39,20 +39,19 @@ const StyledList = styled.ul`
       font-size: 16px;
     }
   }
-  a,
-  aside {
+  li {
     border-bottom: 0.8px solid black;
     padding: 7px 0;
     @media ${(props) => props.theme.minWidth.sm} {
       padding: 10px 0;
     }
-  }
-  aside {
-    height: 21px;
-    display: none;
     &.blank {
-      @media ${(props) => props.theme.minWidth.md} {
-        display: block;
+      height: 21px;
+      display: none;
+      &.blank {
+        @media ${(props) => props.theme.minWidth.md} {
+          display: block;
+        }
       }
     }
   }
@@ -80,7 +79,7 @@ const HomeList = ({ type, list }) => {
             </li>
           );
         })}
-        {type === "e-Services" ? <aside className="blank"></aside> : null}
+        {type === "e-Services" ? <li className="blank"></li> : null}
       </StyledList>
     </StyledContainer>
   );
