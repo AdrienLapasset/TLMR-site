@@ -117,6 +117,7 @@ const DansLaPresse = () => {
   const logosRender = logosList.map((logo, index) => {
     return (
       <StyledImg
+        loading="lazy"
         key={index}
         src={logo.name}
         alt={logo.alt}
