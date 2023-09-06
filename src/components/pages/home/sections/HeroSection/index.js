@@ -64,6 +64,13 @@ const StyledContainer = styled.div`
       aspect-ratio: 1.8;
     }
   }
+`;
+const StyledVideoContainer = styled.div`
+  width: 100%;
+  aspect-ratio: 1;
+  @media ${(props) => props.theme.minWidth.sm} {
+    aspect-ratio: 1.78;
+  }
   video {
     max-width: 100%;
   }
@@ -94,16 +101,24 @@ const HeroSection = () => {
           du&nbsp;digital, et d’internet.
         </h1>
       </Grid>
-      {isMobile === true && (
-        <video autoPlay muted loop playsInline>
-          <source src={heroVideoMobile} type="video/mp4" />
-        </video>
-      )}
-      {isMobile === false && (
-        <video autoPlay muted loop playsInline>
-          <source src={heroVideoDesktop} type="video/mp4" />
-        </video>
-      )}
+      <StyledVideoContainer>
+        {isMobile === true && (
+          <video autoPlay muted loop playsInline poster={heroVideoPosterMobile}>
+            <source src={heroVideoMobile} type="video/mp4" />
+          </video>
+        )}
+        {isMobile === false && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={heroVideoPosterDesktop}
+          >
+            <source src={heroVideoDesktop} type="video/mp4" />
+          </video>
+        )}
+      </StyledVideoContainer>
     </StyledContainer>
   );
 };
