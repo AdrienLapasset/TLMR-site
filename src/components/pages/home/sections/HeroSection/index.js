@@ -95,12 +95,12 @@ const HeroSection = () => {
         </h1>
       </Grid>
       {isMobile === true && (
-        <video autoPlay muted loop playsInline poster={heroVideoPosterMobile}>
+        <video autoPlay muted loop playsInline>
           <source src={heroVideoMobile} type="video/mp4" />
         </video>
       )}
       {isMobile === false && (
-        <video autoPlay muted loop playsInline poster={heroVideoPosterDesktop}>
+        <video autoPlay muted loop playsInline>
           <source src={heroVideoDesktop} type="video/mp4" />
         </video>
       )}
