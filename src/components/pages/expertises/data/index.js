@@ -27,23 +27,23 @@ const ExpertiseData = [
           "Gestion des litiges, ICANN, AFNIC, exploitation licite des noms de domaines, cession des noms de domaine, parasitisme.",
       },
     ],
-    // useCases: [
-    // [
-    //   "Gestion d’un contentieux en contrefaçon de modèles d’une marque de chaussures.",
-    //   "Gestion contentieux contrefaçon de marque et accompagnement d’une plateforme de médias internet leaders.",
-    //   "Conseils et contentieux de plusieurs sociétés de production de spectacles vivants et audiovisuels.",
-    //   "Saisies conservatoires opérées auprès de société de production audiovisuelle.",
-    //   "Accompagnement de marques dans la notification de contenus illicites et défense de leurs droits.",
-    //   "Accompagnement et défense des droits de sociétés de productions et d’artistes dans le domaine de la musique.",
-    // ],
-    // [
-    //   "Défense des droits d’un développeur français face à une société américaine.",
-    //   "Défense des droits d’un créateur de mobilier.",
-    //   "Gestion d’un portefeuille de marques d’une centaine de client dont plusieurs sociétés leaders de leur marché.",
-    //   "Accompagnement juridique de la production de l’ensemble du projet d’une pièce de théâtre à succès joué par un homme politique de premier plan.",
-    //   "Gestion de nombreux contentieux/précontentieux en matière de contentieux contrefaçon et concurrence déloyale et parasitaire (demande et défense).",
-    // ],
-    // ],
+    useCases: [
+      [
+        "Gestion d’un contentieux en contrefaçon de modèles d’une marque de chaussures.",
+        "Gestion contentieux contrefaçon de marque et accompagnement d’une plateforme de médias internet leaders.",
+        "Conseils et contentieux de plusieurs sociétés de production de spectacles vivants et audiovisuels.",
+        "Saisies conservatoires opérées auprès de société de production audiovisuelle.",
+        "Accompagnement de marques dans la notification de contenus illicites et défense de leurs droits.",
+        "Accompagnement et défense des droits de sociétés de productions et d’artistes dans le domaine de la musique.",
+      ],
+      [
+        "Défense des droits d’un développeur français face à une société américaine.",
+        "Défense des droits d’un créateur de mobilier.",
+        "Gestion d’un portefeuille de marques d’une centaine de client dont plusieurs sociétés leaders de leur marché.",
+        "Accompagnement juridique de la production de l’ensemble du projet d’une pièce de théâtre à succès joué par un homme politique de premier plan.",
+        "Gestion de nombreux contentieux/précontentieux en matière de contentieux contrefaçon et concurrence déloyale et parasitaire (demande et défense).",
+      ],
+    ],
   },
   {
     title: "Internet, plateformes et e&#8209commerce",
