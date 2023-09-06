@@ -4,7 +4,7 @@ import Grid from "components/global/Grid";
 import heroVideoPosterDesktop from "assets/videos/hero-video-poster--desktop.jpg";
 import heroVideoDesktop from "assets/videos/TLMR_ Home 16-9 website.mp4";
 import heroVideoPosterMobile from "assets/videos/hero-video-poster--mobile.jpg";
-import heroVideoMobile from "assets/videos/TLMR_ Home_mobile.mp4";
+import heroVideoMobile from "assets/videos/TLMR_ Home 1-1 website.mp4";
 
 const StyledContainer = styled.div`
   padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
