@@ -140,6 +140,33 @@ const ExpertiseData = [
     description: [
       "Disposant d’une forte expérience dans le domaine, le cabinet accompagne de nombreuses sociétés et groupes du secteur de l’immobilier (syndics, copropriétés, investisseurs, marchands de biens, administrateurs et gestionnaires des baux locatifs et commerciaux) dans la diversité de leurs problématiques immobilières tant en matière de conseil que de contentieux.",
     ],
+    accordion: [
+      {
+        title: "Droit de la copropriété",
+        content:
+          "Recouvrement de charges de copropriété (phase précontentieuse, phase contentieuse, exécution forcée), contentieux des contestations des Assemblées générales de copropriété, assistance dans le cadre d’expertises judiciaires (préventif, malfaçons, vices de construction, modification des répartitions des charges de copropriété), rédaction des résolutions des Assemblées générales, modifications des règlements de copropriété, rédaction d’actes de cession de parties communes, conseils et formations.",
+      },
+      {
+        title: "Baux d’habitation et gestion locative",
+        content:
+          "Rédaction des baux, recouvrement des loyers, expulsion locative, troubles anormaux de voisinage, assistance dans le cadre d’expertises judiciaires, conseils et formations tous baux (habitation nue, meublée, colocation, sous-location, location de courte durée).",
+      },
+      {
+        title: "Baux commerciaux",
+        content:
+          "Négociation et rédaction des baux commerciaux et professionnels, audit, recouvrement des loyers, expulsion, troubles anormaux de voisinage, congé et non renouvellement de bail, assistance dans le cadre d’expertises judiciaires (fixation de l’indemnité d’éviction, fixation du loyer…) conseils et formations.",
+      },
+      {
+        title: "Construction",
+        content:
+          "Assistance dans le cadre d’expertises judiciaires (référés préventifs, malfaçons, vices de construction), contentieux du permis de construire, atteintes aux parties communes, troubles de jouissance (perte de vue, de luminosité).",
+      },
+      {
+        title: "Responsabilité des professionnels du secteur de l’immobilier",
+        content:
+          "Responsabilité du syndic, de l’architecte, de l’agent immobilier, du promoteur, du constructeur, d’établissement délégataire de service public.",
+      },
+    ],
     useCases: [
       [
         "Gestion des recouvrements de charge pour des leaders du secteur de l’administration de bien.",
@@ -165,7 +192,6 @@ const ExpertiseData = [
         "Le cabinet est ainsi intervenu sur des sujets d’innovation très diversifiés (contrats et projets informatiques complexes, immeubles connectés, plateformes proptech innovantes de gestion locative et de colocation, tokenisation des actifs immobiliers via la blockchain, signatures électroniques et automatisation des process, mise en conformité RGPD des acteurs…).",
       ],
     },
-    accordion: [],
   },
   {
     title: "Pénal, Cybercriminalité et e&#8209réputation",
