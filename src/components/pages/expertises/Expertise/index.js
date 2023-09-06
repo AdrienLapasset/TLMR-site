@@ -213,7 +213,7 @@ const Expertise = ({ expertise }) => {
         <Paragraph size="sm">
           Leaders League & Le Point&nbsp;
           <Paragraph size="sm" as="span" color="greyLight">
-            Le cabinet est classé parmis les meilleurs
+            Le cabinet est classé parmi les meilleurs
             <br /> cabinets français pour son expertise
           </Paragraph>
         </Paragraph>
@@ -240,38 +240,40 @@ const Expertise = ({ expertise }) => {
             />
           ))}
         </StyledAccordionContainer>
-        <StyledUseCases isSeeMoreUseCases={isSeeMoreUseCases}>
-          <h3>Exemples de cas traités</h3>
-          <div>
-            <ul>
-              {expertise?.useCases[0].map((li, index) => (
-                <div key={index}>
-                  <aside>→</aside>
-                  <Paragraph
-                    color="greyLight"
-                    as="li"
-                    html={{ __html: li }}
-                  ></Paragraph>
-                </div>
-              ))}
-            </ul>
-            <ul>
-              {expertise?.useCases[1].map((li, index) => (
-                <div key={index}>
-                  <aside>→</aside>
-                  <Paragraph
-                    color="greyLight"
-                    as="li"
-                    html={{ __html: li }}
-                  ></Paragraph>
-                </div>
-              ))}
-            </ul>
-          </div>
-          <Cta as="button" onClick={handleSeeMoreUseCases}>
-            Voir {isSeeMoreUseCases ? "moins" : "plus"}
-          </Cta>
-        </StyledUseCases>
+        {expertise?.useCases && (
+          <StyledUseCases isSeeMoreUseCases={isSeeMoreUseCases}>
+            <h3>Exemples de cas traités</h3>
+            <div>
+              <ul>
+                {expertise?.useCases[0]?.map((li, index) => (
+                  <div key={index}>
+                    <aside>→</aside>
+                    <Paragraph
+                      color="greyLight"
+                      as="li"
+                      html={{ __html: li }}
+                    ></Paragraph>
+                  </div>
+                ))}
+              </ul>
+              <ul>
+                {expertise?.useCases[1]?.map((li, index) => (
+                  <div key={index}>
+                    <aside>→</aside>
+                    <Paragraph
+                      color="greyLight"
+                      as="li"
+                      html={{ __html: li }}
+                    ></Paragraph>
+                  </div>
+                ))}
+              </ul>
+            </div>
+            <Cta as="button" onClick={handleSeeMoreUseCases}>
+              Voir {isSeeMoreUseCases ? "moins" : "plus"}
+            </Cta>
+          </StyledUseCases>
+        )}
         {expertise.additionalSection && (
           <StyledAdditionalSection>
             <Grid>

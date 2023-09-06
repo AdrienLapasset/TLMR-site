@@ -14,7 +14,7 @@ const ExpertiseData = [
       {
         title: "Dessins et modèles et Brevets",
         content:
-          "Analyse de brevetabilité et de validité des titres. Gestion des contrats (contrats de consortium, licence, fiscalité, franchise, cession, surveillance), droit des inventeurs.",
+          "Analyse de brevetabilité et de validité des titres. Gestion des contrats (contrats de consortium, licence, fiscalité, franchise, cession, surveillance), droit des inventeurs.",
       },
       {
         title: "Droits d’auteur",
@@ -27,23 +27,23 @@ const ExpertiseData = [
           "Gestion des litiges, ICANN, AFNIC, exploitation licite des noms de domaines, cession des noms de domaine, parasitisme.",
       },
     ],
-    useCases: [
-      [
-        "Gestion d’un contentieux en contrefaçon de modèles d’une marque de chaussures.",
-        "Gestion contentieux contrefaçon de marque et accompagnement d’une plateforme de médias internet leaders.",
-        "Conseils et contentieux de plusieurs sociétés de production de spectacles vivants et audiovisuels.",
-        "Saisies conservatoires opérées auprès de société de production audiovisuelle.",
-        "Accompagnement de marques dans la notification de contenus illicites et défense de leurs droits.",
-        "Accompagnement et défense des droits de sociétés de productions et d’artistes dans le domaine de la musique.",
-      ],
-      [
-        "Défense des droits d’un développeur français face à une société américaine.",
-        "Défense des droits d’un créateur de mobilier.",
-        "Gestion d’un portefeuille de marques d’une centaine de client dont plusieurs sociétés leaders de leur marché.",
-        "Accompagnement juridique de la production de l’ensemble du projet d’une pièce de théâtre à succès joué par un homme politique de premier plan.",
-        "Gestion de nombreux contentieux/précontentieux en matière de contentieux contrefaçon et concurrence déloyale et parasitaire (demande et défense).",
-      ],
-    ],
+    // useCases: [
+    // [
+    //   "Gestion d’un contentieux en contrefaçon de modèles d’une marque de chaussures.",
+    //   "Gestion contentieux contrefaçon de marque et accompagnement d’une plateforme de médias internet leaders.",
+    //   "Conseils et contentieux de plusieurs sociétés de production de spectacles vivants et audiovisuels.",
+    //   "Saisies conservatoires opérées auprès de société de production audiovisuelle.",
+    //   "Accompagnement de marques dans la notification de contenus illicites et défense de leurs droits.",
+    //   "Accompagnement et défense des droits de sociétés de productions et d’artistes dans le domaine de la musique.",
+    // ],
+    // [
+    //   "Défense des droits d’un développeur français face à une société américaine.",
+    //   "Défense des droits d’un créateur de mobilier.",
+    //   "Gestion d’un portefeuille de marques d’une centaine de client dont plusieurs sociétés leaders de leur marché.",
+    //   "Accompagnement juridique de la production de l’ensemble du projet d’une pièce de théâtre à succès joué par un homme politique de premier plan.",
+    //   "Gestion de nombreux contentieux/précontentieux en matière de contentieux contrefaçon et concurrence déloyale et parasitaire (demande et défense).",
+    // ],
+    // ],
   },
   {
     title: "Internet, plateformes et e&#8209commerce",
@@ -71,17 +71,17 @@ const ExpertiseData = [
       {
         title: "Négociation et sécurisation des droits à l’image",
         content:
-          "Gestion des droits pour des personnalités, artistes, sportifs, mannequins, entrepeneurs du web (infopreneurs, influenceurs, youtubeurs, blogueurs, instagrammeurs…). Droit des médias et de l’audiovisuel.",
+          "Gestion des droits pour des personnalités, artistes, sportifs, mannequins, entrepreneurs du web (infopreneurs, influenceurs, youtubeurs, blogueurs, instagrammeurs…). Droit des médias et de l’audiovisuel.",
       },
     ],
     useCases: [
       [
-        "Défense de plusieurs e&#8209commercants devant la DGCCRF et DDPP dans le cadre de contrôle diligentés sur le fondement de pratiques commerciales trompeuses.",
+        "Défense de plusieurs e&#8209commerçants devant la DGCCRF et DDPP dans le cadre de contrôle diligentés sur le fondement de pratiques commerciales trompeuses.",
         "Accompagnement droit de l’internet et marketing e&#8209commerce d’une enseigne de plus de 250 magasins leaders en France.",
         "Accompagnement d’une marque de luxe et d’une chaine d’Hotels de luxes dans la récupération de son compte instagram suite à un hack.",
       ],
       [
-        "Gestion de l’e&#8209reputation, droit à l’oubli et suppression de contenus manifestement illicites sur les plateformes (Facebook, Instagram, Google, TikTok…).",
+        "Gestion de l’e&#8209réputation, droit à l’oubli et suppression de contenus manifestement illicites sur les plateformes (Facebook, Instagram, Google, TikTok…).",
         "Accompagnement juridique et lutte anticontrefaçon d’un influenceur/infopreneur leader de son marché.",
       ],
     ],
@@ -101,12 +101,12 @@ const ExpertiseData = [
       {
         title: "Contentieux commercial complexe",
         content:
-          "Précontentieux, contentieux à risque et réglementaires (plateformes legaltech, exercice illégal de la profession d’avocats et médicale, immobilier), conflits, entre actionnaires, procédures d’urgences, référés et injonctions, concurrence déloyale, action en contrefaçon, rupture des relations commerciales établies, litiges de consommateurs, actions groupées et recours collectifs, évaluation du préjudice, expertise judiciaire, assistance au recouvrement, contentieux (arbitrage, médiation, négociation amiable).",
+          "Précontentieux, contentieux à risque et réglementaires (plateformes legaltech, exercice illégal de la profession d’avocats et médicale, immobilier, conflits, entre actionnaires, procédures d’urgences, référés et injonctions, concurrence déloyale, action en contrefaçon, rupture des relations commerciales établies, litiges de consommateurs, actions groupées et recours collectifs, évaluation du préjudice, expertise judiciaire, assistance au recouvrement, contentieux (arbitrage, médiation, négociation amiable).",
       },
       {
         title: "Recouvrement de créances, droit des saisies et suretés",
         content:
-          "Nous pouvons ainsi vous accompagner dans la mise en place de mesures de sécurité efficaces pour protéger vos intérêts, que ce soit par le biais de garanties réelles (hypothèque, nantissement...) ou de garanties personnelles (cautionnement...). Nous sommes également en mesure de vous représenter dans le cadre de toute procédure de saisie devant le juge de l’exécution, de la mise en place des mesures conservatoires jusqu'à la réalisation de la garantie, en veillant à défendre vos intérêts tout au long de la procédure.",
+          "Nous vous accompagnons dans la mise en place de mesures de sécurité efficaces pour protéger vos intérêts, que ce soit par le biais de garanties réelles (hypothèque, nantissement...) ou de garanties personnelles (cautionnement...). Nous sommes également en mesure de vous représenter dans le cadre de toute procédure de saisie devant le juge de l’exécution, de la mise en place des mesures conservatoires jusqu'à la réalisation de la garantie, en veillant à défendre vos intérêts tout au long de la procédure.",
       },
       {
         title: "Contrats divers et complexes",
@@ -125,20 +125,20 @@ const ExpertiseData = [
         "Accompagnement dans le cadre d’une cession de contrôle d’une start&#8209up plateforme leader de la formation en ligne.",
         "Recouvrement de créances de plusieurs millions d’euros.",
         "Accompagnement d’une société d’envergure dans le cadre d’un litige complexe en matière de rupture brutale de relations commerciales établies.",
-        "Défense des intérets d’une legaltech accusée d’exercice illégal de la profession d’avocats",
+        "Défense des intérêts d’une legaltech accusée d’exercice illégal de la profession d’avocats",
       ],
       [
         "Obtention de rétractation d’ordonnance de saisie dans le cadre d’un référé 145.",
-        "Mise en cause de la responsabilité civile professionnels d’experts comptables et mise en œuvre de mesures d’expertise.",
-        "Préservation de créances à recouvrer par le biais de saisie conservatoires orchestrées.",
+        "Mise en cause de la responsabilité civile professionnelle d’experts comptables et mise en œuvre de mesures d’expertise.",
+        "Préservation de créances à recouvrer par le biais de saisies conservatoires orchestrées.",
         "Saisie conservatoire en cryptomonnaies.",
       ],
     ],
   },
   {
-    title: "Droit immobilier, baux et construction",
+    title: "Droit immobilier, copropriété, baux et construction",
     description: [
-      "Disposant d’une forte expérience dans le domaine, le cabinet accompagne de nombreuses sociétés et groupes du secteur de l’immobilier (syndics, copropriétés, investisseurs, marchands de biens, administrateurs et gestionnaires des baux locatifs et commerciaux) dans la diversité de leurs problématiques immobilières tant en matière de conseil que de contentieux.",
+      "Disposant d’une forte expérience dans le domaine, le cabinet accompagne de nombreuses sociétés et groupes du secteur de l’immobilier (syndics, copropriétés, investisseurs, marchands de biens, administrateurs et gestionnaires de baux d’habitation et commerciaux) dans la diversité de leurs problématiques immobilières tant en matière de conseil que de contentieux.",
     ],
     accordion: [
       {
@@ -175,20 +175,21 @@ const ExpertiseData = [
         "Contestation de refus de permis de construire.",
         "Défense d’un architecte dans le cadre de sa RCP.",
         "Accompagnement de deux sociétés du CAC 40 (secteur banque assurance) sur la contractualisation de projets IT/RGPD immobiliers informatiques immeubles connectés.",
+        "Négociation et rédaction de baux commerciaux.",
       ],
       [
-        "Négociation et rédaction de baux commerciaux.",
         "Assistance et représentation de commerçants dans le cadre du non&#8209renouvellement de bail.",
         "Contestation de refus de permis de construire.",
         "Assistance et représentation de commerçants dans le cadre du non&#8209renouvellement de bail.",
         "Assistance et représentation d’établissements délégataires de service public dont la responsabilité est engagée.",
         "Gestion de nombreux dossiers d’expulsion locative.",
+        "Conseil aux investisseurs immobiliers",
       ],
     ],
     additionalSection: {
       title: "Proptech et innovation du secteur",
       description: [
-        "En complément de l’activité traditionnelle, le cabinet a développé une expertise unique en matière de proptech et d’innovation dans le domaine immobilier. Il dispose d’une pratique pluridisciplinaire unique alliant l’expertise IT/nouvelles technologies à l’immobilier et intervient sur de nombreux projets innovants dans le secteur. Ainsi, le pôle IP/IT est régulièrement sollicité, aux côtés de l’équipe immobilier, par les acteurs innovants du secteur et de la proptech (grands comptes, franchises d’agence immobilières, éditeurs de logiciel, start&#8209up…).",
+        "En complément de l’activité traditionnelle, le cabinet a développé une expertise unique en matière de proptech et d’innovation dans le domaine immobilier. Il dispose d’une pratique pluridisciplinaire unique alliant l’expertise IT/nouvelles technologies à l’immobilier et intervient sur de nombreux projets innovants dans le secteur. Ainsi, le pôle IP/IT est régulièrement sollicité, aux côtés de l’équipe immobilier, par les acteurs innovants du secteur et de la proptech (grands comptes, franchises d’agences immobilières, éditeurs de logiciel, start&#8209up…).",
         "Le cabinet est ainsi intervenu sur des sujets d’innovation très diversifiés (contrats et projets informatiques complexes, immeubles connectés, plateformes proptech innovantes de gestion locative et de colocation, tokenisation des actifs immobiliers via la blockchain, signatures électroniques et automatisation des process, mise en conformité RGPD des acteurs…).",
       ],
     },
@@ -210,7 +211,7 @@ const ExpertiseData = [
       {
         title: "Droit de la presse, dénigrement, diffamation et vie privée",
         content:
-          "Droit de la presse, diffamation, injure, atteinte à la présomption d’innocence, régime procédurale de la loi de 1881, atteinte à la vie privée, exception d’information, prescription, nullité de procédure, dénigrement.",
+          "Droit de la presse, diffamation, injure, atteinte à la présomption d’innocence, régime procédural de la loi de 1881, atteinte à la vie privée, exception d’information, prescription, nullité de procédure, dénigrement.",
       },
       {
         title: "Cybercriminalité",
@@ -219,9 +220,9 @@ const ExpertiseData = [
       },
       {
         title:
-          "Assistance et représentation devant les juridictions pénales et au stade de l’enquete et de l’instruction",
+          "Assistance et représentation devant les juridictions pénales et au stade de l’enquête et de l’instruction",
         content:
-          "Assistance devant le juge ou pôle de l’instruction, assistance devant la chambre de l’instruction, contentieux de la détention provisoire et assistance devant le Juge des libertés et de la détention, contrôle judiciaire et mise en examen, garde à Vue, demande d’actes et nullités. Juridictions pénales du premier et second degré (Cour d’assise, Tribunal de police et Tribunal correctionnel), pénal financier, responsabilité des dirigeants, CRPC, alternatives aux poursuites, comparution immédiate.",
+          "Assistance devant le juge ou pôle de l’instruction, assistance devant la chambre de l’instruction, contentieux de la détention provisoire et assistance devant le Juge des libertés et de la détention, contrôle judiciaire et mise en examen, garde à vue, demande d’actes et nullités. Juridictions pénales du premier et second degré (Cour d’assise, Tribunal de police et Tribunal correctionnel), pénal financier, responsabilité des dirigeants, CRPC, alternatives aux poursuites, comparution immédiate.",
       },
       {
         title: "Assistance des victimes et parties civiles",
@@ -246,22 +247,22 @@ const ExpertiseData = [
   {
     title: "Informatique, logiciel, Intelligence artificielle, Blockchain",
     description: [
-      "Vous accompagnez vers le succès grâce à la compréhension de vos enjeux techniques et juridiques liés aux technologies, à l’environnement digital et informatiques. Incontournables dans les matières, ces atouts lui permettent d’offrir un accompagnement de pointe et des solutions pragmatiques et opérationnelles.",
+      "Vous accompagner vers le succès grâce à la compréhension de vos enjeux techniques et juridiques liés aux technologies, à l’environnement digital et informatiques. Incontournables dans les matières, ces atouts lui permettent d’offrir un accompagnement de pointe et des solutions pragmatiques et opérationnelles.",
     ],
     accordion: [
       {
         title: "Gestion des contentieux informatiques",
         content:
-          "Précontentieux et règlement amiable. Expertise technique. Gestion de la négociation et de la rupture des relations commerciales. Responsabilité contractuelle et délictuelle. Médiation arbitrage, audit, négociation, suivi stratégique et technique.",
+          "Précontentieux et règlement amiable. Expertise technique. Gestion de la négociation et de la rupture des relations commerciales. Responsabilité contractuelle et délictuelle. Médiation, arbitrage, audit, négociation, suivi stratégique et technique.",
       },
       {
-        title: "Redaction et negociation de contrats informatiques",
+        title: "Rédaction et négociation de contrats informatiques",
         content:
           "Contrats de licence logiciel. Contrats d’externalisation (SaaS, Infogérance, ASP, Sous&#8209traitance), Contrats d’hébergement. Cahier des charges, Contrat d’intégration. Contrats mobiles. Contrats de maintenance. Contrats de développement web. Contrats Telecom. Gestion du risque informatique et prévention des conflits. Maîtrise de l’Environnement Open Source et des licences libres (BSD, CNU, APACHE, GPL, AGPL, LGPL, MPL…).",
       },
       {
         title:
-          "Intelligence artificielle, droit des robots et des objets connectes",
+          "Intelligence artificielle, droit des robots et des objets connectés",
         content:
           "Ethique de l’intelligence artificielle et des algorithmes. Data Mining. Deep learning. Machine learning, droit des robots et de la personnalité, réalité virtuelle, objets connectés. Domotique et maisons connectées, voitures connectées, drones.",
       },
@@ -278,7 +279,7 @@ const ExpertiseData = [
       {
         title: "Spécialité Greentech et Green IT",
         content:
-          "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start&#8209up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l'environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez&#8209nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
+          "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start&#8209up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l'environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez&#8209nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
       },
     ],
     useCases: [
@@ -296,15 +297,15 @@ const ExpertiseData = [
     additionalSection: {
       title: "Spécialité Greentech et Green IT",
       description: [
-        "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start&#8209up du secteur et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service au service des entreprises qui souhaitent agir en faveur de l’environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez&#8209nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
+        "Cabinet au coeur de l’innovation nous sommes convaincus que notre avenir passe par un un monde plus respectueux de l’environnement et que nous devons agir concrètement en ce sens. Accompagnant plusieurs start&#8209up et sociétés innovantes du secteur, nous avons décidé de mettre notre expertise juridique au service des entreprises qui souhaitent agir en faveur de l’environnement et plus particulièrement dans le domaine du Green IT. En ce sens, nous intervenons également avec une avocate spécialiste du droit de l’environnement. Contactez&#8209nous pour en savoir plus sur nos services en Greentech et Green IT et pour discuter de votre projet de développement durable.",
       ],
     },
   },
   {
     title: "Données personnelles et conformité CNIL/RGPD",
     description: [
-      "A l’ère du numérique, les données personnelles sont devenues l’«or noir» nourrissant de nombreux technologies et faisant l’objet de nombreuses régulation et protection légitime. Le cabinet qui a une expertise reconnue en matière de protection des données personnelles vous accompagne depuis sa création sur ces enjeux fondamentaux.",
-      "Le cabinet accompagne de nombreuses sociétés dans leur mise en conformité au regard du Règlement Général Européen sur la Protection des Données (RGPD) applicable au 25 mai 2018 et à développé une expertise particulière en qualité de Délégué à la protection des données (DPO externalisé).",
+      "A l’ère du numérique, les données personnelles sont devenues l’«or noir» nourrissant de nombreuses technologies et faisant l’objet de nombreuses régulations et protections légitimes. Le cabinet, qui a une expertise reconnue en matière de protection des données personnelles vous accompagne sur ces enjeux fondamentaux.",
+      "Le cabinet accompagne de nombreuses sociétés dans leur mise en conformité au regard du Règlement Général Européen sur la Protection des Données (RGPD) applicable depuis le 25 mai 2018 et a développé une expertise particulière en qualité de Délégué à la protection des données (DPO externalisé).",
       "Le cabinet a développé également une compétence spécifique en matière de contentieux administratifs et judiciaires sur les problématiques de données personnelles et notamment dans le cadre d’actions de groupe.",
     ],
     accordion: [
@@ -326,9 +327,9 @@ const ExpertiseData = [
     ],
     useCases: [
       [
-        "Accompagnement juridique d’un Club de Football français de premier plan sur sa protection des données et son externalisation DPO",
+        "Accompagnement juridique d’un Club de Football français de premier plan sur sa politique de protection des données et son externalisation DPO",
         "Accompagnement juridique IP/IT RGPD d’une plateforme leader de solution de vente de formations en ligne.",
-        "Accompagnement juridique RPGD de plusieurs société e&#8209santé et téléconsultation.",
+        "Accompagnement juridique RPGD de plusieurs sociétés e&#8209santé et téléconsultation.",
       ],
       [
         "Accompagnement RGPD et DPO externalisé d’un groupe de presse et de publications légales.",
@@ -340,8 +341,8 @@ const ExpertiseData = [
   {
     title: "Droit du travail numérique et de la formation",
     description: [
-      "Les technologies ont eu un impact très important sur la vie en entreprise et au travail. Le cabinet a une expertise en droit du travail et notamment sur les dossiers dans des environnements technologiques complexes. Il accompagne aussi bien des entreprises que des salariés en conseil et en contentieux. Accompagnant de nombreux acteurs de la formation il a également développé une compétence spécifique en droit de la formation dont les règles sont principalement issues du Code du travail.",
-      "La formation en présentiel ou en ligne correspond à une réglementation complexe que les acteurs se doivent de respecter scrupuleusement pour pouvoir prétendre aux financements publics. Le cabinet qui a de nombreux clients infopreneurs et dans le domaine de la formation a développé une expertise particulière et notamment sur les domaines suivants :<ul><li>– Mise en conformité des organismes de formation.</li><li>– Création des contrats et assistance à l’obtention des agréments (CPF, Qualiopi…).</li><li>– Fiscalité et exonération de la TVA.</li><li>– Assistance en cas de contrôle (DIRRECTE, Caisse des Dépôts et Consignation) et litiges.</li></ul>",
+      "Les technologies ont eu un impact très important sur la vie en entreprise et au travail. Le cabinet a une expertise en droit du travail, notamment sur les dossiers s’inscrivant dans des environnements technologiques complexes. Il accompagne aussi bien des entreprises que des salariés en conseil et en contentieux. Accompagnant de nombreux acteurs de la formation, il a également développé une compétence spécifique en droit de la formation dont les règles sont principalement issues du Code du travail.",
+      "La formation en présentiel ou en ligne répond à une réglementation complexe que les acteurs du secteur se doivent de respecter scrupuleusement pour pouvoir prétendre aux financements publics. Le cabinet qui a de nombreux clients infopreneurs et dans le domaine de la formation a développé une expertise particulière et notamment sur les domaines suivants :<ul><li>– Mise en conformité des organismes de formation.</li><li>– Création des contrats et assistance à l’obtention des agréments (CPF, Qualiopi…).</li><li>– Fiscalité et exonération de la TVA.</li><li>– Assistance en cas de contrôle (DIRRECTE, Caisse des Dépôts et Consignation) et litiges.</li></ul>",
     ],
     accordion: [
       {
