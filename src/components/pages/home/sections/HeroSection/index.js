@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
+import heroVideoPosterDesktop from "assets/videos/hero-video-poster--desktop.jpg";
 import heroVideoDesktop from "assets/videos/TLMR_ Home 16-9 website.mp4";
+import heroVideoPosterMobile from "assets/videos/hero-video-poster--mobile.jpg";
 import heroVideoMobile from "assets/videos/TLMR_ Home_mobile.mp4";
 
 const StyledContainer = styled.div`
@@ -93,12 +95,12 @@ const HeroSection = () => {
         </h1>
       </Grid>
       {isMobile === true && (
-        <video autoPlay muted loop playsInline>
+        <video autoPlay muted loop playsInline poster={heroVideoPosterMobile}>
           <source src={heroVideoMobile} type="video/mp4" />
         </video>
       )}
       {isMobile === false && (
-        <video autoPlay muted loop playsInline>
+        <video autoPlay muted loop playsInline poster={heroVideoPosterDesktop}>
           <source src={heroVideoDesktop} type="video/mp4" />
         </video>
       )}
