@@ -100,7 +100,8 @@ const StyledCopyrightsContainer = styled.div`
     }
   }
   p,
-  button {
+  button,
+  a {
     font-size: 13px;
     @media ${(props) => props.theme.minWidth.md} {
       font-size: 14px;
