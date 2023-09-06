@@ -79,7 +79,7 @@ const Actualites = () => {
             date
             heroImg {
               asset {
-                gatsbyImageData(placeholder: NONE)
+                gatsbyImageData
               }
             }
             slug {
@@ -130,12 +130,7 @@ const Actualites = () => {
                         to={"/article/" + slug.current}
                       >
                         <div>
-                          <GatsbyImage
-                            image={thumbImg}
-                            alt={title}
-                            // backgroundColor={true}
-                            placeholder={"blurred"}
-                          />
+                          <GatsbyImage image={thumbImg} alt={title} />
                         </div>
                         <Paragraph className="date" size="sm">
                           {new Date(date).toLocaleDateString("fr-FR", {

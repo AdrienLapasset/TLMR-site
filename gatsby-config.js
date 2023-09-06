@@ -35,13 +35,8 @@ module.exports = {
         icon: "src/assets/imgs/favicon.jpg",
       },
     },
-    {
-      resolve: "gatsby-plugin-sharp",
-      options: {
-        defaults: { placeholder: `none` },
-      },
-    },
     "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-root-import",
