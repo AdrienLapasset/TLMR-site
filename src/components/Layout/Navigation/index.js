@@ -176,7 +176,13 @@ const Navigation = () => {
             <Link to="/actualites">Actualités</Link>
             <Link to="/l-equipe">L’équipe</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/paiement">Paiement</Link>
+            <a
+              href="https://buy.stripe.com/8wMg1k9yNa3s5IQ001"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Paiement
+            </a>
           </StyledLinksContainer>
         </StyledNav>
       )}

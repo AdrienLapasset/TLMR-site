@@ -138,9 +138,13 @@ const Footer = () => {
             <Link to="/contact">
               <Paragraph>Contact</Paragraph>
             </Link>
-            <Link to="/paiement">
+            <a
+              href="https://buy.stripe.com/8wMg1k9yNa3s5IQ001"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Paragraph>Paiement</Paragraph>
-            </Link>
+            </a>
           </div>
           <div>
             <Paragraph as="h3">Retrouvez-nous</Paragraph>
