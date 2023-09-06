@@ -81,7 +81,7 @@ const EservicesData = [
     btns: [
       {
         name: "Accéder à la consultation juridique",
-        link: "",
+        consultation: true,
       },
     ],
     imgPath: "",
