@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Grid from "components/global/Grid";
-import heroVideoDesktop from "assets/videos/TLMR_ Home 16-9 2.mp4";
+import heroVideoDesktop from "assets/videos/TLMR_ Home 16-9 website.mp4";
 import heroVideoMobile from "assets/videos/TLMR_ Home_mobile.mp4";
 
 const StyledContainer = styled.div`
