@@ -122,13 +122,13 @@ const MentionsLegales = () => {
               <span>2</span>POLITIQUE DE CONFIDENTIALITÉ
             </StyledTitle>
             <StyledTitle size="expertise">
-              <span>3</span>COOKIES
+              <span id="mentions-legales">3</span>COOKIES
             </StyledTitle>
           </StyledTitleContainer>
           <StyledGrid>
             <aside>1</aside>
             <div>
-              <h2>Mentions légales </h2>
+              <h2>Mentions légales</h2>
               <p>
                 Le site www.tlmr-avocats.com (ci-après désigné « le Site ») est
                 édité par le cabinet Touati La Motte Rouge Avocats, association
@@ -155,7 +155,7 @@ const MentionsLegales = () => {
                   </li>
                 </ul>
               </p>
-              <p id="politique-de-confidentialite">
+              <p>
                 Le Cabinet est inscrit au Barreau de Paris. Le Site est hébergé
                 par la société OVH, SAS au capital de 10.000 euros, immatriculée
                 au R.C.S de Roubaix sous le n° 424 761 419 et dont le siège
@@ -166,6 +166,9 @@ const MentionsLegales = () => {
                 Conseil National des Barreaux (CNB) dont les coordonnées sont
                 les suivantes : CNB, Médiateur à la consommation, 180 boulevard
                 Haussmann, 75010 PARIS.
+              </p>
+              <p id="politique-de-confidentialite">
+                Crédit photos : Cyrille de la Motte Rouge
               </p>
             </div>
           </StyledGrid>

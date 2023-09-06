@@ -156,7 +156,7 @@ const Footer = () => {
         <div>
           <div>
             <Paragraph as="h3">Légal</Paragraph>
-            <Link to="/mentions-legales">
+            <Link to="/mentions-legales#mentions-legales">
               <Paragraph>Mentions légales</Paragraph>
             </Link>
             <Link to="/mentions-legales#politique-de-confidentialite">
