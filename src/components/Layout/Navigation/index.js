@@ -41,7 +41,7 @@ const StyledNav = styled.nav`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: ${(props) => props.theme.columnGap.mobile};
-    grid-template-areas: "logo logo . . . links links links links links links links";
+    grid-template-areas: "logo logo . . . . links links links links links links";
     align-items: center;
   }
   @media ${(props) => props.theme.minWidth.xl} {
@@ -72,7 +72,7 @@ const StyledLinksContainer = styled.div`
   @media ${(props) => props.theme.minWidth.lg} {
     grid-area: links;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: ${(props) => props.theme.columnGap.mobile};
     opacity: 1;
     height: unset;
@@ -176,7 +176,7 @@ const Navigation = () => {
             <Link to="/actualites">Actualités</Link>
             <Link to="/l-equipe">L’équipe</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/paiement">Paiement</Link>
+            {/* <Link to="/paiement">Paiement</Link> */}
           </StyledLinksContainer>
         </StyledNav>
       )}
