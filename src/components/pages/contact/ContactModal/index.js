@@ -130,14 +130,14 @@ const ContactModal = ({ isVisible, handleModal, from }) => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  console.log(from);
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
       "form-name": event.target.getAttribute("name"),
-      subject: "tlmr-avocats.com - Nouvelle prise de contact",
-      Depuis: from,
+      subject:
+        "[tlmr-avocats.com] Prise de contact" + from != undefined
+          ? "depuis " + from
+          : "",
       Email: email,
       Téléphone: phone,
       Message: message,
