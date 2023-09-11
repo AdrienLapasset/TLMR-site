@@ -12,7 +12,7 @@ import Seo from "components/Seo";
 import SeraphinLegalModal from "components/pages/e-services/SeraphinLegalModal";
 import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 import ConsultationModal from "components/pages/e-services/ConsultationModal";
-import ContactModal from "components/pages/Contact/ContactModal";
+import ContactModal from "components/pages/contact/ContactModal";
 
 const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
