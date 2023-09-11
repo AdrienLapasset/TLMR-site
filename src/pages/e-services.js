@@ -12,6 +12,7 @@ import Seo from "components/Seo";
 import SeraphinLegalModal from "components/pages/e-services/SeraphinLegalModal";
 import DeepBlockModal from "components/pages/e-services/DeepBlockModal";
 import ConsultationModal from "components/pages/e-services/ConsultationModal";
+import ContactModal from "components/pages/Contact/ContactModal";
 
 const StyledPageHero = styled(PageHero)`
   @media ${(props) => props.theme.minWidth.sm} {
@@ -47,6 +48,8 @@ const Eservices = () => {
   const [isDeepBlockModalModal, setIsDeepBlockModalModal] = useState(false);
   const [isSeraphinLegalModal, setIsSeraphinLegalModal] = useState(false);
   const [isConsultationModal, setIsConsultationModal] = useState(false);
+  const [isContactModal, setIsContactModal] = useState(false);
+  const [modalFrom, setModalFrom] = useState("");
   const twoPointsSectionRef = useRef(null);
 
   useEffect(() => {
@@ -65,6 +68,10 @@ const Eservices = () => {
   };
   const handleConsultationModal = () => {
     setIsConsultationModal(!isConsultationModal);
+  };
+  const handleContactModal = (eService) => {
+    setIsContactModal(!isContactModal);
+    setModalFrom(eService);
   };
   return (
     <>
@@ -94,6 +101,7 @@ const Eservices = () => {
                     handleDeepBlockModal={handleDeepBlockModal}
                     handleSeraphinLegalModal={handleSeraphinLegalModal}
                     handleConsultationModal={handleConsultationModal}
+                    handleContactModal={handleContactModal}
                   />
                 </StyledElement>
               )
@@ -121,6 +129,11 @@ const Eservices = () => {
         <ConsultationModal
           isVisible={isConsultationModal}
           handleModal={() => handleConsultationModal()}
+        />
+        <ContactModal
+          from={modalFrom}
+          isVisible={isContactModal}
+          handleModal={() => handleContactModal()}
         />
       </Layout>
     </>

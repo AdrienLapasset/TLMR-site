@@ -51,8 +51,8 @@ const EservicesData = [
     ],
     btns: [
       {
+        legalDesign: true,
         name: "Nous contacter",
-        link: "/contact",
       },
     ],
     imgPath: "",

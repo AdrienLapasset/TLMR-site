@@ -154,6 +154,7 @@ const Eservice = ({
   handleDeepBlockModal,
   handleSeraphinLegalModal,
   handleConsultationModal,
+  handleContactModal,
 }) => {
   return (
     <>
@@ -204,7 +205,14 @@ const Eservice = ({
           </ol>
           <div>
             {btns?.map((btn) =>
-              btn.consultation ? (
+              btn.legalDesign ? (
+                <button
+                  key={btn.name}
+                  onClick={() => handleContactModal(title)}
+                >
+                  {btn.name}
+                </button>
+              ) : btn.consultation ? (
                 <button
                   key={btn.name}
                   onClick={() => handleConsultationModal()}
