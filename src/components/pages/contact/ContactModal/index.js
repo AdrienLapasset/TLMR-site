@@ -135,9 +135,9 @@ const ContactModal = ({ isVisible, handleModal, from }) => {
     const formData = {
       "form-name": event.target.getAttribute("name"),
       subject:
-        "[tlmr-avocats.com] Prise de contact" + from != undefined
-          ? "depuis " + from
-          : "",
+        from != undefined
+          ? "[tlmr-avocats.com] Prise de contact depuis " + from
+          : "[tlmr-avocats.com] Prise de contact",
       Email: email,
       Téléphone: phone,
       Message: message,

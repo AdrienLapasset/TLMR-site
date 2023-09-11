@@ -51,7 +51,7 @@ const EservicesData = [
     ],
     btns: [
       {
-        legalDesign: true,
+        contactModal: true,
         name: "Nous contacter",
       },
     ],
@@ -80,8 +80,8 @@ const EservicesData = [
     ],
     btns: [
       {
+        contactModal: true,
         name: "Accéder à la consultation juridique",
-        consultation: true,
       },
     ],
     imgPath: "",

@@ -205,17 +205,10 @@ const Eservice = ({
           </ol>
           <div>
             {btns?.map((btn) =>
-              btn.legalDesign ? (
+              btn.contactModal ? (
                 <button
                   key={btn.name}
                   onClick={() => handleContactModal(title)}
-                >
-                  {btn.name}
-                </button>
-              ) : btn.consultation ? (
-                <button
-                  key={btn.name}
-                  onClick={() => handleConsultationModal()}
                 >
                   {btn.name}
                 </button>
