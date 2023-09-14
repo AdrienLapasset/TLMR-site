@@ -173,7 +173,7 @@ const ALaUne = ({ className, border }) => {
         {articles.map(({ title, date, heroImg, slug }) => {
           const thumbImg = getImage(heroImg.asset);
           return (
-            <StyledNews to={"/article/" + slug.current} key={title}>
+            <StyledNews to={"/" + slug.current} key={title}>
               <div>
                 <GatsbyImage image={thumbImg} alt={title} />
               </div>

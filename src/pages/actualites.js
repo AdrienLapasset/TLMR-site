@@ -125,10 +125,7 @@ const Actualites = () => {
                   {articlesByYear.map(({ date, title, heroImg, slug }) => {
                     const thumbImg = getImage(heroImg.asset);
                     return (
-                      <StyledArticleCard
-                        key={title}
-                        to={"/article/" + slug.current}
-                      >
+                      <StyledArticleCard key={title} to={"/" + slug.current}>
                         <div>
                           <GatsbyImage image={thumbImg} alt={title} />
                         </div>

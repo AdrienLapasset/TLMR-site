@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const articles = articleQuery.data.allSanityArticle.nodes;
   if (articles.length > 0) {
     articles.forEach((article) => {
-      const path = `article/${article.slug.current}`;
+      const path = `${article.slug.current}`;
       createPage({
         path,
         component: Article,
