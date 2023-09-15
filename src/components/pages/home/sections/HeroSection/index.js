@@ -7,16 +7,16 @@ import heroVideoMobile from "assets/videos/TLMR_ Home 1-1 website.mp4";
 const StyledContainer = styled.div`
   padding-top: calc(185px + ${({ theme }) => theme.headerHeightMobile}px);
   @media ${(props) => props.theme.minWidth.sm} {
-    padding-top: 280px;
+    padding-top: 250px;
   }
   @media ${(props) => props.theme.minWidth.lg} {
-    padding-top: 240px;
+    padding-top: 200px;
   }
   @media ${(props) => props.theme.minWidth.xl} {
-    padding-top: 330px;
+    padding-top: 285px;
   }
   @media ${(props) => props.theme.minWidth.xxl} {
-    padding-top: 360px;
+    padding-top: 315px;
   }
   aside {
     margin-bottom: 5px;
@@ -94,9 +94,10 @@ const HeroSection = () => {
       <aside>L’excellence accessible</aside>
       <Grid>
         <h1>
-          Vous simplifier l’accès à l’excellence en particulier dans les
-          domaines des technologies, de l’informatique de&nbsp;l’innovation,
-          du&nbsp;digital, et d’internet.
+          Vous simplifier l’accès à l’excellence, en particulier dans
+          les&nbsp;domaines des technologies, de l’informatique, du digital,
+          de&nbsp;l’innovation, du web, de l’e-commerce, de l’immobilier
+          et&nbsp;le&nbsp;traitement de vos affaires complexes.
         </h1>
       </Grid>
       <StyledVideoContainer>
