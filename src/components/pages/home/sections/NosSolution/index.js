@@ -66,7 +66,7 @@ const NosSolution = () => {
       </StyledColumns>
       <SectionDescription
         description={
-          "Nous accompagnons au quotidien des entreprises qui innovent et avec lesquelles nous parlons le même langage. Le cabinet TLMR a développé une suite d’e-services inédite permettant d’optimiser la relation et le service rendu au client."
+          "Nous accompagnons au quotidien des entreprises qui innovent, avec lesquelles nous parlons le même langage. Nous avons développé une suite inédite de solutions e-services permettant d'optimiser la relation et le service rendu à nos clients."
         }
         links={[
           { text: "En savoir plus", to: "/e-services" },

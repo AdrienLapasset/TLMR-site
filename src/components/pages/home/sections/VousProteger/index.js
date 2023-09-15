@@ -69,7 +69,7 @@ const VousProteger = () => {
       </StyledColumns>
       <SectionDescription
         description={
-          "Vous protéger en toute circonstance que ce soit pour relever vos défis d'entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à des problématiques diverses avec rigueur et pragmatisme."
+          "Vous protéger en toutes circonstances que ce soit pour relever vos défis d'entreprise ou affronter, à vos côtés, les moments difficiles. Le cabinet Touati La Motte Rouge Avocats répond à des problématiques diverses avec rigueur et pragmatisme."
         }
         links={[
           { text: "En savoir plus", to: "/expertises" },

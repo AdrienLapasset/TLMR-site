@@ -68,7 +68,7 @@ const VosTemoignages = () => {
       author: "Lorenzo Pancino, CEO, LearnyBox",
     },
     {
-      text: "Le cabinet a accompagné notre plateforme de financement participatif de projets sportif lors de notre création. Sa maîtrise des enjeux juridiques et techniques des plateformes web d’intermédiation couplé a un sens opérationnel fort nous a permis de lancer sereinement notre activité. Je recommande son expertise.",
+      text: "Le cabinet a accompagné notre plateforme de financement participatif de projets sportifs lors de notre création. Sa maîtrise des enjeux juridiques et techniques des plateformes web d’intermédiation, nous a permis de lancer sereinement notre activité. Je recommande son expertise.",
       author: "Charles Mahé, CEO, Fosburit",
     },
     {

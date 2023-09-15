@@ -2,8 +2,8 @@ const ExpertiseData = [
   {
     title: "Innovation, Propriété intellectuelle et industrielle",
     description: [
-      "Vous accompagner dans des projets innovants est au cœur de l’ADN du Cabinet. La création et l’innovation exigent une compétence juridique spécifique pour laquelle le Cabinet Touati La Motte Rouge dispose d’un savoir&#8209faire reconnu et d’une excellente maîtrise des enjeux en matière de propriété intellectuelle, sur les supports traditionnels comme sur les nouveaux médias et réseaux sociaux.",
-      "Le cabinet intervient en matière de conseil et de contentieux sur tous les volets de la propriété intellectuelle (droits d’auteur, logiciels, marques, dessins et modèles, brevets, noms de domaine, bases de données) et accompagnent les entreprises dans la sécurisation de leurs actifs immatériels mais aussi les créateurs, artistes, développeurs, musiciens et inventeurs dans la défense de leurs droits.",
+      "La création et l’innovation exigent une compétence juridique spécifique pour laquelle le Cabinet Touati La Motte Rouge dispose d’un savoir&#8209faire reconnu et d’une excellente maîtrise des enjeux en matière de propriété intellectuelle, sur les supports traditionnels, comme sur les nouveaux médias et réseaux sociaux.",
+      "Le cabinet intervient en matière de conseil et de contentieux sur tous les volets de la propriété intellectuelle (droits d’auteur, logiciels, marques, dessins et modèles, brevets, noms de domaine, bases de données) et accompagne les entreprises dans la sécurisation de leurs actifs immatériels mais aussi les créateurs, artistes, développeurs, musiciens et inventeurs dans la défense de leurs droits.",
     ],
     accordion: [
       {
@@ -24,22 +24,22 @@ const ExpertiseData = [
       {
         title: "Noms de domaine",
         content:
-          "Gestion des litiges, ICANN, AFNIC, exploitation licite des noms de domaines, cession des noms de domaine, parasitisme.",
+          "Gestion des litiges, ICANN, AFNIC, exploitation licite des noms de domaine, cession des noms de domaine, parasitisme.",
       },
     ],
     useCases: [
       [
         "Gestion d’un contentieux en contrefaçon de modèles d’une marque de chaussures.",
-        "Gestion contentieux contrefaçon de marque et accompagnement d’une plateforme de médias internet leaders.",
-        "Conseils et contentieux de plusieurs sociétés de production de spectacles vivants et audiovisuels.",
+        "Gestion de contentieux en contrefaçon de marques et accompagnement d’une plateforme de médias internet leaders.",
+        "Conseils et contentieux de sociétés de production de spectacles vivants et audiovisuels.",
         "Saisies conservatoires opérées auprès de société de production audiovisuelle.",
-        "Accompagnement de marques dans la notification de contenus illicites et défense de leurs droits.",
+        "Accompagnement des titulaires de marques dans la notification de contenus illicites et la défense de leurs droits.",
         "Accompagnement et défense des droits de sociétés de productions et d’artistes dans le domaine de la musique.",
       ],
       [
         "Défense des droits d’un développeur français face à une société américaine.",
         "Défense des droits d’un créateur de mobilier.",
-        "Gestion d’un portefeuille de marques d’une centaine de client dont plusieurs sociétés leaders de leur marché.",
+        "Gestion d’un portefeuille de marques d’une centaine de clients dont plusieurs sociétés leaders de leur marché.",
         "Accompagnement juridique de la production de l’ensemble du projet d’une pièce de théâtre à succès joué par un homme politique de premier plan.",
         "Gestion de nombreux contentieux/précontentieux en matière de contentieux contrefaçon et concurrence déloyale et parasitaire (demande et défense).",
       ],
