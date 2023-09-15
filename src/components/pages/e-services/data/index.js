@@ -81,7 +81,7 @@ const EservicesData = [
     btns: [
       {
         contactModal: true,
-        name: "Accéder à la consultation juridique",
+        name: "Nous contacter",
       },
     ],
     imgPath: "",
