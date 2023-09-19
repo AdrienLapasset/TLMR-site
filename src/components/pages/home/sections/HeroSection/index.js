@@ -32,8 +32,8 @@ const StyledContainer = styled.div`
   }
   h1 {
     margin-bottom: 20px;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 21px;
+    line-height: 26px;
     @media ${(props) => props.theme.minWidth.sm} {
       font-size: 25px;
       line-height: 31px;
