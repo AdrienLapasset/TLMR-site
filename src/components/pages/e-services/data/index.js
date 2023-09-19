@@ -6,7 +6,7 @@ const EservicesData = [
     ],
     points: [
       "Protégez vos créations par la Technologie Blockchain simplement.",
-      "Apportez une date certaine à un Document",
+      "Apportez la preuve de l’antériorité d’un document à une date donnée.",
     ],
     btns: [
       {
@@ -46,7 +46,7 @@ const EservicesData = [
   {
     title: "Legal design",
     description: [
-      "Vous accompagner dans la construction de vos projets le plus en amont possible est une manière de vous apporter plus de sécurité et d’efficacité. Grace à ses compétences juridiques et sa maîtrise des environnements techniques et numériques, le Cabinet Touati La Motte Rouge offre à ses clients des accompagnements de pointe en matière de Legal Design. On entend ici le Legal Design dans son sens original anglo-saxon (conception). De fait, la prise en compte du juridique dès la conception des services en permet de réduire les risques juridiques et de gagner un temps précieux dans le développement des projets, notamment web et applicatifs.",
+      "Vous accompagner dans la construction de vos projets le plus en amont possible est une manière de vous apporter plus de sécurité et d’efficacité. Grace à ses compétences juridiques et sa maîtrise des environnements techniques et numériques, le Cabinet Touati La Motte Rouge offre à ses clients des accompagnements de pointe en matière de Legal Design. On entend ici le Legal Design dans son sens original anglo-saxon (conception).De fait, la prise en compte des questions d'ordre juridique dès la conception des services permet de réduire les risques de violation de la loi et de gagner un temps précieux dans le développement des projets, notamment web et applicatifs.",
       "Le cabinet dispose également d’un savoir-faire spécifique en matière de « privacy by design » qui correspond à une obligation issue du RGPD.",
     ],
     btns: [
@@ -74,9 +74,9 @@ const EservicesData = [
   {
     title: "Consultation juridique",
     description: [
-      "<b>Vous avez une question ou un problème juridique ?</b></br>Bienvenue dans notre solution de consultation juridique qui vous permettra d’avoir une réponse et un conseil personnalisé d’un avocat de haut niveau (le cabinet est classé parmi les meilleurs cabinets français (classements Leaders League / Le Point).",
-      "<b>Comment cela fonctionne-t-il ?</b></br>C’est simple ! Vous réservez votre consultation et vous aurez ensuite accès à l’agenda partagé de l’un de nos avocats afin de réserver le créneau horaire qui vous convient le mieux. Nous vous enverrons ensuite un lien pour vous connecter à notre plateforme de consultation en ligne, où vous pourrez discuter directement avec votre avocat par visioconférence.",
-      "Pour être le plus efficace possible, vous pouvez nous transmettre des éléments en amont. Ce service a été conçu pour vous aider et vous permettre d’être renseignée de manière rapide, efficace et personnalisé sur votre situation par un avocat compétent, alors retrouvez-nous vite en réservant une consultation.",
+      "<b>Vous avez une question ou un problème juridique ?</b></br>Bienvenue dans notre solution de consultation juridique qui vous permettra d’obtenir la réponse et le conseil personnalisé d’un avocat de haut niveau. Le cabinet est classé parmi les meilleurs cabinets français (classements Leaders League / Le Point).",
+      "<b>Comment cela fonctionne-t-il ?</b></br>C’est simple !  Une fois votre règlement effectué, nous vous transmettons l’accès à la date et l'heure qui vous conviennent le mieux. Vous recevez ensuite un lien pour vous connecter à notre plateforme de consultation en ligne, et discuter directement avec votre avocat par visioconférence.",
+      "Pour être le plus efficace possible, vous pouvez nous transmettre des éléments en amont. Ce service a été conçu pour vous aider et vous permettre d’être renseignée de manière rapide, efficace et personnalisée sur votre situation par un avocat compétent. Alors retrouvez-nous vite en réservant une consultation.",
     ],
     btns: [
       {

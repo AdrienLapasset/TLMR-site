@@ -54,7 +54,7 @@ const Formations = () => {
           <StyledContainer>
             <StyledPageHero
               title="Formations"
-              firstParagraph="Henri de la Motte Rouge et Jean Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne Infolawyers. Dédié à l’accompagnement des entrepreneurs du web infopreneurs et e-commerçants, leur accompagnement inédit a permis à plusieurs centaines d’entrepreneurs d’être en conformité juridique de manière simple et rapide."
+              firstParagraph="Henri de la Motte Rouge et Jean Philippe Touati, premiers avocats infopreneurs, ont fondé le Programme de formation en ligne Infolawyers™. Dédié à l’accompagnement des entrepreneurs du web infopreneurs et e-commerçants, leur accompagnement inédit a permis à plus de mille entrepreneurs de se mettre en conformité sur le plan juridique de manière simple et rapide."
             />
             <StyledColumns>
               <StaticImage

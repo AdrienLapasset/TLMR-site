@@ -110,10 +110,12 @@ const Eservices = () => {
           <StyledTwoPointsSection
             twoPointsSectionRef={twoPointsSectionRef}
             title1="VOUS PROTÉGER"
-            description1=" Vous protéger en toute circonstance que ce soit pour relever vos défis d’entreprise ou en cas de coup dur. Le cabinet Touati La Motte Rouge Avocats répond à vos diverses problématiques avec rigueur et pragmatisme."
+            description1="Vous protéger en toutes circonstances que ce soit pour relever vos défis d'entreprise ou affronter, à vos côtés, les moments difficiles. Le cabinet Touati La Motte Rouge Avocats répond à des problématiques diverses avec rigueur et pragmatisme."
             link1="expertises"
             title2="VOUS FORMER"
-            description2="La formation juridique et la transmission de notre savoir-faire sont au cœur de l’ADN du cabinet TLMR. Henri de la Motte Rouge et Jean Philippe Touati sont les premiers avocats infopreneurs. Ils ont fondé le Programme de formation en ligne Infolawyers™."
+            description2="Parce que la formation juridique et la transmission de leur savoir-faire font partie de
+            leur ADN, Henri de la Motte Rouge et Jean-Philippe Touati, premiers avocats
+            infopreneurs, ont fondé le Programme de formation en ligne infolawyers™."
             link2="formations"
           />
           <ALaUne border />

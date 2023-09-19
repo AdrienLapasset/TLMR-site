@@ -56,7 +56,7 @@ const VousFormer = () => {
         <SectionDescription
           column
           description={
-            "Parce que la formation juridique et la transmission de leur savoir-faire font partie de leur ADN, Henri de la Motte Rouge et Jean-Philippe Touati, premiers avocats infopreneurs, ont fondé le Programme de formation en ligne infolawyers."
+            "Parce que la formation juridique et la transmission de leur savoir-faire font partie de leur ADN, Henri de la Motte Rouge et Jean-Philippe Touati, premiers avocats infopreneurs, ont fondé le Programme de formation en ligne infolawyers™."
           }
           links={[
             { text: "En savoir plus", to: "/formations" },

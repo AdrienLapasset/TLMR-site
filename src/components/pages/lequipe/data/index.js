@@ -35,7 +35,7 @@ const lequipeData = [
     name: "Jean-Philippe Touati",
     post: "Avocat associé",
     description:
-      "Jean Philippe est avocat depuis 27 ans, essentiellement en droit des affaires et droit immobilier. Fin stratège et très expérimenté, il est réputé pour sa détermination dans les dossiers et accompagne de nombreuses entreprises et personnalités dans la résolution de dossiers complexes. Au fil des années il a noué avec ses clients une relation de grande proximité et de confiance. « La connaissance du droit ne fait pas tout. Ce que vous êtes, ce que vous faites et votre expérience sont des données essentielles que j’intègre pleinement dans l’analyse et le traitement des dossiers que vous me confiez ».",
+      "Jean Philippe est avocat depuis 1995, essentiellement en droit des affaires et droit immobilier. Fin stratège et très expérimenté, il est réputé pour sa détermination dans les dossiers et accompagne de nombreuses entreprises et personnalités dans la résolution de dossiers complexes. Au fil des années il a noué avec ses clients une relation de grande proximité et de confiance. « La connaissance du droit ne fait pas tout. Ce que vous êtes, ce que vous faites et votre expérience sont des données essentielles que j’intègre pleinement dans l’analyse et le traitement des dossiers que vous me confiez ».",
     experiences: [
       "Cabinet e-touati.com, avocat 2.0",
       "Cabinet BWT",
@@ -48,6 +48,7 @@ const lequipeData = [
       "Membre fondateur d’AvoTech",
       "Membre de la Commission NTIC du Barreau de Paris",
       "Membre du Club Dynamique",
+      "Président et fondateur de l’association Violons Prodiges",
       "Violoniste",
     ],
     linkedinUrl: "http://www.linkedin.com/in/jean-philippe-touati-71540a19/",
@@ -68,7 +69,7 @@ const lequipeData = [
     ],
     engagements: [
       "CIL/DPO désigné auprès de la CNIL et du Barreau de Paris",
-      "Membre Active de l'AFCDP L'Association Française des Correspondants à la protection des Données à caractère Personne",
+      "Membre Active de l'AFCDP, L'Association Française des Correspondants à la protection des Données à caractère Personnel",
       "Intervenante en Droit du commerce électronique au sein d'organismes de formation",
       "Bénévole Emmaus Connect Paris",
     ],
@@ -79,9 +80,8 @@ const lequipeData = [
     name: "Myriam Hertz",
     post: "Avocate à la Cour",
     description:
-      "Avec plus de dix années d’expérience en droit de l’immobilier Myriam est réputée pour la gestion rigoureuse des dossiers, sa finesse de plaidoirie et son art du combat (Aïkido 1er Dan). Au sein du cabinet elle est en charge avec Jean-Philippe du Pôle Immobilier en fort développement et accompagne la clientèle sur des problématiques de baux, copropriété, rédaction d’actes et opérations complexes aussi bien en matière de conseil que de contentieux. Enseignante et formatrice, elle a également un savoir-faire spécifique en matière de formation, ce qui constitue également l’ADN du cabinet.",
+      "Dès son intégration au Barreau de Paris en 2011, Myriam a orienté son activité autour du droit immobilier, formée par des professionnels reconnus du secteur. Son expertise, son aisance relationnelle et sa rigueur lui permettent d’accompagner efficacement une clientèle composée aussi bien de professionnels, d’investisseurs, que de particuliers sur des problématiques de baux, de copropriété, de rédaction d’actes et opérations complexes aussi bien en matière de conseil que de contentieux. Par ailleurs enseignante et formatrice (formation initiale et formation continue), elle a développé un savoir-faire spécifique en matière de formation et de transmission des connaissances, ce qui constitue également l’ADN du cabinet.",
     experiences: [
-      "Certificat d'Aptitude à la Profession d’Avocat",
       "Université Paris V (Master 2 - Droit des obligations civiles et commerciales).",
       "Université Paris II, Panthéon-Assas (Master 1)",
       "Cabinet d’Avocats MATHIEU et Associés",
@@ -103,7 +103,7 @@ const lequipeData = [
     name: "Camille Loyer",
     post: "Avocate à la Cour",
     description:
-      "Formée au droit de la propriété intellectuelle, de l’audiovisuel et des nouvelles technologies ainsi qu’à la cybercriminalité dans plusieurs cabinets français et internationaux de référence, elle a rejoint le pôle IP/IT du Cabinet Touati La Motte Rouge Avocats en 2023. Forte de ses expériences passées, elle dispose d’une forte expertise en matière de production audiovisuelle, droit commercial, droit de l’internet et droit des marques, en conseil comme en contentieux. Son dynamisme, sa persévérance et son sens de l’analyse et du détail garantissent la qualité du travail fournit dans chaque dossier qu’elle est amenée à traiter. Son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières complexes, ainsi que des dossiers audiovisuels.",
+      "Formée en droit de la propriété intellectuelle, de l’audiovisuel et des nouvelles technologies ainsi qu’en cybercriminalité dans plusieurs cabinets français et internationaux de référence, elle a rejoint le pôle IP/IT du Cabinet Touati La Motte Rouge Avocats en 2023. Forte de ses expériences passées, elle dispose d’une forte expertise en matière de production audiovisuelle, droit commercial, droit de l’internet et droit des marques, en conseil, comme en contentieux. Son dynamisme, sa persévérance ainsi que son sens de l’analyse et du détail garantissent la qualité du travail fourni dans chacun des dossiers qu’elle est amenée à traiter. Son recrutement coïncide avec le fort développement de la clientèle internationale et de dossiers transfrontières complexes, ainsi que des dossiers audiovisuels.",
     experiences: [
       "M2 IP/IT Droit de la propriété intellectuelle et des affaires numériques",
       "Diplôme Universitaire de Common Law",
@@ -125,7 +125,7 @@ const lequipeData = [
     name: "Evanthia Revel",
     post: "Avocate à la Cour",
     description:
-      "Spécialisée en contentieux, Evanthia intervient principalement en droit immobilier, droit de la construction et droit social où elle a été formée dans des cabinets renommés avant de rejoindre le Cabinet TLMR. Son recrutement coïncide avec le fort développement du pôle immobilier et des contentieux complexes gérés par Jean-Philippe Touati. Excellente stratège, Evanthia met au profit des clients sa rigueur et sa détermination dans une logique d’optimisation des résultats. Elle intervient en français et en anglais.",
+      "Evanthia intervient principalement en droit immobilier, droit de la construction et droit social où elle a été formée dans des cabinets renommés avant de rejoindre le Cabinet TLMR. Son recrutement coïncide avec le fort développement du pôle immobilier et des contentieux complexes gérés par Jean-Philippe Touati. Excellente stratège, Evanthia met au profit des clients sa rigueur et sa détermination dans une logique d’optimisation des résultats. Elle intervient en français et en anglais.",
     experiences: [
       "Cabinet Pierrat & Associés",
       "Cabinet Maudret & Hauducoeur",
