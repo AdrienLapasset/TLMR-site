@@ -55,6 +55,11 @@ const StyledContainer = styled.div`
       font-size: 36px;
       line-height: 45px;
     }
+    span {
+      @media ${(props) => props.theme.minWidth.sm} {
+        display: none;
+      }
+    }
   }
   .gatsby-image-wrapper {
     aspect-ratio: 1;
@@ -94,9 +99,10 @@ const HeroSection = () => {
       <aside>L’excellence accessible</aside>
       <Grid>
         <h1>
-          Vous simplifier l’accès à l’excellence, en particulier dans
-          les&nbsp;domaines des technologies, de l’informatique, du digital,
-          de&nbsp;l’innovation, du web, de l’e-commerce, de l’immobilier
+          Vous simplifier l’accès à l’excellence, en<span>&nbsp;</span>
+          particulier dans les&nbsp;domaines des<span>&nbsp;</span>technologies,
+          de l’informatique, du<span>&nbsp;</span>digital, de&nbsp;l’innovation,
+          du web, de<span>&nbsp;</span>l’e&#8209;commerce, de l’immobilier
           et&nbsp;le&nbsp;traitement de vos affaires complexes.
         </h1>
       </Grid>

@@ -46,7 +46,7 @@ const EservicesData = [
   {
     title: "Legal design",
     description: [
-      "Vous accompagner dans la construction de vos projets le plus en amont possible est une manière de vous apporter plus de sécurité et d’efficacité. Grace à ses compétences juridiques et sa maîtrise des environnements techniques et numériques, le Cabinet Touati La Motte Rouge offre à ses clients des accompagnements de pointe en matière de Legal Design. On entend ici le Legal Design dans son sens original anglo-saxon (conception).De fait, la prise en compte des questions d'ordre juridique dès la conception des services permet de réduire les risques de violation de la loi et de gagner un temps précieux dans le développement des projets, notamment web et applicatifs.",
+      "Vous accompagner dans la construction de vos projets le plus en amont possible est une manière de vous apporter plus de sécurité et d’efficacité. Grace à ses compétences juridiques et sa maîtrise des environnements techniques et numériques, le Cabinet Touati La Motte Rouge offre à ses clients des accompagnements de pointe en matière de Legal Design. On entend ici le Legal Design dans son sens original anglo-saxon (conception). De fait, la prise en compte des questions d'ordre juridique dès la conception des services permet de réduire les risques de violation de la loi et de gagner un temps précieux dans le développement des projets, notamment web et applicatifs.",
       "Le cabinet dispose également d’un savoir-faire spécifique en matière de « privacy by design » qui correspond à une obligation issue du RGPD.",
     ],
     btns: [
