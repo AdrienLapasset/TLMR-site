@@ -55,9 +55,16 @@ const StyledContainer = styled.div`
       font-size: 36px;
       line-height: 45px;
     }
-    span {
+
+    &.mobile {
       @media ${(props) => props.theme.minWidth.sm} {
         display: none;
+      }
+    }
+    &.desktop {
+      display: none;
+      @media ${(props) => props.theme.minWidth.sm} {
+        display: block;
       }
     }
   }
@@ -98,11 +105,16 @@ const HeroSection = () => {
     <StyledContainer>
       <aside>L’excellence accessible</aside>
       <Grid>
-        <h1>
-          Vous simplifier l’accès à l’excellence, en<span>&nbsp;</span>
-          particulier dans les&nbsp;domaines des<span>&nbsp;</span>technologies,
-          de l’informatique, du<span>&nbsp;</span>digital, de&nbsp;l’innovation,
-          du web, de<span>&nbsp;</span>l’e&#8209;commerce, de l’immobilier
+        <h1 className="mobile">
+          Vous simplifier l’accès à l’excellence, en&nbsp;particulier dans les
+          domaines des&nbsp;technologies, de l’informatique, du&nbsp;digital, de
+          l’innovation, du web, de&nbsp;l’e&#8209;commerce, de l’immobilier
+          et&nbsp;le traitement de vos affaires complexes.
+        </h1>
+        <h1 className="desktop">
+          Vous simplifier l’accès à l’excellence, en particulier dans
+          les&nbsp;domaines des technologies, de l’informatique, du digital,
+          de&nbsp;l’innovation, du web, de l’e&#8209;commerce, de l’immobilier
           et&nbsp;le&nbsp;traitement de vos affaires complexes.
         </h1>
       </Grid>
