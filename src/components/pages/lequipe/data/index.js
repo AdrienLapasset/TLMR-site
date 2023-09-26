@@ -54,28 +54,6 @@ const lequipeData = [
     linkedinUrl: "http://www.linkedin.com/in/jean-philippe-touati-71540a19/",
   },
   {
-    imgName: "elea",
-    name: "Eléa Bataille",
-    post: "Avocate à la Cour",
-    description:
-      "Excellente juriste, elle met sa rigueur, son talent, sa positivité et sa force de travail au service des clients du cabinet depuis sa création. Dotée d’une solide formation en corporate et droit procédural, elle s’est ensuite orientée en IP/IT et protection des données personnelles. Eléa dispose d’un excellent savoir-faire aussi bien en matière de conseil que de contentieux, notamment dans le domaine du droit des marques, cybercrimnialité, e-commerce et RGPD. Elle intervient également en contentieux des affaires, droit pénal et de la presse.",
-    experiences: [
-      "Titulaire du Certificat de spécialisation du CNAM Délégué à la Protection des Données personnelles",
-      "Ecole de la Défense Pénale du Barreau de Paris",
-      "M2 IP/IT Droit de l'innovation et propriété industrielle",
-      "Master Carrières judiciaires et sciences criminelles",
-      "Cabinet ABCM Avocats",
-      "Matrice Lab Innove",
-    ],
-    engagements: [
-      "CIL/DPO désigné auprès de la CNIL et du Barreau de Paris",
-      "Membre Active de l'AFCDP, L'Association Française des Correspondants à la protection des Données à caractère Personnel",
-      "Intervenante en Droit du commerce électronique au sein d'organismes de formation",
-      "Bénévole Emmaus Connect Paris",
-    ],
-    linkedinUrl: "https://fr.linkedin.com/in/el%C3%A9a-bataille-3a3a68119",
-  },
-  {
     imgName: "myriam",
     name: "Myriam Hertz",
     post: "Avocate à la Cour",
@@ -97,6 +75,28 @@ const lequipeData = [
       "Consultante au Salon de la Copropriété",
     ],
     linkedinUrl: "https://fr.linkedin.com/in/myriamhertzavocat",
+  },
+  {
+    imgName: "elea",
+    name: "Eléa Bataille",
+    post: "Avocate à la Cour",
+    description:
+      "Excellente juriste, elle met sa rigueur, son talent, sa positivité et sa force de travail au service des clients du cabinet depuis sa création. Dotée d’une solide formation en corporate et droit procédural, elle s’est ensuite orientée en IP/IT et protection des données personnelles. Eléa dispose d’un excellent savoir-faire aussi bien en matière de conseil que de contentieux, notamment dans le domaine du droit des marques, cybercrimnialité, e-commerce et RGPD. Elle intervient également en contentieux des affaires, droit pénal et de la presse.",
+    experiences: [
+      "Titulaire du Certificat de spécialisation du CNAM Délégué à la Protection des Données personnelles",
+      "Ecole de la Défense Pénale du Barreau de Paris",
+      "M2 IP/IT Droit de l'innovation et propriété industrielle",
+      "Master Carrières judiciaires et sciences criminelles",
+      "Cabinet ABCM Avocats",
+      "Matrice Lab Innove",
+    ],
+    engagements: [
+      "CIL/DPO désigné auprès de la CNIL et du Barreau de Paris",
+      "Membre Active de l'AFCDP, L'Association Française des Correspondants à la protection des Données à caractère Personnel",
+      "Intervenante en Droit du commerce électronique au sein d'organismes de formation",
+      "Bénévole Emmaus Connect Paris",
+    ],
+    linkedinUrl: "https://fr.linkedin.com/in/el%C3%A9a-bataille-3a3a68119",
   },
   {
     imgName: "camille",
