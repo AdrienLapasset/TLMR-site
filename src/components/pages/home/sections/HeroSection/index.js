@@ -82,7 +82,7 @@ const StyledVideoContainer = styled.div`
     aspect-ratio: 1.78;
   }
   video {
-    max-width: 100%;
+    width: 100%;
   }
 `;
 
