@@ -3,13 +3,13 @@ const path = require("path");
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
 
-  // createRedirect({
-  //   fromPath:
-  //     "/e-services/generateur-de-politique-de-confidentialite-conforme-rgpd/",
-  //   toPath:
-  //     "/e-services#Générateur de politique de confidentialité conforme RGPD/",
-  //   isPermanent: true,
-  // });
+  createRedirect({
+    fromPath:
+      "/e-services/generateur-de-politique-de-confidentialite-conforme-rgpd/",
+    toPath:
+      "/e-services#Générateur de politique de confidentialité conforme RGPD/",
+    isPermanent: true,
+  });
 
   const Article = path.resolve("./src/templates/Article/index.js");
 

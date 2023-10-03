@@ -42,6 +42,7 @@ module.exports = {
     "gatsby-plugin-root-import",
     "gatsby-plugin-netlify",
     "gatsby-plugin-react-helmet",
+    "gatsby-adapter-netlify",
     "gatsby-plugin-client-side-redirect",
   ],
 };
