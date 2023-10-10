@@ -15,6 +15,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     toPath: "/e-services#Protection des créations/",
     isPermanent: true,
   });
+
   //   {
   //     fromPath: "/e-services/signatureelectronique/",
   //     toPath: "/e-services#Signature électronique/",
