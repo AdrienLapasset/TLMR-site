@@ -45,7 +45,7 @@ const StyledContainer = styled(Grid)`
     @media ${(props) => props.theme.minWidth.xxl} {
       grid-column: 9 / 13;
     }
-    & > h2 {
+    & > h1 {
       margin-top: 10px;
       margin-bottom: 40px;
       @media ${(props) => props.theme.minWidth.sm} {
@@ -153,7 +153,6 @@ const Eservice = ({
   btns,
   handleDeepBlockModal,
   handleSeraphinLegalModal,
-  handleConsultationModal,
   handleContactModal,
 }) => {
   return (
@@ -189,7 +188,7 @@ const Eservice = ({
           />
         ) : null}
         <div>
-          <Title size="xs" type="h2">
+          <Title size="xs" type="h1">
             {title}
           </Title>
           {description.map((paragraph) => (

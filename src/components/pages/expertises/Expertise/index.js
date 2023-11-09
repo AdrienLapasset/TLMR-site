@@ -43,7 +43,7 @@ const StyledAccordionContainer = styled.div`
   }
 `;
 const StyledTitleGrid = styled(Grid)`
-  h2 {
+  h1 {
     margin-bottom: 20px;
   }
   & > * {
@@ -85,7 +85,7 @@ const StyledUseCases = styled.div`
   @media ${(props) => props.theme.minWidth.sm} {
     padding-bottom: 0px;
   }
-  & > h3 {
+  & > h2 {
     margin-bottom: 7px;
     @media ${(props) => props.theme.minWidth.sm} {
       margin-bottom: 10px;
@@ -202,7 +202,7 @@ const Expertise = ({ expertise }) => {
     <StyledContainer>
       <StyledTitleGrid>
         <Title
-          type="h2"
+          type="h1"
           lowercase
           size="expertise"
           html={{ __html: expertise.title }}
@@ -242,7 +242,7 @@ const Expertise = ({ expertise }) => {
         </StyledAccordionContainer>
         {expertise?.useCases && (
           <StyledUseCases isSeeMoreUseCases={isSeeMoreUseCases}>
-            <h3>Exemples de cas traités</h3>
+            <h2>Exemples de cas traités</h2>
             <div>
               <ul>
                 {expertise?.useCases[0]?.map((li, index) => (
@@ -281,7 +281,7 @@ const Expertise = ({ expertise }) => {
                 <Dot />
                 <Paragraph
                   size="md"
-                  as="h3"
+                  as="h2"
                   html={{ __html: expertise.additionalSection.title }}
                 ></Paragraph>
               </StyledPoint>
