@@ -348,18 +348,18 @@ export const query = graphql`
 const myPortableTextComponents = {
   types: {
     image: ({ value }) =>
-      value.link ? (
+      value.asset &&
+      (value.link ? (
         <a href={value.link} target="_blank" rel="noreferrer">
           <SanityImg asset={value.asset} alt={value.asset.filename} />
         </a>
       ) : (
         <SanityImg asset={value.asset} alt={value.asset.filename} />
+      )),
+    youtube: ({ value }) =>
+      value.url && (
+        <LiteYouTubeEmbed id={getYouTubeId(value.url)} poster="maxresdefault" />
       ),
-    youtube: ({ value }) => {
-      const { url } = value;
-      const id = getYouTubeId(url);
-      return <LiteYouTubeEmbed id={id} poster="maxresdefault" />;
-    },
   },
   marks: {
     link: ({ value, children }) => (
