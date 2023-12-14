@@ -22,6 +22,7 @@ import {
 import getYouTubeId from "get-youtube-id";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import nbspPonctuation from "components/utils/nbspPonctuation";
 
 const StyledContainer = styled.div`
   & > .gatsby-image-wrapper {
@@ -346,6 +347,23 @@ export const query = graphql`
 `;
 
 const myPortableTextComponents = {
+  block: {
+    h2: ({ children }) => (
+      <h2
+        dangerouslySetInnerHTML={{ __html: nbspPonctuation(children[0]) }}
+      ></h2>
+    ),
+    h3: ({ children }) => (
+      <h3
+        dangerouslySetInnerHTML={{ __html: nbspPonctuation(children[0]) }}
+      ></h3>
+    ),
+    h4: ({ children }) => (
+      <h4
+        dangerouslySetInnerHTML={{ __html: nbspPonctuation(children[0]) }}
+      ></h4>
+    ),
+  },
   types: {
     image: ({ value }) =>
       value.asset &&
@@ -404,7 +422,9 @@ const Article = ({ data, location }) => {
                     <StyledInfo size="sm">{author}</StyledInfo>
                   </div>
                 </StyledDesktopInfo>
-                <h1>{title}</h1>
+                <h1
+                  dangerouslySetInnerHTML={{ __html: nbspPonctuation(title) }}
+                ></h1>
               </StyledHeader>
               <StyledMobileInfo>
                 <div>

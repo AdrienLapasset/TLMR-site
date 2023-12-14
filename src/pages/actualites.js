@@ -7,6 +7,7 @@ import Paragraph from "components/global/Paragraph";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "components/Seo";
+import nbspPonctuation from "components/utils/nbspPonctuation";
 
 const StyledContainer = styled.div`
   padding: 160px 0 75px;
@@ -136,9 +137,13 @@ const Actualites = () => {
                             day: "numeric",
                           })}
                         </Paragraph>
-                        <Paragraph size="lg" as="h3">
-                          {title}
-                        </Paragraph>
+                        <Paragraph
+                          size="lg"
+                          as="h3"
+                          html={{
+                            __html: nbspPonctuation(title),
+                          }}
+                        ></Paragraph>
                       </StyledArticleCard>
                     );
                   })}

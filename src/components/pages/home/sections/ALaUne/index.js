@@ -7,6 +7,7 @@ import Title from "components/global/Title";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useLocation } from "@reach/router";
+import nbspPonctuation from "components/utils/nbspPonctuation";
 
 const border = css`
   border-top: ${(props) => props.theme.border.black};
@@ -184,16 +185,16 @@ const ALaUne = ({ className, border }) => {
                   day: "numeric",
                 })}
               </Paragraph>
-              <h3>{title}</h3>
+              <h3
+                dangerouslySetInnerHTML={{ __html: nbspPonctuation(title) }}
+              ></h3>
             </StyledNews>
           );
         })}
       </StyledColumns>
-      {/* {isHome && ( */}
       <Cta to="/actualites" className="mobile">
         Toutes les actualités
       </Cta>
-      {/* )} */}
     </StyledContainer>
   );
 };
