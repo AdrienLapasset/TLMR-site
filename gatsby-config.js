@@ -33,6 +33,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/assets/imgs/favicon.jpg",
+        include_favicon: false,
       },
     },
     "gatsby-plugin-image",
