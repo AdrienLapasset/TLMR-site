@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <clipPath id="clip-favicon_1">
+      <rect width="128" height="128"/>
+    </clipPath>
+  </defs>
+  <g id="favicon_1" data-name="favicon – 1" clip-path="url(#clip-favicon_1)">
+    <rect id="Rectangle_33" data-name="Rectangle 33" width="128" height="128" fill="#fff"/>
+    <text id="T" transform="translate(0 -2)" font-size="100" font-family="SohneBreit-Buch, Söhne Breit"><tspan x="23.8" y="104">T</tspan></text>
+  </g>
+</svg>
