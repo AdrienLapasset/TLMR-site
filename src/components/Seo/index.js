@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
-import favicon from "assets/imgs/favicon-48.png";
 
 const query = graphql`
   query SEO {
@@ -35,7 +34,6 @@ const SEO = ({ pageTitle, articleDescription, imageUrl }) => {
       title={pageTitle}
       titleTemplate={titleTemplate}
       htmlAttributes={{ lang }}
-      link={[{ rel: "icon", type: "image/png", href: favicon }]}
       meta={[
         {
           name: `google-site-verification`,
