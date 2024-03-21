@@ -26,6 +26,7 @@ import nbspPonctuation from "components/utils/nbspPonctuation";
 
 const StyledContainer = styled.div`
   & > .gatsby-image-wrapper {
+    width: 100%;
     aspect-ratio: 1;
     margin-bottom: 10px;
     @media ${(props) => props.theme.minWidth.sm} {
@@ -264,6 +265,8 @@ const StyledContent = styled.section`
   }
   img {
     max-width: 100%;
+    display: block;
+    margin: 0 auto 35px;
   }
   p,
   li,
@@ -369,10 +372,20 @@ const myPortableTextComponents = {
       value.asset &&
       (value.link ? (
         <a href={value.link} target="_blank" rel="noreferrer">
-          <SanityImg asset={value.asset} alt={value.asset.filename} />
+          <SanityImg
+            asset={value.asset}
+            alt={value.asset.filename}
+            width={value.asset.width}
+            style={{ width: value.asset.width }}
+          />
         </a>
       ) : (
-        <SanityImg asset={value.asset} alt={value.asset.filename} />
+        <SanityImg
+          asset={value.asset}
+          alt={value.asset.filename}
+          width={value.asset.width}
+          style={{ width: value.asset.width }}
+        />
       )),
     youtube: ({ value }) =>
       value.url && (
