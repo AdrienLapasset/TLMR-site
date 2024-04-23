@@ -134,7 +134,7 @@ const MentionsLegales = () => {
                 édité par le cabinet Touati La Motte Rouge Avocats, association
                 d’avocats à responsabilité professionnelle individuelle (AARPI)
                 enregistrée sous le numéro Siret 837 987 387, dont le siège
-                social est situé 77 boulevard Malesherbes à Paris 75008
+                social est situé 69 place Félix Lobligeois à Paris 75017
                 (ci-après désigné « le Cabinet »).
               </p>
               <p>
