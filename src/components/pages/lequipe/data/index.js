@@ -56,7 +56,7 @@ const lequipeData = [
   {
     imgName: "myriam",
     name: "Myriam Hertz",
-    post: "Avocate à la Cour",
+    post: "Avocate associée",
     description:
       "Dès son intégration au Barreau de Paris en 2011, Myriam a orienté son activité autour du droit immobilier, formée par des professionnels reconnus du secteur. Son expertise, son aisance relationnelle et sa rigueur lui permettent d’accompagner efficacement une clientèle composée aussi bien de professionnels, d’investisseurs, que de particuliers sur des problématiques de baux, de copropriété, de rédaction d’actes et opérations complexes aussi bien en matière de conseil que de contentieux. Par ailleurs enseignante et formatrice (formation initiale et formation continue), elle a développé un savoir-faire spécifique en matière de formation et de transmission des connaissances, ce qui constitue également l’ADN du cabinet.",
     experiences: [
