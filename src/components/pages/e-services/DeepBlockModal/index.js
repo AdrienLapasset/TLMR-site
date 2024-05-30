@@ -33,14 +33,14 @@ const StyledModal = styled.div`
   @media ${(props) => props.theme.minWidth.md} {
     width: 850px;
   }
-  button {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    cursor: pointer;
+  header {
+    background-color: white;
+    padding: 15px;
     @media ${(props) => props.theme.minWidth.sm} {
-      top: 20px;
-      left: 20px;
+      position: absolute;
+    }
+    button {
+      cursor: pointer;
     }
   }
   iframe {
@@ -58,9 +58,11 @@ const DeepBlockModal = ({ isVisible, handleModal }) => {
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
-        <button type="button" onClick={handleModal}>
-          <img src={croix} alt="" />
-        </button>
+        <header>
+          <button type="button" onClick={handleModal}>
+            <img src={croix} alt="" />
+          </button>
+        </header>
         <iframe
           title="Deep Block"
           src="https://form.openlogs.fr/form?token=6184f83054bf3d3aa550d43e10ba309fc30ddc4c6b568f508b7d7b9d0f872847"
