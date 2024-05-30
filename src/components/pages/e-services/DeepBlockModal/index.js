@@ -29,28 +29,27 @@ const StyledModal = styled.div`
   width: 100%;
   border-radius: 9px;
   overflow-y: scroll;
+  position: relative;
   @media ${(props) => props.theme.minWidth.md} {
     width: 850px;
   }
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    padding: 45px 45px 0 45px;
-    button {
-      cursor: pointer;
-      margin-left: 20px;
+  button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    @media ${(props) => props.theme.minWidth.sm} {
+      top: 20px;
+      left: 20px;
     }
   }
   iframe {
     width: 100%;
     display: block;
     border: 0;
-    padding: 0 10px 45px;
     height: 100vh;
     @media ${(props) => props.theme.minWidth.sm} {
       height: 650px;
-      padding: 0 10px;
     }
   }
 `;
@@ -59,17 +58,12 @@ const DeepBlockModal = ({ isVisible, handleModal }) => {
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
-        <header>
-          <Paragraph as="h2" size="xxl">
-            Nous vous remercions d’utiliser le formulaire
-          </Paragraph>
-          <button type="button" onClick={handleModal}>
-            <img src={croix} alt="" />
-          </button>
-        </header>
+        <button type="button" onClick={handleModal}>
+          <img src={croix} alt="" />
+        </button>
         <iframe
           title="Deep Block"
-          src="https://contrat.legapol.fr/iframe.php?mID=2&amp;eID=3"
+          src="https://form.openlogs.fr/form?token=6184f83054bf3d3aa550d43e10ba309fc30ddc4c6b568f508b7d7b9d0f872847"
         ></iframe>
       </StyledModal>
     </StyledContainer>
