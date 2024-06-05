@@ -54,6 +54,9 @@ const StyledModal = styled.div`
     display: block;
     border: 0;
     margin-bottom: 100px;
+    @media ${(props) => props.theme.minWidth.md} {
+      margin-bottom: 0;
+    }
   }
 `;
 
