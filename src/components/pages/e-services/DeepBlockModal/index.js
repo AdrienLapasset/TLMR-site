@@ -30,14 +30,18 @@ const StyledModal = styled.div`
   border-radius: 9px;
   overflow-y: scroll;
   position: relative;
+  padding: 0 15px;
   @media ${(props) => props.theme.minWidth.md} {
     width: 850px;
+    padding: 55px 0 0;
   }
   header {
     background-color: white;
-    padding: 15px;
-    @media ${(props) => props.theme.minWidth.sm} {
+    padding: 15px 15px 15px 0;
+    @media ${(props) => props.theme.minWidth.md} {
+      padding: 15px 15px 10px 25px;
       position: absolute;
+      top: 0;
     }
     button {
       cursor: pointer;
@@ -48,7 +52,8 @@ const StyledModal = styled.div`
     display: block;
     border: 0;
     height: 100vh;
-    @media ${(props) => props.theme.minWidth.sm} {
+    margin-bottom: 20px;
+    @media ${(props) => props.theme.minWidth.md} {
       height: 650px;
     }
   }
