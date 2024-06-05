@@ -24,16 +24,17 @@ const StyledContainer = styled.div`
 `;
 
 const StyledModal = styled.div`
-  max-height: 100vh;
   background-color: white;
   width: 100%;
   border-radius: 9px;
   overflow-y: scroll;
   position: relative;
   padding: 0 15px;
+  height: 100vh;
   @media ${(props) => props.theme.minWidth.md} {
     width: 850px;
     padding: 55px 0 0;
+    height: 650px;
   }
   header {
     background-color: white;
@@ -49,12 +50,11 @@ const StyledModal = styled.div`
   }
   iframe {
     width: 100%;
+    height: 100%;
     display: block;
     border: 0;
-    height: 100vh;
     margin-bottom: 20px;
     @media ${(props) => props.theme.minWidth.md} {
-      height: 650px;
     }
   }
 `;
