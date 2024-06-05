@@ -6,7 +6,7 @@ import croix from "assets/icons/croix.svg";
 const StyledContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
-  overflow-y: scroll;
+  overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;
@@ -29,7 +29,7 @@ const StyledModal = styled.div`
   border-radius: 9px;
   overflow-y: scroll;
   position: relative;
-  padding: 0 15px;
+  padding: 55px 15px 0;
   height: 100vh;
   @media ${(props) => props.theme.minWidth.md} {
     width: 850px;
@@ -38,11 +38,11 @@ const StyledModal = styled.div`
   }
   header {
     background-color: white;
-    padding: 15px 15px 15px 0;
+    padding: 15px 15px 10px 0;
+    position: absolute;
+    top: 0;
     @media ${(props) => props.theme.minWidth.md} {
       padding: 15px 15px 10px 25px;
-      position: absolute;
-      top: 0;
     }
     button {
       cursor: pointer;
@@ -53,7 +53,6 @@ const StyledModal = styled.div`
     height: 100%;
     display: block;
     border: 0;
-    margin-bottom: 20px;
     @media ${(props) => props.theme.minWidth.md} {
     }
   }
