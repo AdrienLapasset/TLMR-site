@@ -53,7 +53,7 @@ const StyledModal = styled.div`
     height: 100%;
     display: block;
     border: 0;
-    margin-bottom: env(safe-area-inset-bottom);
+    margin-bottom: 100px;
   }
 `;
 
