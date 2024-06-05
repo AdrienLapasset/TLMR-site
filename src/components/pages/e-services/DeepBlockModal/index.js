@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Paragraph from "components/global/Paragraph";
 import croix from "assets/icons/croix.svg";
@@ -60,6 +60,13 @@ const StyledModal = styled.div`
 `;
 
 const DeepBlockModal = ({ isVisible, handleModal }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "scroll";
+    };
+  });
+
   return (
     <StyledContainer isVisible={isVisible}>
       <StyledModal>
