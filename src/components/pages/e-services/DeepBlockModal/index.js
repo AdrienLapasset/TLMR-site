@@ -29,7 +29,7 @@ const StyledModal = styled.div`
   border-radius: 9px;
   overflow-y: scroll;
   position: relative;
-  padding: 55px 15px 0;
+  padding: 55px 15px env(safe-area-inset-bottom);
   height: 100vh;
   @media ${(props) => props.theme.minWidth.md} {
     width: 850px;
@@ -53,8 +53,7 @@ const StyledModal = styled.div`
     height: 100%;
     display: block;
     border: 0;
-    @media ${(props) => props.theme.minWidth.md} {
-    }
+    margin-bottom: env(safe-area-inset-bottom);
   }
 `;
 
